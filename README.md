@@ -1,8 +1,48 @@
 ## Overview
 
-Oil Driver is a 3D isometric driving adventure where Saad has to deliver oil for his overlord Conald Trumc through saudi arabia because the street of Hormuz is closed.
+Oil Driver is a 3D isometric driving adventure where Saad has to deliver oil for his overlord Conald Trumc through Saudi Arabia because the street of Hormuz is closed.
 
-## Current Tasks
+## Working with this Project:
+**Before implementing a new feature create a new branch!** Name them `feature/your-feature-name`.
+
+```bash
+git branch feature/your-feature-name
+```
+
+
+    oil-driver/
+    ├── project.godot
+    ├── README.md
+    ├── .gitignore
+    ├── assets/                 <- ART
+    │   ├── Models/
+    │   ├── Textures/
+    │   └── Environments/
+    ├── audio/
+    │   ├── music/
+    │   └── soundfx/
+    ├── game/                   
+    │   ├── autoload/
+    │   ├── cars/               
+    │   │   ├── car.tscn        <- CAR CHARACTER
+    │   │   └── car.gd
+    │   ├── levels/
+    │   │   └── Level.tscn      <- LEVEL/WORLD
+    │   ├── obstacles/
+    │   └── ui/
+    ├── planning/
+    └── translation/
+ 
+### Car 
+Can be edited with godot and tweaked under properties:
+![alt text](planning/car-editor.png)
+### Level
+Detailed instruction will follow soon sorry.
+Basically 
+1. copy level
+2. edit level using GridMap
+
+![alt text](planning/world-editor.png)
 
 ## Current Tasks
 
