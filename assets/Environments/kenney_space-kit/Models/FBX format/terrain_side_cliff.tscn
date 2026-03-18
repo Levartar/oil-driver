@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dbfbm8pqei6cv"]
+
+[ext_resource type="PackedScene" uid="uid://d0pwmxitvffxv" path="res://assets/Environments/kenney_space-kit/Models/FBX format/terrain_sideCliff.fbx" id="1_sl45r"]
+
+[node name="terrain_sideCliff" unique_id=1324848823 instance=ExtResource("1_sl45r")]
+
+[node name="terrain_sideCliff" parent="." index="0" unique_id=1578142718]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, -1.5, 0, -1.5)

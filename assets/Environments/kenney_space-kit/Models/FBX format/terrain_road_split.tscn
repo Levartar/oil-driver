@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cper3tp8fpfly"]
+
+[ext_resource type="PackedScene" uid="uid://biiyy1hq68a5b" path="res://assets/Environments/kenney_space-kit/Models/FBX format/terrain_roadSplit.fbx" id="1_0tiah"]
+
+[node name="terrain_roadSplit" unique_id=1095000633 instance=ExtResource("1_0tiah")]
+
+[node name="terrain_roadSplit" parent="." index="0" unique_id=546245734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -2)

@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://bpw7f2u2c3wqt"]
+
+[ext_resource type="PackedScene" uid="uid://bsqloh6cx7yk0" path="res://assets/Environments/kenney_space-kit/Models/FBX format/barrel.fbx" id="1_es4w3"]
+[ext_resource type="PackedScene" uid="uid://dv5t7a3qriwnf" path="res://assets/Environments/kenney_space-kit/Models/FBX format/barrels.fbx" id="2_ktm8j"]
+[ext_resource type="PackedScene" uid="uid://dt31qci2p0r1v" path="res://assets/Environments/kenney_space-kit/Models/FBX format/bones.fbx" id="3_kgo7e"]
+[ext_resource type="PackedScene" uid="uid://daisou845t83h" path="res://assets/Environments/kenney_space-kit/Models/FBX format/crater.fbx" id="4_rhrdd"]
+[ext_resource type="PackedScene" uid="uid://br3q480unlsvw" path="res://assets/Environments/kenney_space-kit/Models/FBX format/craterLarge.fbx" id="5_24ojr"]
+[ext_resource type="PackedScene" uid="uid://c5ronx23u6afs" path="res://assets/Environments/kenney_space-kit/Models/FBX format/meteor.fbx" id="6_x4vwm"]
+[ext_resource type="PackedScene" uid="uid://cyjmh54w48w3u" path="res://assets/Environments/kenney_space-kit/Models/FBX format/meteor_detailed.fbx" id="7_yc6km"]
+[ext_resource type="PackedScene" uid="uid://bcxenlq5n6tlm" path="res://assets/Environments/kenney_space-kit/Models/FBX format/meteor_half.fbx" id="8_prnvb"]
+[ext_resource type="PackedScene" uid="uid://crinvlb4acqx3" path="res://assets/Environments/kenney_space-kit/Models/FBX format/rock.fbx" id="9_swluu"]
+[ext_resource type="PackedScene" uid="uid://dfmybr1mrkvmf" path="res://assets/Environments/kenney_space-kit/Models/FBX format/rocks_smallA.fbx" id="10_folj2"]
+[ext_resource type="PackedScene" uid="uid://dhuocl7jldumc" path="res://assets/Environments/kenney_space-kit/Models/FBX format/rocks_smallB.fbx" id="11_nr8el"]
+[ext_resource type="PackedScene" uid="uid://by43k7nd1pjsv" path="res://assets/Environments/kenney_space-kit/Models/FBX format/rock_crystals.fbx" id="12_dglci"]
+[ext_resource type="PackedScene" uid="uid://b4cn2bju1pxnb" path="res://assets/Environments/kenney_space-kit/Models/FBX format/rock_crystalsLargeA.fbx" id="13_igjay"]
+[ext_resource type="PackedScene" uid="uid://dj8ey8ctd0xt4" path="res://assets/Environments/kenney_space-kit/Models/FBX format/rock_crystalsLargeB.fbx" id="14_6quvh"]
+[ext_resource type="PackedScene" uid="uid://bco3nl4licwxt" path="res://assets/Environments/kenney_space-kit/Models/FBX format/rock_largeA.fbx" id="15_ih2f0"]
+[ext_resource type="PackedScene" uid="uid://desjhxaeauxql" path="res://assets/Environments/kenney_space-kit/Models/FBX format/rock_largeB.fbx" id="16_hvl1o"]
+[ext_resource type="PackedScene" uid="uid://dune7w8eqb40g" path="res://assets/Environments/kenney_space-kit/Models/FBX format/rover.fbx" id="17_2rics"]
+[ext_resource type="PackedScene" uid="uid://dbv44s8fd154f" path="res://assets/Environments/kenney_space-kit/Models/FBX format/satelliteDish.fbx" id="18_n0jht"]
+[ext_resource type="PackedScene" uid="uid://bx2hci0jrwsfc" path="res://assets/Environments/kenney_space-kit/Models/FBX format/satelliteDish_detailed.fbx" id="19_nb3qq"]
+[ext_resource type="PackedScene" uid="uid://ka1vc305oekb" path="res://assets/Environments/kenney_space-kit/Models/FBX format/satelliteDish_large.fbx" id="20_yqsw5"]
+[ext_resource type="PackedScene" uid="uid://cp41fe36ar8qa" path="res://assets/Environments/kenney_space-kit/Models/FBX format/terrain.fbx" id="21_al3aj"]
+[ext_resource type="PackedScene" uid="uid://dbfbm8pqei6cv" path="res://assets/Environments/kenney_space-kit/Models/FBX format/terrain_side_cliff.tscn" id="22_ogtsu"]
+[ext_resource type="PackedScene" uid="uid://bjbf8s38mmbd7" path="res://assets/Environments/kenney_space-kit/Models/FBX format/terrain_ramp.fbx" id="23_0bbl4"]
+[ext_resource type="PackedScene" uid="uid://c8ii8rmw2h2k8" path="res://assets/Environments/kenney_space-kit/Models/FBX format/terrain_rampLarge.fbx" id="24_qj40v"]
+[ext_resource type="PackedScene" uid="uid://dmyhmo8gla2su" path="res://assets/Environments/kenney_space-kit/Models/FBX format/terrain_rampLarge_detailed.fbx" id="25_ctf6k"]
+[ext_resource type="PackedScene" uid="uid://cper3tp8fpfly" path="res://assets/Environments/kenney_space-kit/Models/FBX format/terrain_road_split.tscn" id="26_a6bd1"]
+[ext_resource type="PackedScene" uid="uid://csg7goofisw6s" path="res://assets/Environments/kenney_space-kit/Models/FBX format/terrain_roadCross.fbx" id="27_2xj70"]
+[ext_resource type="PackedScene" uid="uid://cdk1moxe4n5ci" path="res://assets/Environments/kenney_space-kit/Models/FBX format/terrain_roadEnd.fbx" id="28_rdpd6"]
+[ext_resource type="PackedScene" uid="uid://xthlywvn03ld" path="res://assets/Environments/kenney_space-kit/Models/FBX format/terrain_roadStraight.fbx" id="29_l4j0n"]
+[ext_resource type="PackedScene" uid="uid://csk6gfrfruqd" path="res://assets/Environments/kenney_space-kit/Models/FBX format/terrain_side.fbx" id="30_1hsir"]
+[ext_resource type="PackedScene" uid="uid://tdkeyvuujjeq" path="res://assets/Environments/kenney_space-kit/Models/FBX format/terrain_sideEnd.fbx" id="31_r400u"]
+[ext_resource type="PackedScene" uid="uid://b1odufr0nxvja" path="res://assets/Environments/kenney_space-kit/Models/FBX format/terrain_side_corner_inner.tscn" id="32_jm6qu"]
+[ext_resource type="PackedScene" uid="uid://dl5qeqm22k6m2" path="res://assets/Environments/kenney_space-kit/Models/FBX format/terrain_side_corner.tscn" id="33_0yyet"]
+[ext_resource type="PackedScene" uid="uid://bkvo540ereuwp" path="res://assets/Environments/kenney_space-kit/Models/FBX format/terrain_road_corner.tscn" id="34_8thep"]
+
+[node name="DesertTiles" type="Node3D" unique_id=1112717935]
+
+[node name="barrel" parent="." unique_id=1889079912 instance=ExtResource("1_es4w3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="barrels" parent="." unique_id=1674212501 instance=ExtResource("2_ktm8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+
+[node name="bones" parent="." unique_id=2111369543 instance=ExtResource("3_kgo7e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+
+[node name="crater" parent="." unique_id=1638449842 instance=ExtResource("4_rhrdd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 4)
+
+[node name="craterLarge" parent="." unique_id=1476308905 instance=ExtResource("5_24ojr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)
+
+[node name="meteor" parent="." unique_id=538487039 instance=ExtResource("6_x4vwm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
+
+[node name="meteor_detailed" parent="." unique_id=1839736242 instance=ExtResource("7_yc6km")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="meteor_half" parent="." unique_id=1614645793 instance=ExtResource("8_prnvb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+
+[node name="rock" parent="." unique_id=666080014 instance=ExtResource("9_swluu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1)
+
+[node name="rocks_smallA" parent="." unique_id=1599358887 instance=ExtResource("10_folj2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
+
+[node name="rocks_smallB" parent="." unique_id=1861117809 instance=ExtResource("11_nr8el")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
+
+[node name="rock_crystals" parent="." unique_id=2145744888 instance=ExtResource("12_dglci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1)
+
+[node name="rock_crystalsLargeA" parent="." unique_id=817566381 instance=ExtResource("13_igjay")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2)
+
+[node name="rock_crystalsLargeB" parent="." unique_id=1368084726 instance=ExtResource("14_6quvh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3)
+
+[node name="rock_largeA" parent="." unique_id=737858402 instance=ExtResource("15_ih2f0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="rock_largeB" parent="." unique_id=281702580 instance=ExtResource("16_hvl1o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="rover" parent="." unique_id=424155083 instance=ExtResource("17_2rics")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 2)
+
+[node name="satelliteDish" parent="." unique_id=266386124 instance=ExtResource("18_n0jht")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 1)
+
+[node name="satelliteDish_detailed" parent="." unique_id=1157010243 instance=ExtResource("19_nb3qq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="satelliteDish_large" parent="." unique_id=1316715024 instance=ExtResource("20_yqsw5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 3)
+
+[node name="terrain" parent="." unique_id=1308532918 instance=ExtResource("21_al3aj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
+
+[node name="terrain_sideCliff" parent="." unique_id=1324848823 instance=ExtResource("22_ogtsu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="terrain_ramp" parent="." unique_id=465388296 instance=ExtResource("23_0bbl4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="terrain_rampLarge" parent="." unique_id=1751349750 instance=ExtResource("24_qj40v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="terrain_rampLarge_detailed" parent="." unique_id=1242255193 instance=ExtResource("25_ctf6k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="terrain_roadSplit" parent="." unique_id=1095000633 instance=ExtResource("26_a6bd1")]
+
+[node name="terrain_roadCross" parent="." unique_id=919324379 instance=ExtResource("27_2xj70")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="terrain_roadEnd" parent="." unique_id=993966492 instance=ExtResource("28_rdpd6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="terrain_roadStraight" parent="." unique_id=1093109669 instance=ExtResource("29_l4j0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
+
+[node name="terrain_side" parent="." unique_id=12721308 instance=ExtResource("30_1hsir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="terrain_sideEnd" parent="." unique_id=277963930 instance=ExtResource("31_r400u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+
+[node name="terrain_sideCornerInner" parent="." unique_id=808845216 instance=ExtResource("32_jm6qu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="terrain_sideCorner" parent="." unique_id=241123429 instance=ExtResource("33_0yyet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="terrain_roadCorner" parent="." unique_id=239449490 instance=ExtResource("34_8thep")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)

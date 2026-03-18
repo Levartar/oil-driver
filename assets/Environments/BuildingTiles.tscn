@@ -1,0 +1,328 @@
+[gd_scene format=3 uid="uid://cwi3nmv1h8qt8"]
+
+[ext_resource type="PackedScene" uid="uid://c0e1mcth6t65y" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-block.glb" id="1_fwpod"]
+[ext_resource type="PackedScene" uid="uid://ca0o1lbvr4a14" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-corner-bottom.glb" id="2_eula0"]
+[ext_resource type="PackedScene" uid="uid://b435efmu800he" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-corner-top.glb" id="3_ogxeb"]
+[ext_resource type="PackedScene" uid="uid://8uprdutel1vu" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-corner-window-middle.glb" id="4_s3hdp"]
+[ext_resource type="PackedScene" uid="uid://b0x6egpfibkme" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-corner-window-narrow.glb" id="5_f1lng"]
+[ext_resource type="PackedScene" uid="uid://d2vr40ryn7y1b" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-corner-window-sill.glb" id="6_b01uh"]
+[ext_resource type="PackedScene" uid="uid://cih0xmsj72g8x" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-corner-window-top-round.glb" id="7_xvcqk"]
+[ext_resource type="PackedScene" uid="uid://dmrjg5d5qn22m" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-corner-window-top-square.glb" id="8_20rvd"]
+[ext_resource type="PackedScene" uid="uid://dbvsewdtcrtkg" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-corner-window.glb" id="9_yx45o"]
+[ext_resource type="PackedScene" uid="uid://bhqtg8a1a8l4u" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-corner.glb" id="10_xv1t5"]
+[ext_resource type="PackedScene" uid="uid://dp6g1qjbt8ix2" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-door-window-narrow.glb" id="11_lhvp1"]
+[ext_resource type="PackedScene" uid="uid://cc3klt7cj6ev2" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-door-window.glb" id="12_h0e6h"]
+[ext_resource type="PackedScene" uid="uid://ceerrxqccyfeq" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-door.glb" id="13_wdajc"]
+[ext_resource type="PackedScene" uid="uid://cov57kafdt3h1" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-edges-door.glb" id="14_rqxyp"]
+[ext_resource type="PackedScene" uid="uid://bo2kwjfgdujiw" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-sample-house-a.glb" id="15_m1vat"]
+[ext_resource type="PackedScene" uid="uid://cacnm1icnnsb4" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-sample-house-b.glb" id="16_gthvj"]
+[ext_resource type="PackedScene" uid="uid://bdtsinidmcbl4" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-sample-house-c.glb" id="17_wxob0"]
+[ext_resource type="PackedScene" uid="uid://b53ykvuvk6rl1" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-sample-tower-a.glb" id="18_hjxjr"]
+[ext_resource type="PackedScene" uid="uid://c0csb87vwx3bi" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-sample-tower-b.glb" id="19_cacgf"]
+[ext_resource type="PackedScene" uid="uid://caouesntpjss1" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-sample-tower-c.glb" id="20_ra3bb"]
+[ext_resource type="PackedScene" uid="uid://dr5opn07kqnqn" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-sample-tower-d.glb" id="21_b4pym"]
+[ext_resource type="PackedScene" uid="uid://b4q6x245tfhid" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-steps-narrow-windows-round.glb" id="22_ju1g3"]
+[ext_resource type="PackedScene" uid="uid://cm6eqk6dymdjm" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-steps-narrow-windows.glb" id="23_341hi"]
+[ext_resource type="PackedScene" uid="uid://wpx71fdc3owq" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-steps-narrow.glb" id="24_xo2ds"]
+[ext_resource type="PackedScene" uid="uid://d05vgcd2coptl" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-steps-wide.glb" id="25_uulag"]
+[ext_resource type="PackedScene" uid="uid://dgvlj87drncct" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-window-awnings.glb" id="26_pmbbb"]
+[ext_resource type="PackedScene" uid="uid://3qs8n8xrtt2q" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-window-balcony.glb" id="27_tm5rn"]
+[ext_resource type="PackedScene" uid="uid://bgfv4x64wwvd5" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-window-door-window-round.glb" id="28_ntkn5"]
+[ext_resource type="PackedScene" uid="uid://buevvpfobhf1x" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-window-door-window.glb" id="29_3jx7s"]
+[ext_resource type="PackedScene" uid="uid://ciphxp48c45jf" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-window-large-left.glb" id="30_26sy2"]
+[ext_resource type="PackedScene" uid="uid://btgx0opojnfvo" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-window-large-middle.glb" id="31_qx8vq"]
+[ext_resource type="PackedScene" uid="uid://ducl4aoxpusqc" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-window-large-right.glb" id="32_0064r"]
+[ext_resource type="PackedScene" uid="uid://50joqr2kbgq5" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-window-large.glb" id="33_ybi4c"]
+[ext_resource type="PackedScene" uid="uid://cvn7yaiod3pju" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-window-left-sill.glb" id="34_74bhg"]
+[ext_resource type="PackedScene" uid="uid://bn8nhl0bcm302" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-window-left.glb" id="35_8k7uj"]
+[ext_resource type="PackedScene" uid="uid://qk0kep3m5wwv" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-window-right-sill.glb" id="36_xmkvi"]
+[ext_resource type="PackedScene" uid="uid://dfh2l7twcknem" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-window-right.glb" id="37_taygv"]
+[ext_resource type="PackedScene" uid="uid://d0l4jtc8n326n" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-window-sill.glb" id="38_ehask"]
+[ext_resource type="PackedScene" uid="uid://cok41pimuy8ka" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-window-wide-sill.glb" id="39_w0qod"]
+[ext_resource type="PackedScene" uid="uid://uw5qgxldn8k7" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-window-wide.glb" id="40_km35w"]
+[ext_resource type="PackedScene" uid="uid://5x7c44kru0ah" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-window.glb" id="41_66616"]
+[ext_resource type="PackedScene" uid="uid://clw4ma2kvkven" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-windows-high-middle.glb" id="42_ae1qu"]
+[ext_resource type="PackedScene" uid="uid://b464yuopfdylx" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-windows-high-top-round.glb" id="43_2u87v"]
+[ext_resource type="PackedScene" uid="uid://bkr3eyg2fdd2q" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-windows-high-top-square.glb" id="44_roplx"]
+[ext_resource type="PackedScene" uid="uid://dxfb4farbd8oj" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-windows-round.glb" id="45_5plp4"]
+[ext_resource type="PackedScene" uid="uid://brjh3etixqip1" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-windows-sills-round.glb" id="46_lwwxt"]
+[ext_resource type="PackedScene" uid="uid://gahaobotvsow" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-windows-sills.glb" id="47_hdbiq"]
+[ext_resource type="PackedScene" uid="uid://da26b8oy011ns" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-windows.glb" id="48_qo186"]
+[ext_resource type="PackedScene" uid="uid://lo3rxuxis1fm" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/detail-ac-a.glb" id="49_iup1y"]
+[ext_resource type="PackedScene" uid="uid://dqyv32mcc512h" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/detail-ac-b.glb" id="50_hm1cd"]
+[ext_resource type="PackedScene" uid="uid://dw17qkhm5somn" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/door-brown-glass.glb" id="51_bfq0j"]
+[ext_resource type="PackedScene" uid="uid://d2msbf1a25mqo" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/door-brown-window.glb" id="52_ysyva"]
+[ext_resource type="PackedScene" uid="uid://b2yt86k25bj7w" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/door-brown.glb" id="53_bhun0"]
+[ext_resource type="PackedScene" uid="uid://82invcisp7fh" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/door-white-glass.glb" id="54_lh7jm"]
+[ext_resource type="PackedScene" uid="uid://rslch41wdsnp" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/door-white-window.glb" id="55_maf14"]
+[ext_resource type="PackedScene" uid="uid://drim6b4rttbr2" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/door-white.glb" id="56_8oadj"]
+[ext_resource type="PackedScene" uid="uid://r2v2x3mvpj5i" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-awning-a.glb" id="57_8gvpq"]
+[ext_resource type="PackedScene" uid="uid://dmu2nwm4noq33" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-awning-b.glb" id="58_ple2j"]
+[ext_resource type="PackedScene" uid="uid://d0fpi56qws3hr" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-awning-c.glb" id="59_e42mn"]
+[ext_resource type="PackedScene" uid="uid://b6llmmspl0p2t" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-border-center-corner.glb" id="60_tt2qo"]
+[ext_resource type="PackedScene" uid="uid://yn36bwsmxlx7" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-border-center.glb" id="61_iskq7"]
+[ext_resource type="PackedScene" uid="uid://dq7qsxjv6uxw2" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-border-corner-slanted-passage.glb" id="62_o6e3q"]
+[ext_resource type="PackedScene" uid="uid://03ngss7m60jv" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-border-corner-slanted.glb" id="63_gkwup"]
+[ext_resource type="PackedScene" uid="uid://ke1sqn7k2q7w" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-border-corner.glb" id="64_i3yy3"]
+[ext_resource type="PackedScene" uid="uid://betcpaprrax3y" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-border-end.glb" id="65_v3lgo"]
+[ext_resource type="PackedScene" uid="uid://dg0plnioffup2" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-border-side.glb" id="66_lrns8"]
+[ext_resource type="PackedScene" uid="uid://cqwpbcm3ub5rq" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-border-straight.glb" id="67_xgrik"]
+[ext_resource type="PackedScene" uid="uid://c1y0hcjk0wqt0" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-center.glb" id="68_qr0w0"]
+[ext_resource type="PackedScene" uid="uid://cqr4mkfj8fe2d" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-corner-high.glb" id="69_g0fuh"]
+[ext_resource type="PackedScene" uid="uid://bbj43oqbhbyie" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-corner.glb" id="70_wlq02"]
+[ext_resource type="PackedScene" uid="uid://ducp07cq5p446" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-detail-a.glb" id="71_c11pk"]
+[ext_resource type="PackedScene" uid="uid://bhsd05qeqvybk" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-detail-b.glb" id="72_pq2i5"]
+[ext_resource type="PackedScene" uid="uid://bwwwxm03hskuj" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-detail-c.glb" id="73_un36w"]
+[ext_resource type="PackedScene" uid="uid://b5ce6sqli4mwv" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-detail-d.glb" id="74_4tifi"]
+[ext_resource type="PackedScene" uid="uid://0odojy6wiom7" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-flat-top.glb" id="75_y3f7i"]
+[ext_resource type="PackedScene" uid="uid://bvbbbvro4pa74" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-gable-corner.glb" id="76_1wm22"]
+[ext_resource type="PackedScene" uid="uid://c4oxheyfoeryf" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-gable-end.glb" id="77_yx6st"]
+[ext_resource type="PackedScene" uid="uid://bkvylar17m2sd" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-gable.glb" id="78_17hsh"]
+[ext_resource type="PackedScene" uid="uid://bgt0wpos763cu" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-slanted-corner-a.glb" id="79_1u33b"]
+[ext_resource type="PackedScene" uid="uid://bf5p6ohj45jhw" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-slanted-corner-b.glb" id="80_i73yg"]
+[ext_resource type="PackedScene" uid="uid://b0anc0erjt0fy" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-slanted-corner-c.glb" id="81_df2l2"]
+[ext_resource type="PackedScene" uid="uid://pwve180sj5wc" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-slanted-corner-inner.glb" id="82_oa7bp"]
+[ext_resource type="PackedScene" uid="uid://cb1ubjdd3aomo" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-slanted-detail.glb" id="83_irelq"]
+[ext_resource type="PackedScene" uid="uid://u1uuyhx32e1o" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-slanted-flat.glb" id="84_xn5xx"]
+[ext_resource type="PackedScene" uid="uid://5ktd7aqt61re" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-slanted-window.glb" id="85_ogh8m"]
+[ext_resource type="PackedScene" uid="uid://lu87fbw3yn2u" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/roof-slanted.glb" id="86_dp7si"]
+[ext_resource type="PackedScene" uid="uid://msgkeclmjw6t" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-brown-detailed.glb" id="87_aobi2"]
+[ext_resource type="PackedScene" uid="uid://cnk68wm6prrmt" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-brown-large.glb" id="88_is2mf"]
+[ext_resource type="PackedScene" uid="uid://ex5hk6xjd2bs" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-brown-narrow.glb" id="89_4l7h7"]
+[ext_resource type="PackedScene" uid="uid://5725rkfbe2e1" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-brown-round-low.glb" id="90_y2lcd"]
+[ext_resource type="PackedScene" uid="uid://c2jrm4hvebany" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-brown-round-middle.glb" id="91_fp8w2"]
+[ext_resource type="PackedScene" uid="uid://cuu63yf8gkosl" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-brown-round-narrow.glb" id="92_hpqbq"]
+[ext_resource type="PackedScene" uid="uid://bs35pghtq3d88" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-brown-round-top.glb" id="93_staif"]
+[ext_resource type="PackedScene" uid="uid://bvnf1011u148f" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-brown-round-wide.glb" id="94_077n3"]
+[ext_resource type="PackedScene" uid="uid://nxhpq0tc5m46" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-brown-tall.glb" id="95_i5esc"]
+[ext_resource type="PackedScene" uid="uid://cirm7ehto0stu" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-brown-wide.glb" id="96_a3g04"]
+[ext_resource type="PackedScene" uid="uid://dd8b8dt3ar4tt" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-brown.glb" id="97_adygp"]
+[ext_resource type="PackedScene" uid="uid://cu4nntr25ch4c" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-white-detailed.glb" id="98_bjekp"]
+[ext_resource type="PackedScene" uid="uid://7mjrjr5mvcwf" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-white-large.glb" id="99_lhk51"]
+[ext_resource type="PackedScene" uid="uid://nmng2h341rad" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-white-narrow.glb" id="100_qbqib"]
+[ext_resource type="PackedScene" uid="uid://d3r8blyw5a2ac" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-white-round-low.glb" id="101_j38q6"]
+[ext_resource type="PackedScene" uid="uid://ch60wohacsrro" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-white-round-middle.glb" id="102_jq46b"]
+[ext_resource type="PackedScene" uid="uid://vm2kjpskybga" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-white-round-narrow.glb" id="103_bg2c5"]
+[ext_resource type="PackedScene" uid="uid://cf8kmcicv8fmg" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-white-round-top.glb" id="104_uh0m4"]
+[ext_resource type="PackedScene" uid="uid://dco3tsw4k3v8u" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-white-round-wide.glb" id="105_p6es7"]
+[ext_resource type="PackedScene" uid="uid://r0f16v8xek6f" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-white-tall.glb" id="106_ragxm"]
+[ext_resource type="PackedScene" uid="uid://4nhada50cfi8" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-white-wide.glb" id="107_mjeme"]
+[ext_resource type="PackedScene" uid="uid://c7ocbpvudqnnw" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/window-white.glb" id="108_0tq28"]
+
+[node name="BuildingTiles" type="Node3D" unique_id=1844396281]
+
+[node name="building-block2" parent="." unique_id=1761077683 instance=ExtResource("1_fwpod")]
+
+[node name="building-corner-bottom2" parent="." unique_id=39359251 instance=ExtResource("2_eula0")]
+
+[node name="building-corner-top2" parent="." unique_id=402219004 instance=ExtResource("3_ogxeb")]
+
+[node name="building-corner-window-middle2" parent="." unique_id=399264696 instance=ExtResource("4_s3hdp")]
+
+[node name="building-corner-window-narrow2" parent="." unique_id=1129654914 instance=ExtResource("5_f1lng")]
+
+[node name="building-corner-window-sill2" parent="." unique_id=1186183899 instance=ExtResource("6_b01uh")]
+
+[node name="building-corner-window-top-round2" parent="." unique_id=561573941 instance=ExtResource("7_xvcqk")]
+
+[node name="building-corner-window-top-square2" parent="." unique_id=427826404 instance=ExtResource("8_20rvd")]
+
+[node name="building-corner-window2" parent="." unique_id=877342114 instance=ExtResource("9_yx45o")]
+
+[node name="building-corner2" parent="." unique_id=1863510542 instance=ExtResource("10_xv1t5")]
+
+[node name="building-door-window-narrow2" parent="." unique_id=231016496 instance=ExtResource("11_lhvp1")]
+
+[node name="building-door-window2" parent="." unique_id=1907342486 instance=ExtResource("12_h0e6h")]
+
+[node name="building-door2" parent="." unique_id=117025956 instance=ExtResource("13_wdajc")]
+
+[node name="building-edges-door2" parent="." unique_id=733514 instance=ExtResource("14_rqxyp")]
+
+[node name="building-sample-house-a2" parent="." unique_id=2010908936 instance=ExtResource("15_m1vat")]
+
+[node name="building-sample-house-b2" parent="." unique_id=906897822 instance=ExtResource("16_gthvj")]
+
+[node name="building-sample-house-c2" parent="." unique_id=1067648543 instance=ExtResource("17_wxob0")]
+
+[node name="building-sample-tower-a2" parent="." unique_id=661596048 instance=ExtResource("18_hjxjr")]
+
+[node name="building-sample-tower-b2" parent="." unique_id=317392306 instance=ExtResource("19_cacgf")]
+
+[node name="building-sample-tower-c2" parent="." unique_id=853401865 instance=ExtResource("20_ra3bb")]
+
+[node name="building-sample-tower-d2" parent="." unique_id=1005677176 instance=ExtResource("21_b4pym")]
+
+[node name="building-steps-narrow-windows-round2" parent="." unique_id=1645223144 instance=ExtResource("22_ju1g3")]
+
+[node name="building-steps-narrow-windows2" parent="." unique_id=27242670 instance=ExtResource("23_341hi")]
+
+[node name="building-steps-narrow2" parent="." unique_id=697621465 instance=ExtResource("24_xo2ds")]
+
+[node name="building-steps-wide2" parent="." unique_id=807292931 instance=ExtResource("25_uulag")]
+
+[node name="building-window-awnings2" parent="." unique_id=2098142794 instance=ExtResource("26_pmbbb")]
+
+[node name="building-window-balcony2" parent="." unique_id=1305455776 instance=ExtResource("27_tm5rn")]
+
+[node name="building-window-door-window-round2" parent="." unique_id=1069727103 instance=ExtResource("28_ntkn5")]
+
+[node name="building-window-door-window2" parent="." unique_id=413310546 instance=ExtResource("29_3jx7s")]
+
+[node name="building-window-large-left2" parent="." unique_id=1083705155 instance=ExtResource("30_26sy2")]
+
+[node name="building-window-large-middle2" parent="." unique_id=1424664612 instance=ExtResource("31_qx8vq")]
+
+[node name="building-window-large-right2" parent="." unique_id=1596771604 instance=ExtResource("32_0064r")]
+
+[node name="building-window-large2" parent="." unique_id=1246923623 instance=ExtResource("33_ybi4c")]
+
+[node name="building-window-left-sill2" parent="." unique_id=907554675 instance=ExtResource("34_74bhg")]
+
+[node name="building-window-left2" parent="." unique_id=1194259661 instance=ExtResource("35_8k7uj")]
+
+[node name="building-window-right-sill2" parent="." unique_id=1191042383 instance=ExtResource("36_xmkvi")]
+
+[node name="building-window-right2" parent="." unique_id=1550695919 instance=ExtResource("37_taygv")]
+
+[node name="building-window-sill2" parent="." unique_id=612004927 instance=ExtResource("38_ehask")]
+
+[node name="building-window-wide-sill2" parent="." unique_id=1705491682 instance=ExtResource("39_w0qod")]
+
+[node name="building-window-wide2" parent="." unique_id=53348365 instance=ExtResource("40_km35w")]
+
+[node name="building-window2" parent="." unique_id=329215753 instance=ExtResource("41_66616")]
+
+[node name="building-windows-high-middle2" parent="." unique_id=1263840690 instance=ExtResource("42_ae1qu")]
+
+[node name="building-windows-high-top-round2" parent="." unique_id=1049970100 instance=ExtResource("43_2u87v")]
+
+[node name="building-windows-high-top-square2" parent="." unique_id=952461624 instance=ExtResource("44_roplx")]
+
+[node name="building-windows-round2" parent="." unique_id=131106739 instance=ExtResource("45_5plp4")]
+
+[node name="building-windows-sills-round2" parent="." unique_id=674045282 instance=ExtResource("46_lwwxt")]
+
+[node name="building-windows-sills2" parent="." unique_id=2026604030 instance=ExtResource("47_hdbiq")]
+
+[node name="building-windows2" parent="." unique_id=1688415918 instance=ExtResource("48_qo186")]
+
+[node name="detail-ac-a2" parent="." unique_id=661653272 instance=ExtResource("49_iup1y")]
+
+[node name="detail-ac-b2" parent="." unique_id=622241543 instance=ExtResource("50_hm1cd")]
+
+[node name="door-brown-glass2" parent="." unique_id=1688257537 instance=ExtResource("51_bfq0j")]
+
+[node name="door-brown-window2" parent="." unique_id=1033977712 instance=ExtResource("52_ysyva")]
+
+[node name="door-brown2" parent="." unique_id=1466969447 instance=ExtResource("53_bhun0")]
+
+[node name="door-white-glass2" parent="." unique_id=129177855 instance=ExtResource("54_lh7jm")]
+
+[node name="door-white-window2" parent="." unique_id=400492262 instance=ExtResource("55_maf14")]
+
+[node name="door-white2" parent="." unique_id=360550214 instance=ExtResource("56_8oadj")]
+
+[node name="roof-flat-awning-a2" parent="." unique_id=1803453403 instance=ExtResource("57_8gvpq")]
+
+[node name="roof-flat-awning-b2" parent="." unique_id=349612166 instance=ExtResource("58_ple2j")]
+
+[node name="roof-flat-awning-c2" parent="." unique_id=445492564 instance=ExtResource("59_e42mn")]
+
+[node name="roof-flat-border-center-corner2" parent="." unique_id=2009679928 instance=ExtResource("60_tt2qo")]
+
+[node name="roof-flat-border-center2" parent="." unique_id=54083866 instance=ExtResource("61_iskq7")]
+
+[node name="roof-flat-border-corner-slanted-passage2" parent="." unique_id=1225558078 instance=ExtResource("62_o6e3q")]
+
+[node name="roof-flat-border-corner-slanted2" parent="." unique_id=1510534969 instance=ExtResource("63_gkwup")]
+
+[node name="roof-flat-border-corner2" parent="." unique_id=961853300 instance=ExtResource("64_i3yy3")]
+
+[node name="roof-flat-border-end2" parent="." unique_id=854033105 instance=ExtResource("65_v3lgo")]
+
+[node name="roof-flat-border-side2" parent="." unique_id=2072024554 instance=ExtResource("66_lrns8")]
+
+[node name="roof-flat-border-straight2" parent="." unique_id=1436262486 instance=ExtResource("67_xgrik")]
+
+[node name="roof-flat-center2" parent="." unique_id=674725656 instance=ExtResource("68_qr0w0")]
+
+[node name="roof-flat-corner-high2" parent="." unique_id=1188115663 instance=ExtResource("69_g0fuh")]
+
+[node name="roof-flat-corner2" parent="." unique_id=2105766898 instance=ExtResource("70_wlq02")]
+
+[node name="roof-flat-detail-a2" parent="." unique_id=169910535 instance=ExtResource("71_c11pk")]
+
+[node name="roof-flat-detail-b2" parent="." unique_id=1651099680 instance=ExtResource("72_pq2i5")]
+
+[node name="roof-flat-detail-c2" parent="." unique_id=38571858 instance=ExtResource("73_un36w")]
+
+[node name="roof-flat-detail-d2" parent="." unique_id=2129648433 instance=ExtResource("74_4tifi")]
+
+[node name="roof-flat-top2" parent="." unique_id=1179713780 instance=ExtResource("75_y3f7i")]
+
+[node name="roof-gable-corner2" parent="." unique_id=122895299 instance=ExtResource("76_1wm22")]
+
+[node name="roof-gable-end2" parent="." unique_id=1108330896 instance=ExtResource("77_yx6st")]
+
+[node name="roof-gable2" parent="." unique_id=748174962 instance=ExtResource("78_17hsh")]
+
+[node name="roof-slanted-corner-a2" parent="." unique_id=1801992621 instance=ExtResource("79_1u33b")]
+
+[node name="roof-slanted-corner-b2" parent="." unique_id=71057562 instance=ExtResource("80_i73yg")]
+
+[node name="roof-slanted-corner-c2" parent="." unique_id=208265877 instance=ExtResource("81_df2l2")]
+
+[node name="roof-slanted-corner-inner2" parent="." unique_id=502563617 instance=ExtResource("82_oa7bp")]
+
+[node name="roof-slanted-detail2" parent="." unique_id=200295358 instance=ExtResource("83_irelq")]
+
+[node name="roof-slanted-flat2" parent="." unique_id=421908279 instance=ExtResource("84_xn5xx")]
+
+[node name="roof-slanted-window2" parent="." unique_id=925565185 instance=ExtResource("85_ogh8m")]
+
+[node name="roof-slanted2" parent="." unique_id=2142422639 instance=ExtResource("86_dp7si")]
+
+[node name="window-brown-detailed2" parent="." unique_id=1167212618 instance=ExtResource("87_aobi2")]
+
+[node name="window-brown-large2" parent="." unique_id=2041287456 instance=ExtResource("88_is2mf")]
+
+[node name="window-brown-narrow2" parent="." unique_id=2002756355 instance=ExtResource("89_4l7h7")]
+
+[node name="window-brown-round-low2" parent="." unique_id=1694361401 instance=ExtResource("90_y2lcd")]
+
+[node name="window-brown-round-middle2" parent="." unique_id=2010828273 instance=ExtResource("91_fp8w2")]
+
+[node name="window-brown-round-narrow2" parent="." unique_id=907469314 instance=ExtResource("92_hpqbq")]
+
+[node name="window-brown-round-top2" parent="." unique_id=1396987461 instance=ExtResource("93_staif")]
+
+[node name="window-brown-round-wide2" parent="." unique_id=2022018754 instance=ExtResource("94_077n3")]
+
+[node name="window-brown-tall2" parent="." unique_id=1155398982 instance=ExtResource("95_i5esc")]
+
+[node name="window-brown-wide2" parent="." unique_id=1698399333 instance=ExtResource("96_a3g04")]
+
+[node name="window-brown2" parent="." unique_id=340161895 instance=ExtResource("97_adygp")]
+
+[node name="window-white-detailed2" parent="." unique_id=453204741 instance=ExtResource("98_bjekp")]
+
+[node name="window-white-large2" parent="." unique_id=1449539331 instance=ExtResource("99_lhk51")]
+
+[node name="window-white-narrow2" parent="." unique_id=98656309 instance=ExtResource("100_qbqib")]
+
+[node name="window-white-round-low2" parent="." unique_id=1249315693 instance=ExtResource("101_j38q6")]
+
+[node name="window-white-round-middle2" parent="." unique_id=23512422 instance=ExtResource("102_jq46b")]
+
+[node name="window-white-round-narrow2" parent="." unique_id=361789280 instance=ExtResource("103_bg2c5")]
+
+[node name="window-white-round-top2" parent="." unique_id=1406883401 instance=ExtResource("104_uh0m4")]
+
+[node name="window-white-round-wide2" parent="." unique_id=35580443 instance=ExtResource("105_p6es7")]
+
+[node name="window-white-tall2" parent="." unique_id=2079871668 instance=ExtResource("106_ragxm")]
+
+[node name="window-white-wide2" parent="." unique_id=430533654 instance=ExtResource("107_mjeme")]
+
+[node name="window-white2" parent="." unique_id=435992396 instance=ExtResource("108_0tq28")]

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://h855o4c13lpf"
+path="res://.godot/imported/platform_cornerOpen.obj-7fc98da8d48815aaad3de3140841ff61.mesh"
+
+[deps]
+
+files=["res://.godot/imported/platform_cornerOpen.obj-7fc98da8d48815aaad3de3140841ff61.mesh"]
+
+source_file="res://assets/Environments/kenney_space-kit/Models/OBJ format/platform_cornerOpen.obj"
+dest_files=["res://.godot/imported/platform_cornerOpen.obj-7fc98da8d48815aaad3de3140841ff61.mesh", "res://.godot/imported/platform_cornerOpen.obj-7fc98da8d48815aaad3de3140841ff61.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

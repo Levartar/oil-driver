@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bkvo540ereuwp"]
+
+[ext_resource type="PackedScene" uid="uid://cs3hryaxqdsr4" path="res://assets/Environments/kenney_space-kit/Models/FBX format/terrain_roadCorner.fbx" id="1_ismmq"]
+
+[node name="terrain_roadCorner" unique_id=239449490 instance=ExtResource("1_ismmq")]
+
+[node name="terrain_roadCorner" parent="." index="0" unique_id=819571491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -2)
