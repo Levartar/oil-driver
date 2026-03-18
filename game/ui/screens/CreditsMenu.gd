@@ -25,4 +25,4 @@ func _apply_translations():
     if back_button: back_button.text = tr("BACK")
 
 func _on_back_pressed():
-    SceneLoader.goto_scene("res://ui/screens/MainMenu.tscn", false)
+    SceneLoader.goto_scene("res://game/ui/screens/MainMenu.tscn", false)

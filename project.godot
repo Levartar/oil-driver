@@ -16,7 +16,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="oil-driver"
 config/description="Saad has to drive oil in saudi arabia because the street of Hormuz got closed"
-run/main_scene="res://ui/screens/Boot.tscn"
+run/main_scene="res://game/ui/screens/Boot.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 config/icon="uid://dy4vbo0gfyx7a"

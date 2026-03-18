@@ -15,8 +15,8 @@ func _on_setting_changed(setting_name: String, value):
         _apply_translations()
 
 func _apply_translations():
-    if title: title.text = tr("CONTROLS_SETTINGS")
+    if title: title.text = tr("AUDIO_SETTINGS")
     if back_button: back_button.text = tr("BACK")
 
 func _on_back_pressed():
-    SceneLoader.goto_scene("res://ui/screens/OptionsMenu.tscn", false)
+    SceneLoader.goto_scene("res://game/ui/screens/OptionsMenu.tscn", false)

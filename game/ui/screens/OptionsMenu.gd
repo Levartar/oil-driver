@@ -104,7 +104,7 @@ func _setup_navigation() -> void:
     back_button.focus_neighbor_top = language_option.get_path()
     back_button.focus_neighbor_bottom = audio_button.get_path()
 
-func _on_audio_pressed(): SceneLoader.goto_scene("res://ui/screens/AudioMenu.tscn", false)
-func _on_video_pressed(): SceneLoader.goto_scene("res://ui/screens/VideoMenu.tscn", false)
-func _on_controls_pressed(): SceneLoader.goto_scene("res://ui/screens/ControlsMenu.tscn", false)
-func _on_back_pressed(): SceneLoader.goto_scene("res://ui/screens/MainMenu.tscn", false)
+func _on_audio_pressed(): SceneLoader.goto_scene("res://game/ui/screens/AudioMenu.tscn", false)
+func _on_video_pressed(): SceneLoader.goto_scene("res://game/ui/screens/VideoMenu.tscn", false)
+func _on_controls_pressed(): SceneLoader.goto_scene("res://game/ui/screens/ControlsMenu.tscn", false)
+func _on_back_pressed(): SceneLoader.goto_scene("res://game/ui/screens/MainMenu.tscn", false)

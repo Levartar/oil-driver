@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3]
 
-[ext_resource type="Theme" path="res://ui/theme.tres" id="1"]
-[ext_resource type="Script" path="res://ui/screens/ControlsMenu.gd" id="2"]
+[ext_resource type="Theme" path="res://game/ui/theme.tres" id="1"]
+[ext_resource type="Script" uid="uid://craysl78ofile" path="res://game/ui/screens/CreditsMenu.gd" id="2"]
 
-[node name="ControlsMenu" type="Control"]
+[node name="CreditsMenu" type="Control"]
 script = ExtResource("2")
 layout_mode = 3
 anchors_preset = 15
@@ -23,7 +23,7 @@ alignment = 1
 
 [node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Controls"
+text = "Credits"
 horizontal_alignment = 1
 add_theme_font_size_override("font_size", 36)
 
@@ -31,13 +31,21 @@ add_theme_font_size_override("font_size", 36)
 layout_mode = 2
 custom_minimum_size = Vector2(0, 40)
 
-[node name="ControlsContent" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
+[node name="CreditsText" type="RichTextLabel" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+custom_minimum_size = Vector2(600, 300)
+bbcode_enabled = true
+text = "[center]
+[b]Game Development[/b]
+Your Name Here
 
-[node name="PlaceholderLabel" type="Label" parent="CenterContainer/VBoxContainer/ControlsContent"]
-layout_mode = 2
-text = "Control remapping will go here..."
-horizontal_alignment = 1
+[b]Special Thanks[/b]
+Godot Engine Community
+All the amazing developers who contribute to open source
+
+[b]Built with[/b]
+Godot Engine 4.4.1
+[/center]"
 
 [node name="Spacer2" type="Control" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2

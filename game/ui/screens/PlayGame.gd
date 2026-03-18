@@ -69,4 +69,4 @@ func _on_level_select_pressed():
 	print("Level select screen - implement your level selection here!")
 
 func _on_back_pressed():
-	SceneLoader.goto_scene("res://ui/screens/MainMenu.tscn", false)
+	SceneLoader.goto_scene("res://game/ui/screens/MainMenu.tscn", false)

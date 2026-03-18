@@ -9,8 +9,8 @@ var loading_screen_scene: PackedScene
 
 func _ready():
     current_scene = get_tree().current_scene
-    if ResourceLoader.exists("res://ui/screens/LoadingScreen.tscn"):
-        loading_screen_scene = load("res://ui/screens/LoadingScreen.tscn")
+    if ResourceLoader.exists("res://game/ui/screens/LoadingScreen.tscn"):
+        loading_screen_scene = load("res://game/ui/screens/LoadingScreen.tscn")
 
 func goto_scene(path: String, show_loading: bool = true) -> void:
     scene_loading_started.emit(path)

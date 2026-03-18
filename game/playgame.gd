@@ -24,6 +24,6 @@ func _unhandled_input(event):
 	if event.is_action_pressed("pause"):
 		var paused: bool = not get_tree().paused
 		get_tree().paused = paused
-		if paused and ResourceLoader.exists("res://ui/screens/PauseMenu.tscn"):
-			var pause_menu: Node = load("res://ui/screens/PauseMenu.tscn").instantiate()
+		if paused and ResourceLoader.exists("res://game/ui/screens/PauseMenu.tscn"):
+			var pause_menu: Node = load("res://game/ui/screens/PauseMenu.tscn").instantiate()
 			get_tree().root.add_child(pause_menu)

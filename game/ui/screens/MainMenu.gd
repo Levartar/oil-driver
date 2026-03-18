@@ -62,13 +62,13 @@ func _setup_navigation():
         play_button.focus_neighbor_top = exit_button.get_path()
 
 func _on_play_pressed():
-    SceneLoader.goto_scene("res://ui/screens/PlayGame.tscn", false)
+    SceneLoader.goto_scene("res://game/ui/screens/PlayGame.tscn", false)
 
 func _on_settings_pressed():
-    SceneLoader.goto_scene("res://ui/screens/OptionsMenu.tscn", false)
+    SceneLoader.goto_scene("res://game/ui/screens/OptionsMenu.tscn", false)
 
 func _on_credits_pressed():
-    SceneLoader.goto_scene("res://ui/screens/CreditsMenu.tscn", false)
+    SceneLoader.goto_scene("res://game/ui/screens/CreditsMenu.tscn", false)
 
 func _on_exit_pressed():
     get_tree().quit()

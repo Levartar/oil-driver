@@ -31,4 +31,4 @@ func _on_main_menu_pressed():
     # Remove the pause menu first
     queue_free()
     # Then go to main menu (this will also clean up the game scene)
-    SceneLoader.goto_scene("res://ui/screens/MainMenu.tscn", false)
+    SceneLoader.goto_scene("res://game/ui/screens/MainMenu.tscn", false)

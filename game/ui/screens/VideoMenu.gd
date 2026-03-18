@@ -61,4 +61,4 @@ func _on_loading_screen_toggled(pressed: bool):
     Settings.apply_settings()
 
 func _on_back_pressed():
-    SceneLoader.goto_scene("res://ui/screens/OptionsMenu.tscn", false)
+    SceneLoader.goto_scene("res://game/ui/screens/OptionsMenu.tscn", false)

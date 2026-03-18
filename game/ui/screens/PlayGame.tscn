@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3ybnnmj4ahid"]
 
-[ext_resource type="Theme" path="res://ui/theme.tres" id="1"]
-[ext_resource type="Script" uid="uid://e6an0xdhqgov" path="res://ui/screens/PlayGame.gd" id="2"]
+[ext_resource type="Theme" path="res://game/ui/theme.tres" id="1"]
+[ext_resource type="Script" uid="uid://e6an0xdhqgov" path="res://game/ui/screens/PlayGame.gd" id="2"]
 
 [node name="PlayGame" type="Control" unique_id=591929401]
 layout_mode = 3

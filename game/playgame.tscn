@@ -1,62 +1,58 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3 uid="uid://chl5g5d3byhnh"]
 
-[ext_resource type="Theme" path="res://ui/theme.tres" id="1"]
-[ext_resource type="Script" path="res://game/playgame.gd" id="2"]
+[ext_resource type="Theme" path="res://game/ui/theme.tres" id="1"]
+[ext_resource type="Script" uid="uid://dg03tmtsgjv23" path="res://game/playgame.gd" id="2"]
 
-[node name="PlayGame" type="Control"]
-script = ExtResource("2")
+[node name="PlayGame" type="Control" unique_id=1300317196]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("1")
+script = ExtResource("2")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1203055238]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.2, 0.3, 0.5, 1)
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=753095522]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=177233252]
 layout_mode = 2
 alignment = 1
 
-[node name="GameTitle" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="GameTitle" type="Label" parent="CenterContainer/VBoxContainer" unique_id=567362847]
+custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 text = "YOUR GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
-add_theme_font_size_override("font_size", 64)
-add_theme_color_override("font_color", Color(1, 1, 1, 1))
 
-[node name="Spacer1" type="Control" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
-custom_minimum_size = Vector2(0, 80)
-
-[node name="InstructionLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="InstructionLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=308375035]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 text = "Press ESC to Pause"
 horizontal_alignment = 1
 vertical_alignment = 1
-add_theme_font_size_override("font_size", 24)
-add_theme_color_override("font_color", Color(0.8, 0.8, 0.8, 1))
 
-[node name="Spacer2" type="Control" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
-custom_minimum_size = Vector2(0, 40)
-
-[node name="GameplayArea" type="Control" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
+[node name="GameplayArea" type="Control" parent="CenterContainer/VBoxContainer" unique_id=745415094]
 custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
 
-[node name="PlaceholderLabel" type="Label" parent="CenterContainer/VBoxContainer/GameplayArea"]
+[node name="PlaceholderLabel" type="Label" parent="CenterContainer/VBoxContainer/GameplayArea" unique_id=66209674]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -67,7 +63,8 @@ offset_left = -100.0
 offset_top = -12.0
 offset_right = 100.0
 offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Your game content goes here..."
 horizontal_alignment = 1
 vertical_alignment = 1
-add_theme_color_override("font_color", Color(0.7, 0.7, 0.7, 1))
