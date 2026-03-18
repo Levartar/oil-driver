@@ -18,3 +18,9 @@ func _process(delta: float) -> void:
 		engine_force = ENGINE_POWER * engine_multiplier
 	else:
 		engine_force = ENGINE_POWER * Input.get_axis("down","up")
+
+	# Camera Controller
+	$CameraController.position = lerp($CameraController.position, position, 0.05)
+	var current_quat = Quaternion.from_euler($CameraController.rotation)
+	var target_quat = Quaternion.from_euler(rotation)
+	$CameraController.rotation = current_quat.slerp(target_quat, 0.1).get_euler()
