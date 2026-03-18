@@ -116,6 +116,7 @@ func _ensure_default_input_actions():
         "ui_up": [KEY_UP],
         "ui_down": [KEY_DOWN],
         "pause": [KEY_ESCAPE, KEY_P],
+        "reset": [KEY_R],
         "fire": [KEY_Z],
         "bomb": [KEY_X],
         "dash": [KEY_C],
@@ -142,6 +143,7 @@ func _ensure_default_input_actions():
         "fire": [JOY_BUTTON_X],
         "bomb": [JOY_BUTTON_Y],
         "pause": [JOY_BUTTON_START],
+        "reset": [JOY_BUTTON_BACK],
     }
 
     for action in joy_defaults.keys():
