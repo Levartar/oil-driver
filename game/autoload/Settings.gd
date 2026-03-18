@@ -14,6 +14,7 @@ var settings_data = {
     "show_loading_screen": true,
     "controls": {},
     "auto_acceleration": false,
+    "camera_view": "isometric",
 }
 
 var settings_file_path: String

@@ -43,6 +43,18 @@ text = "Auto Acceleration"
 [node name="AutoAccelerationCheck" type="CheckBox" parent="CenterContainer/VBoxContainer/AutoAccelerationRow" unique_id=580477962]
 layout_mode = 2
 
+[node name="CameraViewRow" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=2098765432]
+layout_mode = 2
+alignment = 1
+
+[node name="CameraViewLabel" type="Label" parent="CenterContainer/VBoxContainer/CameraViewRow" unique_id=3087654321]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "3rd Person Camera"
+
+[node name="CameraViewCheck" type="CheckBox" parent="CenterContainer/VBoxContainer/CameraViewRow" unique_id=4176543210]
+layout_mode = 2
+
 [node name="Spacer3" type="Control" parent="CenterContainer/VBoxContainer" unique_id=1029808789]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2

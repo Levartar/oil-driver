@@ -85,7 +85,7 @@ mesh = ExtResource("3_q4q5n")
 top_level = true
 
 [node name="CameraTarget" type="Node3D" parent="CameraController" unique_id=927505601]
-transform = Transform3D(-0.8152087, 0.5791675, 5.5091608e-08, 0.57916737, 0.81520885, -6.7879725e-08, -8.422487e-08, -2.3428884e-08, -1, -2.897276, 3.5085611, 0)
+transform = Transform3D(-0.57922804, 0.40557986, -0.70710677, 0.5735765, 0.8191522, 0, 0.57922804, -0.40557986, -0.70710677, -0.5, 3.5, 3.5)
 
 [node name="Camera3D" type="Camera3D" parent="CameraController/CameraTarget" unique_id=477490561]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
