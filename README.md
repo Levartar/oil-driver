@@ -55,9 +55,8 @@ git branch feature/your-feature-name
 ## Current Tasks
 
 - [X] **Reset Button** - Add in-game reset functionality
-- [ ] **Testing Toggles** - Developer testing options in settings
-    - [ ] Auto acceleration
-    - [ ] Input acceleration
+- [X] **Testing Toggles** - Developer testing options in settings
+    - [X] Auto acceleration
 - [ ] **Freeflow Camera** - Implement dynamic camera system
 - [ ] **Repo Explanation** - Create image explanation
 - [ ] **Add Licenses** - HDM Licenses Button

@@ -12,7 +12,8 @@ var settings_data = {
     "resolution": {"x": 1920, "y": 1080},  # Store as dict for JSON compatibility
     "language": "en",
     "show_loading_screen": true,
-    "controls": {}
+    "controls": {},
+    "auto_acceleration": false,
 }
 
 var settings_file_path: String

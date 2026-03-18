@@ -3,6 +3,7 @@ extends Control
 @onready var audio_button = $CenterContainer/VBoxContainer/OptionsButtons/AudioButton
 @onready var video_button = $CenterContainer/VBoxContainer/OptionsButtons/VideoButton
 @onready var controls_button = $CenterContainer/VBoxContainer/OptionsButtons/ControlsButton
+@onready var testing_button = $CenterContainer/VBoxContainer/OptionsButtons/TestingButton
 @onready var language_option = $CenterContainer/VBoxContainer/LanguageRow/LanguageOption
 @onready var back_button = $CenterContainer/VBoxContainer/BackButton
 
@@ -24,6 +25,7 @@ func _ready():
     if audio_button: audio_button.pressed.connect(_on_audio_pressed)
     if video_button: video_button.pressed.connect(_on_video_pressed)
     if controls_button: controls_button.pressed.connect(_on_controls_pressed)
+    if testing_button: testing_button.pressed.connect(_on_testing_pressed)
     if back_button: back_button.pressed.connect(_on_back_pressed)
 
     if language_option:
@@ -39,7 +41,7 @@ func _ready():
     if audio_button:
         audio_button.grab_focus()
 
-func _on_setting_changed(setting_name: String, value):
+func _on_setting_changed(setting_name: String, _value):
     if setting_name == "language":
         _apply_translations()
 
@@ -91,15 +93,17 @@ func _apply_translations() -> void:
     if back_button: back_button.text = tr("BACK")
 
 func _setup_navigation() -> void:
-    if not audio_button or not video_button or not controls_button or not language_option or not back_button:
+    if not audio_button or not video_button or not controls_button or not testing_button or not language_option or not back_button:
         return
     audio_button.focus_neighbor_top = back_button.get_path()
     audio_button.focus_neighbor_bottom = video_button.get_path()
     video_button.focus_neighbor_top = audio_button.get_path()
     video_button.focus_neighbor_bottom = controls_button.get_path()
     controls_button.focus_neighbor_top = video_button.get_path()
-    controls_button.focus_neighbor_bottom = language_option.get_path()
-    language_option.focus_neighbor_top = controls_button.get_path()
+    controls_button.focus_neighbor_bottom = testing_button.get_path()
+    testing_button.focus_neighbor_top = controls_button.get_path()
+    testing_button.focus_neighbor_bottom = language_option.get_path()
+    language_option.focus_neighbor_top = testing_button.get_path()
     language_option.focus_neighbor_bottom = back_button.get_path()
     back_button.focus_neighbor_top = language_option.get_path()
     back_button.focus_neighbor_bottom = audio_button.get_path()
@@ -107,4 +111,5 @@ func _setup_navigation() -> void:
 func _on_audio_pressed(): SceneLoader.goto_scene("res://game/ui/screens/AudioMenu.tscn", false)
 func _on_video_pressed(): SceneLoader.goto_scene("res://game/ui/screens/VideoMenu.tscn", false)
 func _on_controls_pressed(): SceneLoader.goto_scene("res://game/ui/screens/ControlsMenu.tscn", false)
+func _on_testing_pressed(): SceneLoader.goto_scene("res://game/ui/screens/TestingMenu.tscn", false)
 func _on_back_pressed(): SceneLoader.goto_scene("res://game/ui/screens/MainMenu.tscn", false)

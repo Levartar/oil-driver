@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://x50krmanerl2"]
+
+[ext_resource type="Theme" path="res://game/ui/theme.tres" id="1"]
+[ext_resource type="Script" uid="uid://cv36pd64233sp" path="res://game/ui/screens/TestingMenu.gd" id="2"]
+
+[node name="TestingMenu" type="Control" unique_id=878128824]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1")
+script = ExtResource("2")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=716208942]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=656146464]
+layout_mode = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer" unique_id=306750837]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "Testing Options"
+horizontal_alignment = 1
+
+[node name="AutoAccelerationRow" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1477126289]
+layout_mode = 2
+alignment = 1
+
+[node name="AutoAccelerationLabel" type="Label" parent="CenterContainer/VBoxContainer/AutoAccelerationRow" unique_id=858070328]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Auto Acceleration"
+
+[node name="AutoAccelerationCheck" type="CheckBox" parent="CenterContainer/VBoxContainer/AutoAccelerationRow" unique_id=580477962]
+layout_mode = 2
+
+[node name="Spacer3" type="Control" parent="CenterContainer/VBoxContainer" unique_id=1029808789]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1088219773]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Back"
