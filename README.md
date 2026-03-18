@@ -57,9 +57,11 @@ git branch feature/your-feature-name
 - [X] **Reset Button** - Add in-game reset functionality
 - [X] **Testing Toggles** - Developer testing options in settings
     - [X] Auto acceleration
-- [ ] **Freeflow Camera** - Implement dynamic camera system
+- [X] **Freeflow Camera** - Implement dynamic camera system
 - [ ] **Repo Explanation** - Create image explanation
 - [ ] **Add Licenses** - HDM Licenses Button
+- [ ] **Add Sounds** - Motor sounds, Crash sounds
+- [ ] **Flip System** - What happens if you turn over the car
 
 ## Stack
 
