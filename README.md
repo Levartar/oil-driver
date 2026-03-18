@@ -1,5 +1,5 @@
 ## Overview
-Oil Driver is a 3D isometric driving adventure designed as a "finite game" specifically for students. It features a "tragicomical" approach, using meme-inspired gameplay to address the serious global issue of the freight blockade in the Strait of Hormuz. Players engage in a loop of driving, dodging obstacles, and delivering goods to pick-up points to trigger dialogue and progress to the next level.
+Oil Driver is a 3D isometric driving adventure where Saad has to deliver oil for his overlord Conald Trumc through saudi arabia because the street of Hormuz is closed.
 ## Stack
 The project utilizes a variety of specialized development and management tools:
 
