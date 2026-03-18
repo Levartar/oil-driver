@@ -3,11 +3,13 @@
 Oil Driver is a 3D isometric driving adventure where Saad has to deliver oil for his overlord Conald Trumc through Saudi Arabia because the street of Hormuz is closed.
 
 ## Working with this Project:
-**Before implementing a new feature create a new branch!** Name them `feature/your-feature-name`.
+Get git if you dont already have it. Download this project using:
 
 ```bash
-git branch feature/your-feature-name
+git clone https://github.com/Levartar/oil-driver.git
 ```
+
+Open Godot and import the created folder. Get Godot 4.6.1 here: https://godotengine.org/download/. Do **NOT** get the .NET version
 
 
     oil-driver/
@@ -43,6 +45,12 @@ Basically
 2. edit level using GridMap
 
 ![alt text](planning/world-editor.png)
+
+**Before implementing a new feature create a new branch!** Name them `feature/your-feature-name`.
+
+```bash
+git branch feature/your-feature-name
+```
 
 ## Current Tasks
 

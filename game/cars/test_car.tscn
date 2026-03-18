@@ -8,7 +8,7 @@
 size = Vector3(1.9091644, 0.14303207, 1)
 
 [node name="Car" type="VehicleBody3D" unique_id=1836486299]
-mass = 1000.0
+mass = 2000.0
 engine_force = 4000.0
 script = ExtResource("1_owuju")
 MAX_STEER = 0.2
