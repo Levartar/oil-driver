@@ -25,6 +25,7 @@ func _ready() -> void:
 	
 	_apply_saved_camera_view()
 	Settings.setting_changed.connect(_on_setting_changed)
+	InputManager.camera_view_toggled.connect(_toggle_camera_view)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -44,10 +45,6 @@ func _process(delta: float) -> void:
 	var current_quat = Quaternion.from_euler($CameraController.rotation)
 	var target_quat = Quaternion.from_euler(rotation)
 	$CameraController.rotation = current_quat.slerp(target_quat, 0.1).get_euler()
-	
-	# Toggle camera view on C key for testing
-	if Input.is_action_just_pressed("change_camera_view"):
-		_toggle_camera_view()
 
 func _apply_saved_camera_view() -> void:
 	var camera_view = Settings.get_setting("camera_view", "isometric")

@@ -2008,10 +2008,10 @@ VideoMenu.tscn::PackedScene::-1::1773824179::0::1::::<><><>0<>0<><>::res://game/
 ::res://planning/::1773839871
 car-editor.png::CompressedTexture2D::6764634429573751133::1773829570::1773830498::1::::<><><>0<>0<>5c7af76740b8c7d6213835e4046e4b29<>res://.godot/imported/car-editor.png-abee710ecd8a54513c49cb945653eb65.ctex::
 world-editor.png::CompressedTexture2D::4349359597293164536::1773829668::1773830498::1::::<><><>0<>0<>3de4fbea031b9a072f99ca8ba0d2c79c<>res://.godot/imported/world-editor.png-bbe46b7538b469d72f68250d0b4e5840.ctex::
-::res://translation-i18n/::1773854718
-strings.csv::Translation::3536260010711866641::1773854877::1773854906::1::::<><><>0<>0<>b633bb0ca993da982d292f2ede842293<>res://translation-i18n/strings.en.translation<*>res://translation-i18n/strings.es.translation<*>res://translation-i18n/strings.fr.translation<*>res://translation-i18n/strings.de.translation<*>res://translation-i18n/strings.nl.translation::
-strings.de.translation::OptimizedTranslation::6011110002769160610::1773854906::0::1::::<><><>0<>0<><>::
-strings.en.translation::OptimizedTranslation::4584813814850546812::1773854906::0::1::::<><><>0<>0<><>::
-strings.es.translation::OptimizedTranslation::1364450579829742541::1773854906::0::1::::<><><>0<>0<><>::
-strings.fr.translation::OptimizedTranslation::1914911064036077840::1773854906::0::1::::<><><>0<>0<><>::
-strings.nl.translation::OptimizedTranslation::7753449149709474513::1773854906::0::1::::<><><>0<>0<><>::
+::res://translation-i18n/::1773854906
+strings.csv::Translation::3536260010711866641::1773855082::1773855110::1::::<><><>0<>0<>b633bb0ca993da982d292f2ede842293<>res://translation-i18n/strings.en.translation<*>res://translation-i18n/strings.es.translation<*>res://translation-i18n/strings.fr.translation<*>res://translation-i18n/strings.de.translation<*>res://translation-i18n/strings.nl.translation::
+strings.de.translation::OptimizedTranslation::6011110002769160610::1773855110::0::1::::<><><>0<>0<><>::
+strings.en.translation::OptimizedTranslation::4584813814850546812::1773855110::0::1::::<><><>0<>0<><>::
+strings.es.translation::OptimizedTranslation::1364450579829742541::1773855110::0::1::::<><><>0<>0<><>::
+strings.fr.translation::OptimizedTranslation::1914911064036077840::1773855110::0::1::::<><><>0<>0<><>::
+strings.nl.translation::OptimizedTranslation::7753449149709474513::1773855110::0::1::::<><><>0<>0<><>::

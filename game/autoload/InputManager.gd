@@ -3,6 +3,9 @@ extends Node
 # Track if a level is currently running
 var _is_level_running: bool = false
 
+# Signal for camera view toggle
+signal camera_view_toggled
+
 
 func _ready() -> void:
 	# Connect to scene loading signals to track when a level is active
@@ -28,6 +31,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_tree().paused = false
 		get_tree().root.set_input_as_handled()
 		SceneLoader.reload_current_scene()
+	
+	# Check for camera view toggle
+	elif event.is_action_pressed("change_camera_view"):
+		get_tree().root.set_input_as_handled()
+		camera_view_toggled.emit()
 
 
 func _on_scene_loaded(_scene_path: String) -> void:
