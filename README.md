@@ -4,11 +4,13 @@ Oil Driver is a 3D isometric driving adventure where Saad has to deliver oil for
 
 ## Current Tasks
 
-- **Freeflow Camera** - Implement dynamic camera system
 - **Reset Button** - Add in-game reset functionality
 - **Testing Toggles** - Developer testing options in settings
     - Auto acceleration
     - Input acceleration
+- **Freeflow Camera** - Implement dynamic camera system
+- **Repo Explanation** - Create image explanation
+- **Add Licenses** - HDM Licenses Button
 
 ## Stack
 
