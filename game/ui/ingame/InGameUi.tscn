@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cs3t23wdjo5ra"]
+
+[ext_resource type="Script" uid="uid://b11blsornqqml" path="res://game/ui/ingame/inGameUI.gd" id="1_j3ay7"]
+
+[node name="InGameUI" type="Control" unique_id=705259701]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_j3ay7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1282907304]
+layout_mode = 0
+theme_override_constants/separation = 8
+
+[node name="FPSLabel" type="Label" parent="VBoxContainer" unique_id=1761385396]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "FPS: 60"
+
+[node name="VelocityLabel" type="Label" parent="VBoxContainer" unique_id=250939448]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Velocity: 0.00 m/s"
+
+[node name="ResetButton" type="Button" parent="VBoxContainer" unique_id=1891438303]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Reset (R)"

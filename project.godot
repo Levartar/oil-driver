@@ -18,6 +18,7 @@ config/name="oil-driver"
 config/description="Saad has to drive oil in saudi arabia because the street of Hormuz got closed"
 run/main_scene="res://game/ui/screens/Boot.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+run/max_fps=120
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 config/icon="uid://dy4vbo0gfyx7a"
 

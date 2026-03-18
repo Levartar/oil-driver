@@ -6,7 +6,7 @@ Oil Driver is a 3D isometric driving adventure where Saad has to deliver oil for
 
 ## Current Tasks
 
-- [ ] **Reset Button** - Add in-game reset functionality
+- [X] **Reset Button** - Add in-game reset functionality
 - [ ] **Testing Toggles** - Developer testing options in settings
     - [ ] Auto acceleration
     - [ ] Input acceleration
