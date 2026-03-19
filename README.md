@@ -62,6 +62,7 @@ git branch feature/your-feature-name
 - [ ] **Add Licenses** - HDM Licenses Button
 - [ ] **Add Sounds** - Motor sounds, Crash sounds
 - [ ] **Flip System** - What happens if you turn over the car
+- [ ] **Particle Effects** - Driving Dust, Speed stripes, tire tracks
 
 ## Stack
 
