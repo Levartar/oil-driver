@@ -13,6 +13,7 @@ mono_crash.*.json
 *.cfb
 *.scn
 *.tscn.bak
+**/.import/
 
 # Build artifacts
 bin/

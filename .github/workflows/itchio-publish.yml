@@ -11,8 +11,8 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v3
 
-      #- name: Reimport Godot assets
-      #  run: godot --headless --editor --quit
+      - name: Reimport Godot assets
+        run: godot --headless --import
       - name: Godot Export
         id: export
         uses: firebelley/godot-export@v7.0.0
