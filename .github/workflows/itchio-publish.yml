@@ -24,8 +24,8 @@ jobs:
       - name: Publish to Itch
         uses: Ayowel/butler-to-itch@v1.2.0
         with:
-          butler_key: ${{secrets.ITCHIO_TOKEN}}
+          butler_key: ${{secrets.ITCHIO_SECRET}}
           itch_user: Levartar
-          itch_game: Purrtroleum
+          itch_game: PURRtroleum
           version: ${{ github.ref_name }}
           files: "${{ steps.export.outputs.archive_directory }}/test-web.zip"
