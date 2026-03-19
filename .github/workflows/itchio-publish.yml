@@ -11,8 +11,17 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v3
 
+      - name: Download Godot
+        run: |
+          cd /tmp
+          wget https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_linux.x86_64.zip
+          unzip -q Godot_v4.6.1-stable_linux.x86_64.zip
+          chmod +x Godot_v4.6.1-stable_linux.x86_64
+          echo "/tmp" >> $GITHUB_PATH
+
       - name: Reimport Godot assets
-        run: ./Godot_v4.6.1-stable_linux.x86_64/Godot_v4.6.1-stable_linux.x86_64 --headless --import
+        run: /tmp/Godot_v4.6.1-stable_linux.x86_64 --headless --import
+
       - name: Godot Export
         id: export
         uses: firebelley/godot-export@v7.0.0
