@@ -10,19 +10,16 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
-      
-      - name: Download Godot executable
-        run: |
-          mkdir -p /tmp/godot
-          cd /tmp/godot
-          wget -q https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_linux.x86_64.zip
-          unzip -q Godot_v4.6.1-stable_linux.x86_64.zip
-          chmod +x Godot_v4.6.1-stable_linux.x86_64
-          echo "GODOT_EXECUTABLE=/tmp/godot/Godot_v4.6.1-stable_linux.x86_64" >> $GITHUB_ENV
-      
-      - name: Reimport assets
-        run: |
-          ${{ env.GODOT_EXECUTABLE }} --headless -e --path ${{ github.workspace }} --import
+
+      - name: Reimport Godot Assets
+        uses: firebelley/godot-export@v7.0.0
+        with:
+          godot_executable_download_url: https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_linux.x86_64.zip
+          godot_export_templates_download_url: https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_export_templates.tpz
+          relative_project_path: ./
+          args: --import
+        env:
+          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
         
       - name: Godot Export
         id: export
