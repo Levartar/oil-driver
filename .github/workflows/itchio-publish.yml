@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Reimport Godot assets
-        run: godot --headless --import
+        run: ./Godot_v4.6.1-stable_linux.x86_64/Godot_v4.6.1-stable_linux.x86_64 --headless --import
       - name: Godot Export
         id: export
         uses: firebelley/godot-export@v7.0.0
