@@ -13,7 +13,6 @@ mono_crash.*.json
 *.cfb
 *.scn
 *.tscn.bak
-export_presets.cfg
 
 # Build artifacts
 bin/
