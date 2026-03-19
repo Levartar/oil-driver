@@ -12,14 +12,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Reimport Godot Assets
-        uses: firebelley/godot-export@v7.0.0
-        with:
-          godot_executable_download_url: https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_linux.x86_64.zip
-          godot_export_templates_download_url: https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_export_templates.tpz
-          relative_project_path: ./
-          args: --import
-        env:
-          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+        run: |
+          cd /opt/godot_bin
+          ./godot.linuxbsd.64 --headless --import-and-quit /home/runner/work/oil-driver/oil-driver
         
       - name: Godot Export
         id: export
