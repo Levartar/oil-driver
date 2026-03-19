@@ -11,6 +11,8 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v3
 
+      #- name: Reimport Godot assets
+      #  run: godot --headless --editor --quit
       - name: Godot Export
         id: export
         uses: firebelley/godot-export@v7.0.0
@@ -22,10 +24,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
       - name: Publish to Itch
-        uses: Ayowel/butler-to-itch@v1.2.0
+        uses: Ayowel/butler-to-itch@v1.3.0
         with:
           butler_key: ${{secrets.ITCHIO_SECRET}}
           itch_user: Levartar
-          itch_game: PURRtroleum
+          itch_game: oil-driver-working-title
           version: ${{ github.ref_name }}
-          files: "${{ steps.export.outputs.archive_directory }}/test-web.zip"
+          files: "${{ steps.export.outputs.archive_directory }}/oil-driver-web.zip"
