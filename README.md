@@ -1,6 +1,7 @@
 ## Overview
 
 Oil Driver is a 3D isometric driving adventure where Saad has to deliver oil for his overlord Conald Trumc through Saudi Arabia because the street of Hormuz is closed.
+    Play Here: https://levartar.itch.io/oil-driver-working-title
 
 ## Working with this Project:
 Get git if you dont already have it. Download this project using:
@@ -63,6 +64,9 @@ git branch feature/your-feature-name
 - [ ] **Add Sounds** - Motor sounds, Crash sounds
 - [ ] **Flip System** - What happens if you turn over the car
 - [ ] **Particle Effects** - Driving Dust, Speed stripes, tire tracks
+
+## Known Problems
+If assets on itch are missing the pipeline is missing imports. Run `git add -f .godot/imported/*`
 
 ## Stack
 
