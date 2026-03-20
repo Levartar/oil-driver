@@ -64,6 +64,7 @@ git branch feature/your-feature-name
 - [ ] **Add Sounds** - Motor sounds, Crash sounds
 - [ ] **Flip System** - What happens if you turn over the car
 - [ ] **Particle Effects** - Driving Dust, Speed stripes, tire tracks
+- [ ] **Gyms and Zoos** - Create test Levels for Designers
 
 ## Known Problems
 If assets on itch are missing the pipeline is missing imports. Run `git add -f .godot/imported/*`
