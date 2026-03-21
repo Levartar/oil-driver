@@ -3,8 +3,6 @@ name: Publish to Itch.io
 on:
   push:
     branches: ["main"]
-    paths:
-      - "game/**"
 
 jobs:
   deploy:
