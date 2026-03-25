@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://h3ck7cf8kdod"
+path="res://.godot/imported/boat-house-c.obj-6dec425d4e965c37345313212a7043ff.mesh"
+
+[deps]
+
+files=["res://.godot/imported/boat-house-c.obj-6dec425d4e965c37345313212a7043ff.mesh"]
+
+source_file="res://assets/Environments/kenney_watercraft-pack/Models/OBJ format/boat-house-c.obj"
+dest_files=["res://.godot/imported/boat-house-c.obj-6dec425d4e965c37345313212a7043ff.mesh", "res://.godot/imported/boat-house-c.obj-6dec425d4e965c37345313212a7043ff.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
