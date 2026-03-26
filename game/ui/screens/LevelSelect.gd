@@ -56,6 +56,11 @@ func _create_level_buttons() -> void:
 		var button = Button.new()
 		button.text = level_name
 		button.custom_minimum_size = Vector2(250, 50)
+
+		# Create spacer
+		var spacer = Control.new()
+		spacer.custom_minimum_size = Vector2(0, 10)
+		game_buttons.add_child(spacer)
 		
 		# Store level path as metadata for loading later
 		button.set_meta("level_path", level_path)
