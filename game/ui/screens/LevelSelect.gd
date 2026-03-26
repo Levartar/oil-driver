@@ -28,29 +28,24 @@ func _discover_levels() -> void:
 		push_error("Failed to open levels directory: res://game/levels/")
 		return
 
-	print("dir: ", dir)	
 	dir.list_dir_begin()
 	var file_name = dir.get_next()
-	print("First file: ", file_name)
 	
 	while file_name != "":
 		# Only include .tscn files and skip special files
-		if file_name.ends_with(".tscn") and not file_name.begins_with("."):
+		if file_name.ends_with(".tscn") or file_name.ends_with("tscn.remap") and not file_name.begins_with("."):
 			var full_path = "res://game/levels/" + file_name
 			discovered_levels.append(full_path)
 			print("Discovered level: ", file_name)
 		file_name = dir.get_next()
-		print("Next file: ", file_name)
 	
 	# Sort levels alphabetically for consistent ordering
 	discovered_levels.sort()
-	print("Total levels found: ", discovered_levels.size())
 
 
 ## Dynamically create buttons for each discovered level
 func _create_level_buttons() -> void:
 	if discovered_levels.is_empty():
-		print("No levels to display")
 		return
 	
 	for level_path: String in discovered_levels:
