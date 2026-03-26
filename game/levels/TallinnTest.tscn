@@ -7,14 +7,26 @@
 [ext_resource type="PackedScene" uid="uid://c28d5kllphpgw" path="res://assets/Environments/Tallinn-Vannallin-merged.glb" id="5_ibfxb"]
 [ext_resource type="PackedScene" uid="uid://bavawpagwfrc3" path="res://assets/Environments/Tallinn-Heightmap-decimated-0.02.glb" id="6_nljnj"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nljnj"]
+sky_top_color = Color(0.27009362, 0.43445107, 0.7677927, 1)
+sky_horizon_color = Color(0.72482157, 0.51399344, 0.584588, 1)
+ground_bottom_color = Color(0.033472195, 0.18774718, 0.2784718, 1)
+ground_horizon_color = Color(0.7254902, 0.5137255, 0.58431375, 1)
+
 [sub_resource type="Sky" id="Sky_uxguy"]
+sky_material = SubResource("ProceduralSkyMaterial_nljnj")
 
 [sub_resource type="Environment" id="Environment_uxguy"]
 background_mode = 2
 sky = SubResource("Sky_uxguy")
-ambient_light_color = Color(0.56611246, 0.3837168, 0.23042148, 1)
+ambient_light_color = Color(0.60612786, 0.3606096, 0.17430845, 1)
+ssao_enabled = true
+ssao_intensity = 1.0
 glow_enabled = true
+fog_enabled = true
 fog_light_color = Color(4.042983e-06, 0.58609957, 0.7147731, 1)
+fog_light_energy = 0.66
+fog_sky_affect = 0.3
 adjustment_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e18qg"]
@@ -40,10 +52,6 @@ environment = SubResource("Environment_uxguy")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=919844708]
 transform = Transform3D(0.7792286, -0.5542286, 0.29263198, 0, 0.46691144, 0.8843041, -0.6267398, -0.68907505, 0.36383075, 6.534383, 4.215336, 4.966818)
-
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1126989556]
-transform = Transform3D(-0.47734302, 0.7770531, -0.410283, -6.76488e-09, 0.46691144, 0.88430405, 0.87871706, 0.4221162, -0.2228768, -5.217474, 15.310678, 4.966818)
-light_energy = 0.1
 
 [node name="Sea" type="StaticBody3D" parent="." unique_id=1716101656]
 transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 19.3, 110.878)
