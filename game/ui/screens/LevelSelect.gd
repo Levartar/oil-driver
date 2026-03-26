@@ -33,7 +33,7 @@ func _discover_levels() -> void:
 	
 	while file_name != "":
 		# Only include .tscn files and skip special files
-		if file_name.ends_with(".tscn") or file_name.ends_with("tscn.remap") and not file_name.begins_with("."):
+		if file_name.ends_with(".tscn") and not file_name.begins_with("."):
 			var full_path = "res://game/levels/" + file_name
 			discovered_levels.append(full_path)
 			print("Discovered level: ", file_name)
