@@ -5,7 +5,7 @@
 [ext_resource type="ArrayMesh" uid="uid://b1ebayax1l8p7" path="res://assets/Cars/kenney_car-kit/Models/OBJ format/wheel-default.obj" id="3_q4q5n"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uxguy"]
-size = Vector3(1.9091644, 0.14303207, 1)
+size = Vector3(1.9091644, 0.15519607, 1)
 
 [node name="Car" type="VehicleBody3D" unique_id=1836486299]
 mass = 1000.0
@@ -13,7 +13,7 @@ engine_force = 4000.0
 script = ExtResource("1_owuju")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=377756479]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09378815, -0.09786087, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.09378815, -0.033266008, 0)
 shape = SubResource("BoxShape3D_uxguy")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1763903668]
@@ -21,7 +21,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -
 mesh = ExtResource("2_71qer")
 
 [node name="FrontWheelR" type="VehicleWheel3D" parent="." unique_id=1422292097]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.86659193, 0, 0.5)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.85896194, -0.022954434, 0.5)
 use_as_steering = true
 wheel_roll_influence = 0.05
 wheel_radius = 0.32
@@ -37,7 +37,7 @@ transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, 0
 mesh = ExtResource("3_q4q5n")
 
 [node name="FrontWheelL" type="VehicleWheel3D" parent="." unique_id=1844584363]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.86659193, 0, -0.5)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.85896194, -0.022954434, -0.5)
 use_as_steering = true
 wheel_roll_influence = 0.05
 wheel_radius = 0.32
@@ -51,7 +51,7 @@ damping_relaxation = 2.0
 mesh = ExtResource("3_q4q5n")
 
 [node name="BackWheelR" type="VehicleWheel3D" parent="." unique_id=2133164323]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.75192726, 0, 0.5)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.75955725, -0.022954434, 0.5)
 engine_force = 4000.0
 use_as_traction = true
 wheel_roll_influence = 0.05
@@ -67,7 +67,7 @@ transform = Transform3D(-1, 1.509958e-07, 0, -1.509958e-07, -1, 0, 0, 0, 1, 0, 0
 mesh = ExtResource("3_q4q5n")
 
 [node name="BackWheelL" type="VehicleWheel3D" parent="." unique_id=631353560]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.75192726, 0, -0.5)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.75955725, -0.022954434, -0.5)
 engine_force = 4000.0
 use_as_traction = true
 wheel_roll_influence = 0.05

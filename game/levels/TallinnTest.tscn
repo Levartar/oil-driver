@@ -25,7 +25,7 @@ material = SubResource("StandardMaterial3D_e18qg")
 size = Vector2(100, 100)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hxu3w"]
-size = Vector3(10, 0.2, 10)
+size = Vector3(10, 0.18935546, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m8l0e"]
 size = Vector3(0.36932373, 0.17599487, 1.0263672)
@@ -46,7 +46,7 @@ transform = Transform3D(-0.47734302, 0.7770531, -0.410283, -6.76488e-09, 0.46691
 light_energy = 0.1
 
 [node name="Sea" type="StaticBody3D" parent="." unique_id=1716101656]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.76304436, 0)
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 18.7, 110.877625)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Sea" unique_id=1347738978]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0035648346, -0.7219883, 0)
@@ -54,7 +54,7 @@ mesh = SubResource("PlaneMesh_1sbjy")
 skeleton = NodePath("../CollisionShape3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sea" unique_id=581269944]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.0035648346, -1.6228974, 0)
+transform = Transform3D(9.999993, 0, 0, 0, 9.999993, 0, 0, 0, 9.999993, 0.0035648341, -1.6761198, 0)
 shape = SubResource("BoxShape3D_hxu3w")
 
 [node name="Ship" type="StaticBody3D" parent="." unique_id=631840034]
@@ -80,17 +80,17 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.007226944, 1.3104522, -0
 shape = SubResource("BoxShape3D_q2b0o")
 
 [node name="Car" parent="." unique_id=1836486299 instance=ExtResource("3_nwgy1")]
-transform = Transform3D(0.99999857, 0.0016755153, 0, -0.0016755153, 0.99999857, 0, 0, 0, 1, -262.25888, 22.42158, 212.12715)
+transform = Transform3D(0.097044274, 0.0001625994, -0.99528015, -0.0016755156, 0.9999987, 0, 0.9952786, 0.0016676069, 0.0970444, -11.231995, -0.6109619, 0.61550903)
 MAX_STEER = 0.4
 ENGINE_POWER = 2000
 
 [node name="InGameUI" parent="." unique_id=705259701 instance=ExtResource("4_8sy56")]
 
 [node name="TallinnEnvironment" type="Node3D" parent="." unique_id=1245317640]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 0, 0)
 
 [node name="Tallinn-Vannallin-merged" parent="TallinnEnvironment" unique_id=11037812 instance=ExtResource("5_ibfxb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.243, 3.24972, -15.85)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6834297, 1.2832336, -35.466873)
 
-[node name="Tallinn-Heightmap-decimated-0_02" parent="TallinnEnvironment" unique_id=806004227 instance=ExtResource("6_nljnj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.513, 3.23, -15.96)
+[node name="Tallinn-Heightmap-decimated-0_02" parent="TallinnEnvironment" unique_id=616442797 instance=ExtResource("6_nljnj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.95343, 1.2635136, -35.576874)
