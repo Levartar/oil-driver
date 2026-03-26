@@ -58,7 +58,7 @@ transform = Transform3D(9.999993, 0, 0, 0, 9.999993, 0, 0, 0, 9.999993, 0.003564
 shape = SubResource("BoxShape3D_hxu3w")
 
 [node name="Ship" type="StaticBody3D" parent="." unique_id=631840034]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.243, -0.5265703, -16.60915)
+transform = Transform3D(-0.8488979, 0, 0.5285569, 0, 1, 0, -0.5285569, 0, -0.8488979, 206.62384, -3.1153765, -239.33112)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ship" unique_id=1312942488]
 mesh = ExtResource("1_ibfxb")
@@ -69,7 +69,7 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.0032596588, 0.5330169, -
 shape = SubResource("BoxShape3D_m8l0e")
 
 [node name="Ship2" type="StaticBody3D" parent="." unique_id=1348341493]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.243, -1.2497201, 0)
+transform = Transform3D(-0.8488979, 0, 0.5285569, 0, 1, 0, -0.5285569, 0, -0.8488979, 215.40273, -3.8385262, -253.4306)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ship2" unique_id=2135038177]
 mesh = ExtResource("2_nljnj")

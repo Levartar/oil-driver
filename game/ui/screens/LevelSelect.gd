@@ -27,9 +27,11 @@ func _discover_levels() -> void:
 	if dir == null:
 		push_error("Failed to open levels directory: res://game/levels/")
 		return
-	
+
+	print("dir: ", dir)	
 	dir.list_dir_begin()
 	var file_name = dir.get_next()
+	print("First file: ", file_name)
 	
 	while file_name != "":
 		# Only include .tscn files and skip special files
@@ -38,6 +40,7 @@ func _discover_levels() -> void:
 			discovered_levels.append(full_path)
 			print("Discovered level: ", file_name)
 		file_name = dir.get_next()
+		print("Next file: ", file_name)
 	
 	# Sort levels alphabetically for consistent ordering
 	discovered_levels.sort()

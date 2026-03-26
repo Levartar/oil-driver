@@ -52,8 +52,8 @@ func _setup_navigation():
 
 func _on_new_game_pressed():
 	# CR1: Changed from Level1.tscn to playgame.tscn
-	if ResourceLoader.exists("res://game/levels/TestLevel.tscn"):
-		SceneLoader.goto_scene("res://game/levels/TestLevel.tscn")
+	if ResourceLoader.exists("res://game/levels/TallinTest.tscn"):
+		SceneLoader.goto_scene("res://game/levels/TallinTest.tscn")
 	else:
 		print("Create res://game/playgame.tscn for your main game scene!")
 
