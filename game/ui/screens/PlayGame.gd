@@ -66,7 +66,7 @@ func _on_continue_pressed():
 			print("Game scene not found: res://game/playgame.tscn")
 
 func _on_level_select_pressed():
-	print("Level select screen - implement your level selection here!")
+	SceneLoader.goto_scene("res://game/ui/screens/LevelSelect.tscn", false)
 
 func _on_back_pressed():
 	SceneLoader.goto_scene("res://game/ui/screens/MainMenu.tscn", false)
