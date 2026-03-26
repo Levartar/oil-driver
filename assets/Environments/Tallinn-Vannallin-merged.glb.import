@@ -42,9 +42,6 @@ _subresources={
 "PATH:hooned_lod2-Tallinn": {
 "generate/physics": true
 },
-"PATH:hooned_lod2-Tallinn_016": {
-"generate/physics": true
-},
 "PATH:hooned_lod2-Tallinn_024": {
 "generate/physics": true
 },

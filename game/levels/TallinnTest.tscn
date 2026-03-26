@@ -46,7 +46,7 @@ transform = Transform3D(-0.47734302, 0.7770531, -0.410283, -6.76488e-09, 0.46691
 light_energy = 0.1
 
 [node name="Sea" type="StaticBody3D" parent="." unique_id=1716101656]
-transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 18.7, 110.877625)
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 19.3, 110.878)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Sea" unique_id=1347738978]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0035648346, -0.7219883, 0)
@@ -89,8 +89,8 @@ ENGINE_POWER = 2000
 [node name="TallinnEnvironment" type="Node3D" parent="." unique_id=1245317640]
 transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 0, 0)
 
-[node name="Tallinn-Vannallin-merged" parent="TallinnEnvironment" unique_id=11037812 instance=ExtResource("5_ibfxb")]
+[node name="Tallinn-Vannallin-merged" parent="TallinnEnvironment" unique_id=694232344 instance=ExtResource("5_ibfxb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6834297, 1.2832336, -35.466873)
 
 [node name="Tallinn-Heightmap-decimated-0_02" parent="TallinnEnvironment" unique_id=616442797 instance=ExtResource("6_nljnj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.95343, 1.2635136, -35.576874)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.953, 1.283, -35.577)
