@@ -20,8 +20,7 @@ Open Godot and import the created folder. Get Godot 4.6.1 here: https://godoteng
     ├── assets/                 <- ART
     │   ├── Models/
     │   ├── Textures/
-    │   ├── Environments/
-    │   └── Blender/            <- Blender Files
+    │   └── Environments/
     ├── audio/
     │   ├── music/
     │   └── soundfx/
