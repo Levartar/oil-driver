@@ -2,7 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://dru88bxi8nxj" path="res://assets/Environments/kenney_watercraft-pack/Models/OBJ format/ship-cargo-c.obj" id="1_ibfxb"]
 [ext_resource type="ArrayMesh" uid="uid://xl75foq2ypf8" path="res://assets/Environments/kenney_watercraft-pack/Models/OBJ format/ship-ocean-liner.obj" id="2_nljnj"]
-[ext_resource type="PackedScene" uid="uid://drieop7e3w5ai" path="res://game/cars/test_car.tscn" id="3_nwgy1"]
+[ext_resource type="PackedScene" uid="uid://1hfwjio03n5a" path="res://game/cars/taxi_car.tscn" id="3_qe21q"]
 [ext_resource type="PackedScene" uid="uid://cs3t23wdjo5ra" path="res://game/ui/ingame/InGameUi.tscn" id="4_8sy56"]
 [ext_resource type="PackedScene" uid="uid://c28d5kllphpgw" path="res://assets/Environments/Tallinn-Vannallin-merged.glb" id="5_ibfxb"]
 [ext_resource type="PackedScene" uid="uid://bavawpagwfrc3" path="res://assets/Environments/Tallinn-Heightmap-decimated-0.02.glb" id="6_nljnj"]
@@ -87,10 +87,8 @@ skeleton = NodePath("../CollisionShape3D")
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.007226944, 1.3104522, -0.08911133)
 shape = SubResource("BoxShape3D_q2b0o")
 
-[node name="Car" parent="." unique_id=1836486299 instance=ExtResource("3_nwgy1")]
-transform = Transform3D(0.097044274, 0.0001625994, -0.99528015, -0.0016755156, 0.9999987, 0, 0.9952786, 0.0016676069, 0.0970444, -11.231995, -0.6109619, 0.61550903)
-MAX_STEER = 0.4
-ENGINE_POWER = 2000
+[node name="Car" parent="." unique_id=1836486299 instance=ExtResource("3_qe21q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 0)
 
 [node name="InGameUI" parent="." unique_id=705259701 instance=ExtResource("4_8sy56")]
 
