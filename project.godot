@@ -36,7 +36,7 @@ DialogueQuest="*uid://b672ftpwqx8rj"
 
 [dialogue_quest]
 
-data_directory=&"res://dialogue_quest/"
+data_directory="res://game/dialogs"
 say_by_name=true
 
 [display]
