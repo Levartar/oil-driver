@@ -32,6 +32,12 @@ Settings="*res://game/autoload/Settings.gd"
 SaveData="*res://game/autoload/SaveData.gd"
 SceneLoader="*res://game/autoload/SceneLoader.gd"
 InputManager="*res://game/autoload/InputManager.gd"
+DialogueQuest="*uid://b672ftpwqx8rj"
+
+[dialogue_quest]
+
+data_directory=&"res://dialogue_quest/"
+say_by_name=true
 
 [display]
 
@@ -39,6 +45,10 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=2
 window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_quest/plugin.cfg")
 
 [file_customization]
 
