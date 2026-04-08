@@ -5,7 +5,7 @@ class_name DialogTrigger
 @export var character_name: String = ""
 @export var trigger_once: bool = true
 
-var dialogue_completed = false
+var dialog_completed = false
 var player_in_range = false
 
 func _ready():
@@ -16,20 +16,20 @@ func _ready():
 func _on_body_entered(body: Node3D) -> void:
 	if body is VehicleBody3D or body.name.to_lower().contains("car"):
 		player_in_range = true
-		_trigger_dialogue()
+		_trigger_dialog()
 
 func _on_body_exited(body: Node3D):
 	"""When player car leaves trigger range"""
 	if body is VehicleBody3D or body.name.to_lower().contains("car"):
 		player_in_range = false
 		reset_trigger()
-		if dialogue_completed:
+		if dialog_completed:
 			GameManager.advance_quest()
-		print("Player left dialogue trigger area for quest: %s" % quest_id)
+		print("Player left dialog trigger area for quest: %s" % quest_id)
 
-func _trigger_dialogue():
+func _trigger_dialog():
 	"""Trigger dialogue if conditions are met"""
-	if dialogue_completed and trigger_once:
+	if dialog_completed and trigger_once:
 		return
 	
 	# Check if this is the active quest
@@ -41,16 +41,16 @@ func _trigger_dialogue():
 	# Start the dialogue
 	var dialog_id = active_quest.get("dialog_id", "")
 	if not dialog_id.is_empty():
-		print("Starting dialogue via DialogueManager: %s" % dialog_id)
-		if DialogueManager:
-			DialogueManager.play_dialogue(dialog_id)
-		dialogue_completed = true
+		print("Starting dialog via DialogManager: %s" % dialog_id)
+		if DialogManager:
+			DialogManager.play_dialog(dialog_id)
+		dialog_completed = true
 	else:
 		print("DialogTrigger error: missing dialog_id in quest")
 
 func reset_trigger():
 	"""Reset trigger to allow dialogue to play again"""
-	if DialogueManager:
-		DialogueManager.stop_dialogue()
+	if DialogManager:
+		DialogManager.stop_dialog()
 	else:
-		print("Missing DialogueManager autoload, cannot stop dialogue")
+		print("Missing DialogManager autoload, cannot stop dialog")

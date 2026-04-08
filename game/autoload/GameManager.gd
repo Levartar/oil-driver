@@ -10,7 +10,6 @@ var quests = {
 		"name": "Tutorial",
 		"character": "tutorial_guide",
 		"dialog_id": "tutorial_wasd",
-		"skippable": true
 	},
 	"quest_1": {
 		"id": "quest_1",
@@ -46,19 +45,16 @@ var quests = {
 
 var quest_sequence = ["tutorial", "quest_1", "quest_2", "quest_3", "quest_4", "quest_5"]
 var current_quest_index = 0
-var auto_save_timer: Timer
 
 func _ready():
-	# Wait for DialogueManager to initialize
-	if not DialogueManager.is_node_ready():
-		await DialogueManager.ready
+	# Wait for DialogManager to initialize
+	if not DialogManager.is_node_ready():
+		await DialogManager.ready
 	
 	# Connect to DialogueQuest signals
 	if DialogueQuest:
-		DialogueQuest.Signals.dialogue_ended.connect(_on_dialogue_ended)
+		DialogueQuest.Signals.dialogue_ended.connect(_on_dialog_ended)
 	
-	print("GameManager initialized")
-
 func _restore_quest_progress():
 	"""Restore quest progress from SaveData when loading a save"""
 	var active_quest = SaveData.get_data("active_quest_id")
@@ -99,18 +95,17 @@ func advance_quest():
 	
 	SaveData.save_game()
 
-func skip_tutorial():
-	"""Skip the tutorial quest"""
-	SaveData.set_data("tutorial_skipped", true)
-	advance_quest()
-
-func _on_dialogue_ended(dialogue_id: String):
+func _on_dialog_ended(dialog_id: String):
 	"""Called when DialogueQuest finishes a dialogue"""
 	var active_quest = get_active_quest()
 	if active_quest.is_empty():
 		return
 	
 	# If the ended dialogue matches the active quest's dialog, advance
-	if dialogue_id == active_quest.get("dialog_id"):
+	if dialog_id == active_quest.get("dialog_id"):
 		advance_quest()
-		print("Quest dialogue completed: %s" % dialogue_id)
+		print("Quest dialog completed: %s" % dialog_id)
+
+func new_game():
+	current_quest_index = 0
+	SaveData.delete_save()

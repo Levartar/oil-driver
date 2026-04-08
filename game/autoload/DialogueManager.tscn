@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://b380xo3b5eoba"]
-
-[ext_resource type="Script" uid="uid://bgirxgrkqq0" path="res://game/autoload/DialogueManager.gd" id="1_script"]
-
-[node name="DialogueManager" type="CanvasLayer" unique_id=1861746135]
-layer = 10
-script = ExtResource("1_script")

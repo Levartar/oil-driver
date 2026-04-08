@@ -88,6 +88,8 @@ transform = Transform3D(-0.3896062, 0, 0.9209815, 0, 1, 0, -0.9209815, 0, -0.389
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 466, -2.083352, -27.688503)
 script = ExtResource("7_dialog")
 quest_id = "tutorial"
+character_name = null
+trigger_once = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/TutorialTrigger" unique_id=1442867140]
 shape = SubResource("SphereShape3D_tutorial")
@@ -97,6 +99,8 @@ debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.54173, -2.083352, -335.18948)
 script = ExtResource("7_dialog")
 quest_id = "quest_1"
+character_name = null
+trigger_once = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/LinahallTrigger" unique_id=1923397247]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11.4479065)
