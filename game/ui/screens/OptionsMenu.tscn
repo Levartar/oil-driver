@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://box0bv1he6h6r"]
 
-[ext_resource type="Theme" path="res://game/ui/theme.tres" id="1"]
+[ext_resource type="Theme" uid="uid://ck5rkbe5ox8lj" path="res://game/ui/theme.tres" id="1"]
 [ext_resource type="Script" uid="uid://8ugjdqbjma0p" path="res://game/ui/screens/OptionsMenu.gd" id="2"]
 
 [node name="OptionsMenu" type="Control" unique_id=612160486]
@@ -36,11 +36,13 @@ layout_mode = 2
 alignment = 1
 
 [node name="AudioButton" type="Button" parent="CenterContainer/VBoxContainer/OptionsButtons" unique_id=867984303]
+visible = false
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 text = "Audio"
 
 [node name="Spacer2" type="Control" parent="CenterContainer/VBoxContainer/OptionsButtons" unique_id=1383308528]
+visible = false
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
@@ -54,11 +56,13 @@ custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
 [node name="ControlsButton" type="Button" parent="CenterContainer/VBoxContainer/OptionsButtons" unique_id=13652753]
+visible = false
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 text = "Controls"
 
 [node name="Spacer4" type="Control" parent="CenterContainer/VBoxContainer/OptionsButtons" unique_id=720199486]
+visible = false
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
@@ -68,10 +72,12 @@ layout_mode = 2
 text = "Testing"
 
 [node name="Spacer5" type="Control" parent="CenterContainer/VBoxContainer" unique_id=1627258052]
+visible = false
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 
 [node name="LanguageRow" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1092502554]
+visible = false
 layout_mode = 2
 alignment = 1
 
