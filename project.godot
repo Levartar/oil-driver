@@ -14,7 +14,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="Meowllinn"
+config/name="New to Tallinn!"
 config/description="Saad has to drive oil in saudi arabia because the street of Hormuz got closed"
 run/main_scene="res://game/ui/screens/Boot.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
@@ -32,6 +32,8 @@ Settings="*res://game/autoload/Settings.gd"
 SaveData="*res://game/autoload/SaveData.gd"
 SceneLoader="*res://game/autoload/SceneLoader.gd"
 InputManager="*res://game/autoload/InputManager.gd"
+GameManager="*res://game/autoload/GameManager.gd"
+DialogueManager="*res://game/autoload/DialogueManager.tscn"
 DialogueQuest="*uid://b672ftpwqx8rj"
 
 [dialogue_quest]

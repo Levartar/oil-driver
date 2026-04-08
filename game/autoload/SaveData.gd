@@ -5,13 +5,14 @@ signal game_loaded
 
 var game_data = {
     "player_name": "",
-    "level": 1,
-    "score": 0,
-    "coins": 0,
+    "player_location": Vector3.ZERO,
     "unlocked_levels": [1],
     "achievements": [],
-    "play_time": 0.0,
-    "last_played": ""
+    "last_played": "",
+    "tutorial_skipped": false,
+    "active_quest_id": "tutorial",
+    "completed_quests": [],
+    "dialogue_flags": {}
 }
 
 var save_file_path: String
@@ -21,6 +22,8 @@ func _ready():
     var safe_name: String = project_name.to_lower().replace(" ", "_").replace("-", "_")
     safe_name = safe_name.strip_edges().replace("/", "_").replace("\\", "_")
     save_file_path = "user://%s_savegame.save" % safe_name
+    # Hook game exit save
+    get_tree().root.tree_exiting.connect(save_game)
 
 func save_game():
     game_data["last_played"] = Time.get_datetime_string_from_system()

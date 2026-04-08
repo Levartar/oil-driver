@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://celed058hq8r1"]
+
+[ext_resource type="Script" path="res://game/ui/ingame/DialogueBox.gd" id="1_5a8cg"]
+[ext_resource type="Theme" path="res://game/ui/theme.tres" id="2_jmn5a"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary"]
+
+[node name="DialogueBox" type="CanvasLayer" unique_id=1091905131]
+layer = 10
+script = ExtResource("1_5a8cg")
+
+[node name="BackgroundPanel" type="Panel" parent="." unique_id=892393614]
+modulate = Color(1, 1, 1, 0)
+offset_top = -120.0
+theme = ExtResource("2_jmn5a")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BackgroundPanel" unique_id=24607075]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_jmn5a")
+theme_override_constants/separation = 16
+
+[node name="PortraitPlaceholder" type="PanelContainer" parent="BackgroundPanel/HBoxContainer" unique_id=987810296]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="Portrait" type="TextureRect" parent="BackgroundPanel/HBoxContainer/PortraitPlaceholder" unique_id=862415738]
+layout_mode = 2
+expand_mode = 3
+stretch_mode = 5
+
+[node name="DialogueContent" type="VBoxContainer" parent="BackgroundPanel/HBoxContainer" unique_id=582054976]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="CharacterName" type="Label" parent="BackgroundPanel/HBoxContainer/DialogueContent" unique_id=1071581336]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Character Name"
+
+[node name="DialogueText" type="Label" parent="BackgroundPanel/HBoxContainer/DialogueContent" unique_id=2731355]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 16
+text = "Dialogue text goes here..."
+autowrap_mode = 3
+
+[node name="SkipButton" type="HBoxContainer" parent="BackgroundPanel/HBoxContainer/DialogueContent" unique_id=1621170133]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SkipTutorialLabel" type="Label" parent="BackgroundPanel/HBoxContainer/DialogueContent/SkipButton" unique_id=200385794]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "[Press SPACE to continue or click Skip Tutorial]"
+
+[node name="SkipTutorialBtn" type="Button" parent="BackgroundPanel/HBoxContainer/DialogueContent/SkipButton" unique_id=463933019]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Skip Tutorial"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1722882850]
+libraries/ = SubResource("AnimationLibrary")

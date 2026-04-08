@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c28d5kllphpgw" path="res://assets/Environments/Tallinn-Vannallin-merged.glb" id="5_ibfxb"]
 [ext_resource type="PackedScene" uid="uid://bavawpagwfrc3" path="res://assets/Environments/Tallinn-Heightmap-decimated-0.02.glb" id="6_nljnj"]
 [ext_resource type="PackedScene" uid="uid://drieop7e3w5ai" path="res://game/cars/test_car.tscn" id="6_qe21q"]
+[ext_resource type="Script" uid="uid://jj14wbdupi0a" path="res://game/scripts/DialogTrigger.gd" id="7_dialog"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nljnj"]
 sky_top_color = Color(0.27009362, 0.43445107, 0.7677927, 1)
@@ -37,6 +38,9 @@ size = Vector2(100, 100)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hxu3w"]
 size = Vector3(10, 0.18935546, 10)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_tutorial"]
+radius = 20.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m8l0e"]
 size = Vector3(0.36932373, 0.17599487, 1.0263672)
@@ -79,6 +83,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.953, 1.283, -35.577)
 transform = Transform3D(-0.3896062, 0, 0.9209815, 0, 1, 0, -0.9209815, 0, -0.3896062, 467.02072, 0, -10.910985)
 
 [node name="Landmarks" type="Node3D" parent="." unique_id=1298327621]
+
+[node name="TutorialTrigger" type="Area3D" parent="Landmarks" unique_id=1562071146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 466, -2.083352, -27.688503)
+script = ExtResource("7_dialog")
+quest_id = "tutorial"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/TutorialTrigger" unique_id=1442867140]
+shape = SubResource("SphereShape3D_tutorial")
+debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
+
+[node name="LinahallTrigger" type="Area3D" parent="Landmarks" unique_id=1073626903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.54173, -2.083352, -335.18948)
+script = ExtResource("7_dialog")
+quest_id = "quest_1"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/LinahallTrigger" unique_id=1923397247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11.4479065)
+shape = SubResource("SphereShape3D_tutorial")
+debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
 
 [node name="Karu" type="Node3D" parent="Landmarks" unique_id=2063952758]
 
