@@ -36,27 +36,27 @@ func _setup_dialog_system():
 	dialog_player.choice_menu = choice_menu
 	visible = false  # Start hidden until dialogue is played
 	
-	print("Dialogue system components configured")
+	print("Dialog system components configured")
 
-func play_dialog(dialogue_id: String):
-	"""Play a dialogue by full path"""
+func play_dialog(dialog_id: String):
+	"""Play a dialog by full path"""
 
 	if not dialog_player:
-		print("DialogueManager: dialogue_player not initialized")
+		print("DialogManager: dialog_player not initialized")
 		return
 	
-	dialog_player.play("%s.dqd" % dialogue_id)
+	dialog_player.play("%s.dqd" % dialog_id)
 	visible = true
 
 func stop_dialog():
-	"""Stop the current dialogue"""
+	"""Stop the current dialog"""
 	if dialog_player:
 		dialog_player.stop()
 		visible = false
-		print("Dialogue stopped")
+		print("Dialog stopped")
 
 func is_playing() -> bool:
-	"""Check if a dialogue is currently playing"""
+	"""Check if a dialog is currently playing"""
 	if not dialog_player:
 		return false
 	return dialog_player.current_dialogue != ""

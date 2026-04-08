@@ -87,7 +87,7 @@ transform = Transform3D(-0.3896062, 0, 0.9209815, 0, 1, 0, -0.9209815, 0, -0.389
 [node name="TutorialTrigger" type="Area3D" parent="Landmarks" unique_id=1562071146]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 466, -2.083352, -27.688503)
 script = ExtResource("7_dialog")
-quest_id = "tutorial"
+quest_id = "tutorial_wasd"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/TutorialTrigger" unique_id=1442867140]
 shape = SubResource("SphereShape3D_tutorial")

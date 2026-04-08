@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://b380xo3b5eoba"]
+
+[node name="DialogManager" type="CanvasLayer" unique_id=1861746135]
+layer = 10
