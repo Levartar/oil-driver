@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://b3fqhb3gw80fd"]
+
+[ext_resource type="Script" uid="uid://odqcp1kl72r5" path="res://game/cars/car.gd" id="1_ti3os"]
+[ext_resource type="ArrayMesh" uid="uid://b1ebayax1l8p7" path="res://assets/Cars/kenney_car-kit/Models/OBJ format/wheel-default.obj" id="3_cd50k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uxguy"]
+size = Vector3(0.388, 0.063, 0.4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_esun7"]
+albedo_color = Color(0.20392157, 0.73333335, 0.47058824, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ti3os"]
+material = SubResource("StandardMaterial3D_esun7")
+height = 1.2
+
+[node name="Car" type="VehicleBody3D" unique_id=1836486299]
+mass = 250.0
+engine_force = 4000.0
+script = ExtResource("1_ti3os")
+MAX_STEER = 0.3
+ENGINE_POWER = 3000
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=377756479]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.004936859, -0.13165367, 0)
+shape = SubResource("BoxShape3D_uxguy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1763903668]
+transform = Transform3D(9.553427e-16, 0.5, -2.1855694e-08, 2.1855694e-08, -2.1855694e-08, -0.5, -0.5, 0, -2.1855694e-08, 0, -0.018646657, 0)
+mesh = SubResource("CapsuleMesh_ti3os")
+
+[node name="FrontWheelR" type="VehicleWheel3D" parent="." unique_id=1422292097]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.17400393, -0.17, 0.2)
+use_as_steering = true
+wheel_roll_influence = 0.4
+wheel_radius = 0.09
+wheel_rest_length = 0.05
+wheel_friction_slip = 20.0
+suspension_travel = 0.05
+suspension_stiffness = 16.0
+damping_compression = 1.5
+damping_relaxation = 2.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FrontWheelR" unique_id=174548571]
+transform = Transform3D(-0.3, 4.5298744e-08, 0, -4.5298744e-08, -0.3, 0, 0, 0, 0.3, 0, 0, 0)
+mesh = ExtResource("3_cd50k")
+
+[node name="FrontWheelL" type="VehicleWheel3D" parent="." unique_id=1844584363]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.17400393, -0.17, -0.2)
+use_as_steering = true
+wheel_roll_influence = 0.4
+wheel_radius = 0.09
+wheel_rest_length = 0.05
+wheel_friction_slip = 20.0
+suspension_travel = 0.05
+suspension_stiffness = 16.0
+damping_compression = 1.5
+damping_relaxation = 2.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FrontWheelL" unique_id=1308987548]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+mesh = ExtResource("3_cd50k")
+
+[node name="BackWheelR" type="VehicleWheel3D" parent="." unique_id=2133164323]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.19423017, -0.17, 0.2)
+engine_force = 4000.0
+use_as_traction = true
+wheel_roll_influence = 0.4
+wheel_radius = 0.09
+wheel_rest_length = 0.05
+wheel_friction_slip = 20.0
+suspension_travel = 0.05
+suspension_stiffness = 16.0
+damping_compression = 1.5
+damping_relaxation = 2.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BackWheelR" unique_id=1188065287]
+transform = Transform3D(-0.3, 4.5298744e-08, 0, -4.5298744e-08, -0.3, 0, 0, 0, 0.3, 0, 0, 0)
+mesh = ExtResource("3_cd50k")
+
+[node name="BackWheelL" type="VehicleWheel3D" parent="." unique_id=631353560]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.19423017, -0.17, -0.2)
+engine_force = 4000.0
+use_as_traction = true
+wheel_roll_influence = 0.4
+wheel_radius = 0.09
+wheel_rest_length = 0.05
+wheel_friction_slip = 20.0
+suspension_travel = 0.05
+suspension_stiffness = 16.0
+damping_compression = 1.5
+damping_relaxation = 2.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BackWheelL" unique_id=157073843]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+mesh = ExtResource("3_cd50k")
+
+[node name="CameraController" type="Node3D" parent="." unique_id=2133133003]
+top_level = true
+
+[node name="CameraTarget" type="Node3D" parent="CameraController" unique_id=927505601]
+transform = Transform3D(-0.57922804, 0.40557986, -0.70710677, 0.5735765, 0.8191522, 0, 0.57922804, -0.40557986, -0.70710677, -0.5, 3.5, 3.5)
+
+[node name="Camera3D" type="Camera3D" parent="CameraController/CameraTarget" unique_id=477490561]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)

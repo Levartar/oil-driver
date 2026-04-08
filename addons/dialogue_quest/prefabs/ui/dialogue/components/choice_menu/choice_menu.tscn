@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dye384gy0fmiu"]
+
+[ext_resource type="Theme" path="res://game/ui/theme.tres" id="1_a71wu"]
+[ext_resource type="Script" uid="uid://gqo5l1l4vu0b" path="res://addons/dialogue_quest/scripts/ui/dialogue/components/choice_menu/choice_menu.gd" id="2_7pwjb"]
+
+[node name="ChoiceMenu" type="PanelContainer" unique_id=659444967]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.5
+offset_top = -16.0
+offset_right = 39.5
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme = ExtResource("1_a71wu")
+script = ExtResource("2_7pwjb")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=790341133]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="Margin" unique_id=518628348]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Margin/ButtonsContainer" unique_id=1404710984]
+layout_mode = 2
+text = "Go Up"
+
+[node name="Button2" type="Button" parent="Margin/ButtonsContainer" unique_id=137544777]
+layout_mode = 2
+text = "Go Down"
