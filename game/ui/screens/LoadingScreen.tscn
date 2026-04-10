@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cmpa2igdwksgl" path="res://game/ui/screens/LoadingScreen.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://b364tplsmhuit" path="res://assets/UI/Alicja/Art_Files/Background.jpg" id="2_8tdio"]
+[ext_resource type="Texture2D" uid="uid://cnhibl3o0ehdu" path="res://assets/UI/Alicja/Art_Files/MainScreen.jpg" id="2_8tdio"]
 
 [node name="LoadingScreen" type="CanvasLayer" unique_id=1241602338]
 script = ExtResource("1")
