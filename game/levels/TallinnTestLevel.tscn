@@ -41,7 +41,7 @@ size = Vector2(100, 100)
 size = Vector3(10, 0.18935546, 10)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_tutorial"]
-radius = 20.0
+radius = 10.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m8l0e"]
 size = Vector3(0.36932373, 0.17599487, 1.0263672)
@@ -79,12 +79,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6834297, 1.2832336, -35.46
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.953, 1.283, -35.577)
 
 [node name="Car" parent="." unique_id=1836486299 instance=ExtResource("6_qe21q")]
-transform = Transform3D(-0.3896062, 0, 0.9209815, 0, 1, 0, -0.9209815, 0, -0.3896062, 467.02072, 0, -10.910985)
+transform = Transform3D(-0.3896062, 0, 0.9209815, 0, 1, 0, -0.9209815, 0, -0.3896062, 471.56866, -2.0033817, -2.0266705)
 
 [node name="Landmarks" type="Node3D" parent="." unique_id=1298327621]
 
 [node name="TutorialTrigger" type="Area3D" parent="Landmarks" unique_id=1562071146]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 466, -2.083352, -27.688503)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 471.60562, -2.083352, -1.7054117)
 script = ExtResource("7_dialog")
 quest_id = "tutorial_wasd"
 
@@ -92,17 +92,24 @@ quest_id = "tutorial_wasd"
 shape = SubResource("SphereShape3D_tutorial")
 debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
 
-[node name="LinahallTrigger" type="Area3D" parent="Landmarks" unique_id=1073626903]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.54173, -2.083352, -335.18948)
+[node name="Karu" type="Area3D" parent="Landmarks" unique_id=1073626903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 465.52112, -2.0834131, -30.591108)
 script = ExtResource("7_dialog")
 quest_id = "quest_1"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/LinahallTrigger" unique_id=1923397247]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11.4479065)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/Karu" unique_id=1923397247]
 shape = SubResource("SphereShape3D_tutorial")
 debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
 
-[node name="Karu" type="Node3D" parent="Landmarks" unique_id=2063952758]
+[node name="LinahallTrigger2" type="Area3D" parent="Landmarks" unique_id=116706048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.54173, -2.083352, -335.18948)
+script = ExtResource("7_dialog")
+quest_id = "quest_2"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/LinahallTrigger2" unique_id=1110471703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11.4479065)
+shape = SubResource("SphereShape3D_tutorial")
+debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
 
 [node name="Harbor" type="Node3D" parent="Landmarks" unique_id=1926155619]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 337.53165, 1.1313934, -386.62637)
