@@ -75,4 +75,3 @@ func _tween_down() -> void:
 	) \
 	.set_ease(Tween.EASE_OUT) \
 	.finished.connect(_tween_up, CONNECT_ONE_SHOT)
-

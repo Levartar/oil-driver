@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://x50krmanerl2"]
 
-[ext_resource type="Theme" path="res://game/ui/theme.tres" id="1"]
+[ext_resource type="Theme" uid="uid://ck5rkbe5ox8lj" path="res://game/ui/theme.tres" id="1"]
 [ext_resource type="Script" uid="uid://cv36pd64233sp" path="res://game/ui/screens/TestingMenu.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://b364tplsmhuit" path="res://assets/UI/Alicja/Art_Files/Background.jpg" id="3_7pjau"]
 
 [node name="TestingMenu" type="Control" unique_id=878128824]
 layout_mode = 3
@@ -20,6 +21,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer" unique_id=840818411]
+self_modulate = Color(0.3137255, 0.3137255, 0.3137255, 1)
+layout_mode = 2
+texture = ExtResource("3_7pjau")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=656146464]
 layout_mode = 2
@@ -47,12 +53,12 @@ layout_mode = 2
 layout_mode = 2
 alignment = 1
 
-[node name="CameraViewLabel" type="Label" parent="CenterContainer/VBoxContainer/CameraViewRow" unique_id=3087654321]
+[node name="CameraViewLabel" type="Label" parent="CenterContainer/VBoxContainer/CameraViewRow" unique_id=-1207312975]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "3rd Person Camera"
 
-[node name="CameraViewCheck" type="CheckBox" parent="CenterContainer/VBoxContainer/CameraViewRow" unique_id=4176543210]
+[node name="CameraViewCheck" type="CheckBox" parent="CenterContainer/VBoxContainer/CameraViewRow" unique_id=-118424086]
 layout_mode = 2
 
 [node name="Spacer3" type="Control" parent="CenterContainer/VBoxContainer" unique_id=1029808789]

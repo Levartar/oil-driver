@@ -1,52 +1,57 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://0bea3egas222"]
 
-[ext_resource type="Theme" path="res://game/ui/theme.tres" id="1"]
+[ext_resource type="Theme" uid="uid://ck5rkbe5ox8lj" path="res://game/ui/theme.tres" id="1"]
 [ext_resource type="Script" uid="uid://bk0vdqsekwin2" path="res://game/ui/screens/PauseMenu.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://b364tplsmhuit" path="res://assets/UI/Alicja/Art_Files/Background.jpg" id="3_wfug4"]
 
-[node name="PauseMenu" type="Control"]
-script = ExtResource("2")
+[node name="PauseMenu" type="Control" unique_id=1909426004]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("1")
+script = ExtResource("2")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color(0, 0, 0, 0.7)
-
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=747208590]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="TextureRect" type="TextureRect" parent="CenterContainer" unique_id=682400117]
+layout_mode = 2
+texture = ExtResource("3_wfug4")
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/TextureRect" unique_id=750573619]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.7)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1665329166]
 layout_mode = 2
 alignment = 1
 
-[node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer" unique_id=256303115]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 text = "Game Paused"
 horizontal_alignment = 1
-add_theme_font_size_override("font_size", 36)
 
-[node name="Spacer1" type="Control" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
-custom_minimum_size = Vector2(0, 40)
-
-[node name="ResumeButton" type="Button" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
+[node name="ResumeButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=803848934]
 custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
 text = "Resume"
 
-[node name="Spacer2" type="Control" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
+[node name="Spacer2" type="Control" parent="CenterContainer/VBoxContainer" unique_id=381263910]
 custom_minimum_size = Vector2(0, 10)
-
-[node name="MainMenuButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="MainMenuButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1445146550]
 custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
 text = "Main Menu"

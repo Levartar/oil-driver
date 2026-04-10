@@ -1,49 +1,55 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://db5r2ktwx0kel"]
 
-[ext_resource type="Theme" path="res://game/ui/theme.tres" id="1"]
+[ext_resource type="Theme" uid="uid://ck5rkbe5ox8lj" path="res://game/ui/theme.tres" id="1"]
 [ext_resource type="Script" uid="uid://t2h4ufqnbydo" path="res://game/ui/screens/AudioMenu.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://b364tplsmhuit" path="res://assets/UI/Alicja/Art_Files/Background.jpg" id="3_fsra1"]
 
-[node name="AudioMenu" type="Control"]
-script = ExtResource("2")
+[node name="AudioMenu" type="Control" unique_id=2094676124]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("1")
+script = ExtResource("2")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=268745060]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer" unique_id=1360814506]
+self_modulate = Color(0.3137255, 0.3137255, 0.3137255, 1)
+layout_mode = 2
+texture = ExtResource("3_fsra1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1906394858]
 layout_mode = 2
 alignment = 1
 
-[node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer" unique_id=476467383]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 text = "Audio Settings"
 horizontal_alignment = 1
-add_theme_font_size_override("font_size", 36)
 
-[node name="Spacer1" type="Control" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
-custom_minimum_size = Vector2(0, 40)
-
-[node name="AudioContent" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
+[node name="AudioContent" type="VBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=128833343]
 layout_mode = 2
 
-[node name="PlaceholderLabel" type="Label" parent="CenterContainer/VBoxContainer/AudioContent"]
+[node name="PlaceholderLabel" type="Label" parent="CenterContainer/VBoxContainer/AudioContent" unique_id=413236535]
 layout_mode = 2
 text = "Audio settings will go here..."
 horizontal_alignment = 1
 
-[node name="Spacer2" type="Control" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
+[node name="Spacer2" type="Control" parent="CenterContainer/VBoxContainer" unique_id=1030203246]
 custom_minimum_size = Vector2(0, 40)
-
-[node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1990309670]
 custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
 text = "Back"

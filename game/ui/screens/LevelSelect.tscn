@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cia8v77bxje5w"]
 
-[ext_resource type="Theme" path="res://game/ui/theme.tres" id="1_hs65x"]
+[ext_resource type="Theme" uid="uid://ck5rkbe5ox8lj" path="res://game/ui/theme.tres" id="1_hs65x"]
 [ext_resource type="Script" uid="uid://cfy7nd2vipcju" path="res://game/ui/screens/LevelSelect.gd" id="2_y06r5"]
+[ext_resource type="Texture2D" uid="uid://b364tplsmhuit" path="res://assets/UI/Alicja/Art_Files/Background.jpg" id="3_y06r5"]
 
 [node name="LevelSelect" type="Control" unique_id=591929402]
 layout_mode = 3
@@ -20,6 +21,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer" unique_id=1179604026]
+layout_mode = 2
+texture = ExtResource("3_y06r5")
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/TextureRect" unique_id=570157642]
+self_modulate = Color(0.3137255, 0.3137255, 0.3137255, 1)
+layout_mode = 0
+texture = ExtResource("3_y06r5")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1434740045]
 layout_mode = 2
