@@ -1,77 +1,87 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://rvnd0rerm8gg"]
 
-[ext_resource type="Theme" path="res://game/ui/theme.tres" id="1"]
+[ext_resource type="Theme" uid="uid://ck5rkbe5ox8lj" path="res://game/ui/theme.tres" id="1"]
 [ext_resource type="Script" uid="uid://164wkqm4utkf" path="res://game/ui/screens/VideoMenu.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://b364tplsmhuit" path="res://assets/UI/Alicja/Art_Files/Background.jpg" id="3_xaa88"]
 
-[node name="VideoMenu" type="Control"]
-script = ExtResource("2")
+[node name="VideoMenu" type="Control" unique_id=1054043861]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("1")
+script = ExtResource("2")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2024573545]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="TextureRect" type="TextureRect" parent="CenterContainer" unique_id=421665482]
+layout_mode = 2
+texture = ExtResource("3_xaa88")
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/TextureRect" unique_id=186148310]
+self_modulate = Color(0.3137255, 0.3137255, 0.3137255, 1)
+layout_mode = 0
+texture = ExtResource("3_xaa88")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1349838555]
 layout_mode = 2
 alignment = 1
 
-[node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer" unique_id=2039013455]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 text = "Video Settings"
 horizontal_alignment = 1
-add_theme_font_size_override("font_size", 32)
 
-[node name="Spacer1" type="Control" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
-custom_minimum_size = Vector2(0, 20)
-
-[node name="FullscreenRow" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+[node name="FullscreenRow" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=185579580]
 layout_mode = 2
 alignment = 1
 
-[node name="FullscreenLabel" type="Label" parent="CenterContainer/VBoxContainer/FullscreenRow"]
+[node name="FullscreenLabel" type="Label" parent="CenterContainer/VBoxContainer/FullscreenRow" unique_id=897607376]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "Fullscreen:"
-custom_minimum_size = Vector2(200, 0)
 
-[node name="FullscreenCheck" type="CheckBox" parent="CenterContainer/VBoxContainer/FullscreenRow"]
+[node name="FullscreenCheck" type="CheckBox" parent="CenterContainer/VBoxContainer/FullscreenRow" unique_id=1090884259]
 layout_mode = 2
 
-[node name="VsyncRow" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+[node name="VsyncRow" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=967055610]
 layout_mode = 2
 alignment = 1
 
-[node name="VsyncLabel" type="Label" parent="CenterContainer/VBoxContainer/VsyncRow"]
+[node name="VsyncLabel" type="Label" parent="CenterContainer/VBoxContainer/VsyncRow" unique_id=1664055965]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "VSync:"
-custom_minimum_size = Vector2(200, 0)
 
-[node name="VsyncCheck" type="CheckBox" parent="CenterContainer/VBoxContainer/VsyncRow"]
+[node name="VsyncCheck" type="CheckBox" parent="CenterContainer/VBoxContainer/VsyncRow" unique_id=1665556808]
 layout_mode = 2
 
-[node name="LoadingRow" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+[node name="LoadingRow" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=150788933]
 layout_mode = 2
 alignment = 1
 
-[node name="LoadingLabel" type="Label" parent="CenterContainer/VBoxContainer/LoadingRow"]
+[node name="LoadingLabel" type="Label" parent="CenterContainer/VBoxContainer/LoadingRow" unique_id=670903098]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "Show Loading Screen:"
-custom_minimum_size = Vector2(200, 0)
 
-[node name="LoadingCheck" type="CheckBox" parent="CenterContainer/VBoxContainer/LoadingRow"]
+[node name="LoadingCheck" type="CheckBox" parent="CenterContainer/VBoxContainer/LoadingRow" unique_id=195997736]
 layout_mode = 2
 
-[node name="Spacer2" type="Control" parent="CenterContainer/VBoxContainer"]
-layout_mode = 2
+[node name="Spacer2" type="Control" parent="CenterContainer/VBoxContainer" unique_id=918202702]
 custom_minimum_size = Vector2(0, 20)
-
-[node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2147222118]
 custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
 text = "Back"

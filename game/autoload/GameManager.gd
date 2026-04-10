@@ -97,15 +97,76 @@ func advance_quest():
 
 func _on_dialog_ended(dialog_id: String):
 	"""Called when DialogueQuest finishes a dialogue"""
+	print("Dialog ended: %s" % dialog_id)
 	var active_quest = get_active_quest()
 	if active_quest.is_empty():
 		return
 	
 	# If the ended dialogue matches the active quest's dialog, advance
-	if dialog_id == active_quest.get("dialog_id"):
+	var dialog_base = dialog_id.trim_suffix(".dqd")
+	if dialog_base == active_quest.get("dialog_id"):
+		if dialog_base == "quest_1":
+			_lerp_fog_to_bright()
+		
 		advance_quest()
-		print("Quest dialog completed: %s" % dialog_id)
+		print("Quest dialog completed: %s" % dialog_base)
 
 func new_game():
 	current_quest_index = 0
 	SaveData.delete_save()
+
+func get_world_environment() -> WorldEnvironment:
+	"""Helper to get the current level's WorldEnvironment node"""
+	var world_env = get_tree().get_first_node_in_group("world_environment") as WorldEnvironment
+	
+	if not world_env:
+		# Try to find WorldEnvironment by name if not in group
+		world_env = get_tree().root.find_child("WorldEnvironment", true, false) as WorldEnvironment
+	
+	return world_env
+
+func fog_dark() -> void:
+	var env = get_world_environment().environment
+	env.fog_enabled = true
+	env.fog_mode = Environment.FOG_MODE_EXPONENTIAL
+	env.fog_light_color = Color(0.3, 0.3, 0.3)  # Dark grey
+	env.fog_light_energy = 0.66
+	env.fog_density = 0.1
+	env.fog_sky_affect = 1.0
+
+func fog_bright() -> void:
+	var env = get_world_environment().environment
+	env.fog_enabled = true
+	env.fog_mode = Environment.FOG_MODE_EXPONENTIAL
+	env.fog_light_color = Color(0, 0.59, 0.71)  # Bright blue
+	env.fog_light_energy = 0.66
+	env.fog_density = 0.01
+	env.fog_sky_affect = 0.3
+
+
+func _lerp_fog_to_bright() -> void:
+	"""Smoothly transition fog from dark to bright using lerp"""
+	var world_env = get_world_environment()
+	if not world_env or not world_env.environment:
+		return
+	
+	var env = world_env.environment
+	var duration = 3.0  # seconds
+	var elapsed = 0.0
+	
+	var dark_color = Color(0.3, 0.3, 0.3)
+	var bright_color = Color(0, 0.59, 0.71)
+	var dark_density = 0.1
+	var bright_density = 0.01
+	var dark_energy = 0.66
+	var bright_energy = 0.66
+	
+	while elapsed < duration:
+		var progress = elapsed / duration
+		env.fog_light_color = dark_color.lerp(bright_color, progress)
+		env.fog_density = lerp(dark_density, bright_density, progress)
+		env.fog_light_energy = lerp(dark_energy, bright_energy, progress)
+		env.fog_sky_affect = lerp(1.0, 0.3, progress)
+		
+		elapsed += get_physics_process_delta_time()
+		await get_tree().physics_frame

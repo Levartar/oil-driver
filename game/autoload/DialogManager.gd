@@ -2,6 +2,8 @@ extends CanvasLayer
 ## Manages dialogue display using DialogueQuest addon
 ## This node is a CanvasLayer parent for the dialogue system components
 
+signal dialog_finished
+
 var dialog_player: DQDialoguePlayer
 var dialog_box: DQDialogueBox
 var choice_menu: DQChoiceMenu
@@ -34,6 +36,10 @@ func _setup_dialog_system():
 	# Assign UI components to dialogue player
 	dialog_player.dialogue_box = dialog_box
 	dialog_player.choice_menu = choice_menu
+	
+	# Connect to dialogue system signals
+	DialogueQuest.Signals.dialogue_ended.connect(_on_dialogue_ended)
+	
 	visible = false  # Start hidden until dialogue is played
 	
 	print("Dialog system components configured")
@@ -60,3 +66,8 @@ func is_playing() -> bool:
 	if not dialog_player:
 		return false
 	return dialog_player.current_dialogue != ""
+
+
+func _on_dialogue_ended(dialogue_id: String) -> void:
+	"""Called when DialogueQuest finishes playing a dialogue"""
+	dialog_finished.emit()

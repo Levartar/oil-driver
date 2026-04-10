@@ -6,6 +6,8 @@ extends VehicleBody3D
 var isometric_transform: Transform3D 
 var third_person_transform: Transform3D
 
+var input_disabled: bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Initialize camera transforms
@@ -30,15 +32,18 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	steering = move_toward(steering, Input.get_axis("right","left")*MAX_STEER,delta*10)
-	var engine_multiplier = 1.0
-	
-	# Apply testing acceleration multipliers
-	# Not good code. This should be refactored to be cleaner and more maintainable, but it works for now.
-	if Settings.get_setting("auto_acceleration", false):
-		engine_force = ENGINE_POWER * engine_multiplier
+	if not input_disabled:
+		steering = move_toward(steering, Input.get_axis("right","left")*MAX_STEER,delta*10)
+		var engine_multiplier = 1.0
+		
+		# Apply testing acceleration multipliers
+		# Not good code. This should be refactored to be cleaner and more maintainable, but it works for now.
+		if Settings.get_setting("auto_acceleration", false):
+			engine_force = ENGINE_POWER * engine_multiplier
+		else:
+			engine_force = ENGINE_POWER * Input.get_axis("down","up")
 	else:
-		engine_force = ENGINE_POWER * Input.get_axis("down","up")
+		engine_force = 0
 
 	# Camera Controller
 	$CameraController.position = lerp($CameraController.position, position, 0.05)

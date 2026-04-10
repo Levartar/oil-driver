@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://wpbcnwejelyu"]
+
+[ext_resource type="Texture2D" uid="uid://2fay7g4mxk3x" path="res://assets/UI/PNG/buttonLong_beige.png" id="1_5j68b"]
+[ext_resource type="Script" uid="uid://rpn0is4631fj" path="res://game/ui/ingame/quest_menu.gd" id="1_fx31j"]
+
+[node name="QuestMenu" type="Control" unique_id=1846370065]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fx31j")
+
+[node name="FoldableContainer" type="FoldableContainer" parent="." unique_id=76667314]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -16.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="FoldableContainer" unique_id=1318533275]
+custom_minimum_size = Vector2(200, 300)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FoldableContainer/ScrollContainer" unique_id=1301047325]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="FoldableContainer/ScrollContainer/VBoxContainer" unique_id=1446642752]
+self_modulate = Color(0.59919906, 0.599199, 0.59919894, 1)
+layout_mode = 2
+texture = ExtResource("1_5j68b")
+stretch_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="FoldableContainer/ScrollContainer/VBoxContainer/TextureRect" unique_id=709625853]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 0
+
+[node name="Label" type="Label" parent="FoldableContainer/ScrollContainer/VBoxContainer/TextureRect/MarginContainer" unique_id=1833653822]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.21568628, 0.17254902, 0.14901961, 1)
+text = "Quest"
+
+[node name="TextureRect2" type="TextureRect" parent="FoldableContainer/ScrollContainer/VBoxContainer" unique_id=2139351219]
+layout_mode = 2
+texture = ExtResource("1_5j68b")
+stretch_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="FoldableContainer/ScrollContainer/VBoxContainer/TextureRect2" unique_id=1964258695]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 0
+
+[node name="Label" type="Label" parent="FoldableContainer/ScrollContainer/VBoxContainer/TextureRect2/MarginContainer" unique_id=1207097076]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.21568628, 0.17254902, 0.14901961, 1)
+text = "Landmark 1"
+
+[node name="TextureRect3" type="TextureRect" parent="FoldableContainer/ScrollContainer/VBoxContainer" unique_id=1080714852]
+layout_mode = 2
+texture = ExtResource("1_5j68b")
+stretch_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="FoldableContainer/ScrollContainer/VBoxContainer/TextureRect3" unique_id=382435692]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 0
+
+[node name="Label" type="Label" parent="FoldableContainer/ScrollContainer/VBoxContainer/TextureRect3/MarginContainer" unique_id=488960834]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.21568628, 0.17254902, 0.14901961, 1)
+text = "Landmark 2"
+
+[node name="TextureRect4" type="TextureRect" parent="FoldableContainer/ScrollContainer/VBoxContainer" unique_id=579741726]
+layout_mode = 2
+texture = ExtResource("1_5j68b")
+stretch_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="FoldableContainer/ScrollContainer/VBoxContainer/TextureRect4" unique_id=66548532]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 0
+
+[node name="Label" type="Label" parent="FoldableContainer/ScrollContainer/VBoxContainer/TextureRect4/MarginContainer" unique_id=650479743]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.21568628, 0.17254902, 0.14901961, 1)
+text = "Landmark 3"
