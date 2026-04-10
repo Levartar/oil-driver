@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://fcktt12ppqtc"]
 
+[ext_resource type="Script" uid="uid://bg6oifgj73l5h" path="res://game/levels/tallinn_test_level.gd" id="1_bp7rj"]
 [ext_resource type="ArrayMesh" uid="uid://dru88bxi8nxj" path="res://assets/Environments/kenney_watercraft-pack/Models/OBJ format/ship-cargo-c.obj" id="1_ibfxb"]
 [ext_resource type="ArrayMesh" uid="uid://xl75foq2ypf8" path="res://assets/Environments/kenney_watercraft-pack/Models/OBJ format/ship-ocean-liner.obj" id="2_nljnj"]
 [ext_resource type="PackedScene" uid="uid://cs3t23wdjo5ra" path="res://game/ui/ingame/InGameUi.tscn" id="4_8sy56"]
@@ -25,9 +26,14 @@ ambient_light_color = Color(0.60612786, 0.3606096, 0.17430845, 1)
 ssao_enabled = true
 ssao_intensity = 1.0
 glow_enabled = true
-fog_light_color = Color(4.042983e-06, 0.58609957, 0.7147731, 1)
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0, 0.58431375, 0.7137255, 1)
 fog_light_energy = 0.66
+fog_density = 0.0798
 fog_sky_affect = 0.3
+fog_depth_curve = 8.574143
+fog_depth_begin = 2.0
 adjustment_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e18qg"]
@@ -41,7 +47,22 @@ size = Vector2(100, 100)
 size = Vector3(10, 0.18935546, 10)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_tutorial"]
-radius = 10.0
+radius = 5.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_v70a4"]
+height = 8.0
+radius = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v70a4"]
+emission_enabled = true
+emission = Color(0, 0.8117647, 0.6627451, 1)
+emission_energy_multiplier = 100.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_v70a4"]
+material = SubResource("StandardMaterial3D_v70a4")
+top_radius = 1.0
+bottom_radius = 1.0
+height = 8.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m8l0e"]
 size = Vector3(0.36932373, 0.17599487, 1.0263672)
@@ -49,7 +70,8 @@ size = Vector3(0.36932373, 0.17599487, 1.0263672)
 [sub_resource type="BoxShape3D" id="BoxShape3D_q2b0o"]
 size = Vector3(0.45874023, 0.84399414, 2.0827637)
 
-[node name="TestLevel" type="Node3D" unique_id=1206792960]
+[node name="Tallinn" type="Node3D" unique_id=1206792960]
+script = ExtResource("1_bp7rj")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1563919294]
 environment = SubResource("Environment_uxguy")
@@ -87,17 +109,30 @@ transform = Transform3D(-0.3896062, 0, 0.9209815, 0, 1, 0, -0.9209815, 0, -0.389
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 471.60562, -2.083352, -1.7054117)
 script = ExtResource("7_dialog")
 quest_id = "tutorial_wasd"
+trigger_once = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/TutorialTrigger" unique_id=1442867140]
 shape = SubResource("SphereShape3D_tutorial")
 debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
 
-[node name="Karu" type="Area3D" parent="Landmarks" unique_id=1073626903]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 465.52112, -2.0834131, -30.591108)
+[node name="KaruGroup" type="Node3D" parent="Landmarks" unique_id=1465512441]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 464.72443, 0.48383236, -28.770016)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Landmarks/KaruGroup" unique_id=1712622287]
+transform = Transform3D(-0.8488979, 0, 0.5285569, 0, 1, 0, -0.5285569, 0, -0.8488979, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/KaruGroup/StaticBody3D" unique_id=1486398164]
+shape = SubResource("CylinderShape3D_v70a4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Landmarks/KaruGroup/StaticBody3D" unique_id=1331524526]
+mesh = SubResource("CylinderMesh_v70a4")
+
+[node name="Karu" type="Area3D" parent="Landmarks/KaruGroup" unique_id=1073626903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6575027, 0)
 script = ExtResource("7_dialog")
 quest_id = "quest_1"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/Karu" unique_id=1923397247]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/KaruGroup/Karu" unique_id=1923397247]
 shape = SubResource("SphereShape3D_tutorial")
 debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
 

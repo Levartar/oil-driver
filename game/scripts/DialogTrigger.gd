@@ -28,9 +28,6 @@ func _on_body_exited(body: Node3D):
 		player_in_range = false
 		player_vehicle = null
 		reset_trigger()
-		if dialog_completed:
-			GameManager.advance_quest()
-		print("Player left dialog trigger area for quest: %s" % quest_id)
 
 func _trigger_dialog():
 	"""Trigger dialogue if conditions are met"""
@@ -56,6 +53,7 @@ func _pause_vehicle() -> void:
 	"""Pause vehicle input, camera stays active"""
 	if player_vehicle:
 		player_vehicle.input_disabled = true
+		player_vehicle.linear_velocity = Vector3.ZERO
 
 
 func _resume_vehicle() -> void:
