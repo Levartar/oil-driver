@@ -59,11 +59,12 @@ git branch feature/your-feature-name
 - [X] **Testing Toggles** - Developer testing options in settings
     - [X] Auto acceleration
 - [X] **Freeflow Camera** - Implement dynamic camera system
-- [ ] **Repo Explanation** - Create image explanation
 - [ ] **Add Licenses** - HDM Licenses Button
-- [ ] **Add Sounds** - Motor sounds, Crash sounds
-- [ ] **Flip System** - What happens if you turn over the car
-- [ ] **Particle Effects** - Driving Dust, Speed stripes, tire tracks
+- [ ] **Add Sounds** - Music, Environments
+- [ ] **Particle Effects** - Movement Dust, Speed stripes, Scene Dust, Fog
+- [ ] **3D Character** - Character for first scenes
+- [ ] **Questlog** - Bar that shows all completed and upcoming quests
+- [X] **Dialog System** - Landmark Message Broadcast 
 - [ ] **Gyms and Zoos** - Create test Levels for Designers
 
 ## Known Problems
