@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b364tplsmhuit" path="res://assets/UI/Alicja/Art_Files/Background.jpg" id="3_fjsyu"]
 
 [node name="OptionsMenu" type="Control" unique_id=612160486]
+z_index = 30
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

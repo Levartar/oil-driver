@@ -109,6 +109,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 471.60562, -2.083352, -1.7054
 script = ExtResource("7_dialog")
 quest_id = "tutorial_wasd"
 trigger_once = true
+autoplay = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/TutorialGroup/TutorialTrigger" unique_id=1442867140]
 shape = SubResource("SphereShape3D_tutorial")
@@ -133,7 +134,6 @@ mesh = SubResource("CylinderMesh_v70a4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6575027, 0)
 script = ExtResource("7_dialog")
 quest_id = "quest_1"
-trigger_once = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/KaruGroup/Karu" unique_id=1923397247]
 shape = SubResource("SphereShape3D_bp7rj")

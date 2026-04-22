@@ -4,12 +4,16 @@ class_name DialogTrigger
 @export var quest_id: String = ""
 @export var character_name: String = ""
 @export var trigger_once: bool = false
+@export var autoplay: bool = false
 
 var dialog_completed = false
 var player_in_range = false
+var dialog_playing = false
 var player_vehicle: VehicleBody3D = null
 var original_camera: Camera3D = null
 var dialog_camera: Camera3D = null
+var interaction_text_instance: Node2D = null
+var interaction_text_scene = preload("res://game/ui/ingame/InteractionText.tscn")
 
 func _ready():
 	body_entered.connect(_on_body_entered)
@@ -19,10 +23,14 @@ func _ready():
 	print("DialogTrigger ready for quest: %s" % quest_id)
 		
 func _on_body_entered(body: Node3D) -> void:
-	if body is VehicleBody3D or body.name.to_lower().contains("car"):
+	if body is VehicleBody3D or body.name.to_lower().contains("player"):
 		player_vehicle = body as VehicleBody3D
 		player_in_range = true
-		_trigger_dialog()
+		if autoplay:
+			_trigger_dialog()
+		else:
+			_show_interaction_text()
+		#_trigger_dialog()
 
 func _on_body_exited(body: Node3D):
 	"""When player car leaves trigger range"""
@@ -30,16 +38,21 @@ func _on_body_exited(body: Node3D):
 		player_in_range = false
 		player_vehicle = null
 		reset_trigger()
+		_hide_interaction_text()
 
 func _trigger_dialog():
 	"""Trigger dialogue if conditions are met"""
 	if dialog_completed and trigger_once:
 		return
 	
+	if dialog_playing:
+		return
+	
 	# Start the dialogue
 	if not quest_id.is_empty():
 		print("Starting dialog via DialogManager: %s" % quest_id)
 		if DialogManager:
+			dialog_playing = true
 			_pause_vehicle()
 			_switch_to_dialog_camera()
 			DialogManager.play_dialog(quest_id)
@@ -50,6 +63,55 @@ func _trigger_dialog():
 func reset_trigger():
 	"""Reset trigger to allow dialogue to play again"""
 	pass
+
+
+func _show_interaction_text() -> void:
+	"""Show interaction text positioned between player and dialog trigger"""
+	if not player_vehicle:
+		return
+	
+	# Instantiate the interaction text scene
+	if interaction_text_instance == null:
+		interaction_text_instance = interaction_text_scene.instantiate()
+		get_tree().root.add_child(interaction_text_instance)
+	
+	# Calculate midpoint between player and dialog trigger
+	var player_pos = player_vehicle.global_position
+	var trigger_pos = global_position
+	var midpoint = (player_pos + trigger_pos) / 2.0
+	
+	# Project the 3D midpoint to 2D screen coordinates
+	var camera = get_viewport().get_camera_3d()
+	if camera:
+		var screen_pos = camera.unproject_position(midpoint)
+		interaction_text_instance.position = screen_pos
+		interaction_text_instance.show()
+		
+		# Show bobbing marker only if dialog is not completed
+		var bobbing_marker = interaction_text_instance.find_child("BobbingMarker", true, false)
+		if bobbing_marker and not dialog_completed:
+			bobbing_marker.show()
+		elif bobbing_marker:
+			bobbing_marker.hide()
+
+
+func _hide_interaction_text() -> void:
+	"""Hide interaction text"""
+	if interaction_text_instance:
+		interaction_text_instance.hide()
+
+
+func _on_interact_input() -> void:
+	"""Handle interact input and start dialog"""
+	if player_in_range:
+		_hide_interaction_text()
+		_trigger_dialog()
+
+
+func _process(delta: float) -> void:
+	"""Check for interact input while player is in range"""
+	if player_in_range and Input.is_action_just_pressed("interact"):
+		_on_interact_input()
 
 
 func _pause_vehicle() -> void:
@@ -98,5 +160,9 @@ func is_node_valid(node: Node) -> bool:
 
 func _on_dialog_finished() -> void:
 	"""Called when DialogManager finishes playing dialog"""
+	dialog_playing = false
 	_resume_vehicle()
 	_switch_back_to_original_camera()
+	# Show interaction text again if player is still in range
+	if player_in_range:
+		_show_interaction_text()

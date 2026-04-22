@@ -8,7 +8,7 @@ enum {
 }
 
 @onready
-var icon: TextureRect = %Icon
+var icon: Label = %Label
 
 @export
 var settings: DQBobbingMarkerSettings
