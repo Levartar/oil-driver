@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dgek211arvtsq" path="res://assets/UI/Alicja/Art_Files/NewToTallinLogo.png" id="4_qp4r8"]
 
 [node name="MainMenu" type="Control" unique_id=335914122]
+z_index = 30
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

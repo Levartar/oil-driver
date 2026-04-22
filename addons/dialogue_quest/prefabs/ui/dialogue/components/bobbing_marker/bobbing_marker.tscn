@@ -1,22 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqhktmbt3febd"]
+[gd_scene format=3 uid="uid://bqhktmbt3febd"]
 
 [ext_resource type="Script" uid="uid://bas5wlco2vae" path="res://addons/dialogue_quest/scripts/ui/dialogue/components/bobbing_marker.gd" id="1_gfy1d"]
 [ext_resource type="Resource" uid="uid://wcffdgcbfihc" path="res://addons/dialogue_quest/resources/components/settings/default_bobbing_marker_settings.tres" id="2_tvxdx"]
-[ext_resource type="Texture2D" uid="uid://hrkpx8gkh770" path="res://addons/dialogue_quest/art/quest_marker.png" id="2_uhtah"]
+[ext_resource type="Texture2D" uid="uid://dbj2x4sso7kk6" path="res://addons/dialogue_quest/art/quest_marker.png" id="2_uhtah"]
 
-[node name="BobbingMarker" type="Control"]
+[node name="BobbingMarker" type="Control" unique_id=351359330]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_gfy1d")
 settings = ExtResource("2_tvxdx")
-icon_visible = true
 
-[node name="Icon" type="TextureRect" parent="."]
+[node name="Label" type="Label" parent="." unique_id=910621137]
 unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 49.0
+theme_override_colors/font_color = Color(0.7254902, 0.36078432, 0.2901961, 1)
+theme_override_font_sizes/font_size = 48
+text = "!"
+
+[node name="Icon" type="TextureRect" parent="." unique_id=46179137]
+unique_name_in_owner = true
+visible = false
 texture_filter = 1
 layout_mode = 0
-offset_top = -16.0
+offset_top = 8.0
 offset_right = 40.0
-offset_bottom = 24.0
+offset_bottom = 48.0
 texture = ExtResource("2_uhtah")
