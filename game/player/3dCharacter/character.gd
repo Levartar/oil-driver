@@ -1,37 +1,47 @@
 extends CharacterBody3D
 
-@onready var _skin = $character
+@onready var _skin = %SophiaSkin
+@onready var _camera = find_child("Camera3D")
+var _last_movement_direction := Vector3.BACK
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+@export_category("Movement")
+@export var SPEED = 8.0
+@export var ACCELERATION = 20.0
+@export var JUMP_VELOCITY = 30
 
-func _physics_process(delta: float) -> void:
-	# Add the gravity.
+func _physics_process(delta: float) -> void:	
+	var is_starting_jump = Input.is_action_just_pressed("jump") and is_on_floor()
+	if is_starting_jump:
+		velocity.y += JUMP_VELOCITY
+		
+	var input_dir := Input.get_vector("left", "right", "up", "down")
+	var forward :Vector3 = _camera.global_basis.z
+	var right : Vector3 = _camera.global_basis.x
+	
+	var move_direction := forward * input_dir.y + right * input_dir.x
+	move_direction.y = 0.0
+	move_direction = move_direction.normalized()
+
+	var y_velocity := velocity.y
+	#velocity.y = 0.0
+	velocity = velocity.move_toward(move_direction*SPEED,ACCELERATION*delta)
 	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir := Input.get_vector("right", "left", "down", "up")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-		#Skin animation
-		var target_angle := Vector3.BACK.signed_angle_to(direction,Vector3.UP)
-		_skin.global_rotation.y = lerp_angle(_skin.rotation.y, target_angle, 10*delta)
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
-
+		velocity += get_gravity()*7 * delta
+		
 	move_and_slide()
 	
-	# Camera Controller
-	$CameraController.position = lerp($CameraController.position, position, 0.02)
-	var current_quat = Quaternion.from_euler($CameraController.rotation)
-	var target_quat = Quaternion.from_euler(rotation)
-	$CameraController.rotation = current_quat.slerp(target_quat, 0.1).get_euler()
+	#Skin animation
+	if move_direction.length() > 0.2:
+		_last_movement_direction = move_direction
+		var target_angle := Vector3.BACK.signed_angle_to(_last_movement_direction,
+		Vector3.UP)
+		_skin.global_rotation.y = lerp_angle(_skin.rotation.y, target_angle, 12*delta)
+	if is_starting_jump:
+		_skin.jump()
+	elif not is_on_floor() and velocity.y < 0:
+		_skin.fall()
+	elif is_on_floor():
+		if velocity.length() > 0.2:
+			_skin.move()
+		else:
+			_skin.idle()

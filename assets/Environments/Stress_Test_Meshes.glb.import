@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://te8ec7m4mhfa"
-path="res://.godot/imported/Stress_Test_Meshes.glb-6296fe51e916410ec81188ec8a69de6c.scn"
+path="res://.godot/imported/Stress_Test_Meshes.glb-9d4538314f8331c048d4361134df3173.scn"
 
 [deps]
 
-source_file="res:///assets/Environments/Stress_Test_Meshes.glb"
-dest_files=["res://.godot/imported/Stress_Test_Meshes.glb-6296fe51e916410ec81188ec8a69de6c.scn"]
+source_file="res://assets/Environments/Stress_Test_Meshes.glb"
+dest_files=["res://.godot/imported/Stress_Test_Meshes.glb-9d4538314f8331c048d4361134df3173.scn"]
 
 [params]
 

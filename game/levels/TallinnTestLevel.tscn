@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://fcktt12ppqtc"]
 
 [ext_resource type="Script" uid="uid://bg6oifgj73l5h" path="res://game/levels/tallinn_test_level.gd" id="1_bp7rj"]
-[ext_resource type="ArrayMesh" uid="uid://dru88bxi8nxj" path="res://assets/Environments/kenney_watercraft-pack/Models/OBJ format/ship-cargo-c.obj" id="1_ibfxb"]
-[ext_resource type="ArrayMesh" uid="uid://xl75foq2ypf8" path="res://assets/Environments/kenney_watercraft-pack/Models/OBJ format/ship-ocean-liner.obj" id="2_nljnj"]
 [ext_resource type="PackedScene" uid="uid://cs3t23wdjo5ra" path="res://game/ui/ingame/InGameUi.tscn" id="4_8sy56"]
 [ext_resource type="PackedScene" uid="uid://c28d5kllphpgw" path="res://assets/Environments/Tallinn-Vannallin-merged.glb" id="5_ibfxb"]
+[ext_resource type="PackedScene" uid="uid://ob0ed6k34od8" path="res://assets/Environments/kenney_watercraft-pack/Models/GLB format/ship-ocean-liner.glb" id="6_bp7rj"]
 [ext_resource type="PackedScene" uid="uid://bavawpagwfrc3" path="res://assets/Environments/Tallinn-Heightmap-decimated-0.02.glb" id="6_nljnj"]
 [ext_resource type="PackedScene" uid="uid://drieop7e3w5ai" path="res://game/player/cars/test_car.tscn" id="6_qe21q"]
+[ext_resource type="PackedScene" uid="uid://bky77kq3ee8pe" path="res://assets/Environments/kenney_watercraft-pack/Models/GLB format/ship-ocean-liner-small.glb" id="7_11vo3"]
 [ext_resource type="Script" uid="uid://jj14wbdupi0a" path="res://game/scripts/DialogTrigger.gd" id="7_dialog"]
 [ext_resource type="PackedScene" uid="uid://wpbcnwejelyu" path="res://game/ui/ingame/QuestMenu.tscn" id="8_v70a4"]
 
@@ -36,11 +36,11 @@ fog_depth_curve = 8.574143
 fog_depth_begin = 2.0
 adjustment_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e18qg"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_83r5m"]
 albedo_color = Color(0, 0.23951492, 0.23958045, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_1sbjy"]
-material = SubResource("StandardMaterial3D_e18qg")
+material = SubResource("StandardMaterial3D_83r5m")
 size = Vector2(100, 100)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hxu3w"]
@@ -66,12 +66,6 @@ height = 8.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bp7rj"]
 radius = 8.0
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_m8l0e"]
-size = Vector3(0.36932373, 0.17599487, 1.0263672)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_q2b0o"]
-size = Vector3(0.45874023, 0.84399414, 2.0827637)
 
 [node name="Tallinn" type="Node3D" unique_id=1206792960]
 script = ExtResource("1_bp7rj")
@@ -174,27 +168,11 @@ transform = Transform3D(0.9976125, -0.040264122, 0.05610782, 2.6953633e-09, 0.81
 [node name="Harbor" type="Node3D" parent="Landmarks" unique_id=1926155619]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 337.53165, 1.1313934, -386.62637)
 
-[node name="Ship" type="StaticBody3D" parent="Landmarks/Harbor" unique_id=631840034]
+[node name="ship-ocean-liner2" parent="Landmarks/Harbor" unique_id=350021702 instance=ExtResource("6_bp7rj")]
 transform = Transform3D(-0.8488979, 0, 0.5285569, 0, 1, 0, -0.5285569, 0, -0.8488979, -5.1501617, -3.1153612, 10.709747)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Landmarks/Harbor/Ship" unique_id=1312942488]
-mesh = ExtResource("1_ibfxb")
-skeleton = NodePath("../CollisionShape3D")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/Harbor/Ship" unique_id=912873998]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.0032596588, 0.5330169, -0.13183594)
-shape = SubResource("BoxShape3D_m8l0e")
-
-[node name="Ship2" type="StaticBody3D" parent="Landmarks/Harbor" unique_id=1348341493]
+[node name="ship-ocean-liner-small2" parent="Landmarks/Harbor" unique_id=1786982342 instance=ExtResource("7_11vo3")]
 transform = Transform3D(-0.8488979, 0, 0.5285569, 0, 1, 0, -0.5285569, 0, -0.8488979, 3.6287231, -3.838511, -3.38974)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Landmarks/Harbor/Ship2" unique_id=2135038177]
-mesh = ExtResource("2_nljnj")
-skeleton = NodePath("../CollisionShape3D")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/Harbor/Ship2" unique_id=422777494]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.007226944, 1.3104522, -0.08911133)
-shape = SubResource("BoxShape3D_q2b0o")
 
 [node name="UI" type="Control" parent="." unique_id=1008533477]
 layout_mode = 3

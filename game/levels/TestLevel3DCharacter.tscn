@@ -32,6 +32,16 @@ fog_depth_curve = 8.574143
 fog_depth_begin = 2.0
 adjustment_enabled = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uqq66"]
+albedo_color = Color(0, 0.33183005, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bwrow"]
+material = SubResource("StandardMaterial3D_uqq66")
+size = Vector2(100, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gugeh"]
+size = Vector3(10, 0.18935546, 10)
+
 [node name="Tallinn" type="Node3D" unique_id=1206792960]
 script = ExtResource("1_rthsi")
 
@@ -42,7 +52,7 @@ environment = SubResource("Environment_uxguy")
 transform = Transform3D(0.7792286, -0.5542286, 0.29263198, 0, 0.46691144, 0.8843041, -0.6267398, -0.68907505, 0.36383075, 6.534383, 4.215336, 4.966818)
 
 [node name="Player3D" parent="." unique_id=1492717194 instance=ExtResource("2_uqq66")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3704386, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1034155, 1.3704386, 0)
 
 [node name="UI" type="Control" parent="." unique_id=1008533477]
 layout_mode = 3
@@ -51,8 +61,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="InGameUI" parent="UI" unique_id=705259701 instance=ExtResource("8_xxrv7")]
+visible = false
 layout_mode = 0
 
 [node name="QuestMenu" parent="UI" unique_id=1846370065 instance=ExtResource("9_bxr5v")]
@@ -65,3 +77,15 @@ grow_horizontal = 0
 folded = true
 
 [node name="Map_1" parent="." unique_id=1116384737 instance=ExtResource("10_2kedu")]
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=1464213828]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 22.695625, 110.878)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1591397169]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0035648346, -0.7219883, 0)
+mesh = SubResource("PlaneMesh_bwrow")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=665977106]
+transform = Transform3D(9.999993, 0, 0, 0, 9.999993, 0, 0, 0, 9.999993, 0.0035648341, -1.6761198, 0)
+shape = SubResource("BoxShape3D_gugeh")

@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="DQCharacter" load_steps=2 format=3 uid="uid://tutorial_guide"]
+[gd_resource type="Resource" script_class="DQCharacter" format=3 uid="uid://djjcsvkg7rdho"]
 
-[ext_resource type="Script" path="res://addons/dialogue_quest/scripts/systems/character/resources/character.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://cjgeerk1adeay" path="res://addons/dialogue_quest/scripts/systems/character/resources/character.gd" id="1_script"]
 
 [resource]
 script = ExtResource("1_script")
-color = Color(0.2, 0.6, 1.0, 1.0)
-portrait = null
+color = Color(0.2, 0.6, 1, 1)
 character_id = "tutorial_guide"
 character_name = "Guide"
