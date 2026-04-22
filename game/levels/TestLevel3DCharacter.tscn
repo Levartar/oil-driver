@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://i1iceph2grdq"]
+
+[ext_resource type="Script" uid="uid://bg6oifgj73l5h" path="res://game/levels/tallinn_test_level.gd" id="1_rthsi"]
+[ext_resource type="PackedScene" uid="uid://df1g2tgb4mhf0" path="res://game/player/3dCharacter/Character.tscn" id="2_uqq66"]
+[ext_resource type="PackedScene" uid="uid://cs3t23wdjo5ra" path="res://game/ui/ingame/InGameUi.tscn" id="8_xxrv7"]
+[ext_resource type="PackedScene" uid="uid://wpbcnwejelyu" path="res://game/ui/ingame/QuestMenu.tscn" id="9_bxr5v"]
+[ext_resource type="PackedScene" uid="uid://te8ec7m4mhfa" path="res://assets/Environments/Stress_Test_Meshes.glb" id="10_2kedu"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nljnj"]
+sky_top_color = Color(0.27009362, 0.43445107, 0.7677927, 1)
+sky_horizon_color = Color(0.72482157, 0.51399344, 0.584588, 1)
+ground_bottom_color = Color(0.033472195, 0.18774718, 0.2784718, 1)
+ground_horizon_color = Color(0.7254902, 0.5137255, 0.58431375, 1)
+
+[sub_resource type="Sky" id="Sky_uxguy"]
+sky_material = SubResource("ProceduralSkyMaterial_nljnj")
+
+[sub_resource type="Environment" id="Environment_uxguy"]
+background_mode = 2
+sky = SubResource("Sky_uxguy")
+ambient_light_color = Color(0.60612786, 0.3606096, 0.17430845, 1)
+ssao_enabled = true
+ssao_intensity = 1.0
+glow_enabled = true
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0, 0.58431375, 0.7137255, 1)
+fog_light_energy = 0.66
+fog_density = 0.0798
+fog_sky_affect = 0.3
+fog_depth_curve = 8.574143
+fog_depth_begin = 2.0
+adjustment_enabled = true
+
+[node name="Tallinn" type="Node3D" unique_id=1206792960]
+script = ExtResource("1_rthsi")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1563919294]
+environment = SubResource("Environment_uxguy")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=919844708]
+transform = Transform3D(0.7792286, -0.5542286, 0.29263198, 0, 0.46691144, 0.8843041, -0.6267398, -0.68907505, 0.36383075, 6.534383, 4.215336, 4.966818)
+
+[node name="Player3D" parent="." unique_id=1492717194 instance=ExtResource("2_uqq66")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3704386, 0)
+
+[node name="UI" type="Control" parent="." unique_id=1008533477]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InGameUI" parent="UI" unique_id=705259701 instance=ExtResource("8_xxrv7")]
+layout_mode = 0
+
+[node name="QuestMenu" parent="UI" unique_id=1846370065 instance=ExtResource("9_bxr5v")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 0
+folded = true
+
+[node name="Map_1" parent="." unique_id=1116384737 instance=ExtResource("10_2kedu")]

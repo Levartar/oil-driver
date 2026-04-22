@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ck6ik468xx8e7"]
 
 [ext_resource type="ArrayMesh" uid="uid://dru88bxi8nxj" path="res://assets/Environments/kenney_watercraft-pack/Models/OBJ format/ship-cargo-c.obj" id="1_q2udc"]
-[ext_resource type="PackedScene" uid="uid://drieop7e3w5ai" path="res://game/cars/test_car.tscn" id="2_b6ow8"]
+[ext_resource type="PackedScene" uid="uid://drieop7e3w5ai" path="res://game/player/cars/test_car.tscn" id="2_b6ow8"]
 [ext_resource type="ArrayMesh" uid="uid://xl75foq2ypf8" path="res://assets/Environments/kenney_watercraft-pack/Models/OBJ format/ship-ocean-liner.obj" id="2_tv1b2"]
 [ext_resource type="PackedScene" uid="uid://cs3t23wdjo5ra" path="res://game/ui/ingame/InGameUi.tscn" id="4_h5srj"]
 [ext_resource type="PackedScene" uid="uid://c0e1mcth6t65y" path="res://assets/Environments/kenney_modular-buildings/Models/GLB format/building-block.glb" id="5_h5srj"]
