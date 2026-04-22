@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @onready var _skin = $character
-@onready var _camera = %Camera3D
+@onready var _camera = find_child("Camera3D")
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
