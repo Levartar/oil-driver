@@ -2,10 +2,13 @@
 
 [ext_resource type="Script" uid="uid://lm5woifwaq3d" path="res://game/player/3dCharacter/character.gd" id="1_rn1j0"]
 [ext_resource type="PackedScene" uid="uid://cymng271y4cub" path="res://assets/Characters/character.glb" id="1_suivc"]
+[ext_resource type="Script" uid="uid://ckhdxjj75uois" path="res://game/player/3dCharacter/camera_controller.gd" id="3_24pk3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rn1j0"]
 radius = 0.28759766
 height = 1.7822266
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_24pk3"]
 
 [node name="Player3D" type="CharacterBody3D" unique_id=1492717194]
 script = ExtResource("1_rn1j0")
@@ -17,10 +20,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8820611, 0)
 shape = SubResource("CapsuleShape3D_rn1j0")
 
 [node name="CameraController" type="Node3D" parent="." unique_id=886182715]
-top_level = true
+script = ExtResource("3_24pk3")
 
 [node name="CameraTarget" type="Node3D" parent="CameraController" unique_id=1948916253]
-transform = Transform3D(-3.5806277e-08, 2.5071827e-08, 0.99999994, 0.5735765, 0.8191522, 0, -0.8191522, 0.5735765, -4.3711385e-08, 0, 3.5, -3.448)
+unique_name_in_owner = true
+transform = Transform3D(1.0000001, 0, 0, 0, 0.90855205, -0.4177719, 0, 0.417772, 0.9085519, 0, 0.7690439, 0)
 
-[node name="Camera3D" type="Camera3D" parent="CameraController/CameraTarget" unique_id=690049673]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraController/CameraTarget" unique_id=2118780949]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+shape = SubResource("SphereShape3D_24pk3")
+spring_length = 8.0
+
+[node name="Camera3D" type="Camera3D" parent="CameraController/CameraTarget/SpringArm3D" unique_id=690049673]
+unique_name_in_owner = true
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999998, 0, 0, 0, 1, 0, 0, 0)
