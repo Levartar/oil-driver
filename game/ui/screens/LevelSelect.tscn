@@ -27,7 +27,6 @@ layout_mode = 2
 texture = ExtResource("3_y06r5")
 
 [node name="TextureRect" type="TextureRect" parent="CenterContainer/TextureRect" unique_id=570157642]
-self_modulate = Color(0.3137255, 0.3137255, 0.3137255, 1)
 layout_mode = 0
 texture = ExtResource("3_y06r5")
 

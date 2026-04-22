@@ -13,7 +13,7 @@ grow_vertical = 2
 script = ExtResource("1")
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=947512606]
-self_modulate = Color(0.3137255, 0.3137255, 0.3137255, 1)
+self_modulate = Color(1, 1, 1, 0.82900006)
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0

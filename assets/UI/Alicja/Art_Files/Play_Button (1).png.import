@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djn4jrn5hnu6p"
-path="res://.godot/imported/Credits_Button.png-f943a5f663ccf2fcafc91e0337cb288d.ctex"
+uid="uid://dyt7vpcfblldp"
+path="res://.godot/imported/Play_Button (1).png-800dd6030678920d6cff90ea5a44f8fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/Alicja/Art_Files/Credits_Button.png"
-dest_files=["res://.godot/imported/Credits_Button.png-f943a5f663ccf2fcafc91e0337cb288d.ctex"]
+source_file="res://assets/UI/Alicja/Art_Files/Play_Button (1).png"
+dest_files=["res://.godot/imported/Play_Button (1).png-800dd6030678920d6cff90ea5a44f8fc.ctex"]
 
 [params]
 

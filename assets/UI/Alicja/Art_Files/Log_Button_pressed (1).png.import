@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clqcnnabcp3gw"
-path="res://.godot/imported/Play_Button_Pressed.png-88ca31e0007064c876e8e84babfbe286.ctex"
+uid="uid://bc2hew4aa5mdf"
+path="res://.godot/imported/Log_Button_pressed (1).png-34e7467864d51ca6840811551fdbfcd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/Alicja/Art_Files/Play_Button_Pressed.png"
-dest_files=["res://.godot/imported/Play_Button_Pressed.png-88ca31e0007064c876e8e84babfbe286.ctex"]
+source_file="res://assets/UI/Alicja/Art_Files/Log_Button_pressed (1).png"
+dest_files=["res://.godot/imported/Log_Button_pressed (1).png-34e7467864d51ca6840811551fdbfcd1.ctex"]
 
 [params]
 

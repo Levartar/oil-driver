@@ -62,6 +62,10 @@ folder_colors={
 "res://translation-i18n/": "pink"
 }
 
+[gui]
+
+theme/custom_font="uid://6cp21ff65y8j"
+
 [input]
 
 up={

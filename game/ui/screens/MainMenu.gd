@@ -41,7 +41,7 @@ func _apply_translations():
 		title_text = fallbacks.get("MAIN_MENU_TITLE", "Main Menu")
 	
 	if game_title: game_title.text = title_text
-	if play_button: play_button.text = tr("PLAY") if tr("PLAY") != "PLAY" else fallbacks.get("PLAY", "Play")
+	#if play_button: play_button.text = tr("PLAY") if tr("PLAY") != "PLAY" else fallbacks.get("PLAY", "Play")
 	if settings_button: settings_button.text = tr("SETTINGS") if tr("SETTINGS") != "SETTINGS" else fallbacks.get("SETTINGS", "Settings")
 	if credits_button: credits_button.text = tr("CREDITS") if tr("CREDITS") != "CREDITS" else fallbacks.get("CREDITS", "Credits")
 	if exit_button: exit_button.text = tr("EXIT") if tr("EXIT") != "EXIT" else fallbacks.get("EXIT", "Exit")
