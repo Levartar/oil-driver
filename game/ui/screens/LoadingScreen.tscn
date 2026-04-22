@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://b88cbxw8jajp6"]
 
 [ext_resource type="Script" uid="uid://cmpa2igdwksgl" path="res://game/ui/screens/LoadingScreen.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://b364tplsmhuit" path="res://assets/UI/Alicja/Art_Files/Background.jpg" id="2_8tdio"]
 [ext_resource type="Texture2D" uid="uid://cnhibl3o0ehdu" path="res://assets/UI/Alicja/Art_Files/MainScreen.jpg" id="2_8tdio"]
 
 [node name="LoadingScreen" type="CanvasLayer" unique_id=1241602338]
@@ -11,15 +10,16 @@ script = ExtResource("1")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color(0.1, 0.1, 0.1, 0.9)
 
 [node name="CenterContainer" type="CenterContainer" parent="ColorRect" unique_id=1886269499]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 
+[node name="PanelContainer" type="PanelContainer" parent="ColorRect/CenterContainer" unique_id=486729643]
+layout_mode = 2
+
 [node name="TextureRect" type="TextureRect" parent="ColorRect/CenterContainer" unique_id=60557310]
-self_modulate = Color(0.3137255, 0.3137255, 0.3137255, 1)
 layout_mode = 2
 texture = ExtResource("2_8tdio")
 

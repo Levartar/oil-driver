@@ -1,8 +1,8 @@
 extends Control
 
-@onready var fps_label: Label = $VBoxContainer/FPSLabel
-@onready var velocity_label: Label = $VBoxContainer/VelocityLabel
-@onready var reset_button: Button = $VBoxContainer/ResetButton
+@onready var fps_label: Label = %FPSLabel
+@onready var velocity_label: Label = %VelocityLabel
+@onready var reset_button: Button = %ResetButton
 
 var player: Node3D
 
