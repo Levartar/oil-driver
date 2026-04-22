@@ -97,7 +97,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6834297, 1.2832336, -35.46
 [node name="Tallinn-Heightmap-decimated-0_02" parent="TallinnEnvironment" unique_id=616442797 instance=ExtResource("6_nljnj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.953, 1.283, -35.577)
 
-[node name="Car" parent="." unique_id=1836486299 instance=ExtResource("6_qe21q")]
+[node name="PlayerCar" parent="." unique_id=1836486299 instance=ExtResource("6_qe21q")]
 transform = Transform3D(-0.3896062, 0, 0.9209815, 0, 1, 0, -0.9209815, 0, -0.3896062, 471.56866, -2.0033817, -2.0266705)
 
 [node name="Landmarks" type="Node3D" parent="." unique_id=1298327621]

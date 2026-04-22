@@ -9,7 +9,7 @@ class_name DialogTrigger
 var dialog_completed = false
 var player_in_range = false
 var dialog_playing = false
-var player_vehicle: VehicleBody3D = null
+var player: Node3D = null
 var original_camera: Camera3D = null
 var dialog_camera: Camera3D = null
 var interaction_text_instance: Node2D = null
@@ -23,8 +23,8 @@ func _ready():
 	print("DialogTrigger ready for quest: %s" % quest_id)
 		
 func _on_body_entered(body: Node3D) -> void:
-	if body is VehicleBody3D or body.name.to_lower().contains("player"):
-		player_vehicle = body as VehicleBody3D
+	if body.name.to_lower().contains("player"):
+		player = body
 		player_in_range = true
 		if autoplay:
 			_trigger_dialog()
@@ -33,10 +33,10 @@ func _on_body_entered(body: Node3D) -> void:
 		#_trigger_dialog()
 
 func _on_body_exited(body: Node3D):
-	"""When player car leaves trigger range"""
-	if body is VehicleBody3D or body.name.to_lower().contains("car"):
+	"""When player leaves trigger range"""
+	if body.name.to_lower().contains("player"):
 		player_in_range = false
-		player_vehicle = null
+		player = null
 		reset_trigger()
 		_hide_interaction_text()
 
@@ -53,7 +53,7 @@ func _trigger_dialog():
 		print("Starting dialog via DialogManager: %s" % quest_id)
 		if DialogManager:
 			dialog_playing = true
-			_pause_vehicle()
+			_pause_player()
 			_switch_to_dialog_camera()
 			DialogManager.play_dialog(quest_id)
 		dialog_completed = true
@@ -67,8 +67,6 @@ func reset_trigger():
 
 func _show_interaction_text() -> void:
 	"""Show interaction text positioned between player and dialog trigger"""
-	if not player_vehicle:
-		return
 	
 	# Instantiate the interaction text scene
 	if interaction_text_instance == null:
@@ -76,7 +74,7 @@ func _show_interaction_text() -> void:
 		get_tree().root.add_child(interaction_text_instance)
 	
 	# Calculate midpoint between player and dialog trigger
-	var player_pos = player_vehicle.global_position
+	var player_pos = player.global_position
 	var trigger_pos = global_position
 	var midpoint = (player_pos + trigger_pos) / 2.0
 	
@@ -114,17 +112,24 @@ func _process(delta: float) -> void:
 		_on_interact_input()
 
 
-func _pause_vehicle() -> void:
-	"""Pause vehicle input, camera stays active"""
-	if player_vehicle:
-		player_vehicle.input_disabled = true
-		player_vehicle.linear_velocity = Vector3.ZERO
+func _pause_player() -> void:
+	"""Pause player input, camera stays active"""
+	if player:
+		if player is VehicleBody3D:
+			player.input_disabled = true
+			player.linear_velocity = Vector3.ZERO
+		elif player is CharacterBody3D:
+			player.input_disabled = true
+			player.velocity = Vector3.ZERO
 
 
-func _resume_vehicle() -> void:
-	"""Resume vehicle input after dialog"""
-	if player_vehicle:
-		player_vehicle.input_disabled = false
+func _resume_player() -> void:
+	"""Resume player input after dialog"""
+	if player:
+		if player is VehicleBody3D:
+			player.input_disabled = false
+		elif player is CharacterBody3D:
+			player.input_disabled = false
 
 
 func _switch_to_dialog_camera() -> void:
@@ -161,7 +166,7 @@ func is_node_valid(node: Node) -> bool:
 func _on_dialog_finished() -> void:
 	"""Called when DialogManager finishes playing dialog"""
 	dialog_playing = false
-	_resume_vehicle()
+	_resume_player()
 	_switch_back_to_original_camera()
 	# Show interaction text again if player is still in range
 	if player_in_range:
