@@ -26,11 +26,6 @@ grow_vertical = 2
 layout_mode = 2
 texture = ExtResource("3_xaa88")
 
-[node name="TextureRect" type="TextureRect" parent="CenterContainer/TextureRect" unique_id=186148310]
-self_modulate = Color(0.3137255, 0.3137255, 0.3137255, 1)
-layout_mode = 0
-texture = ExtResource("3_xaa88")
-
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1349838555]
 layout_mode = 2
 alignment = 1

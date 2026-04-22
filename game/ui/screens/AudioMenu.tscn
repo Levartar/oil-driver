@@ -22,8 +22,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect2" type="TextureRect" parent="CenterContainer" unique_id=1360814506]
-self_modulate = Color(0.3137255, 0.3137255, 0.3137255, 1)
+[node name="TextureRect" type="TextureRect" parent="CenterContainer" unique_id=1360814506]
 layout_mode = 2
 texture = ExtResource("3_fsra1")
 

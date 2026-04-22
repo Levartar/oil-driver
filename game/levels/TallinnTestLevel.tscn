@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cs3t23wdjo5ra" path="res://game/ui/ingame/InGameUi.tscn" id="4_8sy56"]
 [ext_resource type="PackedScene" uid="uid://c28d5kllphpgw" path="res://assets/Environments/Tallinn-Vannallin-merged.glb" id="5_ibfxb"]
 [ext_resource type="PackedScene" uid="uid://bavawpagwfrc3" path="res://assets/Environments/Tallinn-Heightmap-decimated-0.02.glb" id="6_nljnj"]
-[ext_resource type="PackedScene" uid="uid://drieop7e3w5ai" path="res://game/cars/test_car.tscn" id="6_qe21q"]
+[ext_resource type="PackedScene" uid="uid://drieop7e3w5ai" path="res://game/player/cars/test_car.tscn" id="6_qe21q"]
 [ext_resource type="Script" uid="uid://jj14wbdupi0a" path="res://game/scripts/DialogTrigger.gd" id="7_dialog"]
 [ext_resource type="PackedScene" uid="uid://wpbcnwejelyu" path="res://game/ui/ingame/QuestMenu.tscn" id="8_v70a4"]
 

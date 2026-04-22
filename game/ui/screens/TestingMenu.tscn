@@ -23,7 +23,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="CenterContainer" unique_id=840818411]
-self_modulate = Color(0.3137255, 0.3137255, 0.3137255, 1)
 layout_mode = 2
 texture = ExtResource("3_7pjau")
 
