@@ -5,6 +5,9 @@ class_name DialogTrigger
 @export var character_name: String = ""
 @export var trigger_once: bool = false
 @export var autoplay: bool = false
+@export var collectible: bool = false
+@export var image: Texture = null
+@export var image_description: String = ""
 
 var dialog_completed = false
 var player_in_range = false
@@ -14,13 +17,13 @@ var original_camera: Camera3D = null
 var dialog_camera: Camera3D = null
 var interaction_text_instance: Node2D = null
 var interaction_text_scene = preload("res://game/ui/ingame/InteractionText.tscn")
+var fullscreen_viewer = null
 
 func _ready():
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 	if DialogManager:
 		DialogManager.dialog_finished.connect(_on_dialog_finished)
-	print("DialogTrigger ready for quest: %s" % quest_id)
 		
 func _on_body_entered(body: Node3D) -> void:
 	if body.name.to_lower().contains("player"):
@@ -48,7 +51,13 @@ func _trigger_dialog():
 	if dialog_playing:
 		return
 	
-	# Start the dialogue
+	if collectible:
+		var collectible_node = get_parent()
+		if collectible_node and is_node_valid(collectible_node):
+			collectible_node.collect_collectible()
+		else:
+			print("DialogTrigger error: marked as collectible but parent is not a Collectible")
+	
 	if not quest_id.is_empty():
 		print("Starting dialog via DialogManager: %s" % quest_id)
 		if DialogManager:
@@ -57,6 +66,10 @@ func _trigger_dialog():
 			_switch_to_dialog_camera()
 			DialogManager.play_dialog(quest_id)
 		dialog_completed = true
+		
+		# Show image with blending if set
+		if image:
+			_show_image_blend()
 	else:
 		print("DialogTrigger error: missing dialog_id in quest")
 
@@ -106,7 +119,7 @@ func _on_interact_input() -> void:
 		_trigger_dialog()
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	"""Check for interact input while player is in range"""
 	if player_in_range and Input.is_action_just_pressed("interact"):
 		_on_interact_input()
@@ -147,7 +160,6 @@ func _switch_to_dialog_camera() -> void:
 	if current_camera and current_camera != dialog_camera:
 		original_camera = current_camera
 		dialog_camera.make_current()
-		print("DialogTrigger: Switched to dialog camera")
 
 
 func _switch_back_to_original_camera() -> void:
@@ -163,11 +175,53 @@ func is_node_valid(node: Node) -> bool:
 	return node and not node.is_queued_for_deletion() and node.get_parent()
 
 
+func _show_image_blend() -> void:
+	"""Show image with fade-in blend after 2 seconds"""
+	await get_tree().create_timer(2.0).timeout
+	
+	if not dialog_playing or not image:
+		return
+	
+	# Create fullscreen viewer
+	fullscreen_viewer = load("res://game/ui/ingame/FullscreenImageViewer.tscn").instantiate()
+	get_tree().root.add_child(fullscreen_viewer)
+	fullscreen_viewer.show_image(image)
+	fullscreen_viewer.closeable = false 
+	
+	# Blend in over 4 seconds
+	var tween = create_tween()
+	tween.set_trans(Tween.TRANS_LINEAR)
+	await tween.tween_property(fullscreen_viewer, "modulate:a", 1.0, 4.0).from(0.0)
+	
+	_emit_collectible()
+
+
+func _emit_collectible() -> void:
+	"""Save collectible data and emit signal"""
+	
+	var collectible_data = {
+		"id": quest_id, 
+		"description": image_description,
+		"image": image,
+	}
+	
+	if GameManager:
+		GameManager.collect_collectible(quest_id, collectible_data)
+
+
+func _remove_image_blend() -> void:
+	"""Remove fullscreen image viewer"""
+	if fullscreen_viewer:
+		fullscreen_viewer.queue_free()
+		fullscreen_viewer = null
+
+
 func _on_dialog_finished() -> void:
 	"""Called when DialogManager finishes playing dialog"""
 	dialog_playing = false
 	_resume_player()
 	_switch_back_to_original_camera()
+	_remove_image_blend()
 	# Show interaction text again if player is still in range
-	if player_in_range:
+	if player_in_range and not autoplay:
 		_show_interaction_text()

@@ -13,10 +13,13 @@ var input_disabled := false
 
 func _physics_process(delta: float) -> void:	
 	var is_starting_jump = Input.is_action_just_pressed("jump") and is_on_floor()
-	if is_starting_jump:
+	if is_starting_jump and not input_disabled:
 		velocity.y += JUMP_VELOCITY
-		
-	var input_dir := Input.get_vector("left", "right", "up", "down")
+	
+
+	var input_dir := Vector2.ZERO
+	if not input_disabled:
+		input_dir = Input.get_vector("left", "right", "up", "down")
 	var forward :Vector3 = _camera.global_basis.z
 	var right : Vector3 = _camera.global_basis.x
 	
@@ -28,8 +31,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * 7 * delta
 
-	if not input_disabled:	
-		move_and_slide()
+	move_and_slide()
 	
 	#Skin animation
 	if move_direction.length() > 0.2:

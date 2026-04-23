@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://c6t4n0kn5d0bl"]
+
+[ext_resource type="Script" uid="uid://dg4ab6ono7t72" path="res://game/ui/ingame/collectible_item.gd" id="1_abc12"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_brown"]
+bg_color = Color(0.45582563, 0.37878484, 0.34030613, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.4)
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
+[node name="CollectibleItem" type="PanelContainer" unique_id=508580880]
+custom_minimum_size = Vector2(150, 200)
+theme_override_styles/panel = SubResource("StyleBoxFlat_brown")
+script = ExtResource("1_abc12")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1347480637]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1022237218]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="CollectibleImage" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=634015044]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollectibleDescription" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1595494353]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Description"
+fit_content = true

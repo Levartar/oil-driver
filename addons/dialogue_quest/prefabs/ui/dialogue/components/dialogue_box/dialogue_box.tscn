@@ -3,19 +3,30 @@
 [ext_resource type="Script" uid="uid://63l0qog3day0" path="res://addons/dialogue_quest/scripts/ui/dialogue/components/dialogue_box.gd" id="1_6hcde"]
 [ext_resource type="Theme" uid="uid://ck5rkbe5ox8lj" path="res://game/ui/theme.tres" id="1_dp0sj"]
 [ext_resource type="Resource" uid="uid://jh8lun0hq76i" path="res://addons/dialogue_quest/resources/components/settings/default_dialogue_box_settings.tres" id="2_lis4o"]
-[ext_resource type="Texture2D" uid="uid://bxoc4vnee5fid" path="res://addons/dialogue_quest/art/placeholders/portraits/shahar_portrait.png" id="2_nl5qw"]
+[ext_resource type="Texture2D" uid="uid://cvfie7i7qps7o" path="res://assets/UI/Wolf mascot.png" id="4_dp0sj"]
 [ext_resource type="PackedScene" uid="uid://bqhktmbt3febd" path="res://addons/dialogue_quest/prefabs/ui/dialogue/components/bobbing_marker/bobbing_marker.tscn" id="5_e6hhv"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cr0ul"]
+bg_color = Color(0.34509805, 0.28235295, 0.2509804, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(0, 0, 0, 0.4)
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
 [node name="DialogueBox" type="PanelContainer" unique_id=1030259856]
+z_index = 12
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -469.0
-offset_top = -304.0
+offset_top = -349.0
 offset_right = 469.0
-offset_bottom = -126.0
+offset_bottom = -51.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("1_dp0sj")
@@ -23,7 +34,7 @@ script = ExtResource("1_6hcde")
 settings = ExtResource("2_lis4o")
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla ut morbi tincidunt augue interdum. Sed viverra ipsum nunc aliquet bibendum enim facilisis.q"
 name_text = "This is a man with a very long name"
-portrait_image = ExtResource("2_nl5qw")
+portrait_image = ExtResource("4_dp0sj")
 
 [node name="Margin" type="MarginContainer" parent="." unique_id=277854376]
 layout_mode = 2
@@ -40,14 +51,17 @@ layout_mode = 2
 
 [node name="AutoButton" type="Button" parent="Margin/Rows/RowTop" unique_id=953510621]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme_type_variation = &"ButtonActivated"
 text = "Auto"
 
 [node name="SkipButton" type="Button" parent="Margin/Rows/RowTop" unique_id=686072941]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme_type_variation = &"ButtonActivated"
+theme_override_styles/normal = SubResource("StyleBoxFlat_cr0ul")
 text = "Skip"
 
 [node name="NameMargin" type="MarginContainer" parent="Margin/Rows/RowTop" unique_id=1662295312]
@@ -65,11 +79,20 @@ text = "This is a man with a very long name"
 [node name="RowMiddle" type="HBoxContainer" parent="Margin/Rows" unique_id=1105750837]
 layout_mode = 2
 
-[node name="DialogueText" type="RichTextLabel" parent="Margin/Rows/RowMiddle" unique_id=882213634]
+[node name="MarginContainer" type="MarginContainer" parent="Margin/Rows/RowMiddle" unique_id=174675428]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="DialogueText" type="RichTextLabel" parent="Margin/Rows/RowMiddle/MarginContainer" unique_id=882213634]
 unique_name_in_owner = true
 clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fringilla ut morbi tincidunt augue interdum. Sed viverra ipsum nunc aliquet bibendum enim facilisis.q"
 fit_content = true
@@ -80,7 +103,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(44, 48)
 layout_mode = 2
 size_flags_vertical = 8
-icon_visible = false
+icon_visible = true
 
 [node name="PortraitBackground" type="PanelContainer" parent="Margin/Rows/RowMiddle" unique_id=1394729397]
 layout_mode = 2
@@ -91,8 +114,9 @@ theme_type_variation = &"PanelContainerForeground"
 [node name="Portrait" type="TextureRect" parent="Margin/Rows/RowMiddle/PortraitBackground" unique_id=905088767]
 unique_name_in_owner = true
 texture_filter = 1
-custom_minimum_size = Vector2(128, 128)
+custom_minimum_size = Vector2(256, 256)
 layout_mode = 2
-texture = ExtResource("2_nl5qw")
+texture = ExtResource("4_dp0sj")
 expand_mode = 1
 stretch_mode = 4
+flip_h = true

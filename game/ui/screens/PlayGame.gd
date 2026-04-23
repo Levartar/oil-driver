@@ -30,7 +30,7 @@ func _ready():
 		if new_game_button:
 			new_game_button.grab_focus()
 
-func _on_setting_changed(setting_name: String, value):
+func _on_setting_changed(setting_name: String, _value):
 	if setting_name == "language":
 		_apply_translations()
 

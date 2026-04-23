@@ -4,87 +4,107 @@ signal game_saved
 signal game_loaded
 
 var game_data = {
-    "player_name": "",
-    "player_location": Vector3.ZERO,
-    "unlocked_levels": [1],
-    "achievements": [],
-    "last_played": "",
-    "tutorial_skipped": false,
-    "active_quest_id": "tutorial",
-    "completed_quests": [],
-    "dialogue_flags": {}
+	"player_name": "",
+	"player_location": Vector3.ZERO,
+	"unlocked_levels": [1],
+	"achievements": [],
+	"last_played": "",
+	"tutorial_skipped": false,
+	"active_quest_id": "tutorial",
+	"completed_quests": [],
+	"dialogue_flags": {},
+	"collected_collectibles": [],
 }
 
 var save_file_path: String
 
 func _ready():
-    var project_name: String = ProjectSettings.get_setting("application/config/name", "Game")
-    var safe_name: String = project_name.to_lower().replace(" ", "_").replace("-", "_")
-    safe_name = safe_name.strip_edges().replace("/", "_").replace("\\", "_")
-    save_file_path = "user://%s_savegame.save" % safe_name
-    # Hook game exit save
-    get_tree().root.tree_exiting.connect(save_game)
+	var project_name: String = ProjectSettings.get_setting("application/config/name", "Game")
+	var safe_name: String = project_name.to_lower().replace(" ", "_").replace("-", "_")
+	safe_name = safe_name.strip_edges().replace("/", "_").replace("\\", "_")
+	save_file_path = "user://%s_savegame.save" % safe_name
+	# Hook game exit save
+	get_tree().root.tree_exiting.connect(save_game)
 
 func save_game():
-    game_data["last_played"] = Time.get_datetime_string_from_system()
-    var file = FileAccess.open(save_file_path, FileAccess.WRITE)
-    if file == null:
-        print("Error creating save file"); return false
-    var json_string: String = JSON.stringify(game_data)
-    file.store_string(json_string)
-    file.close()
-    game_saved.emit()
-    print("Game saved successfully")
-    return true
+	game_data["last_played"] = Time.get_datetime_string_from_system()
+	var file = FileAccess.open(save_file_path, FileAccess.WRITE)
+	if file == null:
+		print("Error creating save file"); return false
+	var json_string: String = JSON.stringify(game_data)
+	file.store_string(json_string)
+	file.close()
+	game_saved.emit()
+	print("Game saved successfully")
+	return true
 
 func load_game():
-    if not FileAccess.file_exists(save_file_path):
-        print("No save file found"); return false
-    var file = FileAccess.open(save_file_path, FileAccess.READ)
-    if file == null:
-        print("Error loading save file"); return false
-    var json_string: String = file.get_as_text()
-    file.close()
-    var json = JSON.new()
-    var parse_result = json.parse(json_string)
-    if parse_result != OK:
-        print("Error parsing save JSON"); return false
-    var loaded_data = json.data
-    for key in loaded_data:
-        if key in game_data:
-            game_data[key] = loaded_data[key]
-    game_loaded.emit()
-    print("Game loaded successfully")
-    return true
+	if not FileAccess.file_exists(save_file_path):
+		print("No save file found"); return false
+	var file = FileAccess.open(save_file_path, FileAccess.READ)
+	if file == null:
+		print("Error loading save file"); return false
+	var json_string: String = file.get_as_text()
+	file.close()
+	var json = JSON.new()
+	var parse_result = json.parse(json_string)
+	if parse_result != OK:
+		print("Error parsing save JSON"); return false
+	var loaded_data = json.data
+	for key in loaded_data:
+		if key in game_data:
+			game_data[key] = loaded_data[key]
+	game_loaded.emit()
+	print("Game loaded successfully")
+	return true
 
 func has_save_file():
-    return FileAccess.file_exists(save_file_path)
+	return FileAccess.file_exists(save_file_path)
 
 func delete_save():
-    if FileAccess.file_exists(save_file_path):
-        DirAccess.remove_absolute(save_file_path)
-        print("Save file deleted")
-        return true
-    return false
+	if FileAccess.file_exists(save_file_path):
+		DirAccess.remove_absolute(save_file_path)
+		print("Save file deleted")
+		return true
+	return false
 
 func get_data(key: String, default_value = null):
-    return game_data.get(key, default_value)
+	return game_data.get(key, default_value)
 
 func set_data(key: String, value):
-    if key in game_data:
-        game_data[key] = value
+	if key in game_data:
+		game_data[key] = value
 
-func unlock_level(level_number: int):
-    if level_number not in game_data["unlocked_levels"]:
-        game_data["unlocked_levels"].append(level_number)
-        game_data["unlocked_levels"].sort()
 
 func unlock_achievement(achievement_id: String):
-    if achievement_id not in game_data["achievements"]:
-        game_data["achievements"].append(achievement_id)
+	if achievement_id not in game_data["achievements"]:
+		game_data["achievements"].append(achievement_id)
 
-func is_level_unlocked(level_number: int) -> bool:
-    return level_number in game_data["unlocked_levels"]
 
 func has_achievement(achievement_id: String) -> bool:
-    return achievement_id in game_data["achievements"]
+	return achievement_id in game_data["achievements"]
+
+func add_collectible(collectible_id: String, collectible_data: Dictionary = {}) -> void:
+	"""Add a collectible to the collected list with its data"""
+	var collected = get_data("collected_collectibles", [])
+	
+	# Check if already collected
+	for item in collected:
+		if item.get("id") == collectible_id:
+			return
+
+	collected.append(collectible_data)
+	set_data("collected_collectibles", collected)
+	save_game()
+
+func has_collectible(collectible_id: String) -> bool:
+	"""Check if a collectible has been collected"""
+	var collected = get_data("collected_collectibles", [])
+	for item in collected:
+		if item.get("id") == collectible_id:
+			return true
+	return false
+
+func get_collected_collectibles() -> Array:
+	"""Get array of all collected collectible data"""
+	return get_data("collected_collectibles", [])
