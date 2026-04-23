@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://drieop7e3w5ai" path="res://game/player/cars/test_car.tscn" id="6_qe21q"]
 [ext_resource type="PackedScene" uid="uid://bky77kq3ee8pe" path="res://assets/Environments/kenney_watercraft-pack/Models/GLB format/ship-ocean-liner-small.glb" id="7_11vo3"]
 [ext_resource type="Script" uid="uid://jj14wbdupi0a" path="res://game/scripts/DialogTrigger.gd" id="7_dialog"]
+[ext_resource type="PackedScene" uid="uid://p1caxt7ql1vd" path="res://game/collectibles/Collectible.tscn" id="8_11vo3"]
 [ext_resource type="PackedScene" uid="uid://wpbcnwejelyu" path="res://game/ui/ingame/QuestMenu.tscn" id="8_v70a4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nljnj"]
@@ -66,6 +67,10 @@ height = 8.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bp7rj"]
 radius = 8.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_11vo3"]
+radius = 1.2885742
+height = 3.0620117
 
 [node name="Tallinn" type="Node3D" unique_id=1206792960]
 
@@ -177,6 +182,21 @@ transform = Transform3D(-0.8488979, 0, 0.5285569, 0, 1, 0, -0.5285569, 0, -0.848
 
 [node name="ship-ocean-liner-small2" parent="Landmarks/Harbor" unique_id=1786982342 instance=ExtResource("7_11vo3")]
 transform = Transform3D(-0.8488979, 0, 0.5285569, 0, 1, 0, -0.5285569, 0, -0.8488979, 3.6287231, -3.838511, -3.38974)
+
+[node name="Collectibles" type="Node3D" parent="Landmarks" unique_id=289880703]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="Collectible" parent="Landmarks/Collectibles" unique_id=1791445064 instance=ExtResource("8_11vo3")]
+transform = Transform3D(0.9443993, 0, 0.3288007, 0, 1, 0, -0.3288007, 0, 0.9443993, 221.04326, 0, -10.745331)
+
+[node name="Area3D" type="Area3D" parent="Landmarks/Collectibles/Collectible" unique_id=1388909782]
+script = ExtResource("7_dialog")
+quest_id = "collectible_1"
+character_name = "wolf"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/Collectibles/Collectible/Area3D" unique_id=1880335655]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05493164, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
 
 [node name="UI" type="Control" parent="." unique_id=1008533477]
 layout_mode = 3
