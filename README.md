@@ -1,7 +1,7 @@
 ## Overview
 
 Welcome to Tallin is a game for international students that just got here and dont know what to do.
-    Play Here: https://levartar.itch.io/oil-driver-working-title
+    Play Here: https://levartar.itch.io/new-to-tallinn
 
 ## Working with this Project:
 Get git if you dont already have it. Download this project using:
