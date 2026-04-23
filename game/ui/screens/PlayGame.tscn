@@ -58,10 +58,12 @@ disabled = true
 text = "Continue"
 
 [node name="Spacer3" type="Control" parent="CenterContainer/VBoxContainer/GameButtons" unique_id=707337769]
+visible = false
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
 [node name="LevelSelectButton" type="Button" parent="CenterContainer/VBoxContainer/GameButtons" unique_id=972271470]
+visible = false
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 text = "Level Select"
