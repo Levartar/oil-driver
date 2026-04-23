@@ -106,7 +106,7 @@ func _on_interact_input() -> void:
 		_trigger_dialog()
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	"""Check for interact input while player is in range"""
 	if player_in_range and Input.is_action_just_pressed("interact"):
 		_on_interact_input()

@@ -22,7 +22,7 @@ func _ready():
 	_apply_translations()
 	if play_button: play_button.grab_focus()
 
-func _on_setting_changed(setting_name: String, value):
+func _on_setting_changed(setting_name: String, _value):
 	if setting_name == "language":
 		_apply_translations()
 
