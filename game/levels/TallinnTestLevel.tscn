@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cs3t23wdjo5ra" path="res://game/ui/ingame/InGameUi.tscn" id="4_8sy56"]
 [ext_resource type="PackedScene" uid="uid://df1g2tgb4mhf0" path="res://game/player/3dCharacter/Character.tscn" id="4_11vo3"]
 [ext_resource type="PackedScene" uid="uid://c28d5kllphpgw" path="res://assets/Environments/Tallinn-Vannallin-merged.glb" id="5_ibfxb"]
+[ext_resource type="Texture2D" uid="uid://dr5nrwg7jm015" path="res://assets/UI/Alicja/Art_Files/Karu_Background.png" id="6_83r5m"]
 [ext_resource type="PackedScene" uid="uid://ob0ed6k34od8" path="res://assets/Environments/kenney_watercraft-pack/Models/GLB format/ship-ocean-liner.glb" id="6_bp7rj"]
 [ext_resource type="PackedScene" uid="uid://bavawpagwfrc3" path="res://assets/Environments/Tallinn-Heightmap-decimated-0.02.glb" id="6_nljnj"]
 [ext_resource type="PackedScene" uid="uid://drieop7e3w5ai" path="res://game/player/cars/test_car.tscn" id="6_qe21q"]
@@ -143,6 +144,9 @@ mesh = SubResource("CylinderMesh_v70a4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6575027, 0)
 script = ExtResource("7_dialog")
 quest_id = "quest_1"
+character_name = "wolf"
+image = ExtResource("6_83r5m")
+image_description = "Karu 17"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/KaruGroup/Karu" unique_id=1923397247]
 shape = SubResource("SphereShape3D_bp7rj")

@@ -17,6 +17,7 @@ shadow_size = 4
 shadow_offset = Vector2(4, 4)
 
 [node name="DialogueBox" type="PanelContainer" unique_id=1030259856]
+z_index = 12
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
