@@ -29,6 +29,6 @@ jobs:
         with:
           butler_key: ${{secrets.ITCHIO_SECRET}}
           itch_user: Levartar
-          itch_game: oil-driver-working-title
+          itch_game: new-to-tallinn
           version: ${{ github.ref_name }}
           files: "${{ steps.export.outputs.archive_directory }}/oil-driver-web.zip"
