@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dxeq7ttyxrwbv" path="res://game/player/3dCharacter/camera_controller.tscn" id="3_24pk3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rn1j0"]
-radius = 0.19042969
+radius = 0.13232422
 height = 0.85876465
 
 [node name="Player3D" type="CharacterBody3D" unique_id=1492717194]
