@@ -50,7 +50,7 @@ grow_vertical = 2
 title = "Quests"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="FoldableContainer" unique_id=1318533275]
-custom_minimum_size = Vector2(200, 300)
+custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="FoldableContainer/ScrollContainer" unique_id=1401251373]
@@ -60,13 +60,15 @@ theme_override_constants/margin_left = 6
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="FoldableContainer/ScrollContainer/MarginContainer" unique_id=1301047325]
+[node name="QuestVBoxContainer" type="VBoxContainer" parent="FoldableContainer/ScrollContainer/MarginContainer" unique_id=1301047325]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 8
 
-[node name="BobbingMarker" parent="FoldableContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=351359330 instance=ExtResource("3_573h1")]
+[node name="QuestBobbingMarker" parent="FoldableContainer/ScrollContainer/MarginContainer/QuestVBoxContainer" unique_id=351359330 instance=ExtResource("3_573h1")]
+unique_name_in_owner = true
 visible = false
 z_index = 12
 custom_minimum_size = Vector2(20, 2)
@@ -75,20 +77,21 @@ size_flags_horizontal = 8
 size_flags_vertical = 4
 icon_visible = true
 
-[node name="FoldableContainer" type="FoldableContainer" parent="FoldableContainer/ScrollContainer/MarginContainer/VBoxContainer" unique_id=1619092754]
+[node name="QuestFoldableContainer" type="FoldableContainer" parent="FoldableContainer/ScrollContainer/MarginContainer/QuestVBoxContainer" unique_id=1619092754]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_styles/title_panel = SubResource("StyleBoxFlat_fx31j")
 theme_override_styles/panel = SubResource("StyleBoxFlat_f71i1")
 title = "QuestName"
 
-[node name="MarginContainer" type="MarginContainer" parent="FoldableContainer/ScrollContainer/MarginContainer/VBoxContainer/FoldableContainer" unique_id=709625853]
+[node name="MarginContainer" type="MarginContainer" parent="FoldableContainer/ScrollContainer/MarginContainer/QuestVBoxContainer/QuestFoldableContainer" unique_id=709625853]
 layout_mode = 2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="RichTextLabel" type="RichTextLabel" parent="FoldableContainer/ScrollContainer/MarginContainer/VBoxContainer/FoldableContainer/MarginContainer" unique_id=1661217588]
+[node name="RichTextLabel" type="RichTextLabel" parent="FoldableContainer/ScrollContainer/MarginContainer/QuestVBoxContainer/QuestFoldableContainer/MarginContainer" unique_id=1661217588]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 12
 theme_override_font_sizes/bold_font_size = 12
