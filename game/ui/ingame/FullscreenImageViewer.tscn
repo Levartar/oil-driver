@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cap1k3m5n7q2r"]
+
+[ext_resource type="Script" uid="uid://bb771sr54yton" path="res://game/ui/ingame/fullscreen_image_viewer.gd" id="1_xyz78"]
+
+[node name="FullscreenImageViewer" type="CanvasLayer" unique_id=1675657514]
+script = ExtResource("1_xyz78")
+
+[node name="Background" type="ColorRect" parent="." unique_id=2036770886]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.8)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=9517165]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ImageDisplay" type="TextureRect" parent="CenterContainer" unique_id=1987272716]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(800, 600)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5

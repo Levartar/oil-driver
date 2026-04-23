@@ -22,6 +22,16 @@ shadow_color = Color(0, 0, 0, 0.4)
 shadow_size = 4
 shadow_offset = Vector2(4, 4)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_573h1"]
+bg_color = Color(0.34580213, 0.2827793, 0.25030932, 0.568)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.4)
+shadow_size = 4
+shadow_offset = Vector2(4, 4)
+
 [node name="QuestMenu" type="Control" unique_id=1846370065]
 layout_mode = 3
 anchors_preset = 15
@@ -48,11 +58,12 @@ title = "Notebook"
 
 [node name="TabContainer" type="TabContainer" parent="FoldableContainer" unique_id=26747223]
 layout_mode = 2
-current_tab = 0
+current_tab = 1
 tab_0/title = "Quests"
 tab_1/title = "Collectibles"
 
 [node name="ScrollContainerQuests" type="ScrollContainer" parent="FoldableContainer/TabContainer" unique_id=1318533275]
+visible = false
 custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
 metadata/_tab_index = 0
@@ -108,7 +119,6 @@ text = "Lorem Ipsum Quad Positrum Erebum Lirum Larum
 fit_content = true
 
 [node name="ScrollContainerCollectibles" type="ScrollContainer" parent="FoldableContainer/TabContainer" unique_id=1732747249]
-visible = false
 custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
 metadata/_tab_index = 1
@@ -122,105 +132,33 @@ theme_override_constants/margin_top = 4
 theme_override_constants/margin_bottom = 4
 
 [node name="CollectiblesGridContainer" type="GridContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer" unique_id=286197895]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer" unique_id=153778650]
+[node name="TemplatePanelContainer" type="PanelContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer" unique_id=855783445]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_573h1")
+
+[node name="MarginContainer" type="MarginContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/TemplatePanelContainer" unique_id=153778650]
 layout_mode = 2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer" unique_id=1998649668]
+[node name="VBoxContainer" type="VBoxContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/TemplatePanelContainer/MarginContainer" unique_id=1998649668]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer/VBoxContainer" unique_id=283217098]
-layout_mode = 2
-texture = ExtResource("3_f71i1")
-stretch_mode = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer/VBoxContainer" unique_id=1839087495]
-layout_mode = 2
-theme_override_font_sizes/normal_font_size = 12
-theme_override_font_sizes/bold_font_size = 12
-theme_override_font_sizes/bold_italics_font_size = 12
-theme_override_font_sizes/italics_font_size = 12
-theme_override_font_sizes/mono_font_size = 12
-text = "Lorem Ipsum Quad Positrum Erebum Lirum Larum
-"
-fit_content = true
-
-[node name="MarginContainer2" type="MarginContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer" unique_id=751586411]
-layout_mode = 2
-theme_override_constants/margin_left = 4
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 4
-theme_override_constants/margin_bottom = 4
-
-[node name="VBoxContainer" type="VBoxContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer2" unique_id=1983070343]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer2/VBoxContainer" unique_id=654642475]
+[node name="TextureRect" type="TextureRect" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/TemplatePanelContainer/MarginContainer/VBoxContainer" unique_id=283217098]
 layout_mode = 2
 texture = ExtResource("3_f71i1")
 stretch_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer2/VBoxContainer" unique_id=1587335887]
-layout_mode = 2
-theme_override_font_sizes/normal_font_size = 12
-theme_override_font_sizes/bold_font_size = 12
-theme_override_font_sizes/bold_italics_font_size = 12
-theme_override_font_sizes/italics_font_size = 12
-theme_override_font_sizes/mono_font_size = 12
-text = "Lorem Ipsum Quad Positrum Erebum Lirum Larum
-"
-fit_content = true
-
-[node name="MarginContainer3" type="MarginContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer" unique_id=513441274]
-layout_mode = 2
-theme_override_constants/margin_left = 4
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 4
-theme_override_constants/margin_bottom = 4
-
-[node name="VBoxContainer" type="VBoxContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer3" unique_id=1634587150]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer3/VBoxContainer" unique_id=1317019188]
-layout_mode = 2
-texture = ExtResource("3_f71i1")
-stretch_mode = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer3/VBoxContainer" unique_id=1578777137]
-layout_mode = 2
-theme_override_font_sizes/normal_font_size = 12
-theme_override_font_sizes/bold_font_size = 12
-theme_override_font_sizes/bold_italics_font_size = 12
-theme_override_font_sizes/italics_font_size = 12
-theme_override_font_sizes/mono_font_size = 12
-text = "Lorem Ipsum Quad Positrum Erebum Lirum Larum
-"
-fit_content = true
-
-[node name="MarginContainer4" type="MarginContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer" unique_id=1248049326]
-layout_mode = 2
-theme_override_constants/margin_left = 4
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 4
-theme_override_constants/margin_bottom = 4
-
-[node name="VBoxContainer" type="VBoxContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer4" unique_id=994806321]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer4/VBoxContainer" unique_id=753845154]
-layout_mode = 2
-texture = ExtResource("3_f71i1")
-stretch_mode = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer4/VBoxContainer" unique_id=1181862872]
+[node name="RichTextLabel" type="RichTextLabel" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/TemplatePanelContainer/MarginContainer/VBoxContainer" unique_id=1839087495]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 12
 theme_override_font_sizes/bold_font_size = 12

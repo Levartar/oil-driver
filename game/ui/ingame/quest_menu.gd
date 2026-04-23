@@ -5,6 +5,7 @@ extends Control
 @onready var vbox_container = %QuestVBoxContainer
 @onready var bobbing_marker = %QuestBobbingMarker
 @onready var template_quest_container = %QuestFoldableContainer
+@onready var collectibles_container = %CollectiblesGridContainer
 
 var quest_containers: Array = []
 var active_quest_id: String = ""
@@ -12,6 +13,8 @@ var active_quest_id: String = ""
 
 func _ready() -> void:
 	$FoldableContainer.folded = folded
+
+	release_focus()
 	
 	# Get initial quest state
 	active_quest_id = SaveData.get_data("active_quest_id", "")
@@ -20,9 +23,11 @@ func _ready() -> void:
 	if GameManager:
 		GameManager.quest_completed.connect(_on_quest_completed)
 		GameManager.quest_started.connect(_on_quest_started)
+		GameManager.collectible_collected.connect(_on_collectible_collected)
 	
 	# Initial display
 	update_quests_display()
+	update_collectibles_display()
 
 
 func _process(_delta: float) -> void:
@@ -107,3 +112,34 @@ func _on_quest_started(quest_id: String) -> void:
 	"""Called when a new quest becomes active"""
 	active_quest_id = quest_id
 	update_quests_display()
+
+
+func _on_collectible_collected(_collectible_id: String) -> void:
+	"""Called when a collectible is collected"""
+	update_collectibles_display()
+
+
+func update_collectibles_display() -> void:
+	"""Update collectibles display"""
+	if not collectibles_container:
+		print("Error: collectibles_container not found");
+		return
+	
+	var collected_ids = GameManager.get_collected_collectibles()
+	
+	# Clear existing collectibles
+	for child in collectibles_container.get_children():
+		child.queue_free()
+	
+	# Add collected collectibles
+	for collectible_id in collected_ids:
+		var collectible_scene = load("res://game/ui/ingame/CollectibleItem.tscn")
+		if collectible_scene:
+			var collectible_ui = collectible_scene.instantiate()
+			collectible_ui.set_collectible_data(collectible_id)
+			collectibles_container.add_child(collectible_ui)
+
+func _input(event: InputEvent) -> void:
+	# Don't consume jump input - let it pass to the player
+	if event.is_action("jump"):
+		get_tree().root.set_input_as_handled()

@@ -102,7 +102,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6834297, 1.2832336, -35.46
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.953, 1.283, -35.577)
 
 [node name="Player" parent="." unique_id=1492717194 instance=ExtResource("4_11vo3")]
-transform = Transform3D(-0.8819377, 0, -0.471366, 0, 1, 0, 0.471366, 0, -0.8819377, 470.2879, -2.4450989, -0.36374664)
+transform = Transform3D(-0.8819377, 0, -0.471366, 0, 1, 0, 0.471366, 0, -0.8819377, 443.63126, -2.4450989, -16.502995)
 ROTATION_SPEED = 100.0
 
 [node name="NotCar" parent="." unique_id=1836486299 instance=ExtResource("6_qe21q")]
@@ -188,11 +188,13 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="Collectible" parent="Landmarks/Collectibles" unique_id=1791445064 instance=ExtResource("8_11vo3")]
 transform = Transform3D(0.9443993, 0, 0.3288007, 0, 1, 0, -0.3288007, 0, 0.9443993, 221.04326, 0, -10.745331)
+collectible_id = "collectible_1"
 
 [node name="Area3D" type="Area3D" parent="Landmarks/Collectibles/Collectible" unique_id=1388909782]
 script = ExtResource("7_dialog")
 quest_id = "collectible_1"
 character_name = "wolf"
+collectible = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/Collectibles/Collectible/Area3D" unique_id=1880335655]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05493164, 0)

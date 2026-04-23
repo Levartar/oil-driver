@@ -13,7 +13,7 @@ var input_disabled := false
 
 func _physics_process(delta: float) -> void:	
 	var is_starting_jump = Input.is_action_just_pressed("jump") and is_on_floor()
-	if is_starting_jump:
+	if is_starting_jump and not input_disabled:
 		velocity.y += JUMP_VELOCITY
 		
 	var input_dir := Input.get_vector("left", "right", "up", "down")
@@ -32,17 +32,18 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 	
 	#Skin animation
-	if move_direction.length() > 0.2:
-		_last_movement_direction = move_direction
-		var target_angle := Vector3.BACK.signed_angle_to(_last_movement_direction,
-		Vector3.UP)
-		_skin.global_rotation.y = lerp_angle(_skin.rotation.y, target_angle, 1)
-	if is_starting_jump:
-		_skin.jump()
-	elif not is_on_floor() and velocity.y < 0:
-		_skin.fall()
-	elif is_on_floor():
-		if velocity.length() > 0.2:
-			_skin.move()
-		else:
-			_skin.idle()
+	if not input_disabled:	
+		if move_direction.length() > 0.2:
+			_last_movement_direction = move_direction
+			var target_angle := Vector3.BACK.signed_angle_to(_last_movement_direction,
+			Vector3.UP)
+			_skin.global_rotation.y = lerp_angle(_skin.rotation.y, target_angle, 1)
+		if is_starting_jump:
+			_skin.jump()
+		elif not is_on_floor() and velocity.y < 0:
+			_skin.fall()
+		elif is_on_floor():
+			if velocity.length() > 0.2:
+				_skin.move()
+			else:
+				_skin.idle()

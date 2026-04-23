@@ -5,6 +5,7 @@ class_name DialogTrigger
 @export var character_name: String = ""
 @export var trigger_once: bool = false
 @export var autoplay: bool = false
+@export var collectible: bool = false
 
 var dialog_completed = false
 var player_in_range = false
@@ -20,7 +21,6 @@ func _ready():
 	body_exited.connect(_on_body_exited)
 	if DialogManager:
 		DialogManager.dialog_finished.connect(_on_dialog_finished)
-	print("DialogTrigger ready for quest: %s" % quest_id)
 		
 func _on_body_entered(body: Node3D) -> void:
 	if body.name.to_lower().contains("player"):
@@ -48,7 +48,11 @@ func _trigger_dialog():
 	if dialog_playing:
 		return
 	
-	# Start the dialogue
+	if collectible and not SaveData.has_collectible(quest_id):
+		SaveData.add_collectible(quest_id)
+		if GameManager:
+			GameManager.collect_collectible(quest_id)
+	
 	if not quest_id.is_empty():
 		print("Starting dialog via DialogManager: %s" % quest_id)
 		if DialogManager:
@@ -147,7 +151,6 @@ func _switch_to_dialog_camera() -> void:
 	if current_camera and current_camera != dialog_camera:
 		original_camera = current_camera
 		dialog_camera.make_current()
-		print("DialogTrigger: Switched to dialog camera")
 
 
 func _switch_back_to_original_camera() -> void:
