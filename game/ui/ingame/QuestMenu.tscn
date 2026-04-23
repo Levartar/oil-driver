@@ -58,12 +58,11 @@ title = "Notebook"
 
 [node name="TabContainer" type="TabContainer" parent="FoldableContainer" unique_id=26747223]
 layout_mode = 2
-current_tab = 1
+current_tab = 0
 tab_0/title = "Quests"
 tab_1/title = "Collectibles"
 
 [node name="ScrollContainerQuests" type="ScrollContainer" parent="FoldableContainer/TabContainer" unique_id=1318533275]
-visible = false
 custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
 metadata/_tab_index = 0
@@ -119,6 +118,7 @@ text = "Lorem Ipsum Quad Positrum Erebum Lirum Larum
 fit_content = true
 
 [node name="ScrollContainerCollectibles" type="ScrollContainer" parent="FoldableContainer/TabContainer" unique_id=1732747249]
+visible = false
 custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
 metadata/_tab_index = 1
