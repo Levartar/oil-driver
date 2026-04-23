@@ -10,36 +10,42 @@ var quests = {
 		"name": "Tutorial",
 		"character": "tutorial_guide",
 		"dialog_id": "tutorial_wasd",
+		"description": "Learn how to move your vehicle using WASD keys.",
 	},
 	"quest_1": {
 		"id": "quest_1",
-		"name": "Alexander Nevsky Cathedral",
+		"name": "Karu 17",
 		"character": "guide1",
 		"dialog_id": "quest_1",
+		"description": "Visit the Karu Dormitory and speak with the guide.",
 	},
 	"quest_2": {
 		"id": "quest_2",
-		"name": "Toompea Castle",
+		"name": "Tallinn University",
 		"character": "guide2",
 		"dialog_id": "quest_2",
+		"description": "Visit the Tallinn University and speak with the guide.",
 	},
 	"quest_3": {
 		"id": "quest_3",
-		"name": "Kiek in de Kök",
+		"name": "R-Kiosk",
 		"character": "guide3",
 		"dialog_id": "quest_3",
+		"description": "Visit the R-Kiosk and speak with the guide.",
 	},
 	"quest_4": {
 		"id": "quest_4",
-		"name": "Tallinn Town Hall",
+		"name": "Ulikool Tram Stop",
 		"character": "guide4",
 		"dialog_id": "quest_4",
+		"description": "Visit the Ulikool Tram Stop and speak with the guide.",
 	},
 	"quest_5": {
 		"id": "quest_5",
-		"name": "St. Olaf Church",
+		"name": "Linnahall",
 		"character": "guide5",
 		"dialog_id": "quest_5",
+		"description": "Visit Linnahall and speak with the guide.",
 	}
 }
 
@@ -71,6 +77,36 @@ func get_active_quest() -> Dictionary:
 		var quest_id = quest_sequence[current_quest_index]
 		return quests[quest_id]
 	return {}
+
+func get_completed_quests() -> Array:
+	"""Get all completed quests as an array of quest dictionaries"""
+	var completed_quests = SaveData.get_data("completed_quests", [])
+	var result = []
+	for quest_id in completed_quests:
+		if quest_id in quests:
+			result.append(quests[quest_id])
+	return result
+
+func get_quest_visibility_list() -> Array:
+	"""Get list of quests to display (active + completed, not pending)"""
+	var result = []
+	var active_quest_id = SaveData.get_data("active_quest_id", "")
+	var completed_quests = SaveData.get_data("completed_quests", [])
+	
+	# Add active quest first
+	if active_quest_id in quests:
+		var active_quest = quests[active_quest_id].duplicate()
+		active_quest["completed"] = false
+		result.append(active_quest)
+	
+	# Add completed quests
+	for quest_id in completed_quests:
+		if quest_id in quests:
+			var completed_quest = quests[quest_id].duplicate()
+			completed_quest["completed"] = true
+			result.append(completed_quest)
+	
+	return result
 
 func advance_quest():
 	"""Mark current quest as complete and advance to next"""

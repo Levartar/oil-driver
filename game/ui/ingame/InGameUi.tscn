@@ -7,21 +7,39 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_j3ay7")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1282907304]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1981664704]
 layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1480154687]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1282907304]
+layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="FPSLabel" type="Label" parent="VBoxContainer" unique_id=1761385396]
+[node name="FPSLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1761385396]
+unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "FPS: 60"
 
-[node name="VelocityLabel" type="Label" parent="VBoxContainer" unique_id=250939448]
+[node name="VelocityLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=250939448]
+unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "Velocity: 0.00 m/s"
 
-[node name="ResetButton" type="Button" parent="VBoxContainer" unique_id=1891438303]
+[node name="ResetButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1891438303]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Reset (R)"

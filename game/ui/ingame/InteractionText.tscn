@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dthrga02kgrwk"]
 
+[ext_resource type="FontFile" uid="uid://6cp21ff65y8j" path="res://assets/UI/Alicja/Art_Files/Fonts/genty-sans-regular.ttf" id="1_8wcvc"]
 [ext_resource type="PackedScene" uid="uid://bqhktmbt3febd" path="res://addons/dialogue_quest/prefabs/ui/dialogue/components/bobbing_marker/bobbing_marker.tscn" id="1_gfi3d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hbuv"]
@@ -28,6 +29,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_2hbuv")
 
 [node name="Label" type="Label" parent="PanelContainer" unique_id=1383199031]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_8wcvc")
+theme_override_font_sizes/font_size = 16
 text = "[e] to interact"
 horizontal_alignment = 1
 vertical_alignment = 1
