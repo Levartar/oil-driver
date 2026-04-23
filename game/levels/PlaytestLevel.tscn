@@ -37,7 +37,7 @@ fog_depth_begin = 2.0
 adjustment_enabled = true
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_4xv3o"]
-radius = 5.83
+radius = 2.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_tutorial"]
 radius = 7.904
@@ -67,31 +67,29 @@ transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
 transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -23.54, 0.07, 0)
 
 [node name="Player" parent="." unique_id=1492717194 instance=ExtResource("3_ombyj")]
-transform = Transform3D(-0.39233717, 0, -0.9198215, 0, 1, 0, 0.9198215, 0, -0.39233717, 31.058046, -2.4450831, 89.68501)
+transform = Transform3D(-0.8899026, 0, -0.45615074, 0, 1, 0, 0.45615074, 0, -0.8899026, -50.307858, -2.4450831, 86.970184)
 ROTATION_SPEED = 100.0
 
 [node name="Landmarks" type="Node3D" parent="." unique_id=1298327621]
 
 [node name="TutorialGroup" type="Node3D" parent="Landmarks" unique_id=479623006]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.244362, 0, 88.98405)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.490753, -2.6655073, 85.8778)
 
 [node name="TutorialTrigger" type="Area3D" parent="Landmarks/TutorialGroup" unique_id=1562071146]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 471.60562, -2.083352, -1.7054117)
 script = ExtResource("5_l0y63")
 quest_id = "tutorial_wasd"
 trigger_once = true
 autoplay = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/TutorialGroup/TutorialTrigger" unique_id=1442867140]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -467.51776, 0, 2.3255234)
 shape = SubResource("SphereShape3D_4xv3o")
 debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
 
 [node name="Camera3D" type="Camera3D" parent="Landmarks/TutorialGroup" unique_id=1331246126]
-transform = Transform3D(-0.06740589, 0.43485257, -0.8979753, 1.0219875e-08, 0.9000223, 0.43584383, 0.99772567, 0.02937843, -0.060666803, -1.03788, -1.0869484, 0.15808105)
+transform = Transform3D(-0.9339303, 0.1557947, -0.3217177, 1.0219875e-08, 0.9000223, 0.43584383, 0.35745528, 0.40704778, -0.840558, -1.1029205, 1.6120219, -1.2896957)
 
 [node name="TutorialCameraGroup" type="Node3D" parent="Landmarks" unique_id=2138771919]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.16835, 3.8146973e-06, 87.29465)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.373558, 0, 78.82038)
 
 [node name="TutorialTrigger" type="Area3D" parent="Landmarks/TutorialCameraGroup" unique_id=2003616871]
 script = ExtResource("5_l0y63")
@@ -123,23 +121,16 @@ debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
 [node name="Camera3D" type="Camera3D" parent="Landmarks/KaruGroup" unique_id=172738742]
 transform = Transform3D(0.5977511, 0.16133755, -0.7852795, 0, 0.97954005, 0.20124885, 0.80168176, -0.1202967, 0.58552116, -18.893162, 4.858328, 13.648701)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Landmarks/KaruGroup" unique_id=39992465]
-transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.8660254, 0, -0.8660254, 0.49999997, -2.110077, 10.637342, 8.487915)
-visible = false
-light_color = Color(0.95234615, 0.71455765, 0.21508199, 1)
-light_energy = 100.0
-light_volumetric_fog_energy = 16.0
-
 [node name="UlikoolGroup" type="Node3D" parent="Landmarks" unique_id=51769365]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.00276, 0.96769524, 92.86604)
 
 [node name="Ulikool" type="Area3D" parent="Landmarks/UlikoolGroup" unique_id=1376926563]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.843933, -2.6575027, -12.640953)
 script = ExtResource("5_l0y63")
-quest_id = "quest_2"
+quest_id = "Ulikool"
 character_name = "wolf"
 image = ExtResource("5_4xv3o")
-image_description = "Karu 17"
+image_description = "Astra Building"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/UlikoolGroup/Ulikool" unique_id=425153786]
 transform = Transform3D(0.9575211, 0, 0.28836337, 0, 1, 0, -0.28836337, 0, 0.9575211, 0.0519104, 2.4732132, 0.7214737)
@@ -156,10 +147,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.392082, 0.96769905, 117.730
 [node name="RKiosk" type="Area3D" parent="Landmarks/RKioskGroup" unique_id=1056757404]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.843933, -2.6575027, -12.640953)
 script = ExtResource("5_l0y63")
-quest_id = "quest_1"
+quest_id = "RKiosk"
 character_name = "wolf"
-image = ExtResource("5_4xv3o")
-image_description = "Karu 17"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/RKioskGroup/RKiosk" unique_id=496728420]
 transform = Transform3D(0.9575211, 0, 0.28836337, 0, 1, 0, -0.28836337, 0, 0.9575211, -4.389267, 2.4732132, 2.05896)
@@ -190,19 +179,19 @@ transform = Transform3D(0.9976125, -0.040264122, 0.05610782, 2.6953633e-09, 0.81
 [node name="Collectibles" type="Node3D" parent="Landmarks" unique_id=289880703]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
-[node name="Collectible" parent="Landmarks/Collectibles" unique_id=1791445064 instance=ExtResource("9_bt8f4")]
-transform = Transform3D(0.044977322, 0, 0.49797294, 0, 0.5, 0, -0.49797294, 0, 0.044977322, 2.3375754, -0.48314285, 43.218876)
+[node name="TutorialCollectible" parent="Landmarks/Collectibles" unique_id=1791445064 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(0.1914063, 0, -0.46191302, 0, 0.5, 0, 0.46191302, 0, 0.1914063, -21.224287, -0.5560936, 39.07273)
 collectible_id = "tutorial_collectible"
 image = ExtResource("7_mcq6k")
 description = "Tutorial"
 
-[node name="Area3D" type="Area3D" parent="Landmarks/Collectibles/Collectible" unique_id=1388909782]
+[node name="Area3D" type="Area3D" parent="Landmarks/Collectibles/TutorialCollectible" unique_id=1388909782]
 script = ExtResource("5_l0y63")
-quest_id = "collectible_1"
+quest_id = "tutorial_collectible"
 character_name = "wolf"
 collectible = true
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/Collectibles/Collectible/Area3D" unique_id=1880335655]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/Collectibles/TutorialCollectible/Area3D" unique_id=1880335655]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
 shape = SubResource("CapsuleShape3D_11vo3")
 
