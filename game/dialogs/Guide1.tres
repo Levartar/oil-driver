@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="DQCharacter" format=3 uid="uid://guide1"]
 
+[ext_resource type="Texture2D" uid="uid://cvfie7i7qps7o" path="res://assets/UI/Wolf mascot.png" id="1_diq5n"]
 [ext_resource type="Script" uid="uid://cjgeerk1adeay" path="res://addons/dialogue_quest/scripts/systems/character/resources/character.gd" id="1_script"]
 
 [resource]
 script = ExtResource("1_script")
-color = Color(1, 0.2, 0.2, 1)
-character_id = "guide1"
-character_name = "Alexander"
+color = Color(0, 0.44705883, 0.80784315, 1)
+portrait = ExtResource("1_diq5n")
+character_id = "wolf"
+character_name = "Wolf"
