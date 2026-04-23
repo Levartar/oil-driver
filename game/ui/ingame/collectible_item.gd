@@ -1,7 +1,7 @@
 extends PanelContainer
 
 @onready var image_rect = %CollectibleImage
-@onready var description_label = %CollectibleDescription
+@onready var description_label: RichTextLabel = %CollectibleDescription
 
 var collectible_id: String
 var collectible_data: Dictionary
@@ -25,13 +25,10 @@ func set_collectible_data(id: String) -> void:
 
 func _load_collectible_data() -> void:
 	# Try to find collectible data from scene instances
-	var collectibles = get_tree().get_nodes_in_group("collectibles")
+	var collectibles = SaveData.get_data("collected_collectibles", [])
 	for collectible in collectibles:
-		if collectible.collectible_id == collectible_id:
-			collectible_data = {
-				"image": collectible.image,
-				"description": collectible.description
-			}
+		if collectible.get("id") == collectible_id:
+			collectible_data = collectible
 			break
 	
 	# Update UI
@@ -40,7 +37,6 @@ func _load_collectible_data() -> void:
 	
 	if description_label and collectible_data.get("description"):
 		description_label.text = collectible_data["description"]
-
 
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:

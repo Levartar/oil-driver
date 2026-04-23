@@ -62,11 +62,11 @@ func has_save_file():
 	return FileAccess.file_exists(save_file_path)
 
 func delete_save():
-    if FileAccess.file_exists(save_file_path):
-        DirAccess.remove_absolute(save_file_path)
-        print("Save file deleted")
-        return true
-    return false
+	if FileAccess.file_exists(save_file_path):
+		DirAccess.remove_absolute(save_file_path)
+		print("Save file deleted")
+		return true
+	return false
 
 func get_data(key: String, default_value = null):
 	return game_data.get(key, default_value)
@@ -84,19 +84,27 @@ func unlock_achievement(achievement_id: String):
 func has_achievement(achievement_id: String) -> bool:
 	return achievement_id in game_data["achievements"]
 
-func add_collectible(collectible_id: String) -> void:
-	"""Add a collectible to the collected list"""
+func add_collectible(collectible_id: String, collectible_data: Dictionary = {}) -> void:
+	"""Add a collectible to the collected list with its data"""
 	var collected = get_data("collected_collectibles", [])
-	if collectible_id not in collected:
-		collected.append(collectible_id)
-		set_data("collected_collectibles", collected)
-		save_game()
+	
+	# Check if already collected
+	for item in collected:
+		if item.get("id") == collectible_id:
+			return
+
+	collected.append(collectible_data)
+	set_data("collected_collectibles", collected)
+	save_game()
 
 func has_collectible(collectible_id: String) -> bool:
 	"""Check if a collectible has been collected"""
 	var collected = get_data("collected_collectibles", [])
-	return collectible_id in collected
+	for item in collected:
+		if item.get("id") == collectible_id:
+			return true
+	return false
 
 func get_collected_collectibles() -> Array:
-	"""Get array of all collected collectible IDs"""
+	"""Get array of all collected collectible data"""
 	return get_data("collected_collectibles", [])

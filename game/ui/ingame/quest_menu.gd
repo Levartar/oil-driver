@@ -125,18 +125,18 @@ func update_collectibles_display() -> void:
 		print("Error: collectibles_container not found");
 		return
 	
-	var collected_ids = GameManager.get_collected_collectibles()
+	var collectibles = GameManager.get_collected_collectibles()
 	
 	# Clear existing collectibles
 	for child in collectibles_container.get_children():
 		child.queue_free()
 	
 	# Add collected collectibles
-	for collectible_id in collected_ids:
+	for collectible in collectibles:
 		var collectible_scene = load("res://game/ui/ingame/CollectibleItem.tscn")
 		if collectible_scene:
 			var collectible_ui = collectible_scene.instantiate()
-			collectible_ui.set_collectible_data(collectible_id)
+			collectible_ui.set_collectible_data(collectible.get("id", ""))
 			collectibles_container.add_child(collectible_ui)
 
 func _input(event: InputEvent) -> void:

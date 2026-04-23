@@ -1,15 +1,15 @@
-[gd_scene format=3 uid="uid://fcktt12ppqtc"]
+[gd_scene format=3 uid="uid://byt88scfbsw2m"]
 
-[ext_resource type="PackedScene" uid="uid://cs3t23wdjo5ra" path="res://game/ui/ingame/InGameUi.tscn" id="4_8sy56"]
-[ext_resource type="PackedScene" uid="uid://df1g2tgb4mhf0" path="res://game/player/3dCharacter/Character.tscn" id="4_11vo3"]
-[ext_resource type="PackedScene" uid="uid://c28d5kllphpgw" path="res://assets/Environments/Tallinn-Vannallin-merged.glb" id="5_ibfxb"]
-[ext_resource type="PackedScene" uid="uid://ob0ed6k34od8" path="res://assets/Environments/kenney_watercraft-pack/Models/GLB format/ship-ocean-liner.glb" id="6_bp7rj"]
-[ext_resource type="PackedScene" uid="uid://bavawpagwfrc3" path="res://assets/Environments/Tallinn-Heightmap-decimated-0.02.glb" id="6_nljnj"]
-[ext_resource type="PackedScene" uid="uid://drieop7e3w5ai" path="res://game/player/cars/test_car.tscn" id="6_qe21q"]
-[ext_resource type="PackedScene" uid="uid://bky77kq3ee8pe" path="res://assets/Environments/kenney_watercraft-pack/Models/GLB format/ship-ocean-liner-small.glb" id="7_11vo3"]
-[ext_resource type="Script" uid="uid://jj14wbdupi0a" path="res://game/scripts/DialogTrigger.gd" id="7_dialog"]
-[ext_resource type="PackedScene" uid="uid://p1caxt7ql1vd" path="res://game/collectibles/Collectible.tscn" id="8_11vo3"]
-[ext_resource type="PackedScene" uid="uid://wpbcnwejelyu" path="res://game/ui/ingame/QuestMenu.tscn" id="8_v70a4"]
+[ext_resource type="PackedScene" uid="uid://c28d5kllphpgw" path="res://assets/Environments/Tallinn-Vannallin-merged.glb" id="1_3n0eb"]
+[ext_resource type="PackedScene" uid="uid://bavawpagwfrc3" path="res://assets/Environments/Tallinn-Heightmap-decimated-0.02.glb" id="2_6xe7l"]
+[ext_resource type="PackedScene" uid="uid://df1g2tgb4mhf0" path="res://game/player/3dCharacter/Character.tscn" id="3_msc6x"]
+[ext_resource type="PackedScene" uid="uid://drieop7e3w5ai" path="res://game/player/cars/test_car.tscn" id="4_ombyj"]
+[ext_resource type="Script" uid="uid://jj14wbdupi0a" path="res://game/scripts/DialogTrigger.gd" id="5_6xt56"]
+[ext_resource type="PackedScene" uid="uid://ob0ed6k34od8" path="res://assets/Environments/kenney_watercraft-pack/Models/GLB format/ship-ocean-liner.glb" id="6_l0y63"]
+[ext_resource type="PackedScene" uid="uid://bky77kq3ee8pe" path="res://assets/Environments/kenney_watercraft-pack/Models/GLB format/ship-ocean-liner-small.glb" id="7_6b5et"]
+[ext_resource type="PackedScene" uid="uid://p1caxt7ql1vd" path="res://game/collectibles/Collectible.tscn" id="8_r7ao3"]
+[ext_resource type="PackedScene" uid="uid://cs3t23wdjo5ra" path="res://game/ui/ingame/InGameUi.tscn" id="9_klxx8"]
+[ext_resource type="PackedScene" uid="uid://wpbcnwejelyu" path="res://game/ui/ingame/QuestMenu.tscn" id="10_bt8f4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nljnj"]
 sky_top_color = Color(0.27009362, 0.43445107, 0.7677927, 1)
@@ -95,17 +95,17 @@ shape = SubResource("BoxShape3D_hxu3w")
 [node name="TallinnEnvironment" type="Node3D" parent="." unique_id=1245317640]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
 
-[node name="Tallinn-Vannallin-merged" parent="TallinnEnvironment" unique_id=1108566722 instance=ExtResource("5_ibfxb")]
+[node name="Tallinn-Vannallin-merged" parent="TallinnEnvironment" unique_id=1108566722 instance=ExtResource("1_3n0eb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6834297, 1.2832336, -35.466873)
 
-[node name="Tallinn-Heightmap-decimated-0_02" parent="TallinnEnvironment" unique_id=616442797 instance=ExtResource("6_nljnj")]
+[node name="Tallinn-Heightmap-decimated-0_02" parent="TallinnEnvironment" unique_id=616442797 instance=ExtResource("2_6xe7l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.953, 1.283, -35.577)
 
-[node name="Player" parent="." unique_id=1492717194 instance=ExtResource("4_11vo3")]
+[node name="Player" parent="." unique_id=1492717194 instance=ExtResource("3_msc6x")]
 transform = Transform3D(-0.8819377, 0, -0.471366, 0, 1, 0, 0.471366, 0, -0.8819377, 443.63126, -2.4450989, -16.502995)
 ROTATION_SPEED = 100.0
 
-[node name="NotCar" parent="." unique_id=1836486299 instance=ExtResource("6_qe21q")]
+[node name="NotCar" parent="." unique_id=1836486299 instance=ExtResource("4_ombyj")]
 transform = Transform3D(-0.3896062, 0, 0.9209815, 0, 1, 0, -0.9209815, 0, -0.3896062, 471.56866, -2.0033817, -2.0266705)
 visible = false
 
@@ -115,7 +115,7 @@ visible = false
 
 [node name="TutorialTrigger" type="Area3D" parent="Landmarks/TutorialGroup" unique_id=1562071146]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 471.60562, -2.083352, -1.7054117)
-script = ExtResource("7_dialog")
+script = ExtResource("5_6xt56")
 quest_id = "tutorial_wasd"
 trigger_once = true
 autoplay = true
@@ -141,7 +141,7 @@ mesh = SubResource("CylinderMesh_v70a4")
 
 [node name="Karu" type="Area3D" parent="Landmarks/KaruGroup" unique_id=1073626903]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6575027, 0)
-script = ExtResource("7_dialog")
+script = ExtResource("5_6xt56")
 quest_id = "quest_1"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/KaruGroup/Karu" unique_id=1923397247]
@@ -162,7 +162,7 @@ light_volumetric_fog_energy = 16.0
 
 [node name="LinahallTrigger2" type="Area3D" parent="Landmarks/LinahallGroup" unique_id=116706048]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.54173, -2.083352, -335.18948)
-script = ExtResource("7_dialog")
+script = ExtResource("5_6xt56")
 quest_id = "quest_2"
 trigger_once = true
 
@@ -177,22 +177,22 @@ transform = Transform3D(0.9976125, -0.040264122, 0.05610782, 2.6953633e-09, 0.81
 [node name="Harbor" type="Node3D" parent="Landmarks" unique_id=1926155619]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 337.53165, 1.1313934, -386.62637)
 
-[node name="ship-ocean-liner2" parent="Landmarks/Harbor" unique_id=350021702 instance=ExtResource("6_bp7rj")]
+[node name="ship-ocean-liner2" parent="Landmarks/Harbor" unique_id=350021702 instance=ExtResource("6_l0y63")]
 transform = Transform3D(-0.8488979, 0, 0.5285569, 0, 1, 0, -0.5285569, 0, -0.8488979, -5.1501617, -3.1153612, 10.709747)
 
-[node name="ship-ocean-liner-small2" parent="Landmarks/Harbor" unique_id=1786982342 instance=ExtResource("7_11vo3")]
+[node name="ship-ocean-liner-small2" parent="Landmarks/Harbor" unique_id=1786982342 instance=ExtResource("7_6b5et")]
 transform = Transform3D(-0.8488979, 0, 0.5285569, 0, 1, 0, -0.5285569, 0, -0.8488979, 3.6287231, -3.838511, -3.38974)
 
 [node name="Collectibles" type="Node3D" parent="Landmarks" unique_id=289880703]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
-[node name="Collectible" parent="Landmarks/Collectibles" unique_id=1791445064 instance=ExtResource("8_11vo3")]
+[node name="Collectible" parent="Landmarks/Collectibles" unique_id=1791445064 instance=ExtResource("8_r7ao3")]
 transform = Transform3D(0.9443993, 0, 0.3288007, 0, 1, 0, -0.3288007, 0, 0.9443993, 221.04326, 0, -10.745331)
 collectible_id = "collectible_1"
 description = "Test Atlas"
 
 [node name="Area3D" type="Area3D" parent="Landmarks/Collectibles/Collectible" unique_id=1388909782]
-script = ExtResource("7_dialog")
+script = ExtResource("5_6xt56")
 quest_id = "collectible_1"
 character_name = "wolf"
 collectible = true
@@ -210,10 +210,10 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="InGameUI" parent="UI" unique_id=705259701 instance=ExtResource("4_8sy56")]
+[node name="InGameUI" parent="UI" unique_id=705259701 instance=ExtResource("9_klxx8")]
 layout_mode = 0
 
-[node name="QuestMenu" parent="UI" unique_id=1846370065 instance=ExtResource("8_v70a4")]
+[node name="QuestMenu" parent="UI" unique_id=1846370065 instance=ExtResource("10_bt8f4")]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0

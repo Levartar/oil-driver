@@ -15,3 +15,12 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
+
+func collect_collectible() -> void:
+	var collectible_data = {
+				"id": collectible_id,
+				"image": image,
+				"description": description
+			}
+	if GameManager:
+		GameManager.collect_collectible(collectible_id,collectible_data)

@@ -209,13 +209,12 @@ func _lerp_fog_to_bright() -> void:
 		await get_tree().physics_frame
 
 
-func collect_collectible(collectible_id: String) -> void:
+func collect_collectible(collectible_id: String, collectible_data: Dictionary = {}) -> void:
 	"""Mark a collectible as collected"""
-	print("has collectible:", SaveData.has_collectible(collectible_id))
-	if SaveData.has_collectible(collectible_id):
-		SaveData.add_collectible(collectible_id)
+	if not SaveData.has_collectible(collectible_id):
+		SaveData.add_collectible(collectible_id, collectible_data)
 		emit_signal("collectible_collected", collectible_id)
-		print("emitted collectible_collected signal for: %s" % collectible_id)
+		print("Collectible collected: %s" % collectible_id)
 
 
 func get_collected_collectibles() -> Array:

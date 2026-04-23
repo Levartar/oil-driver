@@ -48,10 +48,12 @@ func _trigger_dialog():
 	if dialog_playing:
 		return
 	
-	if collectible and not SaveData.has_collectible(quest_id):
-		SaveData.add_collectible(quest_id)
-		if GameManager:
-			GameManager.collect_collectible(quest_id)
+	if collectible:
+		var collectible_node = get_parent()
+		if collectible_node and is_node_valid(collectible_node):
+			collectible_node.collect_collectible()
+		else:
+			print("DialogTrigger error: marked as collectible but parent is not a Collectible")
 	
 	if not quest_id.is_empty():
 		print("Starting dialog via DialogManager: %s" % quest_id)
