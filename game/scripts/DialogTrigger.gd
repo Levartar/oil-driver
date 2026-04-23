@@ -56,10 +56,9 @@ func _trigger_dialog():
 		if collectible_node and is_node_valid(collectible_node):
 			collectible_node.collect_collectible()
 		else:
-			print("DialogTrigger error: marked as collectible but parent is not a Collectible")
+			printerr("DialogTrigger error: marked as collectible but parent is not a Collectible")
 	
 	if not quest_id.is_empty():
-		print("Starting dialog via DialogManager: %s" % quest_id)
 		if DialogManager:
 			dialog_playing = true
 			_pause_player()
@@ -71,7 +70,7 @@ func _trigger_dialog():
 		if image:
 			_show_image_blend()
 	else:
-		print("DialogTrigger error: missing dialog_id in quest")
+		printerr("DialogTrigger error: missing dialog_id in quest")
 
 func reset_trigger():
 	"""Reset trigger to allow dialogue to play again"""
