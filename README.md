@@ -1,6 +1,6 @@
 ## Overview
 
-Oil Driver is a 3D isometric driving adventure where Saad has to deliver oil for his overlord Conald Trumc through Saudi Arabia because the street of Hormuz is closed.
+Welcome to Tallin is a game for international students that just got here and dont know what to do.
     Play Here: https://levartar.itch.io/oil-driver-working-title
 
 ## Working with this Project:
@@ -62,8 +62,8 @@ git branch feature/your-feature-name
 - [ ] **Add Licenses** - HDM Licenses Button
 - [ ] **Add Sounds** - Music, Environments
 - [ ] **Particle Effects** - Movement Dust, Speed stripes, Scene Dust, Fog
-- [ ] **3D Character** - Character for first scenes
-- [ ] **Questlog** - Bar that shows all completed and upcoming quests
+- [X] **3D Character** - Character for first scenes
+- [X] **Questlog** - Bar that shows all completed and upcoming quests
 - [X] **Dialog System** - Landmark Message Broadcast 
 - [ ] **Gyms and Zoos** - Create test Levels for Designers
 
