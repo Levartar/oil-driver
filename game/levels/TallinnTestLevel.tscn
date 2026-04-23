@@ -99,7 +99,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6834297, 1.2832336, -35.46
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.953, 1.283, -35.577)
 
 [node name="Player" parent="." unique_id=1492717194 instance=ExtResource("4_11vo3")]
-transform = Transform3D(-0.8819377, 0, -0.471366, 0, 1, 0, 0.471366, 0, -0.8819377, 470.2879, -2.2729535, -0.36374664)
+transform = Transform3D(-0.8819377, 0, -0.471366, 0, 1, 0, 0.471366, 0, -0.8819377, 470.2879, -2.4450989, -0.36374664)
 ROTATION_SPEED = 100.0
 
 [node name="NotCar" parent="." unique_id=1836486299 instance=ExtResource("6_qe21q")]

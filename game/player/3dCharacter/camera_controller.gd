@@ -23,7 +23,6 @@ func _input(event: InputEvent) -> void:
 	#print("event", event)
 	if event.is_action_pressed("left_click"):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-		print("mouse captured")
 	if event.is_action_pressed("ui_cancel") || event.is_action_released("left_click"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	

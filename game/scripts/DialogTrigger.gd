@@ -169,5 +169,5 @@ func _on_dialog_finished() -> void:
 	_resume_player()
 	_switch_back_to_original_camera()
 	# Show interaction text again if player is still in range
-	if player_in_range:
+	if player_in_range and not autoplay:
 		_show_interaction_text()
