@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://rpn0is4631fj" path="res://game/ui/ingame/quest_menu.gd" id="1_fx31j"]
 [ext_resource type="PackedScene" uid="uid://bqhktmbt3febd" path="res://addons/dialogue_quest/prefabs/ui/dialogue/components/bobbing_marker/bobbing_marker.tscn" id="3_573h1"]
-[ext_resource type="Texture2D" uid="uid://li25vhlsioks" path="res://assets/image(1).png" id="3_f71i1"]
+[ext_resource type="Texture2D" uid="uid://c4icvsk3br7jh" path="res://assets/UI/PNG/panelInset_blue.png" id="3_f71i1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fx31j"]
 content_margin_top = 4.0
@@ -32,10 +32,6 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_fx31j")
 
-[node name="Image(1)" type="Sprite2D" parent="." unique_id=1371764547]
-position = Vector2(924, 533)
-texture = ExtResource("3_f71i1")
-
 [node name="FoldableContainer" type="FoldableContainer" parent="." unique_id=76667314]
 layout_mode = 1
 anchors_preset = 6
@@ -48,27 +44,35 @@ offset_top = -16.0
 offset_bottom = 16.0
 grow_horizontal = 0
 grow_vertical = 2
-title = "Quests"
+title = "Notebook"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="FoldableContainer" unique_id=1318533275]
+[node name="TabContainer" type="TabContainer" parent="FoldableContainer" unique_id=26747223]
+layout_mode = 2
+current_tab = 0
+tab_0/title = "Quests"
+tab_1/title = "Collectibles"
+
+[node name="ScrollContainerQuests" type="ScrollContainer" parent="FoldableContainer/TabContainer" unique_id=1318533275]
 custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
+metadata/_tab_index = 0
+metadata/_tab_name = "Quests"
 
-[node name="MarginContainer" type="MarginContainer" parent="FoldableContainer/ScrollContainer" unique_id=1401251373]
+[node name="MarginContainer" type="MarginContainer" parent="FoldableContainer/TabContainer/ScrollContainerQuests" unique_id=1401251373]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 6
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="QuestVBoxContainer" type="VBoxContainer" parent="FoldableContainer/ScrollContainer/MarginContainer" unique_id=1301047325]
+[node name="QuestVBoxContainer" type="VBoxContainer" parent="FoldableContainer/TabContainer/ScrollContainerQuests/MarginContainer" unique_id=1301047325]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 8
 
-[node name="QuestBobbingMarker" parent="FoldableContainer/ScrollContainer/MarginContainer/QuestVBoxContainer" unique_id=351359330 instance=ExtResource("3_573h1")]
+[node name="QuestBobbingMarker" parent="FoldableContainer/TabContainer/ScrollContainerQuests/MarginContainer/QuestVBoxContainer" unique_id=351359330 instance=ExtResource("3_573h1")]
 unique_name_in_owner = true
 visible = false
 z_index = 12
@@ -78,21 +82,145 @@ size_flags_horizontal = 8
 size_flags_vertical = 4
 icon_visible = true
 
-[node name="QuestFoldableContainer" type="FoldableContainer" parent="FoldableContainer/ScrollContainer/MarginContainer/QuestVBoxContainer" unique_id=1619092754]
+[node name="QuestFoldableContainer" type="FoldableContainer" parent="FoldableContainer/TabContainer/ScrollContainerQuests/MarginContainer/QuestVBoxContainer" unique_id=1619092754]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_styles/title_panel = SubResource("StyleBoxFlat_fx31j")
 theme_override_styles/panel = SubResource("StyleBoxFlat_f71i1")
 title = "QuestName"
 
-[node name="MarginContainer" type="MarginContainer" parent="FoldableContainer/ScrollContainer/MarginContainer/QuestVBoxContainer/QuestFoldableContainer" unique_id=709625853]
+[node name="MarginContainer" type="MarginContainer" parent="FoldableContainer/TabContainer/ScrollContainerQuests/MarginContainer/QuestVBoxContainer/QuestFoldableContainer" unique_id=709625853]
 layout_mode = 2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="RichTextLabel" type="RichTextLabel" parent="FoldableContainer/ScrollContainer/MarginContainer/QuestVBoxContainer/QuestFoldableContainer/MarginContainer" unique_id=1661217588]
+[node name="RichTextLabel" type="RichTextLabel" parent="FoldableContainer/TabContainer/ScrollContainerQuests/MarginContainer/QuestVBoxContainer/QuestFoldableContainer/MarginContainer" unique_id=1661217588]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 12
+theme_override_font_sizes/bold_italics_font_size = 12
+theme_override_font_sizes/italics_font_size = 12
+theme_override_font_sizes/mono_font_size = 12
+text = "Lorem Ipsum Quad Positrum Erebum Lirum Larum
+"
+fit_content = true
+
+[node name="ScrollContainerCollectibles" type="ScrollContainer" parent="FoldableContainer/TabContainer" unique_id=1732747249]
+visible = false
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+metadata/_tab_index = 1
+metadata/_tab_name = "Collectibles"
+
+[node name="MarginContainer" type="MarginContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles" unique_id=1649479489]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="CollectiblesGridContainer" type="GridContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer" unique_id=286197895]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer" unique_id=153778650]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer" unique_id=1998649668]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer/VBoxContainer" unique_id=283217098]
+layout_mode = 2
+texture = ExtResource("3_f71i1")
+stretch_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer/VBoxContainer" unique_id=1839087495]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 12
+theme_override_font_sizes/bold_italics_font_size = 12
+theme_override_font_sizes/italics_font_size = 12
+theme_override_font_sizes/mono_font_size = 12
+text = "Lorem Ipsum Quad Positrum Erebum Lirum Larum
+"
+fit_content = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer" unique_id=751586411]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer2" unique_id=1983070343]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer2/VBoxContainer" unique_id=654642475]
+layout_mode = 2
+texture = ExtResource("3_f71i1")
+stretch_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer2/VBoxContainer" unique_id=1587335887]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 12
+theme_override_font_sizes/bold_italics_font_size = 12
+theme_override_font_sizes/italics_font_size = 12
+theme_override_font_sizes/mono_font_size = 12
+text = "Lorem Ipsum Quad Positrum Erebum Lirum Larum
+"
+fit_content = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer" unique_id=513441274]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer3" unique_id=1634587150]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer3/VBoxContainer" unique_id=1317019188]
+layout_mode = 2
+texture = ExtResource("3_f71i1")
+stretch_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer3/VBoxContainer" unique_id=1578777137]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 12
+theme_override_font_sizes/bold_italics_font_size = 12
+theme_override_font_sizes/italics_font_size = 12
+theme_override_font_sizes/mono_font_size = 12
+text = "Lorem Ipsum Quad Positrum Erebum Lirum Larum
+"
+fit_content = true
+
+[node name="MarginContainer4" type="MarginContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer" unique_id=1248049326]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer4" unique_id=994806321]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer4/VBoxContainer" unique_id=753845154]
+layout_mode = 2
+texture = ExtResource("3_f71i1")
+stretch_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="FoldableContainer/TabContainer/ScrollContainerCollectibles/MarginContainer/CollectiblesGridContainer/MarginContainer4/VBoxContainer" unique_id=1181862872]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 12
 theme_override_font_sizes/bold_font_size = 12

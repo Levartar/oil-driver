@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://fcktt12ppqtc"]
 
-[ext_resource type="Script" uid="uid://bg6oifgj73l5h" path="res://game/levels/tallinn_test_level.gd" id="1_bp7rj"]
 [ext_resource type="PackedScene" uid="uid://cs3t23wdjo5ra" path="res://game/ui/ingame/InGameUi.tscn" id="4_8sy56"]
 [ext_resource type="PackedScene" uid="uid://df1g2tgb4mhf0" path="res://game/player/3dCharacter/Character.tscn" id="4_11vo3"]
 [ext_resource type="PackedScene" uid="uid://c28d5kllphpgw" path="res://assets/Environments/Tallinn-Vannallin-merged.glb" id="5_ibfxb"]
@@ -69,7 +68,6 @@ height = 8.0
 radius = 8.0
 
 [node name="Tallinn" type="Node3D" unique_id=1206792960]
-script = ExtResource("1_bp7rj")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1563919294]
 environment = SubResource("Environment_uxguy")

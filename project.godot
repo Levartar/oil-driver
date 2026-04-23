@@ -19,8 +19,9 @@ config/description="An introduction into Tallinn"
 run/main_scene="res://game/ui/screens/Boot.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 run/max_fps=120
-boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
-config/icon="uid://dy4vbo0gfyx7a"
+boot_splash/bg_color=Color(0.3518888, 0.28819177, 0.25634497, 1)
+boot_splash/image="uid://cvfie7i7qps7o"
+config/icon="uid://cvfie7i7qps7o"
 
 [audio]
 
