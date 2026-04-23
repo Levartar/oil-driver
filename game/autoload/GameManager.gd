@@ -14,38 +14,38 @@ var quests = {
 	},
 	"quest_1": {
 		"id": "quest_1",
-		"name": "Alexander Nevsky Cathedral",
+		"name": "Karu 17",
 		"character": "guide1",
 		"dialog_id": "quest_1",
-		"description": "Visit the Alexander Nevsky Cathedral and speak with the guide.",
+		"description": "Visit the Karu Dormitory and speak with the guide.",
 	},
 	"quest_2": {
 		"id": "quest_2",
-		"name": "Toompea Castle",
+		"name": "Tallinn University",
 		"character": "guide2",
 		"dialog_id": "quest_2",
-		"description": "Visit Toompea Castle and speak with the guide.",
+		"description": "Visit the Tallinn University and speak with the guide.",
 	},
 	"quest_3": {
 		"id": "quest_3",
-		"name": "Kiek in de Kök",
+		"name": "R-Kiosk",
 		"character": "guide3",
 		"dialog_id": "quest_3",
-		"description": "Visit Kiek in de Kök and speak with the guide.",
+		"description": "Visit the R-Kiosk and speak with the guide.",
 	},
 	"quest_4": {
 		"id": "quest_4",
-		"name": "Tallinn Town Hall",
+		"name": "Ulikool Tram Stop",
 		"character": "guide4",
 		"dialog_id": "quest_4",
-		"description": "Visit Tallinn Town Hall and speak with the guide.",
+		"description": "Visit the Ulikool Tram Stop and speak with the guide.",
 	},
 	"quest_5": {
 		"id": "quest_5",
-		"name": "St. Olaf Church",
+		"name": "Linnahall",
 		"character": "guide5",
 		"dialog_id": "quest_5",
-		"description": "Visit St. Olaf Church and speak with the guide.",
+		"description": "Visit Linnahall and speak with the guide.",
 	}
 }
 

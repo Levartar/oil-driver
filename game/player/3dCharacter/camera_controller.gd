@@ -19,16 +19,11 @@ func _process(delta: float) -> void:
 		_cameraTarget.rotation.x = clamp(_cameraTarget.rotation.x,-PI/6.0,PI/3.0)
 		_cameraTarget.rotation.y -= _camera_input_direction.x * delta
 	
-	# Camera Controller
-	#position = lerp(position, parent.position, 0.02)
-	#var current_quat = Quaternion.from_euler(rotation)
-	#var target_quat = Quaternion.from_euler(parent.rotation)
-	#rotation = current_quat.slerp(target_quat, 0.1).get_euler()
-	
 func _input(event: InputEvent) -> void:
 	#print("event", event)
 	if event.is_action_pressed("left_click"):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		print("mouse captured")
 	if event.is_action_pressed("ui_cancel") || event.is_action_released("left_click"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
