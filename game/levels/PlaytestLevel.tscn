@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://oofn0ftd1535" path="res://assets/UI/Alicja/Art_Files/TLU_background.png" id="5_4xv3o"]
 [ext_resource type="Script" uid="uid://jj14wbdupi0a" path="res://game/scripts/DialogTrigger.gd" id="5_l0y63"]
 [ext_resource type="Texture2D" uid="uid://dr5nrwg7jm015" path="res://assets/UI/Alicja/Art_Files/Karu_Background.png" id="6_6b5et"]
-[ext_resource type="Texture2D" uid="uid://cwexqne1mnk2y" path="res://assets/Textures/UV texture/uv-texture.png" id="7_mcq6k"]
+[ext_resource type="Texture2D" uid="uid://cv3enxek6mv1x" path="res://assets/Posters/good-job-poster-design-vector.jpg" id="7_mcq6k"]
 [ext_resource type="PackedScene" uid="uid://p1caxt7ql1vd" path="res://game/collectibles/Collectible.tscn" id="9_bt8f4"]
 [ext_resource type="PackedScene" uid="uid://cs3t23wdjo5ra" path="res://game/ui/ingame/InGameUi.tscn" id="10_yskq0"]
 [ext_resource type="PackedScene" uid="uid://wpbcnwejelyu" path="res://game/ui/ingame/QuestMenu.tscn" id="11_5tcqt"]
@@ -21,6 +21,7 @@ sky_material = SubResource("ProceduralSkyMaterial_nljnj")
 
 [sub_resource type="Environment" id="Environment_uxguy"]
 background_mode = 2
+background_energy_multiplier = 2.0
 sky = SubResource("Sky_uxguy")
 ambient_light_color = Color(0.60612786, 0.3606096, 0.17430845, 1)
 ssao_enabled = true
@@ -42,8 +43,8 @@ radius = 2.0
 [sub_resource type="SphereShape3D" id="SphereShape3D_tutorial"]
 radius = 7.904
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_bp7rj"]
-radius = 9.979
+[sub_resource type="BoxShape3D" id="BoxShape3D_mcq6k"]
+size = Vector3(15.612793, 9.089355, 31.105042)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4xv3o"]
 size = Vector3(15.529259, 6.3012695, 5.4316406)
@@ -59,6 +60,7 @@ environment = SubResource("Environment_uxguy")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=919844708]
 transform = Transform3D(0.7792286, -0.5542286, 0.29263198, 0, 0.46691144, 0.8843041, -0.6267398, -0.68907505, 0.36383075, 6.534383, 4.215336, 4.966818)
+light_color = Color(0.8301198, 0.8229385, 1.1551381e-06, 1)
 
 [node name="TallinnEnvironment" type="Node3D" parent="." unique_id=1245317640]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
@@ -103,6 +105,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2830305, -2.5359054, -0.888
 shape = SubResource("SphereShape3D_tutorial")
 debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
 
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Landmarks/TutorialCameraGroup/TutorialTrigger" unique_id=2088681876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.964359, -2.5359054, 16.002945)
+shape = SubResource("SphereShape3D_tutorial")
+debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
+
 [node name="KaruGroup" type="Node3D" parent="Landmarks" unique_id=1465512441]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.806698, 0.48384762, 62.004078)
 
@@ -115,7 +122,8 @@ image = ExtResource("6_6b5et")
 image_description = "Karu 17"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/KaruGroup/Karu" unique_id=1923397247]
-shape = SubResource("SphereShape3D_bp7rj")
+transform = Transform3D(0.9563048, 0, 0.2923717, 0, 1, 0, -0.2923717, 0, 0.9563048, -7.249733, 0.45532227, -10.232304)
+shape = SubResource("BoxShape3D_mcq6k")
 debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
 
 [node name="Camera3D" type="Camera3D" parent="Landmarks/KaruGroup" unique_id=172738742]
