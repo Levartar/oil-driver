@@ -60,6 +60,18 @@ text = "3rd Person Camera"
 [node name="CameraViewCheck" type="CheckBox" parent="CenterContainer/VBoxContainer/CameraViewRow" unique_id=-118424086]
 layout_mode = 2
 
+[node name="DebugViewRow" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1153469089]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/DebugViewRow" unique_id=1512863232]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Show Debug Stats"
+
+[node name="DebugViewCheck" type="CheckBox" parent="CenterContainer/VBoxContainer/DebugViewRow" unique_id=1168665566]
+layout_mode = 2
+
 [node name="Spacer3" type="Control" parent="CenterContainer/VBoxContainer" unique_id=1029808789]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2

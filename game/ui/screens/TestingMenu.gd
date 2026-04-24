@@ -7,6 +7,7 @@ extends Control
 @onready var title = $CenterContainer/VBoxContainer/Title
 @onready var auto_acceleration_label = $CenterContainer/VBoxContainer/AutoAccelerationRow/AutoAccelerationLabel
 @onready var camera_view_label = $CenterContainer/VBoxContainer/CameraViewRow/CameraViewLabel
+@onready var debug_check = $CenterContainer/VBoxContainer/DebugViewRow/DebugViewCheck
 
 func _ready():
 	add_to_group("translatable")
@@ -17,6 +18,10 @@ func _ready():
 		var is_isometric = Settings.get_setting("camera_view") == "isometric"
 		camera_view_check.button_pressed = is_isometric
 		camera_view_check.toggled.connect(_on_camera_view_toggled)
+	if debug_check:
+		var debug = Settings.get_setting("debug")
+		debug_check.button_pressed = debug
+		debug_check.toggled.connect(_on_debug_toggled)
 	if back_button:
 		back_button.pressed.connect(_on_back_pressed)
 	Settings.setting_changed.connect(_on_setting_changed)
@@ -51,6 +56,10 @@ func _on_auto_acceleration_toggled(pressed: bool):
 func _on_camera_view_toggled(pressed: bool):
 	var new_view = "isometric" if pressed else "third_person"
 	Settings.set_setting("camera_view", new_view)
+	
+func _on_debug_toggled(pressed: bool):
+	var new_debug = true if pressed else false
+	Settings.set_setting("debug", new_debug)
 
 func _on_back_pressed():
 	SceneLoader.goto_scene("res://game/ui/screens/OptionsMenu.tscn", false)
