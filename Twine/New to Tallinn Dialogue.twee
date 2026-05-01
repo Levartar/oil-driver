@@ -1,0 +1,21 @@
+:: StoryTitle
+New to Tallinn Dialogue
+
+
+:: StoryData
+{
+  "ifid": "1EAE6FBD-8F87-4295-8208-B4F609408BDE",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Untitled Passage",
+  "zoom": 1
+}
+
+
+:: Untitled Passage {"position":"600,275","size":"100,100"}
+test test test
+
+
+:: Untitled Passage 1 {"position":"725,275","size":"100,100"}
+testtt
+
