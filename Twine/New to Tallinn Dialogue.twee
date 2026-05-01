@@ -29,10 +29,25 @@ Nice job! You’re officially at TLU. ''Pro-tip: Be here every day this week. ''
 [[Recieve quest 3->Quest3: Find Rkiosk1]]
 
 
-:: Finish quest3 {"position":"1975,550","size":"100,100"}
+:: Finish quest3 {"position":"1950,550","size":"100,100"}
 ''Finish quest 3''
 
 Perfect! That little green card is your golden ticket to the whole city. Just remember to 'beep' it every time you board a bus or tram.
+
+[[Recieve quest 4->Quest4]]
+
+
+
+:: Finish quest4 {"position":"2050,675","size":"100,100"}
+''Finish quest 4''
+
+
+
+[[Recieve quest 5->Quest5]]
+
+
+:: Finish quest5 {"position":"2150,800","size":"100,100"}
+
 
 
 :: Introduce Mascot {"position":"1000,300","size":"100,100"}
@@ -41,7 +56,6 @@ Perfect! That little green card is your golden ticket to the whole city. Just re
 //I'm still figuring out Mascot's narrative
 
 [[Next->Tutorial: Walk]]
-
 
 
 :: Quest 1: Finding Karu17 {"position":"1375,425","size":"100,100"}
@@ -75,6 +89,18 @@ Since you're here, take some time to wander toward'' Old Town''; it's the heart 
 We need to find an ''R-Kiosk'' to buy your ''Ühiskaart''. It’s the only way to travel like a local. Let’s find the nearest one.
 
 [[Finish quest3->Finish quest3]]
+
+
+:: Quest4 {"position":"1950,675","size":"100,100"}
+''Quest 4 Detail''
+
+[[Finish quest4->Finish quest4]]
+
+
+:: Quest5 {"position":"2050,800","size":"100,100"}
+''Quest 5 Detail''
+
+[[Finish quest5->Finish quest5]]
 
 
 :: Title & Menu {"position":"1025,175","size":"100,100"}
