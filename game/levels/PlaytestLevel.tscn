@@ -131,6 +131,23 @@ debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
 [node name="Camera3D" type="Camera3D" parent="Landmarks/KaruGroup" unique_id=172738742]
 transform = Transform3D(0.5977511, 0.16133755, -0.7852795, 0, 0.97954005, 0.20124885, 0.80168176, -0.1202967, 0.58552116, -18.893162, 4.858328, 13.648701)
 
+[node name="Test" type="Node3D" parent="Landmarks" unique_id=1676232368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.06108, 0.48384762, 62.004078)
+
+[node name="Karu" type="Area3D" parent="Landmarks/Test" unique_id=1264300030]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.6575027, 0)
+script = ExtResource("5_l0y63")
+quest_id = "Test"
+character_name = "wolf"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/Test/Karu" unique_id=237437651]
+transform = Transform3D(0.9563048, 0, 0.2923717, 0, 1, 0, -0.2923717, 0, 0.9563048, -7.249733, 0.45532227, -10.232304)
+shape = SubResource("BoxShape3D_mcq6k")
+debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
+
+[node name="Camera3D" type="Camera3D" parent="Landmarks/Test" unique_id=890621465]
+transform = Transform3D(0.83014864, -0.11220479, 0.5461351, 5.9729945e-09, 0.97954017, 0.20124888, -0.5575423, -0.16706647, 0.8131638, 0.64484406, 4.858328, 13.648701)
+
 [node name="UlikoolGroup" type="Node3D" parent="Landmarks" unique_id=51769365]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.00276, 0.96769524, 92.86604)
 
