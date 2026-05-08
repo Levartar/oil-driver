@@ -81,7 +81,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.490753, -2.6655073, 85.87
 
 [node name="TutorialTrigger" type="Area3D" parent="Landmarks/TutorialGroup" unique_id=1562071146]
 script = ExtResource("5_l0y63")
-quest_id = "tutorial_wasd"
+quest_id = "tutorial_intro"
 trigger_once = true
 autoplay = true
 
