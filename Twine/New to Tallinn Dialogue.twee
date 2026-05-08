@@ -32,7 +32,7 @@ Nice job! You’re officially at TLU. ''Pro-tip: Be here every day this week. ''
 :: Finish quest3 {"position":"1950,550","size":"100,100"}
 ''Finish quest 3''
 
-Perfect! That little green card is your golden ticket to the whole city. Just remember to 'beep' it every time you board a bus or tram.
+Perfect! That little green card is your golden ticket to the whole city. Just remember to ''beep it every time you board a bus or tram.''
 
 [[Recieve quest 4->Quest4]]
 
@@ -55,6 +55,7 @@ Perfect! That little green card is your golden ticket to the whole city. Just re
 
 Tere! Welcome to Tallinn! I’m Eksmati, the official mascot of Tallinn University.
 
+
 [[Next->Introduce Mascot 2]]
 
 
@@ -65,12 +66,6 @@ Think of me as the local expert in your pocket. I'll be hanging out here in your
 
 
 :: Introduce Mascot 3 {"position":"1000,550","size":"100,100"}
-See that Quest Book on the right? That’s our game plan.
-
-[[Next->Introduce Mascot 4]]
-
-
-:: Introduce Mascot 4 {"position":"1000,675","size":"100,100"}
 I’ll guide you through the map and help you tick off every quest. Let’s get moving!
 
 [[Next->Tutorial: Walk]]
