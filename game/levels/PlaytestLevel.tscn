@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://p1caxt7ql1vd" path="res://game/collectibles/Collectible.tscn" id="9_bt8f4"]
 [ext_resource type="PackedScene" uid="uid://cs3t23wdjo5ra" path="res://game/ui/ingame/InGameUi.tscn" id="10_yskq0"]
 [ext_resource type="PackedScene" uid="uid://wpbcnwejelyu" path="res://game/ui/ingame/QuestMenu.tscn" id="11_5tcqt"]
+[ext_resource type="Script" uid="uid://0xq2liivqarr" path="res://addons/minimap/minimap_node.gd" id="11_6xe7l"]
+[ext_resource type="Texture2D" uid="uid://c8xlsyiyq7cty" path="res://assets/UI/PNG/buttonRound_blue.png" id="12_msc6x"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nljnj"]
 sky_top_color = Color(0.27009362, 0.43445107, 0.7677927, 1)
@@ -228,3 +230,21 @@ anchor_top = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 0
 folded = true
+
+[node name="MiniMap" type="SubViewportContainer" parent="UI" unique_id=1946928083 node_paths=PackedStringArray("camera_3d", "target")]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 128.0
+script = ExtResource("11_6xe7l")
+camera_3d = NodePath("mmCamera")
+zoom = 2.0
+window_size = Vector2i(512, 512)
+target = NodePath("../../Player")
+marker_image = ExtResource("12_msc6x")
+border_line_color = Color(0.34509805, 0.28235295, 0.2509804, 1)
+metadata/_custom_type_script = "uid://0xq2liivqarr"
+
+[node name="mmCamera" type="Camera3D" parent="UI/MiniMap" unique_id=1971103540]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -50.307858, 75.35878, 86.970184)
+projection = 1
+size = 200.0
