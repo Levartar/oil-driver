@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b32evpc4sj6lr"]
+
+[ext_resource type="PackedScene" uid="uid://c28d5kllphpgw" path="res://assets/Environments/Tallinn-Vannallin-merged.glb" id="1_tkioj"]
+[ext_resource type="Shader" uid="uid://cllccgpke1odk" path="res://assets/Shaders/scribble.gdshader" id="2_gb7f6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j07vo"]
+render_priority = 0
+shader = ExtResource("2_gb7f6")
+shader_parameter/line_color = Color(0.25, 0.55, 1, 1)
+shader_parameter/line_spacing = 2.0
+shader_parameter/line_width = 1.0
+shader_parameter/noise_scale = 0.035
+shader_parameter/noise_amplitude = 2.5
+shader_parameter/noise_speed = 0.6
+shader_parameter/real_time = 0.0
+
+[node name="Tallinn-Vannallin-merged" unique_id=1108566722 instance=ExtResource("1_tkioj")]
+
+[node name="hooned_lod2-Tallinn_049" parent="." index="27" unique_id=1517150891]
+surface_material_override/0 = SubResource("ShaderMaterial_j07vo")
