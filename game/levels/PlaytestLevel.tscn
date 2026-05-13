@@ -258,7 +258,7 @@ transform = Transform3D(0.9976125, -0.040264122, 0.05610782, 2.6953633e-09, 0.81
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="TutorialCollectible" parent="Landmarks/Collectibles" unique_id=1791445064 instance=ExtResource("9_bt8f4")]
-transform = Transform3D(0.1914063, 0, -0.46191302, 0, 0.5, 0, 0.46191302, 0, 0.1914063, -21.224287, -0.5560936, 39.07273)
+transform = Transform3D(0.1914063, 0, -0.46191302, 0, 0.5, 0, 0.46191302, 0, 0.1914063, -21.481653, -0.5662168, 39.147533)
 collectible_id = "tutorial_collectible"
 image = ExtResource("7_mcq6k")
 description = "Tutorial"

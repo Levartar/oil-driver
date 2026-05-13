@@ -1,7 +1,7 @@
 ## Overview
 
 Welcome to Tallin is a game for international students that just got here and dont know what to do.
-    Play Here: https://levartar.itch.io/new-to-tallinn
+	Play Here: https://levartar.itch.io/new-to-tallinn
 
 ## Working with this Project:
 Get git if you dont already have it. Download this project using:
@@ -13,28 +13,28 @@ git clone https://github.com/Levartar/oil-driver.git
 Open Godot and import the created folder. Get Godot 4.6.1 here: https://godotengine.org/download/. Do **NOT** get the .NET version
 
 
-    oil-driver/
-    ├── project.godot
-    ├── README.md
-    ├── .gitignore
-    ├── assets/                 <- ART
-    │   ├── Models/
-    │   ├── Textures/
-    │   └── Environments/
-    ├── audio/
-    │   ├── music/
-    │   └── soundfx/
-    ├── game/                   
-    │   ├── autoload/
-    │   ├── cars/               
-    │   │   ├── car.tscn        <- CAR CHARACTER
-    │   │   └── car.gd
-    │   ├── levels/
-    │   │   └── Level.tscn      <- LEVEL/WORLD
-    │   ├── obstacles/
-    │   └── ui/
-    ├── planning/
-    └── translation/
+	oil-driver/
+	├── project.godot
+	├── README.md
+	├── .gitignore
+	├── assets/                 <- ART
+	│   ├── Models/
+	│   ├── Textures/
+	│   └── Environments/
+	├── audio/
+	│   ├── music/
+	│   └── soundfx/
+	├── game/                   
+	│   ├── autoload/
+	│   ├── cars/               
+	│   │   ├── car.tscn        <- CAR CHARACTER
+	│   │   └── car.gd
+	│   ├── levels/
+	│   │   └── Level.tscn      <- LEVEL/WORLD
+	│   ├── obstacles/
+	│   └── ui/
+	├── planning/
+	└── translation/
  
 ### Car 
 Can be edited with godot and tweaked under properties:
@@ -57,7 +57,7 @@ git branch feature/your-feature-name
 
 - [X] **Reset Button** - Add in-game reset functionality
 - [X] **Testing Toggles** - Developer testing options in settings
-    - [X] Auto acceleration
+	- [X] Auto acceleration
 - [X] **Freeflow Camera** - Implement dynamic camera system
 - [ ] **Add Licenses** - HDM Licenses Button
 - [ ] **Add Sounds** - Music, Environments
@@ -74,16 +74,16 @@ If assets on itch are missing the pipeline is missing imports. Run `git add -f .
 
 The project utilizes a variety of specialized development and management tools:
 
-    Engine: Godot.
-    Art & Modeling: Blender, Crocotile3d, Picocad, and Canva.
-    Management & Version Control: Jira, Git, Google Workspace, and lettucemeet.
-    Communication: Discord and WhatsApp.
+	Engine: Godot.
+	Art & Modeling: Blender, Crocotile3d, Picocad, and Canva.
+	Management & Version Control: Jira, Git, Google Workspace, and lettucemeet.
+	Communication: Discord and WhatsApp.
 
 ## Team
 
 The project is being developed by Team 3, consisting of the following members:
 
-    Producer: Asjad 
-    Game Designer: Sunny 
-    Programmer: Jakob 
-    Artist: Alicja
+	Producer: Asjad 
+	Game Designer: Sunny 
+	Programmer: Jakob 
+	Artist: Alicja

@@ -220,10 +220,7 @@ func _clamp_to_minimap_bounds(minimap_pos: Vector2) -> Vector2:
 	if minimap_pos.x >= min_x and minimap_pos.x <= max_x and \
 	   minimap_pos.y >= min_y and minimap_pos.y <= max_y:
 		return minimap_pos
-	
-	# Log that marker is hitting bounds
-	print("Quest marker hitting minimap bounds at position: %s (bounds: x=[%.1f-%.1f], y=[%.1f-%.1f])" % [minimap_pos, min_x, max_x, min_y, max_y])
-	
+
 	# Simple clamp to bounds
 	var clamped_x = clamp(minimap_pos.x, min_x, max_x)
 	var clamped_y = clamp(minimap_pos.y, min_y, max_y)
