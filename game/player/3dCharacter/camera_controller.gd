@@ -2,6 +2,7 @@ extends Node3D
 
 @export_group("Camera")
 @export_range(0.0,1.0) var mouse_sensitivity :=0.25
+@export_range(0.0,1.0) var camerasensitivity := 0.1
 @onready var _cameraTarget: Node3D = %CameraTarget
 
 var _camera_input_direction:= Vector2.ZERO
@@ -15,9 +16,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		_cameraTarget.rotation.x += _camera_input_direction.y * delta
+		_cameraTarget.rotation.x += _camera_input_direction.y * delta* mouse_sensitivity
 		_cameraTarget.rotation.x = clamp(_cameraTarget.rotation.x,-PI/6.0,PI/3.0)
-		_cameraTarget.rotation.y -= _camera_input_direction.x * delta
+		_cameraTarget.rotation.y -= _camera_input_direction.x * delta* mouse_sensitivity
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel") || event.is_action_released("left_click"):

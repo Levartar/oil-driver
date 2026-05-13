@@ -11,6 +11,11 @@ var input_disabled := false
 @export var JUMP_VELOCITY = 30
 @export var ROTATION_SPEED = 12.0
 
+@export_category("Step Climbing")
+@export var MAX_STEP_HEIGHT = 0.5
+@export var STEP_RAYCAST_DISTANCE = 0.3
+@export var STEP_CLIMB_SPEED = 15.0
+
 func _physics_process(delta: float) -> void:	
 	var is_starting_jump = Input.is_action_just_pressed("jump") and is_on_floor()
 	if is_starting_jump and not input_disabled:
@@ -30,6 +35,10 @@ func _physics_process(delta: float) -> void:
 	velocity = velocity.move_toward(move_direction*SPEED,ACCELERATION*delta)
 	if not is_on_floor():
 		velocity += get_gravity() * 7 * delta
+	
+	# Automatic step climbing
+	if is_on_floor() and move_direction.length() > 0.2:
+		_handle_step_climbing(move_direction, delta)
 
 	move_and_slide()
 	
@@ -48,3 +57,34 @@ func _physics_process(delta: float) -> void:
 			_skin.move()
 		else:
 			_skin.idle()
+
+
+func _handle_step_climbing(move_direction: Vector3, delta: float) -> void:
+	# Raycast forward to detect if there's a step ahead
+	var raycast_start = global_position + Vector3.UP * 0.1
+	var raycast_end = raycast_start + move_direction * STEP_RAYCAST_DISTANCE
+	
+	var space_state = get_world_3d().direct_space_state
+	var query = PhysicsRayQueryParameters3D.create(raycast_start, raycast_end)
+	var result = space_state.intersect_ray(query)
+	
+	if result:
+		# Found an obstacle ahead at chest height
+		var obstacle_point = result.position
+		
+		# Now raycast downward from slightly ahead to find the top of the step
+		var step_check_start = global_position + move_direction * STEP_RAYCAST_DISTANCE + Vector3.UP * MAX_STEP_HEIGHT
+		var step_check_end = step_check_start - Vector3.UP * (MAX_STEP_HEIGHT * 2)
+		
+		query = PhysicsRayQueryParameters3D.create(step_check_start, step_check_end)
+		var step_result = space_state.intersect_ray(query)
+		
+		if step_result:
+			# Calculate the height difference
+			var ground_level = global_position.y
+			var step_top = step_result.position.y
+			var step_height = step_top - ground_level
+			
+			# Only climb if the step is within reasonable height and we're moving toward it
+			if step_height > 0.05 and step_height <= MAX_STEP_HEIGHT:
+				velocity.y = STEP_CLIMB_SPEED

@@ -3,13 +3,36 @@
 [ext_resource type="Texture2D" uid="uid://cwexqne1mnk2y" path="res://assets/Textures/UV texture/uv-texture.png" id="1_777h6"]
 [ext_resource type="Script" uid="uid://bpmbbhogt4tw7" path="res://game/collectibles/collectible.gd" id="1_u2n02"]
 [ext_resource type="Texture2D" uid="uid://cf61ml1d0syr6" path="res://assets/Environments/Test_T_Atlas_2.png" id="2_vm4pb"]
+[ext_resource type="Texture2D" uid="uid://cuf7rqxp62r0c" path="res://assets/Particles/star_01.png" id="4_fecet"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u2n02"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vm4pb"]
 albedo_texture = ExtResource("1_777h6")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_vm4pb"]
-material = SubResource("StandardMaterial3D_u2n02")
+material = SubResource("StandardMaterial3D_vm4pb")
 size = Vector2(1.5, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fecet"]
+albedo_color = Color(0.8, 0.14509805, 0.3764706, 1)
+emission_enabled = true
+emission = Color(0.79847115, 0.14532235, 0.375664, 1)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gu4d0"]
+material = SubResource("StandardMaterial3D_fecet")
+size = Vector2(1.6, 2.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gu4d0"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0, 1, 1, 1)
+albedo_texture = ExtResource("4_fecet")
+emission_enabled = true
+emission = Color(0.8, 0.14509805, 0.3764706, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hdr7f"]
+material = SubResource("StandardMaterial3D_gu4d0")
+size = Vector2(0.4, 0.4)
 
 [node name="Collectible" type="Node3D" unique_id=1791445064]
 script = ExtResource("1_u2n02")
@@ -19,3 +42,24 @@ image = ExtResource("2_vm4pb")
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("PlaneMesh_vm4pb")
+
+[node name="Glow" type="MeshInstance3D" parent="." unique_id=69744161]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.0023777485)
+mesh = SubResource("PlaneMesh_gu4d0")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="Glow" unique_id=1006659002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09791094, -0.00596327)
+mesh = SubResource("PlaneMesh_hdr7f")
+emission_shape = 6
+emission_ring_axis = Vector3(0, 1, 0)
+emission_ring_height = 1.0
+emission_ring_radius = 1.0
+emission_ring_inner_radius = 0.0
+emission_ring_cone_angle = 90.0
+spread = 180.0
+flatness = 0.8
+gravity = Vector3(0, 1, 0)
+initial_velocity_max = 2.0
+angular_velocity_min = -4.0
+angular_velocity_max = 4.0
