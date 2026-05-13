@@ -214,24 +214,11 @@ func _clamp_to_minimap_bounds(minimap_pos: Vector2) -> Vector2:
 	   minimap_pos.y >= min_y and minimap_pos.y <= max_y:
 		return minimap_pos
 	
-	# Project to edge using angle from center
-	var center = Vector2(window_size.x / 2.0, window_size.y / 2.0)
-	var direction = (minimap_pos - center).normalized()
+	# Log that marker is hitting bounds
+	print("Quest marker hitting minimap bounds at position: %s (bounds: x=[%.1f-%.1f], y=[%.1f-%.1f])" % [minimap_pos, min_x, max_x, min_y, max_y])
 	
-	# Find intersection with minimap boundary
-	var t = 1.0
-	var test_pos = minimap_pos
+	# Simple clamp to bounds
+	var clamped_x = clamp(minimap_pos.x, min_x, max_x)
+	var clamped_y = clamp(minimap_pos.y, min_y, max_y)
 	
-	# Check x bounds
-	if direction.x > 0:
-		t = min(t, (max_x - center.x) / direction.x)
-	elif direction.x < 0:
-		t = min(t, (min_x - center.x) / direction.x)
-	
-	# Check y bounds
-	if direction.y > 0:
-		t = min(t, (max_y - center.y) / direction.y)
-	elif direction.y < 0:
-		t = min(t, (min_y - center.y) / direction.y)
-	
-	return center + direction * t
+	return Vector2(clamped_x, clamped_y)
