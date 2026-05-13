@@ -1,0 +1,161 @@
+:: StoryTitle
+New to Tallinn Dialogue
+
+
+:: StoryData
+{
+  "ifid": "1EAE6FBD-8F87-4295-8208-B4F609408BDE",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Title & Menu",
+  "zoom": 1
+}
+
+
+:: Finish quest1 {"position":"1475,425","size":"100,100"}
+''Finish Quest 1''
+
+Nice work! You’ve got a roof over your head. This is your home base for the semester.
+
+[[Recieve quest 2->Quest2: Find Uni]]
+
+
+
+:: Finish quest2 {"position":"1750,425","size":"100,100"}
+''Finish Quest 2''
+
+Nice job! You’re officially at TLU. ''Pro-tip: Be here every day this week. ''Orientation is the only time everything is explained clearly before the real work begins!
+
+[[Recieve quest 3->Quest3: Find Rkiosk1]]
+
+
+:: Finish quest3 {"position":"1950,550","size":"100,100"}
+''Finish quest 3''
+
+Perfect! That little green card is your golden ticket to the whole city. Just remember to 'beep' it every time you board a bus or tram.
+
+[[Recieve quest 4->Quest4]]
+
+
+
+:: Finish quest4 {"position":"2050,675","size":"100,100"}
+''Finish quest 4''
+
+
+
+[[Recieve quest 5->Quest5]]
+
+
+:: Finish quest5 {"position":"2150,800","size":"100,100"}
+
+
+
+:: Introduce Mascot {"position":"1000,300","size":"100,100"}
+''Introduce Eksmati''
+
+Tere! Welcome to Tallinn! I’m Eksmati, the official mascot of Tallinn University.
+
+[[Next->Introduce Mascot 2]]
+
+
+:: Introduce Mascot 2 {"position":"1000,425","size":"100,100"}
+Think of me as the local expert in your pocket. I'll be hanging out here in your phone to make sure your move to Estonia is smooth. 
+
+[[Next->Introduce Mascot 3]]
+
+
+:: Introduce Mascot 3 {"position":"1000,550","size":"100,100"}
+See that Quest Book on the right? That’s our game plan.
+
+[[Next->Introduce Mascot 4]]
+
+
+:: Introduce Mascot 4 {"position":"1000,675","size":"100,100"}
+I’ll guide you through the map and help you tick off every quest. Let’s get moving!
+
+[[Next->Tutorial: Walk]]
+
+
+
+
+:: Quest 1: Finding Karu17 {"position":"1375,425","size":"100,100"}
+''Quest 1 Detail''
+
+First things first: you need a place to stay. Most international students stay right here at ''Karu17 dorms''. Let’s get you checked in!
+
+[[Finish->Finish quest1]]
+
+
+
+:: Quest2: Find Uni {"position":"1650,425","size":"100,100"}
+''Quest 2 Detail''
+
+Now, let’s find ''Tallinn University''. It’s the heart of your journey! Follow the map to the Astra building for Orientation Week. They’ll give you the 'Survival Guide' and some crucial info about your studies. Let’s head out!
+
+[[Finish ->Finish quest2]]
+
+
+:: Quest3: Find Rkiosk1 {"position":"1750,550","size":"100,100"}
+''Quest 3 Detail1''
+
+Since you're here, take some time to wander toward'' Old Town''; it's the heart of Tallinn. Walking is great, but Tallinn has a secret: once you’re registered, public transport is free for residents.
+
+[[Next->Quest3: Find Rkiosk2]]
+
+
+:: Quest3: Find Rkiosk2 {"position":"1850,550","size":"100,100"}
+''Quest 3 Detail2''
+
+We need to find an ''R-Kiosk'' to buy your ''Ühiskaart''. It’s the only way to travel like a local. Let’s find the nearest one.
+
+[[Finish quest3->Finish quest3]]
+
+
+:: Quest4 {"position":"1950,675","size":"100,100"}
+''Quest 4 Detail''
+
+[[Finish quest4->Finish quest4]]
+
+
+:: Quest5 {"position":"2050,800","size":"100,100"}
+''Quest 5 Detail''
+
+[[Finish quest5->Finish quest5]]
+
+
+:: Title & Menu {"position":"1025,175","size":"100,100"}
+''TItle Page''
+
+''Logo : New to Tallinn!''
+
+Welcome all Tallinn University International students! We know moving is a lot, so this game is designed to help you settle in. We’ll guide you through the must-do tasks so you can get straight to the fun part: exploring your new home. Ready to start your first quest?
+
+[[Play->Introduce Mascot]]
+
+
+
+:: Tutorial : Quest box {"position":"1375,300","size":"100,100"}
+''Tutorial : Quest Box''
+
+I’ve given you a notebook. ''Left-click on the right box'' to see what we need to do first.
+
+[[Quest 1 pop up->Quest 1: Finding Karu17]]
+
+
+
+:: Tutorial: Walk {"position":"1125,300","size":"100,100"}
+''Tutorial: Walk''
+
+Use ''WASD'' or the ''Arrow Keys'' to follow the path, ''Spacebar'' for jumping
+
+[[Next->Tutorial:Camera]]
+
+
+
+:: Tutorial:Camera {"position":"1250,300","size":"100,100"}
+''Tutorial: Camera''
+
+Look around!'' Left-click and drag'' to take in the beautiful campus scenery.
+
+[[Next->Tutorial : Quest box]]
+
