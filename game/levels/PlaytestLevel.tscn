@@ -67,19 +67,18 @@ material = SubResource("StandardMaterial3D_ombyj")
 size = Vector2(1, 1)
 orientation = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_msc6x"]
-albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="SphereMesh" id="SphereMesh_ombyj"]
-material = SubResource("StandardMaterial3D_msc6x")
-radius = 15.0
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_4xv3o"]
-size = Vector3(15.529259, 6.3012695, 5.4316406)
+size = Vector3(48.878654, 6.3012695, 5.4316406)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_msc6x"]
+size = Vector3(16.318085, 6.3012695, 5.4316406)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_11vo3"]
 radius = 1.5996094
 height = 3.579834
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ombyj"]
+load_path = "res://.godot/imported/buttonRound_brown.png-b2dc217d3ceb5e25b60574dad9644531.ctex"
 
 [node name="Tallinn" type="Node3D" unique_id=1206792960]
 script = ExtResource("1_6xe7l")
@@ -95,7 +94,7 @@ light_color = Color(0.8301198, 0.8229385, 1.1551381e-06, 1)
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
 
 [node name="Main" parent="TallinnEnvironment" unique_id=488862403 instance=ExtResource("1_3n0eb")]
-transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -23.54, 0.07, 0)
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -23.54991, 0.07, 0.0027471923)
 
 [node name="Player" parent="." unique_id=1492717194 instance=ExtResource("3_ombyj")]
 transform = Transform3D(-0.8899026, 0, -0.45615074, 0, 1, 0, 0.45615074, 0, -0.8899026, -50.307858, -2.4450831, 86.970184)
@@ -156,24 +155,18 @@ shape = SubResource("BoxShape3D_mcq6k")
 debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="Landmarks/KaruGroup/Karu" unique_id=496665968]
-transform = Transform3D(0.27892405, 0, -0.9603132, 0, 1.0000001, 0, 0.96031314, 0, 0.27892408, -4.053459, -0.34977484, -11.483585)
+transform = Transform3D(0.27892405, 0, -0.9603132, 0, 1.0000001, 0, 0.96031314, 0, 0.27892408, -9.242088, 0.3141513, -9.5237465)
 amount = 48
-lifetime = 6.0
+lifetime = 4.0
 mesh = SubResource("PlaneMesh_6xt56")
 emission_shape = 3
-emission_box_extents = Vector3(15, 1, 10)
+emission_box_extents = Vector3(15, 1, 6)
 spread = 180.0
 flatness = 0.8
 gravity = Vector3(0, 1, 0)
 initial_velocity_max = 2.0
 angular_velocity_min = -4.0
 angular_velocity_max = 4.0
-
-[node name="Marker" type="MeshInstance3D" parent="Landmarks/KaruGroup/Karu" unique_id=607642164]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 41.052, 0)
-visible = false
-layers = 2
-mesh = SubResource("SphereMesh_ombyj")
 
 [node name="Camera3D" type="Camera3D" parent="Landmarks/KaruGroup" unique_id=172738742]
 transform = Transform3D(0.5977511, 0.16133755, -0.7852795, 0, 0.97954005, 0.20124885, 0.80168176, -0.1202967, 0.58552116, -18.893162, 4.858328, 13.648701)
@@ -190,9 +183,23 @@ image = ExtResource("5_4xv3o")
 image_description = "Astra Building"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/UlikoolGroup/Ulikool" unique_id=425153786]
-transform = Transform3D(0.9575211, 0, 0.28836337, 0, 1, 0, -0.28836337, 0, 0.9575211, 0.0519104, 2.4732132, 0.7214737)
+transform = Transform3D(0.9575211, 0, 0.28836337, 0, 1, 0, -0.28836337, 0, 0.9575211, 0.3449402, 2.4732132, 0.6332245)
 shape = SubResource("BoxShape3D_4xv3o")
 debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="Landmarks/UlikoolGroup/Ulikool" unique_id=1548405809]
+transform = Transform3D(-0.95057, 0, -0.3105105, 0, 1.0000001, 0, 0.31051046, 0, -0.95057005, 1.2032776, -0.34977484, -1.329277)
+amount = 48
+lifetime = 4.0
+mesh = SubResource("PlaneMesh_6xt56")
+emission_shape = 3
+emission_box_extents = Vector3(25, 1, 4)
+spread = 180.0
+flatness = 0.8
+gravity = Vector3(0, 1, 0)
+initial_velocity_max = 2.0
+angular_velocity_min = -4.0
+angular_velocity_max = 4.0
 
 [node name="Camera3D" type="Camera3D" parent="Landmarks/UlikoolGroup" unique_id=1949331528]
 transform = Transform3D(0.9566206, -0.0052166977, 0.29129001, -7.450581e-09, 0.9998397, 0.017906103, -0.2913367, -0.017129349, 0.9564673, 67.60541, 4.8707066, 36.797913)
@@ -208,9 +215,23 @@ quest_id = "RKiosk"
 character_name = "wolf"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/RKioskGroup/RKiosk" unique_id=496728420]
-transform = Transform3D(0.9575211, 0, 0.28836337, 0, 1, 0, -0.28836337, 0, 0.9575211, -4.389267, 2.4732132, 2.05896)
-shape = SubResource("BoxShape3D_4xv3o")
+transform = Transform3D(0.9575211, 0, 0.28836337, 0, 1, 0, -0.28836337, 0, 0.9575211, -1.2337723, 2.4732132, 1.1086655)
+shape = SubResource("BoxShape3D_msc6x")
 debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="Landmarks/RKioskGroup/RKiosk" unique_id=1971947716]
+transform = Transform3D(-0.96043473, 0, -0.27850503, 0, 1.0000001, 0, 0.278505, 0, -0.9604348, 0.4543686, -0.34977484, -0.7982254)
+amount = 24
+lifetime = 4.0
+mesh = SubResource("PlaneMesh_6xt56")
+emission_shape = 3
+emission_box_extents = Vector3(10, 1, 4)
+spread = 180.0
+flatness = 0.8
+gravity = Vector3(0, 1, 0)
+initial_velocity_max = 2.0
+angular_velocity_min = -4.0
+angular_velocity_max = 4.0
 
 [node name="Camera3D" type="Camera3D" parent="Landmarks/RKioskGroup" unique_id=254098416]
 transform = Transform3D(0.9566206, -0.056153566, 0.28587386, -3.7252903e-09, 0.98124903, 0.19274461, -0.2913367, -0.18438345, 0.93868303, 57.942543, 4.8390064, 15.122696)
@@ -286,6 +307,6 @@ zoom = 2.0
 window_size = Vector2i(512, 512)
 target = NodePath("../../Player")
 marker_image = ExtResource("12_msc6x")
-marker_scale = Vector2(0.5, 0.5)
+quest_marker_image = SubResource("CompressedTexture2D_ombyj")
 border_line_color = Color(0.34509805, 0.28235295, 0.2509804, 1)
 metadata/_custom_type_script = "uid://0xq2liivqarr"

@@ -30,6 +30,13 @@ var quest_markers: Dictionary = {}  # quest_id -> Sprite2D
 		marker_image = value
 		if marker:
 			marker.texture = marker_image
+@export var quest_marker_image: Texture2D:
+	set(value):
+		quest_marker_image = value
+		for quest_id in quest_markers:
+			var marker_data = quest_markers[quest_id]
+			var quest_marker = marker_data["marker"]
+			quest_marker.texture = quest_marker_image
 
 @export var marker_scale: Vector2 = Vector2(1, 1):
 	set(value):
@@ -140,7 +147,7 @@ func add_quest_marker(quest_id: String, world_position: Vector3) -> void:
 		return  # Marker already exists
 	
 	var quest_marker = Sprite2D.new()
-	quest_marker.texture = marker_image
+	quest_marker.texture = quest_marker_image
 	quest_marker.scale = marker_scale
 	quest_marker.z_index = 2
 	add_child(quest_marker)
