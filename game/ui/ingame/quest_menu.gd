@@ -1,6 +1,7 @@
 extends Control
 
 @export var folded = false
+@export var titleIcon:TextureRect = null
 
 @onready var vbox_container = %QuestVBoxContainer
 @onready var bobbing_marker = %QuestBobbingMarker
@@ -12,7 +13,9 @@ var active_quest_id: String = ""
 
 
 func _ready() -> void:
-	$FoldableContainer.folded = folded
+	%FoldableContainer.folded = folded
+	if titleIcon:
+		%FoldableContainer.add_title_bar_control(titleIcon) 
 
 	release_focus()
 	

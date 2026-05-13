@@ -290,22 +290,28 @@ layout_mode = 0
 [node name="QuestMenu" parent="UI" unique_id=1846370065 instance=ExtResource("11_5tcqt")]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 6
+anchors_preset = 1
 anchor_left = 1.0
-anchor_top = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 0.0
 grow_horizontal = 0
+grow_vertical = 1
 folded = true
 
-[node name="MiniMap" type="SubViewportContainer" parent="UI" unique_id=1946928083 node_paths=PackedStringArray("target")]
-unique_name_in_owner = true
+[node name="FoldableContainer" type="FoldableContainer" parent="UI" unique_id=222813800]
+custom_minimum_size = Vector2(512, 0)
 layout_mode = 0
-offset_right = 256.0
-offset_bottom = 128.0
+offset_right = 16.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 32
+title = "Minimap"
+
+[node name="MiniMap" type="SubViewportContainer" parent="UI/FoldableContainer" unique_id=1946928083 node_paths=PackedStringArray("target")]
+unique_name_in_owner = true
+layout_mode = 2
 script = ExtResource("11_6xe7l")
 zoom = 2.0
 window_size = Vector2i(512, 512)
-target = NodePath("../../Player")
+target = NodePath("../../../Player")
 marker_image = ExtResource("12_msc6x")
 quest_marker_image = SubResource("CompressedTexture2D_ombyj")
 border_line_color = Color(0.34509805, 0.28235295, 0.2509804, 1)
