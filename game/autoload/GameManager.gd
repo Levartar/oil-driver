@@ -12,8 +12,8 @@ var quests = {
 		"dialog_id": "tutorial_wasd",
 		"description": "Learn how to move your vehicle using WASD keys.",
 	},
-	"quest_1": {
-		"id": "quest_1",
+	"Karu17": {
+		"id": "Karu17",
 		"name": "Karu 17",
 		"dialog_id": "Karu17",
 		"description": "Visit the Karu Dormitory and learn about Orientation Day",
@@ -44,7 +44,7 @@ var quests = {
 	}
 }
 
-var quest_sequence = ["tutorial", "quest_1", "quest_2", "quest_3", "quest_4", "quest_5"]
+var quest_sequence = ["tutorial", "Karu17", "quest_2", "quest_3", "quest_4", "quest_5"]
 var current_quest_index = 0
 
 func _ready():

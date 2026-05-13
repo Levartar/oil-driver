@@ -49,12 +49,30 @@ radius = 7.904
 [sub_resource type="BoxShape3D" id="BoxShape3D_mcq6k"]
 size = Vector3(15.612793, 9.089355, 31.105042)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_msc6x"]
+load_path = "res://.godot/imported/star_01.png-1ac8c8a4bb6aba7d455544366c43abc2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ombyj"]
+transparency = 1
+blend_mode = 1
+cull_mode = 2
+albedo_color = Color(0, 1, 1, 1)
+albedo_texture = SubResource("CompressedTexture2D_msc6x")
+emission_enabled = true
+emission = Color(0.8, 0.14509805, 0.3764706, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6xt56"]
+lightmap_size_hint = Vector2i(7, 7)
+material = SubResource("StandardMaterial3D_ombyj")
+size = Vector2(1, 1)
+orientation = 0
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_msc6x"]
 albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_ombyj"]
 material = SubResource("StandardMaterial3D_msc6x")
-radius = 14.132
+radius = 15.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4xv3o"]
 size = Vector3(15.529259, 6.3012695, 5.4316406)
@@ -137,8 +155,23 @@ transform = Transform3D(0.9563048, 0, 0.2923717, 0, 1, 0, -0.2923717, 0, 0.95630
 shape = SubResource("BoxShape3D_mcq6k")
 debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Landmarks/KaruGroup/Karu" unique_id=607642164]
+[node name="CPUParticles3D" type="CPUParticles3D" parent="Landmarks/KaruGroup/Karu" unique_id=496665968]
+transform = Transform3D(0.27892405, 0, -0.9603132, 0, 1.0000001, 0, 0.96031314, 0, 0.27892408, -4.053459, -0.34977484, -11.483585)
+amount = 48
+lifetime = 6.0
+mesh = SubResource("PlaneMesh_6xt56")
+emission_shape = 3
+emission_box_extents = Vector3(15, 1, 10)
+spread = 180.0
+flatness = 0.8
+gravity = Vector3(0, 1, 0)
+initial_velocity_max = 2.0
+angular_velocity_min = -4.0
+angular_velocity_max = 4.0
+
+[node name="Marker" type="MeshInstance3D" parent="Landmarks/KaruGroup/Karu" unique_id=607642164]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 41.052, 0)
+visible = false
 layers = 2
 mesh = SubResource("SphereMesh_ombyj")
 
@@ -243,21 +276,16 @@ anchor_bottom = 0.5
 grow_horizontal = 0
 folded = true
 
-[node name="MiniMap" type="SubViewportContainer" parent="UI" unique_id=1946928083 node_paths=PackedStringArray("camera_3d", "target")]
+[node name="MiniMap" type="SubViewportContainer" parent="UI" unique_id=1946928083 node_paths=PackedStringArray("target")]
+unique_name_in_owner = true
 layout_mode = 0
 offset_right = 256.0
 offset_bottom = 128.0
 script = ExtResource("11_6xe7l")
-camera_3d = NodePath("MiniMapCamera")
-zoom = 8.0
+zoom = 2.0
 window_size = Vector2i(512, 512)
 target = NodePath("../../Player")
 marker_image = ExtResource("12_msc6x")
 marker_scale = Vector2(0.5, 0.5)
 border_line_color = Color(0.34509805, 0.28235295, 0.2509804, 1)
 metadata/_custom_type_script = "uid://0xq2liivqarr"
-
-[node name="MiniMapCamera" type="Camera3D" parent="UI/MiniMap" unique_id=1117027318]
-transform = Transform3D(1, 0, 0, 0, -2.9802322e-08, 1, 0, -1, -2.9802322e-08, -50.307858, 69.903915, 86.970184)
-projection = 1
-size = 100.0
