@@ -1,6 +1,9 @@
 extends Area3D
 class_name DialogTrigger
 
+signal quest_marker_needed(quest_id: String, position: Vector3)
+signal quest_marker_remove(quest_id: String)
+
 @export var quest_id: String = ""
 @export var character_name: String = ""
 @export var trigger_once: bool = false
@@ -24,6 +27,8 @@ func _ready():
 	body_exited.connect(_on_body_exited)
 	if DialogManager:
 		DialogManager.dialog_finished.connect(_on_dialog_finished)
+	if GameManager:
+		GameManager.quest_started.connect(_on_quest_started)
 		
 func _on_body_entered(body: Node3D) -> void:
 	if body.name.to_lower().contains("player"):
@@ -215,12 +220,30 @@ func _remove_image_blend() -> void:
 		fullscreen_viewer = null
 
 
+func _on_quest_started(started_quest_id: String) -> void:
+	"""Called when GameManager starts a new quest"""
+	if started_quest_id == quest_id:
+		quest_marker_needed.emit(quest_id, global_position)
+
+
+func _hide_marker() -> void:
+	"""Hide the marker"""
+	pass
+
+
 func _on_dialog_finished() -> void:
 	"""Called when DialogManager finishes playing dialog"""
 	dialog_playing = false
 	_resume_player()
 	_switch_back_to_original_camera()
 	_remove_image_blend()
+
+	var completed_quest = SaveData.get_data("completed_quests", [])
+	if quest_id not in completed_quest:
+		return
+
+	quest_marker_remove.emit(quest_id)
+	print("removing quest marker for quest_id: %s" % quest_id)
 	# Show interaction text again if player is still in range
 	if player_in_range and not autoplay:
 		_show_interaction_text()

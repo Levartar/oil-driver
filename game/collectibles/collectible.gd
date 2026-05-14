@@ -17,6 +17,7 @@ func _process(_delta: float) -> void:
 	pass
 
 func collect_collectible() -> void:
+	%Glow.visible = false
 	var collectible_data = {
 				"id": collectible_id,
 				"image": image,

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://rpn0is4631fj" path="res://game/ui/ingame/quest_menu.gd" id="1_fx31j"]
 [ext_resource type="PackedScene" uid="uid://bqhktmbt3febd" path="res://addons/dialogue_quest/prefabs/ui/dialogue/components/bobbing_marker/bobbing_marker.tscn" id="3_573h1"]
 [ext_resource type="Texture2D" uid="uid://c4icvsk3br7jh" path="res://assets/UI/PNG/panelInset_blue.png" id="3_f71i1"]
+[ext_resource type="Texture2D" uid="uid://dp43o37i5qp1v" path="res://assets/UI/PNG/arrowBrown_left.png" id="4_573h1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fx31j"]
 content_margin_top = 4.0
@@ -32,7 +33,7 @@ shadow_color = Color(0, 0, 0, 0.4)
 shadow_size = 4
 shadow_offset = Vector2(4, 4)
 
-[node name="QuestMenu" type="Control" unique_id=1846370065]
+[node name="QuestMenu" type="Control" unique_id=1846370065 node_paths=PackedStringArray("titleIcon")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,23 +42,23 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_fx31j")
+titleIcon = NodePath("FoldableContainer/TextureRect")
 
 [node name="FoldableContainer" type="FoldableContainer" parent="." unique_id=76667314]
+unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 6
+anchors_preset = 1
 anchor_left = 1.0
-anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -24.0
-offset_top = -16.0
-offset_bottom = 16.0
+offset_left = -400.0
+offset_bottom = 450.0
 grow_horizontal = 0
-grow_vertical = 2
+theme_override_font_sizes/font_size = 32
 title = "Notebook"
 
 [node name="TabContainer" type="TabContainer" parent="FoldableContainer" unique_id=26747223]
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 current_tab = 0
 tab_0/title = "Quests"
 tab_1/title = "Collectibles"
@@ -95,6 +96,7 @@ icon_visible = true
 [node name="QuestFoldableContainer" type="FoldableContainer" parent="FoldableContainer/TabContainer/ScrollContainerQuests/MarginContainer/QuestVBoxContainer" unique_id=1619092754]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 theme_override_styles/title_panel = SubResource("StyleBoxFlat_fx31j")
 theme_override_styles/panel = SubResource("StyleBoxFlat_f71i1")
 title = "QuestName"
@@ -108,11 +110,11 @@ theme_override_constants/margin_bottom = 4
 
 [node name="RichTextLabel" type="RichTextLabel" parent="FoldableContainer/TabContainer/ScrollContainerQuests/MarginContainer/QuestVBoxContainer/QuestFoldableContainer/MarginContainer" unique_id=1661217588]
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 12
-theme_override_font_sizes/bold_font_size = 12
-theme_override_font_sizes/bold_italics_font_size = 12
-theme_override_font_sizes/italics_font_size = 12
-theme_override_font_sizes/mono_font_size = 12
+theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
+theme_override_font_sizes/bold_italics_font_size = 16
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/mono_font_size = 16
 text = "Lorem Ipsum Quad Positrum Erebum Lirum Larum
 "
 fit_content = true
@@ -168,3 +170,7 @@ theme_override_font_sizes/mono_font_size = 12
 text = "Lorem Ipsum Quad Positrum Erebum Lirum Larum
 "
 fit_content = true
+
+[node name="TextureRect" type="TextureRect" parent="FoldableContainer" unique_id=757078801]
+layout_mode = 2
+texture = ExtResource("4_573h1")
