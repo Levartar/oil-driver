@@ -140,7 +140,7 @@ mesh = SubResource("PlaneMesh_l0y63")
 surface_material_override/0 = SubResource("StandardMaterial3D_6b5et")
 
 [node name="Player" parent="." unique_id=1492717194 instance=ExtResource("3_ombyj")]
-transform = Transform3D(-0.8899026, 0, -0.45615074, 0, 1, 0, 0.45615074, 0, -0.8899026, 42.538925, -2.445068, 122.23951)
+transform = Transform3D(-0.8899026, 0, -0.45615074, 0, 1, 0, 0.45615074, 0, -0.8899026, -50.214085, -2.445068, 86.31113)
 ROTATION_SPEED = 100.0
 
 [node name="Car" parent="." unique_id=1836486299 instance=ExtResource("5_shfaa")]
