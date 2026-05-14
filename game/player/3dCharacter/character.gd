@@ -5,6 +5,7 @@ extends CharacterBody3D
 var _last_movement_direction := Vector3.BACK
 var input_disabled := false
 var _is_on_wall := false
+var current_car: VehicleBody3D = null
 
 @export_category("Movement")
 @export var SPEED = 8.0
@@ -118,3 +119,17 @@ func _check_wall_collision() -> bool:
 			return true
 	
 	return false
+
+
+## Called by car entry trigger to enter a car
+func enter_car(car: VehicleBody3D) -> void:
+	current_car = car
+	# The car will handle repositioning the player and disabling collision
+	if car.has_method("request_player_entry"):
+		car.request_player_entry(self)
+
+
+## Called by car when player exits - restores player to normal state
+func exit_car() -> void:
+	current_car = null
+	# Player collision and input already restored by car's _exit_car() method

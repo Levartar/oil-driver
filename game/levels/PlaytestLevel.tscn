@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://df1g2tgb4mhf0" path="res://game/player/3dCharacter/Character.tscn" id="3_ombyj"]
 [ext_resource type="Texture2D" uid="uid://oofn0ftd1535" path="res://assets/UI/Alicja/Art_Files/TLU_background.png" id="5_4xv3o"]
 [ext_resource type="Script" uid="uid://jj14wbdupi0a" path="res://game/scripts/DialogTrigger.gd" id="5_l0y63"]
+[ext_resource type="PackedScene" uid="uid://bcxa051svbo6l" path="res://game/player/cars/enterable_car.tscn" id="5_shfaa"]
 [ext_resource type="Texture2D" uid="uid://dr5nrwg7jm015" path="res://assets/UI/Alicja/Art_Files/Karu_Background.png" id="6_6b5et"]
+[ext_resource type="Script" uid="uid://t17y5ll36yff" path="res://game/player/cars/car_entry_trigger.gd" id="6_c8gwr"]
 [ext_resource type="Texture2D" uid="uid://cv3enxek6mv1x" path="res://assets/Posters/good-job-poster-design-vector.jpg" id="7_mcq6k"]
 [ext_resource type="PackedScene" uid="uid://p1caxt7ql1vd" path="res://game/collectibles/Collectible.tscn" id="9_bt8f4"]
 [ext_resource type="Texture2D" uid="uid://dasnhys766n1s" path="res://assets/UI/Alicja/Posters/5 (3).png" id="10_bt8f4"]
@@ -67,6 +69,9 @@ albedo_color = Color(4.813075e-08, 0.5416085, 0.5426214, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6b5et"]
 albedo_color = Color(0.33183005, 1, 1, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_c8gwr"]
+radius = 2.16
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_4xv3o"]
 radius = 2.0
@@ -135,8 +140,17 @@ mesh = SubResource("PlaneMesh_l0y63")
 surface_material_override/0 = SubResource("StandardMaterial3D_6b5et")
 
 [node name="Player" parent="." unique_id=1492717194 instance=ExtResource("3_ombyj")]
-transform = Transform3D(-0.8899026, 0, -0.45615074, 0, 1, 0, 0.45615074, 0, -0.8899026, -50.461075, -2.445068, 86.23951)
+transform = Transform3D(-0.8899026, 0, -0.45615074, 0, 1, 0, 0.45615074, 0, -0.8899026, 42.538925, -2.445068, 122.23951)
 ROTATION_SPEED = 100.0
+
+[node name="Car" parent="." unique_id=1836486299 instance=ExtResource("5_shfaa")]
+transform = Transform3D(0.19337837, 0, -0.9811243, 0, 1, 0, 0.9811243, 0, 0.19337837, 118.35822, -1.9161296, 3.0661607)
+
+[node name="Area3D" type="Area3D" parent="Car" unique_id=999234530]
+script = ExtResource("6_c8gwr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Car/Area3D" unique_id=198297238]
+shape = SubResource("SphereShape3D_c8gwr")
 
 [node name="Landmarks" type="Node3D" parent="." unique_id=1298327621]
 
