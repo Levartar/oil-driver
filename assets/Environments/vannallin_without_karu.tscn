@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://c0yn7c2lqq112"]
+
+[ext_resource type="PackedScene" uid="uid://hn08t7mkdpkh" path="res://assets/Environments/Vannallin-without Karu.glb" id="1_4jirx"]
+[ext_resource type="Material" uid="uid://d1m1j4c21jo3" path="res://assets/Materials/Building.tres" id="2_asrf6"]
+
+[node name="Vannallin-without Karu" unique_id=1402534528 instance=ExtResource("1_4jirx")]
+
+[node name="hooned_lod2-Tallinn" parent="hooned_lod2-Tallinn_StaticBody" parent_id_path=PackedInt32Array(773085207) index="0" unique_id=1263714404]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_016" parent="hooned_lod2-Tallinn_016_StaticBody" parent_id_path=PackedInt32Array(515227904) index="0" unique_id=1807623325]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_024" parent="hooned_lod2-Tallinn_024_StaticBody" parent_id_path=PackedInt32Array(68653775) index="0" unique_id=75374273]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_025" parent="hooned_lod2-Tallinn_025_StaticBody" parent_id_path=PackedInt32Array(1566454284) index="0" unique_id=419831523]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_026" parent="hooned_lod2-Tallinn_026_StaticBody" parent_id_path=PackedInt32Array(2045059541) index="0" unique_id=287186389]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_027" parent="hooned_lod2-Tallinn_027_StaticBody" parent_id_path=PackedInt32Array(1951347526) index="0" unique_id=1815736398]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_028" parent="hooned_lod2-Tallinn_028_StaticBody" parent_id_path=PackedInt32Array(2031107973) index="0" unique_id=1565362050]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_029" parent="hooned_lod2-Tallinn_029_StaticBody" parent_id_path=PackedInt32Array(1590602411) index="0" unique_id=1063019697]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_030" parent="hooned_lod2-Tallinn_030_StaticBody" parent_id_path=PackedInt32Array(1097505961) index="0" unique_id=1254639593]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_031" parent="hooned_lod2-Tallinn_031_StaticBody" parent_id_path=PackedInt32Array(1076539721) index="0" unique_id=340046218]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_032" parent="hooned_lod2-Tallinn_032_StaticBody" parent_id_path=PackedInt32Array(1994489311) index="0" unique_id=271480159]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_033" parent="hooned_lod2-Tallinn_033_StaticBody" parent_id_path=PackedInt32Array(1122941043) index="0" unique_id=379311627]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_034" parent="hooned_lod2-Tallinn_034_StaticBody" parent_id_path=PackedInt32Array(1671560843) index="0" unique_id=822161020]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_035" parent="hooned_lod2-Tallinn_035_StaticBody" parent_id_path=PackedInt32Array(1017697431) index="0" unique_id=1234151147]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_036" parent="hooned_lod2-Tallinn_036_StaticBody" parent_id_path=PackedInt32Array(2088601469) index="0" unique_id=1797365804]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_037" parent="hooned_lod2-Tallinn_037_StaticBody" parent_id_path=PackedInt32Array(803276830) index="0" unique_id=43186929]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_038" parent="hooned_lod2-Tallinn_038_StaticBody" parent_id_path=PackedInt32Array(1634151448) index="0" unique_id=824418905]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_039" parent="hooned_lod2-Tallinn_039_StaticBody" parent_id_path=PackedInt32Array(1947741604) index="0" unique_id=1424745751]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_040" parent="hooned_lod2-Tallinn_040_StaticBody" parent_id_path=PackedInt32Array(1081514436) index="0" unique_id=1368209564]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_041" parent="hooned_lod2-Tallinn_041_StaticBody" parent_id_path=PackedInt32Array(1084061127) index="0" unique_id=1918007848]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_042" parent="hooned_lod2-Tallinn_042_StaticBody" parent_id_path=PackedInt32Array(232112775) index="0" unique_id=327823897]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_043" parent="hooned_lod2-Tallinn_043_StaticBody" parent_id_path=PackedInt32Array(790700099) index="0" unique_id=1869474031]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_044" parent="hooned_lod2-Tallinn_044_StaticBody" parent_id_path=PackedInt32Array(1359262306) index="0" unique_id=1354111222]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_045" parent="hooned_lod2-Tallinn_045_StaticBody" parent_id_path=PackedInt32Array(186102291) index="0" unique_id=1996269570]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_046" parent="hooned_lod2-Tallinn_046_StaticBody" parent_id_path=PackedInt32Array(413857764) index="0" unique_id=1198097626]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_047" parent="hooned_lod2-Tallinn_047_StaticBody" parent_id_path=PackedInt32Array(797862983) index="0" unique_id=1082117666]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_049" parent="hooned_lod2-Tallinn_049_StaticBody" parent_id_path=PackedInt32Array(818651260) index="0" unique_id=521895672]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_050" parent="hooned_lod2-Tallinn_050_StaticBody" parent_id_path=PackedInt32Array(73756679) index="0" unique_id=1778148391]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_051" parent="hooned_lod2-Tallinn_051_StaticBody" parent_id_path=PackedInt32Array(490224007) index="0" unique_id=994526817]
+surface_material_override/0 = ExtResource("2_asrf6")
+
+[node name="hooned_lod2-Tallinn_052" parent="hooned_lod2-Tallinn_052_StaticBody" parent_id_path=PackedInt32Array(2079315526) index="0" unique_id=702729353]
+surface_material_override/0 = ExtResource("2_asrf6")

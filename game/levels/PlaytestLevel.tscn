@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://byt88scfbsw2m"]
 
 [ext_resource type="Script" uid="uid://cd1x7j3kjr7ep" path="res://game/levels/playtest_level.gd" id="1_6xe7l"]
-[ext_resource type="PackedScene" uid="uid://ch4wob8rmhq12" path="res://assets/Environments/karu_to_tlu_v_1.tscn" id="2_msc6x"]
+[ext_resource type="PackedScene" uid="uid://c0yn7c2lqq112" path="res://assets/Environments/vannallin_without_karu.tscn" id="2_6xt56"]
+[ext_resource type="PackedScene" uid="uid://bgd5lhqyv1rk" path="res://assets/Environments/Karu.tscn" id="2_ombyj"]
 [ext_resource type="PackedScene" uid="uid://df1g2tgb4mhf0" path="res://game/player/3dCharacter/Character.tscn" id="3_ombyj"]
 [ext_resource type="Texture2D" uid="uid://oofn0ftd1535" path="res://assets/UI/Alicja/Art_Files/TLU_background.png" id="5_4xv3o"]
 [ext_resource type="Script" uid="uid://jj14wbdupi0a" path="res://game/scripts/DialogTrigger.gd" id="5_l0y63"]
@@ -35,11 +36,20 @@ fog_enabled = true
 fog_mode = 1
 fog_light_color = Color(0, 0.58431375, 0.7137255, 1)
 fog_light_energy = 0.66
-fog_density = 0.0798
+fog_density = 0.1
 fog_sky_affect = 0.3
 fog_depth_curve = 8.574143
 fog_depth_begin = 2.0
 adjustment_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_l0y63"]
+size = Vector2(100, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6xt56"]
+albedo_color = Color(4.813075e-08, 0.5416085, 0.5426214, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6b5et"]
+albedo_color = Color(0.33183005, 1, 1, 1)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_4xv3o"]
 radius = 2.0
@@ -91,8 +101,21 @@ light_color = Color(0.8301198, 0.8229385, 1.1551381e-06, 1)
 [node name="TallinnEnvironment" type="Node3D" parent="." unique_id=1245317640]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
 
-[node name="Karu_to_TLU_v1" parent="TallinnEnvironment" unique_id=488862403 instance=ExtResource("2_msc6x")]
+[node name="Vannallin-without Karu" parent="TallinnEnvironment" unique_id=1402534528 instance=ExtResource("2_6xt56")]
+transform = Transform3D(1.32, 0, 0, 0, 1.32, 0, 0, 0, 1.32, -23.384, 1.737, -44.855)
+
+[node name="Main" parent="TallinnEnvironment" unique_id=135594780 instance=ExtResource("2_ombyj")]
 transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -23.55, 0.07, 0.003)
+
+[node name="Sea1" type="MeshInstance3D" parent="TallinnEnvironment" unique_id=806198856]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -0.075, -34.428417)
+mesh = SubResource("PlaneMesh_l0y63")
+surface_material_override/0 = SubResource("StandardMaterial3D_6xt56")
+
+[node name="Sea2" type="MeshInstance3D" parent="TallinnEnvironment" unique_id=1727193828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.075, 45.69746)
+mesh = SubResource("PlaneMesh_l0y63")
+surface_material_override/0 = SubResource("StandardMaterial3D_6b5et")
 
 [node name="Player" parent="." unique_id=1492717194 instance=ExtResource("3_ombyj")]
 transform = Transform3D(-0.8899026, 0, -0.45615074, 0, 1, 0, 0.45615074, 0, -0.8899026, -50.307858, -2.4450831, 86.970184)
