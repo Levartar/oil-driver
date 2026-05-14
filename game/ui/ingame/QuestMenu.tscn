@@ -121,7 +121,7 @@ fit_content = true
 
 [node name="ScrollContainerCollectibles" type="ScrollContainer" parent="FoldableContainer/TabContainer" unique_id=1732747249]
 visible = false
-custom_minimum_size = Vector2(400, 400)
+custom_minimum_size = Vector2(468, 468)
 layout_mode = 2
 metadata/_tab_index = 1
 metadata/_tab_name = "Collectibles"
