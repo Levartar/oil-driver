@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://t3vy8fexawc6"]
+
+[ext_resource type="Texture2D" uid="uid://bwkr6o5sn0ovr" path="res://assets/Environments/Karu_to_TLU_v1_WorldGridMaterial_MetallicRoughness.png" id="1_5xeop"]
+
+[resource]
+albedo_color = Color(1, 1, 1, 0)
+albedo_texture = ExtResource("1_5xeop")
+albedo_texture_force_srgb = true
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv2_scale = Vector3(0.1, 0.1, 0.1)

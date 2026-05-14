@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://byt88scfbsw2m"]
 
-[ext_resource type="PackedScene" uid="uid://bu1dkiqd3sawg" path="res://assets/Environments/Karu_to_TLU_v1.glb" id="1_3n0eb"]
 [ext_resource type="Script" uid="uid://cd1x7j3kjr7ep" path="res://game/levels/playtest_level.gd" id="1_6xe7l"]
+[ext_resource type="PackedScene" uid="uid://ch4wob8rmhq12" path="res://assets/Environments/karu_to_tlu_v_1.tscn" id="2_msc6x"]
 [ext_resource type="PackedScene" uid="uid://df1g2tgb4mhf0" path="res://game/player/3dCharacter/Character.tscn" id="3_ombyj"]
 [ext_resource type="Texture2D" uid="uid://oofn0ftd1535" path="res://assets/UI/Alicja/Art_Files/TLU_background.png" id="5_4xv3o"]
 [ext_resource type="Script" uid="uid://jj14wbdupi0a" path="res://game/scripts/DialogTrigger.gd" id="5_l0y63"]
@@ -93,8 +93,8 @@ light_color = Color(0.8301198, 0.8229385, 1.1551381e-06, 1)
 [node name="TallinnEnvironment" type="Node3D" parent="." unique_id=1245317640]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
 
-[node name="Main" parent="TallinnEnvironment" unique_id=488862403 instance=ExtResource("1_3n0eb")]
-transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -23.54991, 0.07, 0.0027471923)
+[node name="Karu_to_TLU_v1" parent="TallinnEnvironment" unique_id=488862403 instance=ExtResource("2_msc6x")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -23.55, 0.07, 0.003)
 
 [node name="Player" parent="." unique_id=1492717194 instance=ExtResource("3_ombyj")]
 transform = Transform3D(-0.8899026, 0, -0.45615074, 0, 1, 0, 0.45615074, 0, -0.8899026, -50.307858, -2.4450831, 86.970184)

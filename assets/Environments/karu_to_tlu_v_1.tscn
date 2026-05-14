@@ -1,0 +1,198 @@
+[gd_scene format=3 uid="uid://ch4wob8rmhq12"]
+
+[ext_resource type="PackedScene" uid="uid://bu1dkiqd3sawg" path="res://assets/Environments/Karu_to_TLU_v1.glb" id="1_ct12t"]
+[ext_resource type="Material" uid="uid://t3vy8fexawc6" path="res://assets/Materials/checkered_gras.tres" id="2_2dvyd"]
+
+[node name="Karu_to_TLU_v1" unique_id=488862403 instance=ExtResource("1_ct12t")]
+
+[node name="LandscapeComponent_0_001" parent="Landscape/LandscapeComponent_0/LandscapeComponent_0_001_StaticBody" parent_id_path=PackedInt32Array(634367013) index="0" unique_id=2060767922]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_1_001" parent="Landscape/LandscapeComponent_1/LandscapeComponent_1_001_StaticBody" parent_id_path=PackedInt32Array(1515145302) index="0" unique_id=1308717185]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_10_001" parent="Landscape/LandscapeComponent_10/LandscapeComponent_10_001_StaticBody" parent_id_path=PackedInt32Array(1362571063) index="0" unique_id=2136927432]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_11_001" parent="Landscape/LandscapeComponent_11/LandscapeComponent_11_001_StaticBody" parent_id_path=PackedInt32Array(833455736) index="0" unique_id=1117231648]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_12_001" parent="Landscape/LandscapeComponent_12/LandscapeComponent_12_001_StaticBody" parent_id_path=PackedInt32Array(276884120) index="0" unique_id=1381600586]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_13_001" parent="Landscape/LandscapeComponent_13/LandscapeComponent_13_001_StaticBody" parent_id_path=PackedInt32Array(1806121127) index="0" unique_id=360426195]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_14_001" parent="Landscape/LandscapeComponent_14/LandscapeComponent_14_001_StaticBody" parent_id_path=PackedInt32Array(529984634) index="0" unique_id=1556634804]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_15_001" parent="Landscape/LandscapeComponent_15/LandscapeComponent_15_001_StaticBody" parent_id_path=PackedInt32Array(1977878031) index="0" unique_id=976017909]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_16_001" parent="Landscape/LandscapeComponent_16/LandscapeComponent_16_001_StaticBody" parent_id_path=PackedInt32Array(444142000) index="0" unique_id=1836126630]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_17_001" parent="Landscape/LandscapeComponent_17/LandscapeComponent_17_001_StaticBody" parent_id_path=PackedInt32Array(109612037) index="0" unique_id=591267366]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_18_001" parent="Landscape/LandscapeComponent_18/LandscapeComponent_18_001_StaticBody" parent_id_path=PackedInt32Array(2082866226) index="0" unique_id=676245662]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_19_001" parent="Landscape/LandscapeComponent_19/LandscapeComponent_19_001_StaticBody" parent_id_path=PackedInt32Array(1460854691) index="0" unique_id=1323639059]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_2_001" parent="Landscape/LandscapeComponent_2/LandscapeComponent_2_001_StaticBody" parent_id_path=PackedInt32Array(1849706996) index="0" unique_id=1764495642]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_20_001" parent="Landscape/LandscapeComponent_20/LandscapeComponent_20_001_StaticBody" parent_id_path=PackedInt32Array(1049417719) index="0" unique_id=557516133]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_21_001" parent="Landscape/LandscapeComponent_21/LandscapeComponent_21_001_StaticBody" parent_id_path=PackedInt32Array(1663881522) index="0" unique_id=137097875]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_22_001" parent="Landscape/LandscapeComponent_22/LandscapeComponent_22_001_StaticBody" parent_id_path=PackedInt32Array(997215489) index="0" unique_id=396962424]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_23_001" parent="Landscape/LandscapeComponent_23/LandscapeComponent_23_001_StaticBody" parent_id_path=PackedInt32Array(1310385195) index="0" unique_id=2058208638]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_24_001" parent="Landscape/LandscapeComponent_24/LandscapeComponent_24_001_StaticBody" parent_id_path=PackedInt32Array(1747764311) index="0" unique_id=313070837]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_25_001" parent="Landscape/LandscapeComponent_25/LandscapeComponent_25_001_StaticBody" parent_id_path=PackedInt32Array(371877651) index="0" unique_id=459563484]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_26_001" parent="Landscape/LandscapeComponent_26/LandscapeComponent_26_001_StaticBody" parent_id_path=PackedInt32Array(566565504) index="0" unique_id=293147737]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_27_001" parent="Landscape/LandscapeComponent_27/LandscapeComponent_27_001_StaticBody" parent_id_path=PackedInt32Array(186152660) index="0" unique_id=1959615731]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_28_001" parent="Landscape/LandscapeComponent_28/LandscapeComponent_28_001_StaticBody" parent_id_path=PackedInt32Array(2068986155) index="0" unique_id=1601291165]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_29_001" parent="Landscape/LandscapeComponent_29/LandscapeComponent_29_001_StaticBody" parent_id_path=PackedInt32Array(1358089502) index="0" unique_id=525075388]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_3_001" parent="Landscape/LandscapeComponent_3/LandscapeComponent_3_001_StaticBody" parent_id_path=PackedInt32Array(1451633499) index="0" unique_id=1131292818]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_30_001" parent="Landscape/LandscapeComponent_30/LandscapeComponent_30_001_StaticBody" parent_id_path=PackedInt32Array(776201911) index="0" unique_id=499685592]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_31_001" parent="Landscape/LandscapeComponent_31/LandscapeComponent_31_001_StaticBody" parent_id_path=PackedInt32Array(1203397072) index="0" unique_id=1129483376]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_32_001" parent="Landscape/LandscapeComponent_32/LandscapeComponent_32_001_StaticBody" parent_id_path=PackedInt32Array(1019532384) index="0" unique_id=1116486993]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_33_001" parent="Landscape/LandscapeComponent_33/LandscapeComponent_33_001_StaticBody" parent_id_path=PackedInt32Array(1321246402) index="0" unique_id=66177472]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_34_001" parent="Landscape/LandscapeComponent_34/LandscapeComponent_34_001_StaticBody" parent_id_path=PackedInt32Array(192582224) index="0" unique_id=1534072880]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_35_001" parent="Landscape/LandscapeComponent_35/LandscapeComponent_35_001_StaticBody" parent_id_path=PackedInt32Array(2092433659) index="0" unique_id=1215559301]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_36_001" parent="Landscape/LandscapeComponent_36/LandscapeComponent_36_001_StaticBody" parent_id_path=PackedInt32Array(258854056) index="0" unique_id=1619559614]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_37_001" parent="Landscape/LandscapeComponent_37/LandscapeComponent_37_001_StaticBody" parent_id_path=PackedInt32Array(317241124) index="0" unique_id=2127769549]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_38_001" parent="Landscape/LandscapeComponent_38/LandscapeComponent_38_001_StaticBody" parent_id_path=PackedInt32Array(1524593936) index="0" unique_id=575119552]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_39_001" parent="Landscape/LandscapeComponent_39/LandscapeComponent_39_001_StaticBody" parent_id_path=PackedInt32Array(1533719496) index="0" unique_id=443402351]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_4_001" parent="Landscape/LandscapeComponent_4/LandscapeComponent_4_001_StaticBody" parent_id_path=PackedInt32Array(181783035) index="0" unique_id=1540425312]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_40_001" parent="Landscape/LandscapeComponent_40/LandscapeComponent_40_001_StaticBody" parent_id_path=PackedInt32Array(446480951) index="0" unique_id=1664816480]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_41_001" parent="Landscape/LandscapeComponent_41/LandscapeComponent_41_001_StaticBody" parent_id_path=PackedInt32Array(895533522) index="0" unique_id=1250466442]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_42_001" parent="Landscape/LandscapeComponent_42/LandscapeComponent_42_001_StaticBody" parent_id_path=PackedInt32Array(1300008107) index="0" unique_id=239674034]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_43_001" parent="Landscape/LandscapeComponent_43/LandscapeComponent_43_001_StaticBody" parent_id_path=PackedInt32Array(386807327) index="0" unique_id=618948422]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_44_001" parent="Landscape/LandscapeComponent_44/LandscapeComponent_44_001_StaticBody" parent_id_path=PackedInt32Array(1610161250) index="0" unique_id=721695648]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_45_001" parent="Landscape/LandscapeComponent_45/LandscapeComponent_45_001_StaticBody" parent_id_path=PackedInt32Array(483069361) index="0" unique_id=180008158]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_46_001" parent="Landscape/LandscapeComponent_46/LandscapeComponent_46_001_StaticBody" parent_id_path=PackedInt32Array(295618174) index="0" unique_id=1842080399]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_47_001" parent="Landscape/LandscapeComponent_47/LandscapeComponent_47_001_StaticBody" parent_id_path=PackedInt32Array(2133233284) index="0" unique_id=501616643]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_48_001" parent="Landscape/LandscapeComponent_48/LandscapeComponent_48_001_StaticBody" parent_id_path=PackedInt32Array(1538441704) index="0" unique_id=884190489]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_49_001" parent="Landscape/LandscapeComponent_49/LandscapeComponent_49_001_StaticBody" parent_id_path=PackedInt32Array(1867176714) index="0" unique_id=1539489781]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_5_001" parent="Landscape/LandscapeComponent_5/LandscapeComponent_5_001_StaticBody" parent_id_path=PackedInt32Array(2021463989) index="0" unique_id=1962068970]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_50_001" parent="Landscape/LandscapeComponent_50/LandscapeComponent_50_001_StaticBody" parent_id_path=PackedInt32Array(1996392410) index="0" unique_id=840469792]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_51_001" parent="Landscape/LandscapeComponent_51/LandscapeComponent_51_001_StaticBody" parent_id_path=PackedInt32Array(1917635630) index="0" unique_id=930648269]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_52_001" parent="Landscape/LandscapeComponent_52/LandscapeComponent_52_001_StaticBody" parent_id_path=PackedInt32Array(796644001) index="0" unique_id=724144870]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_53_001" parent="Landscape/LandscapeComponent_53/LandscapeComponent_53_001_StaticBody" parent_id_path=PackedInt32Array(526736325) index="0" unique_id=1258633357]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_54_001" parent="Landscape/LandscapeComponent_54/LandscapeComponent_54_001_StaticBody" parent_id_path=PackedInt32Array(184250089) index="0" unique_id=1006073959]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_55_001" parent="Landscape/LandscapeComponent_55/LandscapeComponent_55_001_StaticBody" parent_id_path=PackedInt32Array(720359332) index="0" unique_id=1774995551]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_56_001" parent="Landscape/LandscapeComponent_56/LandscapeComponent_56_001_StaticBody" parent_id_path=PackedInt32Array(1546532199) index="0" unique_id=1429397263]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_57_001" parent="Landscape/LandscapeComponent_57/LandscapeComponent_57_001_StaticBody" parent_id_path=PackedInt32Array(1674627404) index="0" unique_id=2006006784]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_58_001" parent="Landscape/LandscapeComponent_58/LandscapeComponent_58_001_StaticBody" parent_id_path=PackedInt32Array(481024605) index="0" unique_id=1281348919]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_59_001" parent="Landscape/LandscapeComponent_59/LandscapeComponent_59_001_StaticBody" parent_id_path=PackedInt32Array(1519714720) index="0" unique_id=1083918984]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_6_001" parent="Landscape/LandscapeComponent_6/LandscapeComponent_6_001_StaticBody" parent_id_path=PackedInt32Array(981099244) index="0" unique_id=676465631]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_60_001" parent="Landscape/LandscapeComponent_60/LandscapeComponent_60_001_StaticBody" parent_id_path=PackedInt32Array(503061566) index="0" unique_id=1309080734]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_61_001" parent="Landscape/LandscapeComponent_61/LandscapeComponent_61_001_StaticBody" parent_id_path=PackedInt32Array(2075710833) index="0" unique_id=488010891]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_62_001" parent="Landscape/LandscapeComponent_62/LandscapeComponent_62_001_StaticBody" parent_id_path=PackedInt32Array(207820687) index="0" unique_id=26559635]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_63_001" parent="Landscape/LandscapeComponent_63/LandscapeComponent_63_001_StaticBody" parent_id_path=PackedInt32Array(530241714) index="0" unique_id=108053941]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_7_001" parent="Landscape/LandscapeComponent_7/LandscapeComponent_7_001_StaticBody" parent_id_path=PackedInt32Array(1935771650) index="0" unique_id=1715302376]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_8_001" parent="Landscape/LandscapeComponent_8/LandscapeComponent_8_001_StaticBody" parent_id_path=PackedInt32Array(495722969) index="0" unique_id=989782704]
+surface_material_override/0 = ExtResource("2_2dvyd")
+
+[node name="LandscapeComponent_9_001" parent="Landscape/LandscapeComponent_9/LandscapeComponent_9_001_StaticBody" parent_id_path=PackedInt32Array(1541858033) index="0" unique_id=246184423]
+surface_material_override/0 = ExtResource("2_2dvyd")
