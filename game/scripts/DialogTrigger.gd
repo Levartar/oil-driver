@@ -181,7 +181,7 @@ func is_node_valid(node: Node) -> bool:
 
 func _show_image_blend() -> void:
 	"""Show image with fade-in blend after 2 seconds"""
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.0).timeout
 	
 	if not dialog_playing or not image:
 		return

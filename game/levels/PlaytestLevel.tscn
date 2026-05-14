@@ -261,13 +261,14 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 transform = Transform3D(0.1914063, 0, -0.46191302, 0, 0.5, 0, 0.46191302, 0, 0.1914063, -21.481653, -0.5662168, 39.147533)
 collectible_id = "tutorial_collectible"
 image = ExtResource("7_mcq6k")
-description = "Tutorial"
+description = "You did a good job collecting this poster"
 
 [node name="Area3D" type="Area3D" parent="Landmarks/Collectibles/TutorialCollectible" unique_id=1388909782]
 script = ExtResource("5_l0y63")
 quest_id = "tutorial_collectible"
 character_name = "wolf"
 collectible = true
+image = ExtResource("7_mcq6k")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/Collectibles/TutorialCollectible/Area3D" unique_id=1880335655]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)

@@ -99,7 +99,7 @@ transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
 [node name="Tallinn-Vannallin-merged" parent="TallinnEnvironment" unique_id=1108566722 instance=ExtResource("5_ibfxb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.6834297, 1.2832336, -35.466873)
 
-[node name="Tallinn-Heightmap-decimated-0_02" parent="TallinnEnvironment" unique_id=616442797 instance=ExtResource("6_nljnj")]
+[node name="Tallinn-Heightmap-decimated-0_02" parent="TallinnEnvironment" unique_id=1150589733 instance=ExtResource("6_nljnj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9529996, 1.283, -35.577)
 
 [node name="Player" parent="." unique_id=1492717194 instance=ExtResource("4_11vo3")]

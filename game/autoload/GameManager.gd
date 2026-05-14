@@ -9,7 +9,7 @@ var quests = {
 	"tutorial": {
 		"id": "tutorial",
 		"name": "Tutorial",
-		"dialog_id": "tutorial_wasd",
+		"dialog_id": "tutorial_intro",
 		"description": "Learn how to move your vehicle using WASD keys.",
 	},
 	"Karu17": {
