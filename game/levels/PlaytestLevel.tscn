@@ -9,11 +9,28 @@
 [ext_resource type="Texture2D" uid="uid://dr5nrwg7jm015" path="res://assets/UI/Alicja/Art_Files/Karu_Background.png" id="6_6b5et"]
 [ext_resource type="Texture2D" uid="uid://cv3enxek6mv1x" path="res://assets/Posters/good-job-poster-design-vector.jpg" id="7_mcq6k"]
 [ext_resource type="PackedScene" uid="uid://p1caxt7ql1vd" path="res://game/collectibles/Collectible.tscn" id="9_bt8f4"]
+[ext_resource type="Texture2D" uid="uid://dasnhys766n1s" path="res://assets/UI/Alicja/Posters/5 (3).png" id="10_bt8f4"]
+[ext_resource type="Texture2D" uid="uid://cj87wsphf6dxw" path="res://assets/UI/Alicja/Posters/1 (3).png" id="10_l0y63"]
 [ext_resource type="PackedScene" uid="uid://cs3t23wdjo5ra" path="res://game/ui/ingame/InGameUi.tscn" id="10_yskq0"]
 [ext_resource type="PackedScene" uid="uid://wpbcnwejelyu" path="res://game/ui/ingame/QuestMenu.tscn" id="11_5tcqt"]
+[ext_resource type="Texture2D" uid="uid://b6dga5aeqw7rp" path="res://assets/UI/Alicja/Posters/2 (3).png" id="11_6b5et"]
 [ext_resource type="Script" uid="uid://0xq2liivqarr" path="res://addons/minimap/minimap_node.gd" id="11_6xe7l"]
+[ext_resource type="Texture2D" uid="uid://d0dmyt3yr0aaf" path="res://assets/UI/Alicja/Posters/NewToTallinn_posters.png" id="11_fuvcj"]
+[ext_resource type="Texture2D" uid="uid://dogalygswv5gc" path="res://assets/UI/Alicja/Posters/NewToTallinn_posters (4).png" id="12_0g511"]
 [ext_resource type="Texture2D" uid="uid://dmpqjmidldywm" path="res://assets/UI/Untitled.png" id="12_msc6x"]
+[ext_resource type="Texture2D" uid="uid://db1t1em8cedfq" path="res://assets/UI/Alicja/Posters/NewToTallinn_posters (6).png" id="12_poppy"]
+[ext_resource type="Texture2D" uid="uid://2mx7vd2na8lk" path="res://assets/UI/Alicja/Posters/3 (1).png" id="12_r7ao3"]
+[ext_resource type="Texture2D" uid="uid://dcwb18woc2vkn" path="res://assets/UI/Alicja/Posters/NewToTallinn_posters (8).png" id="13_5mx6v"]
+[ext_resource type="Texture2D" uid="uid://b16yisu8luebe" path="res://assets/UI/Alicja/Posters/4 (2).png" id="13_klxx8"]
 [ext_resource type="Texture2D" uid="uid://b6whr04mkj2gs" path="res://assets/UI/target_round_a.png" id="13_ombyj"]
+[ext_resource type="Texture2D" uid="uid://ckhm8f4s3dhiq" path="res://assets/UI/Alicja/Posters/NewToTallinn_posters (1).png" id="13_yskq0"]
+[ext_resource type="Texture2D" uid="uid://b7p102earqa1d" path="res://assets/UI/Alicja/Posters/NewToTallinn_posters (3).png" id="16_5tcqt"]
+[ext_resource type="Texture2D" uid="uid://g1r471k48or6" path="res://assets/UI/Alicja/Posters/NewToTallinn_posters (5).png" id="18_37vir"]
+[ext_resource type="Texture2D" uid="uid://do4rkr5ej6o48" path="res://assets/UI/Alicja/Posters/NewToTallinn_posters (2).png" id="18_a37cw"]
+[ext_resource type="Texture2D" uid="uid://dck2ay53w4d00" path="res://assets/UI/Alicja/Posters/NewToTallinn_posters (7).png" id="21_mordt"]
+[ext_resource type="Texture2D" uid="uid://khcvxdehils2" path="res://assets/UI/Alicja/Posters/NewToTallinn_posters (12).png" id="21_nfwdi"]
+[ext_resource type="Texture2D" uid="uid://b2jvn4gieodw5" path="res://assets/UI/Alicja/Posters/NewToTallinn_posters (13).png" id="22_8tbhh"]
+[ext_resource type="Texture2D" uid="uid://dfh1ql6e5fhe7" path="res://assets/UI/Alicja/Posters/NewToTallinn_posters (11).png" id="23_vgtr8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nljnj"]
 sky_top_color = Color(0.27009362, 0.43445107, 0.7677927, 1)
@@ -102,7 +119,7 @@ light_color = Color(0.8301198, 0.8229385, 1.1551381e-06, 1)
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
 
 [node name="Vannallin-without Karu" parent="TallinnEnvironment" unique_id=1402534528 instance=ExtResource("2_6xt56")]
-transform = Transform3D(1.32, 0, 0, 0, 1.32, 0, 0, 0, 1.32, -23.384, 1.737, -44.855)
+transform = Transform3D(1.3199999, 0, 0, 0, 1.3199999, 0, 0, 0, 1.3199999, -23.385, 1.727, -44.855)
 
 [node name="Main" parent="TallinnEnvironment" unique_id=135594780 instance=ExtResource("2_ombyj")]
 transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -23.55, 0.07, 0.003)
@@ -118,7 +135,7 @@ mesh = SubResource("PlaneMesh_l0y63")
 surface_material_override/0 = SubResource("StandardMaterial3D_6b5et")
 
 [node name="Player" parent="." unique_id=1492717194 instance=ExtResource("3_ombyj")]
-transform = Transform3D(-0.8899026, 0, -0.45615074, 0, 1, 0, 0.45615074, 0, -0.8899026, -50.307858, -2.4450831, 86.970184)
+transform = Transform3D(-0.8899026, 0, -0.45615074, 0, 1, 0, 0.45615074, 0, -0.8899026, -50.461075, -2.445068, 86.23951)
 ROTATION_SPEED = 100.0
 
 [node name="Landmarks" type="Node3D" parent="." unique_id=1298327621]
@@ -223,8 +240,8 @@ angular_velocity_min = -4.0
 angular_velocity_max = 4.0
 
 [node name="Camera3D" type="Camera3D" parent="Landmarks/UlikoolGroup" unique_id=1949331528]
-transform = Transform3D(0.9566206, -0.0052166977, 0.29129001, -7.450581e-09, 0.9998397, 0.017906103, -0.2913367, -0.017129349, 0.9564673, 67.60541, 4.8707066, 36.797913)
-fov = 38.6
+transform = Transform3D(0.9566206, -0.0052166977, 0.29129001, -7.450581e-09, 0.9998397, 0.017906103, -0.2913367, -0.017129349, 0.9564673, 61.362457, 4.8707066, 6.6163864)
+fov = 81.0
 
 [node name="RKioskGroup" type="Node3D" parent="Landmarks" unique_id=1964313086]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.392082, 0.96769905, 117.730865)
@@ -275,23 +292,312 @@ debug_color = Color(0, 0.6, 0.69803923, 0.8901961)
 [node name="Camera3D" type="Camera3D" parent="Landmarks/LinahallGroup" unique_id=403596016]
 transform = Transform3D(0.9976125, -0.040264122, 0.05610782, 2.6953633e-09, 0.81245, 0.5830309, -0.06906003, -0.58163893, 0.8105102, 60.891106, 35.51307, -315.28976)
 
-[node name="Collectibles" type="Node3D" parent="Landmarks" unique_id=289880703]
+[node name="Collectibles" type="Node3D" parent="." unique_id=289880703]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
-[node name="TutorialCollectible" parent="Landmarks/Collectibles" unique_id=1791445064 instance=ExtResource("9_bt8f4")]
+[node name="TutorialCollectible" parent="Collectibles" unique_id=1791445064 instance=ExtResource("9_bt8f4")]
 transform = Transform3D(0.1914063, 0, -0.46191302, 0, 0.5, 0, 0.46191302, 0, 0.1914063, -21.481653, -0.5662168, 39.147533)
 collectible_id = "tutorial_collectible"
 image = ExtResource("7_mcq6k")
 description = "You did a good job collecting this poster"
 
-[node name="Area3D" type="Area3D" parent="Landmarks/Collectibles/TutorialCollectible" unique_id=1388909782]
+[node name="Area3D" type="Area3D" parent="Collectibles/TutorialCollectible" unique_id=1388909782]
 script = ExtResource("5_l0y63")
 quest_id = "tutorial_collectible"
 character_name = "wolf"
 collectible = true
 image = ExtResource("7_mcq6k")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/Collectibles/TutorialCollectible/Area3D" unique_id=1880335655]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/TutorialCollectible/Area3D" unique_id=1880335655]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="TallinnaUlikool" parent="Collectibles" unique_id=2046294860 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(0.47427246, 0, 0.15832134, 0, 0.5, 0, -0.15832134, 0, 0.47427246, 57.97974, -0.770506, 43.737137)
+collectible_id = "tallinna_ulikool"
+image = ExtResource("10_bt8f4")
+description = "Tallinn University was officially established in 2005, making it one of the youngest universities in Estonia"
+
+[node name="Area3D" type="Area3D" parent="Collectibles/TallinnaUlikool" unique_id=1191375083]
+script = ExtResource("5_l0y63")
+quest_id = "tallina_ulikool"
+character_name = "wolf"
+collectible = true
+image = ExtResource("10_bt8f4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/TallinnaUlikool/Area3D" unique_id=997898044]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="Harbor" parent="Collectibles" unique_id=874548161 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(0.46966696, 0, 0.17150205, 0, 0.5, 0, -0.17150205, 0, 0.46966696, -22.735989, -0.770506, -116.020515)
+collectible_id = "harbor"
+image = ExtResource("11_fuvcj")
+description = "Tallinns historic Port"
+
+[node name="Area3D" type="Area3D" parent="Collectibles/Harbor" unique_id=2082042775]
+script = ExtResource("5_l0y63")
+quest_id = "harbor"
+character_name = "wolf"
+collectible = true
+image = ExtResource("11_fuvcj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/Harbor/Area3D" unique_id=1453674466]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="Linnahall" parent="Collectibles" unique_id=1847788268 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(0.49782836, 0, 0.04655029, 0, 0.5, 0, -0.04655029, 0, 0.49782836, -288.7066, 1.2549826, -181.69777)
+collectible_id = "linnahall"
+image = ExtResource("12_poppy")
+description = "Brutalist Landmark Linnahall"
+
+[node name="Area3D" type="Area3D" parent="Collectibles/Linnahall" unique_id=344354614]
+script = ExtResource("5_l0y63")
+quest_id = "linnahall"
+character_name = "wolf"
+collectible = true
+image = ExtResource("12_poppy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/Linnahall/Area3D" unique_id=1196603836]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="Rotermann" parent="Collectibles" unique_id=1304093052 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(0.48846695, 0, -0.10677091, 0, 0.5, 0, 0.10677091, 0, 0.48846695, -218.38759, 0.12159479, 59.37592)
+collectible_id = "rotermann"
+image = ExtResource("13_5mx6v")
+description = "Theres a mall for everyone in Tallinn. This is Rotermann"
+
+[node name="Area3D" type="Area3D" parent="Collectibles/Rotermann" unique_id=1500780609]
+script = ExtResource("5_l0y63")
+quest_id = "rotermann"
+character_name = "wolf"
+collectible = true
+image = ExtResource("13_5mx6v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/Rotermann/Area3D" unique_id=176732956]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="Mabrik" parent="Collectibles" unique_id=1701693376 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(-0.44202968, 0, -0.23368722, 0, 0.5, 0, 0.23368722, 0, -0.44202968, 33.641735, -0.94674337, 10.291554)
+collectible_id = "mabrik"
+image = ExtResource("12_0g511")
+description = "Game Store Mabrik"
+
+[node name="Area3D" type="Area3D" parent="Collectibles/Mabrik" unique_id=1478821947]
+script = ExtResource("5_l0y63")
+quest_id = "mabrik"
+character_name = "wolf"
+collectible = true
+image = ExtResource("12_0g511")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/Mabrik/Area3D" unique_id=1263732978]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="OldTown" parent="Collectibles" unique_id=887662499 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(0.021437177, -0.06749464, 0.4949595, 0.002920521, 0.49542353, 0.067431435, -0.4995317, 0, 0.021635203, -403.89664, 22.408766, -46.205307)
+collectible_id = "old_town"
+image = ExtResource("10_l0y63")
+description = "Old Town, known as Vanalinn"
+
+[node name="Area3D" type="Area3D" parent="Collectibles/OldTown" unique_id=292810028]
+script = ExtResource("5_l0y63")
+quest_id = "old_town"
+character_name = "wolf"
+collectible = true
+image = ExtResource("10_l0y63")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/OldTown/Area3D" unique_id=1733501003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="SongAndDance" parent="Collectibles" unique_id=464402151 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(-0.24599156, 0, -0.43530244, 0, 0.5, 0, 0.43530244, 0, -0.24599156, 349.03818, 1.9514172, 128.52797)
+collectible_id = "old_town"
+image = ExtResource("11_6b5et")
+description = "The Song and Dance Festival is the heart of Estonian identity"
+
+[node name="Area3D" type="Area3D" parent="Collectibles/SongAndDance" unique_id=1445324501]
+script = ExtResource("5_l0y63")
+quest_id = "song_and_dance"
+character_name = "wolf"
+collectible = true
+image = ExtResource("11_6b5et")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/SongAndDance/Area3D" unique_id=1054834283]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="Kadriorg" parent="Collectibles" unique_id=629323811 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(0.19102724, 0, -0.46207, 0, 0.5, 0, 0.46207, 0, 0.19102724, 285.18027, -0.29803157, -14.272903)
+collectible_id = "kadriorg"
+image = ExtResource("13_yskq0")
+description = "Kadriorg, a magnificent palace and park complex"
+
+[node name="Area3D" type="Area3D" parent="Collectibles/Kadriorg" unique_id=2094970085]
+script = ExtResource("5_l0y63")
+quest_id = "kadriorg"
+character_name = "wolf"
+collectible = true
+image = ExtResource("13_yskq0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/Kadriorg/Area3D" unique_id=643920447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="AlexanderCathedral" parent="Collectibles" unique_id=1784757652 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(0.47029838, 0, 0.16976301, 0, 0.5, 0, -0.16976301, 0, 0.47029838, -553.10114, 11.641259, 167.13983)
+collectible_id = "old_town"
+image = ExtResource("12_r7ao3")
+description = "The Alexander Nevsky Cathedral stands as a powerful symbol of Estonia's complex history"
+
+[node name="Area3D" type="Area3D" parent="Collectibles/AlexanderCathedral" unique_id=1694751125]
+script = ExtResource("5_l0y63")
+quest_id = "alexander_cathedral"
+character_name = "wolf"
+collectible = true
+image = ExtResource("12_r7ao3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/AlexanderCathedral/Area3D" unique_id=1662579295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="DanishKingsGarden" parent="Collectibles" unique_id=371692312 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(0.010436341, 0, 0.49989107, 0, 0.5, 0, -0.49989107, 0, 0.010436341, -528.70935, 8.625449, 164.73709)
+collectible_id = "danish_kings_garden"
+image = ExtResource("13_klxx8")
+description = "Danish King’s Garden is haunted by a ghost monk"
+
+[node name="Area3D" type="Area3D" parent="Collectibles/DanishKingsGarden" unique_id=1993706521]
+script = ExtResource("5_l0y63")
+quest_id = "danish_king_garden"
+character_name = "wolf"
+collectible = true
+image = ExtResource("13_klxx8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/DanishKingsGarden/Area3D" unique_id=996651584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="Kompressor" parent="Collectibles" unique_id=685611908 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(-0.0176416, 0, -0.49968866, 0, 0.5, 0, 0.49968866, 0, -0.0176416, -484.1822, 4.389298, 94.4958)
+collectible_id = "kompressor"
+image = ExtResource("18_37vir")
+description = "Pancakes at Kompressor"
+
+[node name="Area3D" type="Area3D" parent="Collectibles/Kompressor" unique_id=167473629]
+script = ExtResource("5_l0y63")
+quest_id = "kompressor"
+character_name = "wolf"
+collectible = true
+image = ExtResource("18_37vir")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/Kompressor/Area3D" unique_id=1584725899]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="ViruGate" parent="Collectibles" unique_id=1746406261 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(0.005637236, 0, 0.49996826, 0, 0.5, 0, -0.49996826, 0, 0.005637236, -350.63065, 1.3945408, 129.24022)
+collectible_id = "viru_gate"
+image = ExtResource("21_nfwdi")
+description = "Viru Gate"
+
+[node name="Area3D" type="Area3D" parent="Collectibles/ViruGate" unique_id=289229462]
+script = ExtResource("5_l0y63")
+quest_id = "viru_gate"
+character_name = "wolf"
+collectible = true
+image = ExtResource("18_37vir")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/ViruGate/Area3D" unique_id=970232728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="FreedomSquare" parent="Collectibles" unique_id=1155753121 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(0.0963552, 0, 0.49062783, 0, 0.5, 0, -0.49062783, 0, 0.0963552, -447.34576, 11.551769, 232.64635)
+collectible_id = "freedom_square"
+image = ExtResource("22_8tbhh")
+description = "Freedom Square"
+
+[node name="Area3D" type="Area3D" parent="Collectibles/FreedomSquare" unique_id=1029786685]
+script = ExtResource("5_l0y63")
+quest_id = "freedom_square"
+character_name = "wolf"
+collectible = true
+image = ExtResource("22_8tbhh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/FreedomSquare/Area3D" unique_id=1720873642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="FatMargaret" parent="Collectibles" unique_id=1800645441 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(-0.37989673, 0, 0.32508224, 0, 0.5, 0, -0.32508224, 0, -0.37989673, -365.6686, 7.59935, -90.831055)
+collectible_id = "fat_margaret"
+image = ExtResource("23_vgtr8")
+description = "Fat Margaret Guard Tower"
+
+[node name="Area3D" type="Area3D" parent="Collectibles/FatMargaret" unique_id=1522707873]
+script = ExtResource("5_l0y63")
+quest_id = "fat_margaret"
+character_name = "wolf"
+collectible = true
+image = ExtResource("22_8tbhh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/FatMargaret/Area3D" unique_id=1166269503]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="BaltiJaam" parent="Collectibles" unique_id=881539716 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(0.41602066, 0, 0.27735686, 0, 0.5, 0, -0.27735686, 0, 0.41602066, -610.14417, 2.4233472, -31.089157)
+collectible_id = "balti_jaam"
+image = ExtResource("16_5tcqt")
+description = "Balti Jaama Turg"
+
+[node name="Area3D" type="Area3D" parent="Collectibles/BaltiJaam" unique_id=1532681542]
+script = ExtResource("5_l0y63")
+quest_id = "balti_jaam"
+character_name = "wolf"
+collectible = true
+image = ExtResource("16_5tcqt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/BaltiJaam/Area3D" unique_id=1312520920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="Zoo" parent="Collectibles" unique_id=1820289619 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(-0.090396866, 0, 0.49176052, 0, 0.5, 0, -0.49176052, 0, -0.090396866, -821.04193, 1.7021251, 209.92476)
+collectible_id = "zoo"
+image = ExtResource("21_mordt")
+description = "Tallinn Zoo"
+
+[node name="Area3D" type="Area3D" parent="Collectibles/Zoo" unique_id=1400370356]
+script = ExtResource("5_l0y63")
+quest_id = "zoo"
+character_name = "wolf"
+collectible = true
+image = ExtResource("21_mordt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/Zoo/Area3D" unique_id=309651375]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
+shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="Iglupark" parent="Collectibles" unique_id=746709644 instance=ExtResource("9_bt8f4")]
+transform = Transform3D(0.49173045, 0, -0.09055996, 0, 0.5, 0, 0.09055996, 0, 0.49173045, -659.5795, -0.9937737, -429.7076)
+collectible_id = "iglupark"
+image = ExtResource("18_a37cw")
+description = "Iglupark Saunas"
+
+[node name="Area3D" type="Area3D" parent="Collectibles/Iglupark" unique_id=1904690152]
+script = ExtResource("5_l0y63")
+quest_id = "iglupark"
+character_name = "wolf"
+collectible = true
+image = ExtResource("18_a37cw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/Iglupark/Area3D" unique_id=728679139]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
 shape = SubResource("CapsuleShape3D_11vo3")
 

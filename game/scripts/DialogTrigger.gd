@@ -197,7 +197,8 @@ func _show_image_blend() -> void:
 	tween.set_trans(Tween.TRANS_LINEAR)
 	await tween.tween_property(fullscreen_viewer, "modulate:a", 1.0, 4.0).from(0.0)
 	
-	_emit_collectible()
+	if not collectible:
+		_emit_collectible()
 
 
 func _emit_collectible() -> void:
