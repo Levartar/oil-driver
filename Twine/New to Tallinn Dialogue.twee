@@ -12,6 +12,21 @@ New to Tallinn Dialogue
 }
 
 
+:: Back to game scene {"position":"1900,1225","size":"100,100"}
+''Back to game scene''
+
+There are x of posters in total
+Collect them all!
+
+
+:: Ending Scene {"position":"1900,1100","size":"100,100"}
+End of the Demo
+Thank you for playing
+
+[[Main Menu->Title & Menu]]
+[[Continue Explore->Back to game scene]]
+
+
 :: Finish quest1 {"position":"1475,425","size":"100,100"}
 ''Finish Quest 1''
 
@@ -34,20 +49,24 @@ Nice job! You’re officially at TLU. ''Pro-tip: Be here every day this week. ''
 
 Perfect! That little green card is your golden ticket to the whole city. Just remember to ''beep it every time you board a bus or tram.''
 
-[[Recieve quest 4->Quest4]]
+[[Next->Open World Unlocked]]
 
 
 
-:: Finish quest4 {"position":"2050,675","size":"100,100"}
+:: Finish quest4 {"position":"1900,925","size":"100,100"}
 ''Finish quest 4''
 
+Player collect quest's pic as a bedge.
+
+[[Next->Ending Scene]]
 
 
-[[Recieve quest 5->Quest5]]
+:: Finish quest5 {"position":"2025,925","size":"100,100"}
+''Finish quest 5''
 
+Player collect quest's pic as a bedge.
 
-:: Finish quest5 {"position":"2150,800","size":"100,100"}
-
+[[Next->Ending Scene]]
 
 
 :: Introduce Mascot {"position":"1000,300","size":"100,100"}
@@ -73,6 +92,19 @@ I’ll guide you through the map and help you tick off every quest. Let’s get 
 
 
 
+:: Open World Unlocked {"position":"1950,675","size":"100,100"}
+''Open World Unlocked''
+
+- Player is free to explore the town.
+- Posters are scattered around the town for player to roam and collect them.
+- When the player finish quest 3, both quest 4 and 5 are unlocked simultaneously. These quests will be displayed in the notebook.
+- Player finish one of these quest to end the game (End of demo,Thank you for playing scene)
+- If player finish both quests, special poster will be unlocked.
+
+[[Recieve quest 4->Quest4: Tourist Information Center]]
+[[Recieve quest 5->Quest5: Linnahaul]]
+
+
 :: Quest 1: Finding Karu17 {"position":"1375,425","size":"100,100"}
 ''Quest 1 Detail''
 
@@ -93,9 +125,9 @@ Now, let’s find ''Tallinn University''. It’s the heart of your journey! Foll
 :: Quest3: Find Rkiosk1 {"position":"1750,550","size":"100,100"}
 ''Quest 3 Detail1''
 
-Since you're here, take some time to wander toward'' Old Town''; it's the heart of Tallinn. Walking is great, but Tallinn has a secret: once you’re registered, public transport is free for residents.
+Since you're here, take some time to wander toward'' Old Town''; it's the heart of Tallinn. Walking is great, but Tallinn has a secret: once you’re registerezd, public transport is free for residents.
 
-[[Next->Quest3: Find Rkiosk2]]
+[[Next->Quest3: Find Rkiosk2]]<!--Comment Text-->
 
 
 :: Quest3: Find Rkiosk2 {"position":"1850,550","size":"100,100"}
@@ -106,13 +138,14 @@ We need to find an ''R-Kiosk'' to buy your ''Ühiskaart''. It’s the only way t
 [[Finish quest3->Finish quest3]]
 
 
-:: Quest4 {"position":"1950,675","size":"100,100"}
+:: Quest4: Tourist Information Center {"position":"1900,825","size":"100,100"}
 ''Quest 4 Detail''
+
 
 [[Finish quest4->Finish quest4]]
 
 
-:: Quest5 {"position":"2050,800","size":"100,100"}
+:: Quest5: Linnahaul {"position":"2025,825","size":"100,100"}
 ''Quest 5 Detail''
 
 [[Finish quest5->Finish quest5]]
