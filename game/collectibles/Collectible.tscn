@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://cwexqne1mnk2y" path="res://assets/Textures/UV texture/uv-texture.png" id="1_777h6"]
 [ext_resource type="Script" uid="uid://bpmbbhogt4tw7" path="res://game/collectibles/collectible.gd" id="1_u2n02"]
-[ext_resource type="Texture2D" uid="uid://cf61ml1d0syr6" path="res://assets/Environments/Test_T_Atlas_2.png" id="2_vm4pb"]
 [ext_resource type="Texture2D" uid="uid://cuf7rqxp62r0c" path="res://assets/Particles/star_01.png" id="4_fecet"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vm4pb"]
@@ -36,7 +35,7 @@ size = Vector2(0.4, 0.4)
 
 [node name="Collectible" type="Node3D" unique_id=1791445064]
 script = ExtResource("1_u2n02")
-image = ExtResource("2_vm4pb")
+image = ExtResource("1_777h6")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1360968657]
 unique_name_in_owner = true

@@ -15,8 +15,10 @@ uniform float noise_scale = 0.035;
 uniform float noise_amplitude = 2.5;
 uniform float noise_speed = 0.6;
 uniform float real_time = 0.0;
+uniform float scale = 10.0;
 
 varying vec3 v_world_normal;
+varying vec3 v_vertex_pos;
 
 float hash(vec2 p) {
     return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
@@ -34,7 +36,8 @@ float value_noise(vec2 p) {
 }
 
 void vertex() {
-    v_world_normal = normalize((MODEL_MATRIX * vec4(NORMAL, 0.0)).xyz);
+    v_world_normal = VERTEX * scale;
+    v_vertex_pos = VERTEX * scale;
 }
 
 void fragment() {
@@ -52,10 +55,10 @@ void fragment() {
 
     float c = cos(angle);
     float s = sin(angle);
-    vec2 sample_pos = FRAGCOORD.xy * noise_scale + vec2(real_time * noise_speed, real_time * noise_speed * 0.7);
+    vec2 sample_pos = v_vertex_pos.xy * noise_scale + vec2(real_time * noise_speed, real_time * noise_speed * 0.7);
     float wobble = (value_noise(sample_pos) - 0.5) * 2.0 * noise_amplitude;
 
-    float projected = FRAGCOORD.x * c + FRAGCOORD.y * s + wobble;
+    float projected = v_vertex_pos.x * c + v_vertex_pos.y * s + wobble;
     float m = mod(projected, line_spacing);
     if (m >= line_width) {
         discard;

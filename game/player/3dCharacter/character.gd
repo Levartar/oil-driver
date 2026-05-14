@@ -4,6 +4,8 @@ extends CharacterBody3D
 @onready var _camera = find_child("Camera3D")
 var _last_movement_direction := Vector3.BACK
 var input_disabled := false
+var _is_on_wall := false
+var current_car: VehicleBody3D = null
 
 @export_category("Movement")
 @export var SPEED = 8.0
@@ -16,8 +18,9 @@ var input_disabled := false
 @export var STEP_RAYCAST_DISTANCE = 0.3
 @export var STEP_CLIMB_SPEED = 15.0
 
-func _physics_process(delta: float) -> void:	
-	var is_starting_jump = Input.is_action_just_pressed("jump") and is_on_floor()
+func _physics_process(delta: float) -> void:
+	
+	var is_starting_jump = Input.is_action_just_pressed("jump") and (is_on_floor() or _check_wall_collision())
 	if is_starting_jump and not input_disabled:
 		velocity.y += JUMP_VELOCITY
 	
@@ -59,7 +62,7 @@ func _physics_process(delta: float) -> void:
 			_skin.idle()
 
 
-func _handle_step_climbing(move_direction: Vector3, delta: float) -> void:
+func _handle_step_climbing(move_direction: Vector3, _delta: float) -> void:
 	# Raycast forward to detect if there's a step ahead
 	var raycast_start = global_position + Vector3.UP * 0.1
 	var raycast_end = raycast_start + move_direction * STEP_RAYCAST_DISTANCE
@@ -70,7 +73,7 @@ func _handle_step_climbing(move_direction: Vector3, delta: float) -> void:
 	
 	if result:
 		# Found an obstacle ahead at chest height
-		var obstacle_point = result.position
+		var _obstacle_point = result.position
 		
 		# Now raycast downward from slightly ahead to find the top of the step
 		var step_check_start = global_position + move_direction * STEP_RAYCAST_DISTANCE + Vector3.UP * MAX_STEP_HEIGHT
@@ -88,3 +91,45 @@ func _handle_step_climbing(move_direction: Vector3, delta: float) -> void:
 			# Only climb if the step is within reasonable height and we're moving toward it
 			if step_height > 0.05 and step_height <= MAX_STEP_HEIGHT:
 				velocity.y = STEP_CLIMB_SPEED
+
+
+func _check_wall_collision() -> bool:
+	# Raycast in multiple directions around the character to detect walls
+	var space_state = get_world_3d().direct_space_state
+	var raycast_distance = 0.5  # Distance to check for walls
+	var directions = [
+		Vector3.RIGHT,
+		Vector3.LEFT,
+		Vector3.FORWARD,
+		Vector3.BACK,
+		(Vector3.RIGHT + Vector3.FORWARD).normalized(),
+		(Vector3.RIGHT + Vector3.BACK).normalized(),
+		(Vector3.LEFT + Vector3.FORWARD).normalized(),
+		(Vector3.LEFT + Vector3.BACK).normalized(),
+	]
+	
+	var raycast_start = global_position + Vector3.UP * 0.5
+	
+	for direction in directions:
+		var raycast_end = raycast_start + direction * raycast_distance
+		var query = PhysicsRayQueryParameters3D.create(raycast_start, raycast_end)
+		var result = space_state.intersect_ray(query)
+		
+		if result:
+			return true
+	
+	return false
+
+
+## Called by car entry trigger to enter a car
+func enter_car(car: VehicleBody3D) -> void:
+	current_car = car
+	# The car will handle repositioning the player and disabling collision
+	if car.has_method("request_player_entry"):
+		car.request_player_entry(self)
+
+
+## Called by car when player exits - restores player to normal state
+func exit_car() -> void:
+	current_car = null
+	# Player collision and input already restored by car's _exit_car() method
