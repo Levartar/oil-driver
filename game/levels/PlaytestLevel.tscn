@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://p1caxt7ql1vd" path="res://game/collectibles/Collectible.tscn" id="9_bt8f4"]
 [ext_resource type="Texture2D" uid="uid://dasnhys766n1s" path="res://assets/UI/Alicja/Posters/5 (3).png" id="10_bt8f4"]
 [ext_resource type="Texture2D" uid="uid://cj87wsphf6dxw" path="res://assets/UI/Alicja/Posters/1 (3).png" id="10_l0y63"]
+[ext_resource type="Texture2D" uid="uid://d1iw8ub3kqfbw" path="res://assets/UI/Alicja/Art_Files/NewToTallinn_official (1).png" id="10_x73xq"]
 [ext_resource type="PackedScene" uid="uid://cs3t23wdjo5ra" path="res://game/ui/ingame/InGameUi.tscn" id="10_yskq0"]
 [ext_resource type="PackedScene" uid="uid://wpbcnwejelyu" path="res://game/ui/ingame/QuestMenu.tscn" id="11_5tcqt"]
 [ext_resource type="Texture2D" uid="uid://b6dga5aeqw7rp" path="res://assets/UI/Alicja/Posters/2 (3).png" id="11_6b5et"]
@@ -125,7 +126,7 @@ light_energy = 3.152
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
 
 [node name="Vannallin-without Karu" parent="TallinnEnvironment" unique_id=1402534528 instance=ExtResource("2_6xt56")]
-transform = Transform3D(1.3199999, 0, 0, 0, 1.3199999, 0, 0, 0, 1.3199999, -23.385, 1.727, -44.855)
+transform = Transform3D(1.3199999, 0, 0, 0, 1.3199999, 0, 0, 0, 1.3199999, -23.385, 1.717, -44.855)
 
 [node name="Main" parent="TallinnEnvironment" unique_id=135594780 instance=ExtResource("2_ombyj")]
 transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -23.55, 0.07, 0.003)
@@ -267,6 +268,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.843933, -2.6575027, -12.64
 script = ExtResource("5_l0y63")
 quest_id = "RKiosk"
 character_name = "wolf"
+image = ExtResource("10_x73xq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Landmarks/RKioskGroup/RKiosk" unique_id=496728420]
 transform = Transform3D(0.9575211, 0, 0.28836337, 0, 1, 0, -0.28836337, 0, 0.9575211, -1.2337723, 2.4732132, 1.1086655)
@@ -383,6 +385,7 @@ transform = Transform3D(0.8565352, 0.31228152, -0.41088665, -0.050120167, 0.8427
 
 [node name="Rotermann" parent="Collectibles" unique_id=1304093052 instance=ExtResource("9_bt8f4")]
 transform = Transform3D(0.48846695, 0, -0.10677091, 0, 0.5, 0, 0.10677091, 0, 0.48846695, -218.38759, 0.12159479, 59.37592)
+visible = false
 collectible_id = "rotermann"
 image = ExtResource("13_5mx6v")
 description = "Theres a mall for everyone in Tallinn. This is Rotermann"
@@ -494,7 +497,7 @@ description = "Danish King’s Garden is haunted by a ghost monk"
 
 [node name="Area3D" type="Area3D" parent="Collectibles/DanishKingsGarden" unique_id=1993706521]
 script = ExtResource("5_l0y63")
-quest_id = "danish_king_garden"
+quest_id = "danish_kings_garden"
 character_name = "wolf"
 collectible = true
 image = ExtResource("13_klxx8")
