@@ -396,6 +396,7 @@ shape = SubResource("CapsuleShape3D_11vo3")
 
 [node name="Mabrik" parent="Collectibles" unique_id=1701693376 instance=ExtResource("9_bt8f4")]
 transform = Transform3D(-0.44202968, 0, -0.23368722, 0, 0.5, 0, 0.23368722, 0, -0.44202968, 33.641735, -0.94674337, 10.291554)
+visible = false
 collectible_id = "mabrik"
 image = ExtResource("12_0g511")
 description = "Game Store Mabrik"
