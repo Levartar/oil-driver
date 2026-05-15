@@ -145,7 +145,8 @@ transform = Transform3D(-0.8899026, 0, -0.45615074, 0, 1, 0, 0.45615074, 0, -0.8
 ROTATION_SPEED = 100.0
 
 [node name="Car" parent="." unique_id=1836486299 instance=ExtResource("5_shfaa")]
-transform = Transform3D(0.19337837, 0, -0.9811243, 0, 1, 0, 0.9811243, 0, 0.19337837, 118.35822, -1.9161296, 3.0661607)
+transform = Transform3D(0.19337837, 0, -0.9811243, 0, 1, 0, 0.9811243, 0, 0.19337837, 255.43231, -1.9161296, 13.450758)
+visible = false
 
 [node name="Area3D" type="Area3D" parent="Car" unique_id=999234530]
 script = ExtResource("6_c8gwr")
@@ -372,11 +373,13 @@ script = ExtResource("5_l0y63")
 quest_id = "linnahall"
 character_name = "wolf"
 collectible = true
-image = ExtResource("12_poppy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/Linnahall/Area3D" unique_id=1196603836]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
 shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="Camera3D" type="Camera3D" parent="Collectibles/Linnahall/Area3D" unique_id=1613741175]
+transform = Transform3D(0.8565352, 0.31228152, -0.41088665, -0.050120167, 0.842725, 0.53600615, 0.5136493, -0.43851435, 0.73747516, -78.74219, 93.20032, 63.575165)
 
 [node name="Rotermann" parent="Collectibles" unique_id=1304093052 instance=ExtResource("9_bt8f4")]
 transform = Transform3D(0.48846695, 0, -0.10677091, 0, 0.5, 0, 0.10677091, 0, 0.48846695, -218.38759, 0.12159479, 59.37592)
@@ -424,11 +427,13 @@ script = ExtResource("5_l0y63")
 quest_id = "old_town"
 character_name = "wolf"
 collectible = true
-image = ExtResource("10_l0y63")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/OldTown/Area3D" unique_id=1733501003]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
 shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="Camera3D" type="Camera3D" parent="Collectibles/OldTown/Area3D" unique_id=1704112886]
+transform = Transform3D(0.6659322, -0.09867723, 0.73945767, 0.10254424, 0.9939125, 0.040284976, -0.7389313, 0.049000036, 0.6719968, 69.69002, -4.660202, 79.715454)
 
 [node name="SongAndDance" parent="Collectibles" unique_id=464402151 instance=ExtResource("9_bt8f4")]
 transform = Transform3D(-0.24599156, 0, -0.43530244, 0, 0.5, 0, 0.43530244, 0, -0.24599156, 349.03818, 1.9514172, 128.52797)
@@ -543,11 +548,14 @@ script = ExtResource("5_l0y63")
 quest_id = "freedom_square"
 character_name = "wolf"
 collectible = true
-image = ExtResource("22_8tbhh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/FreedomSquare/Area3D" unique_id=1720873642]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
 shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="Camera3D" type="Camera3D" parent="Collectibles/FreedomSquare/Area3D" unique_id=752274604]
+transform = Transform3D(0.43005288, 0.14600423, -0.8909193, -0.037340354, 0.98886836, 0.1440317, 0.9020312, -0.028674012, 0.43071753, -127.22937, 29.25705, 20.474243)
+fov = 44.7
 
 [node name="FatMargaret" parent="Collectibles" unique_id=1800645441 instance=ExtResource("9_bt8f4")]
 transform = Transform3D(-0.37989673, 0, 0.32508224, 0, 0.5, 0, -0.32508224, 0, -0.37989673, -365.6686, 7.59935, -90.831055)
@@ -577,11 +585,13 @@ script = ExtResource("5_l0y63")
 quest_id = "balti_jaam"
 character_name = "wolf"
 collectible = true
-image = ExtResource("16_5tcqt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/BaltiJaam/Area3D" unique_id=1312520920]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
 shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="Camera3D" type="Camera3D" parent="Collectibles/BaltiJaam/Area3D" unique_id=642996574]
+transform = Transform3D(0.8807744, -0.1108655, 0.4603755, -0.08129102, 0.9223751, 0.37764525, -0.46650678, -0.37004462, 0.80339193, 8.649963, 32.918747, 44.94867)
 
 [node name="Zoo" parent="Collectibles" unique_id=1820289619 instance=ExtResource("9_bt8f4")]
 transform = Transform3D(-0.090396866, 0, 0.49176052, 0, 0.5, 0, -0.49176052, 0, -0.090396866, -821.04193, 1.7021251, 209.92476)
