@@ -1,10 +1,30 @@
 [gd_scene format=3 uid="uid://bgd5lhqyv1rk"]
 
 [ext_resource type="PackedScene" uid="uid://b2y263nty6wnn" path="res://assets/Environments/5_14_2026_Update_Main.glb" id="1_hp3g2"]
+[ext_resource type="Texture2D" uid="uid://bwkr6o5sn0ovr" path="res://assets/Environments/Karu_to_TLU_v1_WorldGridMaterial_MetallicRoughness.png" id="2_xs30g"]
 [ext_resource type="Material" uid="uid://d1m1j4c21jo3" path="res://assets/Materials/Building.tres" id="3_8avts"]
+[ext_resource type="Shader" uid="uid://c58sw8mbkyxov" path="res://assets/Shaders/modulate.gdshader" id="3_qebak"]
 [ext_resource type="Material" uid="uid://t3vy8fexawc6" path="res://assets/Materials/checkered_gras.tres" id="3_ww7d3"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xs30g"]
+render_priority = 0
+shader = ExtResource("3_qebak")
+shader_parameter/tint_color = Color(0.37, 0.069559984, 0.0481, 0.7921569)
+shader_parameter/blend_mode = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfo5e"]
+next_pass = SubResource("ShaderMaterial_xs30g")
+albedo_color = Color(1, 1, 1, 0)
+albedo_texture = ExtResource("2_xs30g")
+albedo_texture_force_srgb = true
+uv1_scale = Vector3(646.24, 646.24, 646.24)
+uv2_scale = Vector3(0.1, 0.1, 0.1)
+
 [node name="Main" unique_id=135594780 instance=ExtResource("1_hp3g2")]
+
+[node name="Boolean" parent="Boolean_StaticBody" parent_id_path=PackedInt32Array(956763289) index="0" unique_id=1909875042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027770996, 0.010007858, 0.0068359375)
+surface_material_override/0 = SubResource("StandardMaterial3D_sfo5e")
 
 [node name="LandscapeComponent_02" parent="Landscape/LandscapeComponent_0/LandscapeComponent_02_StaticBody" parent_id_path=PackedInt32Array(1978484816) index="0" unique_id=246776346]
 surface_material_override/0 = ExtResource("3_ww7d3")

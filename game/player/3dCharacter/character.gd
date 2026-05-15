@@ -9,6 +9,7 @@ var current_car: VehicleBody3D = null
 
 @export_category("Movement")
 @export var SPEED = 8.0
+@export var SPRINT_MULTIPLIER = 4.0
 @export var ACCELERATION = 20.0
 @export var JUMP_VELOCITY = 30
 @export var ROTATION_SPEED = 12.0
@@ -24,6 +25,8 @@ func _physics_process(delta: float) -> void:
 	if is_starting_jump and not input_disabled:
 		velocity.y += JUMP_VELOCITY
 	
+	var is_sprinting = Input.is_action_pressed("sprint") and not input_disabled
+	var current_speed = SPEED * (SPRINT_MULTIPLIER if is_sprinting else 1.0)
 
 	var input_dir := Vector2.ZERO
 	if not input_disabled:
@@ -35,7 +38,11 @@ func _physics_process(delta: float) -> void:
 	move_direction.y = 0.0
 	move_direction = move_direction.normalized()
 
-	velocity = velocity.move_toward(move_direction*SPEED,ACCELERATION*delta)
+	if move_direction.length() > 0.2:
+		velocity = velocity.move_toward(move_direction*current_speed,ACCELERATION*delta)
+	else:
+		velocity.x = 0.0
+		velocity.z = 0.0
 	if not is_on_floor():
 		velocity += get_gravity() * 7 * delta
 	

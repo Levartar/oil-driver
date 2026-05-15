@@ -1,4 +1,17 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://d1m1j4c21jo3"]
 
+[ext_resource type="Texture2D" uid="uid://b6llvbu2mvjcl" path="res://assets/Environments/Karu_to_TLU_v1_WorldGridMaterial_BaseColor.png" id="1_6k5ah"]
+[ext_resource type="Shader" uid="uid://c58sw8mbkyxov" path="res://assets/Shaders/modulate.gdshader" id="2_nrdl0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qy1gk"]
+render_priority = 0
+shader = ExtResource("2_nrdl0")
+shader_parameter/tint_color = Color(0.62, 0.186, 0, 0.42745098)
+shader_parameter/blend_mode = 0
+
 [resource]
-albedo_color = Color(0.88159513, 0.34204853, 0.41576356, 1)
+next_pass = SubResource("ShaderMaterial_qy1gk")
+albedo_texture = ExtResource("1_6k5ah")
+uv1_scale = Vector3(6.48, 6.48, 6.48)
+uv1_offset = Vector3(0.004, 0, 0)
+uv1_triplanar = true
