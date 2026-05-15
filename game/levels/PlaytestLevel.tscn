@@ -531,11 +531,13 @@ script = ExtResource("5_l0y63")
 quest_id = "viru_gate"
 character_name = "wolf"
 collectible = true
-image = ExtResource("18_37vir")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Collectibles/ViruGate/Area3D" unique_id=970232728]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
 shape = SubResource("CapsuleShape3D_11vo3")
+
+[node name="Camera3D" type="Camera3D" parent="Collectibles/ViruGate/Area3D" unique_id=250029170]
+transform = Transform3D(0.9988176, 0.016036417, -0.04589223, 0.004737851, 0.9074185, 0.42020157, 0.048381984, -0.41992217, 0.9062696, 0.26498413, 8.827255, 23.506714)
 
 [node name="FreedomSquare" parent="Collectibles" unique_id=1155753121 instance=ExtResource("9_bt8f4")]
 transform = Transform3D(0.0963552, 0, 0.49062783, 0, 0.5, 0, -0.49062783, 0, 0.0963552, -447.34576, 11.551769, 232.64635)
