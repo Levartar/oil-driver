@@ -6,7 +6,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qy1gk"]
 render_priority = 0
 shader = ExtResource("2_nrdl0")
-shader_parameter/tint_color = Color(0, 0.42352942, 0.23137255, 0.29411766)
+shader_parameter/tint_color = Color(0.62, 0.186, 0, 0.42745098)
 shader_parameter/blend_mode = 0
 
 [resource]

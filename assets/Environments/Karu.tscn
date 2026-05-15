@@ -9,7 +9,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xs30g"]
 render_priority = 0
 shader = ExtResource("3_qebak")
-shader_parameter/tint_color = Color(0.3650107, 0.06787731, 0.04602568, 0.69100004)
+shader_parameter/tint_color = Color(0.37, 0.069559984, 0.0481, 0.7921569)
 shader_parameter/blend_mode = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfo5e"]

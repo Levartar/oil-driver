@@ -118,7 +118,8 @@ environment = SubResource("Environment_uxguy")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=919844708]
 transform = Transform3D(0.7792286, -0.5542286, 0.29263198, 0, 0.46691144, 0.8843041, -0.6267398, -0.68907505, 0.36383075, 6.534383, 4.215336, 4.966818)
-light_color = Color(0.8301198, 0.8229385, 1.1551381e-06, 1)
+light_color = Color(0.919062, 0.63989943, 0.32354823, 1)
+light_energy = 3.152
 
 [node name="TallinnEnvironment" type="Node3D" parent="." unique_id=1245317640]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
@@ -327,7 +328,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.31384277, 0)
 shape = SubResource("CapsuleShape3D_11vo3")
 
 [node name="TallinnaUlikool" parent="Collectibles" unique_id=2046294860 instance=ExtResource("9_bt8f4")]
-transform = Transform3D(0.47427246, 0, 0.15832134, 0, 0.5, 0, -0.15832134, 0, 0.47427246, 57.97974, -0.770506, 43.737137)
+transform = Transform3D(0.47427246, 0, 0.15832134, 0, 0.5, 0, -0.15832134, 0, 0.47427246, 53.622307, -0.77050555, 26.391624)
 collectible_id = "tallinna_ulikool"
 image = ExtResource("10_bt8f4")
 description = "Tallinn University was officially established in 2005, making it one of the youngest universities in Estonia"
