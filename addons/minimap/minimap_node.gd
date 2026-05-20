@@ -6,6 +6,7 @@ var sub_viewport: SubViewport
 var border: Line2D
 var placeholder: ColorRect
 var marker: Sprite2D
+var marker_pointer: Sprite2D
 @onready var sub_viewport_container: SubViewportContainer = $"."
 
 var camera_3d: Camera3D
@@ -84,6 +85,9 @@ func setup():
 	marker = Sprite2D.new()
 	add_child(marker)
 	
+	marker_pointer = Sprite2D.new()
+	add_child(marker_pointer)
+	
 	camera_3d = Camera3D.new()
 	camera_3d.position.y = 100
 	camera_3d.rotation.x = -PI / 2
@@ -110,6 +114,12 @@ func _ready() -> void:
 	marker.texture = marker_image
 	if marker_scale and marker_scale != Vector2.ZERO:
 		marker.scale = marker_scale
+	
+	if marker_pointer and quest_marker_pointer_image:
+		marker_pointer.texture = quest_marker_pointer_image
+		marker_pointer.scale = pointer_scale
+		marker_pointer.z_index = 3
+	
 	placeholder.hide()
 
 	# Setup Camera3D for top-down orthographic view
@@ -155,9 +165,11 @@ func _process(delta: float) -> void:
 	
 	# Update all quest marker positions
 	_update_quest_markers()
+	
+	_update_player_marker_pointer()
 
 
-func add_quest_marker(quest_id: String, world_position: Vector3) -> void:
+func add_quest_marker(quest_id: String, world_position: Vector3, marker_color: Color = Color.WHITE) -> void:
 	"""Add a quest marker to the minimap at the given world position"""
 	if quest_id in quest_markers:
 		return  # Marker already exists
@@ -166,6 +178,7 @@ func add_quest_marker(quest_id: String, world_position: Vector3) -> void:
 	quest_marker.texture = quest_marker_image
 	quest_marker.scale = marker_scale
 	quest_marker.z_index = 2
+	quest_marker.self_modulate = marker_color
 	add_child(quest_marker)
 	
 	# Create pointer sprite for out-of-bounds marker indication
@@ -174,6 +187,7 @@ func add_quest_marker(quest_id: String, world_position: Vector3) -> void:
 	pointer.scale = pointer_scale
 	pointer.z_index = 3
 	pointer.visible = false  # Initially hidden until marker goes out of bounds
+	pointer.self_modulate = marker_color
 	add_child(pointer)
 	
 	print("Added quest marker for quest_id: %s at world position: %s" % [quest_id, world_position])
@@ -181,7 +195,8 @@ func add_quest_marker(quest_id: String, world_position: Vector3) -> void:
 	quest_markers[quest_id] = {
 		"marker": quest_marker,
 		"pointer": pointer,
-		"world_position": world_position
+		"world_position": world_position,
+		"color": marker_color
 	}
 
 
@@ -193,6 +208,8 @@ func remove_quest_marker(quest_id: String) -> void:
 	print("Removing quest marker for quest_id: %s" % quest_id)
 	var marker_data = quest_markers[quest_id]
 	marker_data["marker"].queue_free()
+	if "pointer" in marker_data and marker_data["pointer"]:
+		marker_data["pointer"].queue_free()
 	quest_markers.erase(quest_id)
 
 
@@ -295,3 +312,31 @@ func _clamp_to_minimap_bounds(minimap_pos: Vector2) -> Vector2:
 	var clamped_y = clamp(minimap_pos.y, min_y, max_y)
 	
 	return Vector2(clamped_x, clamped_y)
+
+
+func _update_player_marker_pointer() -> void:
+	"""Update player marker pointer rotation based on camera viewing direction"""
+	
+	var scene_root = get_parent().get_parent().get_parent()
+	if not scene_root:
+		return
+
+	var player = scene_root.get_node_or_null("Player")
+	if not player:
+		return
+	
+	# Get the camera from the player
+	var camera = player._camera as Camera3D
+	if not camera:
+		return
+	
+	# Get camera's forward direction (negative Z axis in Godot)
+	var forward = -camera.global_transform.basis.z
+	
+	# Calculate angle using atan2 (X for horizontal, Z for depth)
+	var angle = atan2(forward.x, forward.z)
+	
+	# Apply 45 degree offset since pointer texture points to top-left by default
+	var offset_radians = -PI / 4.0
+	
+	marker.rotation = angle + offset_radians

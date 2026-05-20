@@ -4,6 +4,7 @@ signal quest_started(quest_id: String)
 signal quest_progressed(quest_id: String)
 signal quest_completed(quest_id: String)
 signal collectible_collected(collectible_id: String)
+signal all_quests_completed
 
 var quests = {
 	"tutorial": {
@@ -111,6 +112,7 @@ func advance_quest():
 		print("Advanced to quest: %s" % next_quest_id)
 	else:
 		print("All quests completed!")
+		emit_signal("all_quests_completed")
 	
 	SaveData.save_game()
 
@@ -202,3 +204,8 @@ func collect_collectible(collectible_id: String, collectible_data: Dictionary = 
 func get_collected_collectibles() -> Array:
 	"""Get all collected collectibles"""
 	return SaveData.get_collected_collectibles()
+
+
+func are_all_quests_completed() -> bool:
+	"""Check if all quests have been completed"""
+	return current_quest_index >= quest_sequence.size()
