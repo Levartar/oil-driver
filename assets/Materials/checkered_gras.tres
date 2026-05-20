@@ -1,8 +1,16 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://t3vy8fexawc6"]
 
 [ext_resource type="Texture2D" uid="uid://bwkr6o5sn0ovr" path="res://assets/Environments/Karu_to_TLU_v1_WorldGridMaterial_MetallicRoughness.png" id="1_5xeop"]
+[ext_resource type="Shader" uid="uid://c58sw8mbkyxov" path="res://assets/Shaders/modulate.gdshader" id="2_nmp16"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gi4n0"]
+render_priority = 0
+shader = ExtResource("2_nmp16")
+shader_parameter/tint_color = Color(0.08378742, 0.41658032, 0.32441437, 0.56078434)
+shader_parameter/blend_mode = 0
 
 [resource]
+next_pass = SubResource("ShaderMaterial_gi4n0")
 albedo_color = Color(1, 1, 1, 0)
 albedo_texture = ExtResource("1_5xeop")
 albedo_texture_force_srgb = true

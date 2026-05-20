@@ -62,7 +62,7 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme_type_variation = &"ButtonActivated"
 theme_override_styles/normal = SubResource("StyleBoxFlat_cr0ul")
-text = "Skip"
+text = "Next"
 
 [node name="NameMargin" type="MarginContainer" parent="Margin/Rows/RowTop" unique_id=1662295312]
 layout_mode = 2

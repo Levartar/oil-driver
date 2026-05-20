@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://khcvxdehils2" path="res://assets/UI/Alicja/Posters/NewToTallinn_posters (12).png" id="21_nfwdi"]
 [ext_resource type="Texture2D" uid="uid://b2jvn4gieodw5" path="res://assets/UI/Alicja/Posters/NewToTallinn_posters (13).png" id="22_8tbhh"]
 [ext_resource type="Texture2D" uid="uid://dfh1ql6e5fhe7" path="res://assets/UI/Alicja/Posters/NewToTallinn_posters (11).png" id="23_vgtr8"]
+[ext_resource type="Texture2D" uid="uid://dyxarwjqgfmif" path="res://assets/UI/pointer_d.png" id="35_482el"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nljnj"]
 sky_top_color = Color(0.27009362, 0.43445107, 0.7677927, 1)
@@ -142,7 +143,7 @@ mesh = SubResource("PlaneMesh_l0y63")
 surface_material_override/0 = SubResource("StandardMaterial3D_6b5et")
 
 [node name="Player" parent="." unique_id=1492717194 instance=ExtResource("3_ombyj")]
-transform = Transform3D(-0.8899026, 0, -0.45615074, 0, 1, 0, 0.45615074, 0, -0.8899026, -50.214085, -2.445068, 86.31113)
+transform = Transform3D(-0.8899026, 0, -0.45615074, 0, 1, 0, 0.45615074, 0, -0.8899026, -50.120544, -2.4450688, 86.72795)
 ROTATION_SPEED = 100.0
 
 [node name="Car" parent="." unique_id=1836486299 instance=ExtResource("5_shfaa")]
@@ -673,6 +674,7 @@ window_size = Vector2i(512, 512)
 target = NodePath("../../../Player")
 marker_image = ExtResource("12_msc6x")
 quest_marker_image = ExtResource("13_ombyj")
+quest_marker_pointer_image = ExtResource("35_482el")
 marker_scale = Vector2(1.5, 1.5)
 border_line_color = Color(0.34509805, 0.28235295, 0.2509804, 1)
 metadata/_custom_type_script = "uid://0xq2liivqarr"

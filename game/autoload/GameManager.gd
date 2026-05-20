@@ -4,6 +4,7 @@ signal quest_started(quest_id: String)
 signal quest_progressed(quest_id: String)
 signal quest_completed(quest_id: String)
 signal collectible_collected(collectible_id: String)
+signal all_quests_completed
 
 var quests = {
 	"tutorial": {
@@ -29,22 +30,10 @@ var quests = {
 		"name": "R-Kiosk",
 		"dialog_id": "RKiosk",
 		"description": "Get your Uhiskaart at the R-Kiosk",
-	},
-	"quest_4": {
-		"id": "quest_4",
-		"name": "Ulikool Tram Stop",
-		"dialog_id": "quest_4",
-		"description": "This is it for this Demo. Thanks for Playing",
-	},
-	"quest_5": {
-		"id": "quest_5",
-		"name": "Linnahall",
-		"dialog_id": "quest_5",
-		"description": "Visit Linnahall and speak with the guide.",
 	}
 }
 
-var quest_sequence = ["tutorial", "Karu17", "Ulikool", "RKiosk", "quest_4", "quest_5"]
+var quest_sequence = ["tutorial", "Karu17", "Ulikool", "RKiosk"]
 var current_quest_index = 0
 
 func _ready():
@@ -123,6 +112,7 @@ func advance_quest():
 		print("Advanced to quest: %s" % next_quest_id)
 	else:
 		print("All quests completed!")
+		emit_signal("all_quests_completed")
 	
 	SaveData.save_game()
 
@@ -214,3 +204,8 @@ func collect_collectible(collectible_id: String, collectible_data: Dictionary = 
 func get_collected_collectibles() -> Array:
 	"""Get all collected collectibles"""
 	return SaveData.get_collected_collectibles()
+
+
+func are_all_quests_completed() -> bool:
+	"""Check if all quests have been completed"""
+	return current_quest_index >= quest_sequence.size()
