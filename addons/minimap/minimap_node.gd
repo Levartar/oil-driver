@@ -316,11 +316,13 @@ func _clamp_to_minimap_bounds(minimap_pos: Vector2) -> Vector2:
 
 func _update_player_marker_pointer() -> void:
 	"""Update player marker pointer rotation based on camera viewing direction"""
-	
+	if not marker_pointer:
+		return
+
 	var scene_root = get_parent().get_parent().get_parent()
 	if not scene_root:
 		return
-
+		
 	var player = scene_root.get_node_or_null("Player")
 	if not player:
 		return
