@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://hn08t7mkdpkh"
-path="res://.godot/imported/Vannallin-without Karu.glb-617818b7a7ae9fbe2da1f8d7318c4625.scn"
+path="res://.godot/imported/Vannallin-without Karu.glb-7fc25a94128b0bad7c4bb87f423c5db3.scn"
 
 [deps]
 
-source_file="res:///assets/Environments/Vannallin-without Karu.glb"
-dest_files=["res://.godot/imported/Vannallin-without Karu.glb-617818b7a7ae9fbe2da1f8d7318c4625.scn"]
+source_file="res://assets/Environments/Vannallin-without Karu.glb"
+dest_files=["res://.godot/imported/Vannallin-without Karu.glb-7fc25a94128b0bad7c4bb87f423c5db3.scn"]
 
 [params]
 
