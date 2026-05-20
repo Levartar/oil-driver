@@ -38,11 +38,27 @@ var quest_markers: Dictionary = {}  # quest_id -> Sprite2D
 			var quest_marker = marker_data["marker"]
 			quest_marker.texture = quest_marker_image
 
+@export var quest_marker_pointer_image: Texture2D:
+	set(value):
+		quest_marker_pointer_image = value
+		for quest_id in quest_markers:
+			var marker_data = quest_markers[quest_id]
+			if "pointer" in marker_data and marker_data["pointer"]:
+				marker_data["pointer"].texture = quest_marker_pointer_image
+
 @export var marker_scale: Vector2 = Vector2(1, 1):
 	set(value):
 		marker_scale = value
 		if marker:
 			marker.scale = marker_scale
+
+@export var pointer_scale: Vector2 = Vector2(1, 1):
+	set(value):
+		pointer_scale = value
+		for quest_id in quest_markers:
+			var marker_data = quest_markers[quest_id]
+			if "pointer" in marker_data and marker_data["pointer"]:
+				marker_data["pointer"].scale = pointer_scale
 
 @export var border_line_color: Color = Color.BLACK:
 	set(value):
@@ -151,10 +167,20 @@ func add_quest_marker(quest_id: String, world_position: Vector3) -> void:
 	quest_marker.scale = marker_scale
 	quest_marker.z_index = 2
 	add_child(quest_marker)
+	
+	# Create pointer sprite for out-of-bounds marker indication
+	var pointer = Sprite2D.new()
+	pointer.texture = quest_marker_pointer_image
+	pointer.scale = pointer_scale
+	pointer.z_index = 3
+	pointer.visible = false  # Initially hidden until marker goes out of bounds
+	add_child(pointer)
+	
 	print("Added quest marker for quest_id: %s at world position: %s" % [quest_id, world_position])
 	
 	quest_markers[quest_id] = {
 		"marker": quest_marker,
+		"pointer": pointer,
 		"world_position": world_position
 	}
 
@@ -178,15 +204,46 @@ func _update_quest_markers() -> void:
 	for quest_id in quest_markers:
 		var marker_data = quest_markers[quest_id]
 		var quest_marker = marker_data["marker"]
+		var pointer = marker_data["pointer"]
 		var world_pos = marker_data["world_position"]
 		
 		# Convert world position to minimap position
 		var minimap_pos = _world_to_minimap_position(world_pos)
 		
-		# Clamp to bounds if out of minimap
-		minimap_pos = _clamp_to_minimap_bounds(minimap_pos)
+		# Check if marker is out of bounds
+		var is_out_of_bounds = _is_out_of_bounds(minimap_pos)
 		
-		quest_marker.position = minimap_pos
+		# Clamp to bounds if out of minimap
+		var clamped_pos = _clamp_to_minimap_bounds(minimap_pos)
+		quest_marker.position = clamped_pos
+		
+		# Update pointer visibility and rotation
+		if is_out_of_bounds and pointer:
+			pointer.visible = true
+			pointer.position = clamped_pos
+			pointer.rotation = _calculate_pointer_angle(world_pos)
+			if quest_marker:
+				quest_marker.visible = false
+		elif pointer:
+			pointer.visible = false
+			if quest_marker:
+				quest_marker.visible = true
+
+
+func _calculate_pointer_angle(world_pos: Vector3) -> float:
+	if not target:
+		return 0.0
+	
+	# Calculate offset from target position
+	var offset = world_pos - target.global_position
+	
+	# Calculate angle using atan2 (returns 0 pointing right, increases counter-clockwise)
+	var angle = atan2(offset.z, offset.x)
+	
+	# Apply 45 degree offset since pointer texture points to top-left by default
+	var offset_radians = PI*3.0 / 4.0
+	
+	return angle + offset_radians
 
 
 func _world_to_minimap_position(world_pos: Vector3) -> Vector2:
@@ -206,6 +263,18 @@ func _world_to_minimap_position(world_pos: Vector3) -> Vector2:
 	var center_y = window_size.y / 2.0
 	
 	return Vector2(center_x + minimap_x, center_y + minimap_y)
+
+
+func _is_out_of_bounds(minimap_pos: Vector2) -> bool:
+	"""Check if a minimap position is outside the visible bounds"""
+	var margin = 10.0  # Distance from edge
+	var min_x = margin
+	var max_x = window_size.x - margin
+	var min_y = margin
+	var max_y = window_size.y - margin
+	
+	return minimap_pos.x < min_x or minimap_pos.x > max_x or \
+		   minimap_pos.y < min_y or minimap_pos.y > max_y
 
 
 func _clamp_to_minimap_bounds(minimap_pos: Vector2) -> Vector2:
