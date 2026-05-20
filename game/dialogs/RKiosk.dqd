@@ -1,2 +1,6 @@
-say | wolf | Perfect! That little green card is your golden ticket to the whole city.
-say | wolf |  Just remember to beep it every time you board a bus or tram.
+say | wolf | Perfect! That little blue card "Ühiskaart" is your golden ticket to the whole city.
+say | wolf | Ühiskaart? What’s that? 
+say | wolf | It’s an electronic contactless public transport card.
+say | wolf | You can load money (e-money) to buy 1-hour tickets, or purchase 1-, 3-, 5-, or 30-day tickets onto the card.
+say | wolf | Just remember to beep it every time you board a bus or tram.
+say | wolf | Remember, there are still plenty of posters hidden around town for you to collect. How many can you find?
