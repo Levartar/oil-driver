@@ -22,6 +22,12 @@ uv2_scale = Vector3(0.1, 0.1, 0.1)
 
 [node name="Main" unique_id=135594780 instance=ExtResource("1_hp3g2")]
 
+[node name="SM_Grass_1_StaticBody" parent="." index="27" unique_id=476366101]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1115.1412, -6.4238534, 62.3942)
+
+[node name="SM_Grass_1_CollisionShape" parent="SM_Grass_1_StaticBody" index="1" unique_id=1807455514]
+shape = null
+
 [node name="Boolean" parent="Boolean_StaticBody" parent_id_path=PackedInt32Array(956763289) index="0" unique_id=1909875042]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027770996, 0.010007858, 0.0068359375)
 surface_material_override/0 = SubResource("StandardMaterial3D_sfo5e")
@@ -224,3 +230,54 @@ surface_material_override/0 = ExtResource("3_8avts")
 
 [node name="Rectangle" parent="Rectangle_StaticBody" parent_id_path=PackedInt32Array(1856481374) index="0" unique_id=1479161431]
 visible = false
+
+[node name="Pattern_0_StaticBody" parent="." index="267" unique_id=1138807339]
+transform = Transform3D(-0.63256544, 0, -0.774507, 0, 1, 0, 0.774507, 0, -0.63256544, 1134.1608, -6.4238534, 63.994076)
+
+[node name="Pattern_1_StaticBody" parent="." index="268" unique_id=1060446567]
+transform = Transform3D(-0.63256544, 0, -0.774507, 0, 1, 0, 0.774507, 0, -0.63256544, 1132.377, -6.4238534, 65.84664)
+
+[node name="Pattern_2_StaticBody" parent="." index="269" unique_id=1054366182]
+transform = Transform3D(-0.63256544, 0, -0.774507, 0, 1, 0, 0.774507, 0, -0.63256544, 1129.1156, -6.4238534, 69.62088)
+
+[node name="Pattern_3_StaticBody" parent="." index="270" unique_id=101265152]
+transform = Transform3D(-0.63256544, 0, -0.774507, 0, 1, 0, 0.774507, 0, -0.63256544, 1131.875, -6.4238534, 62.77408)
+
+[node name="Pattern_4_StaticBody" parent="." index="271" unique_id=1486997455]
+transform = Transform3D(-0.63256544, 0, -0.774507, 0, 1, 0, 0.774507, 0, -0.63256544, 1131.0444, -6.4238534, 64.017685)
+
+[node name="Pattern_5_StaticBody" parent="." index="272" unique_id=1380961990]
+transform = Transform3D(-0.5125778, 0, -0.6275952, 0, 0.81031585, 0, 0.6275952, 0, -0.5125778, 1130.013, -6.4238534, 60.4955)
+
+[node name="Pattern_6_StaticBody" parent="." index="273" unique_id=795744410]
+transform = Transform3D(-0.83822656, 0, -0.13598263, 0, 0.8491848, 0, 0.13598263, 0, -0.83822656, 1128.1754, -6.4238534, 61.037773)
+
+[node name="Pattern_7_StaticBody" parent="." index="274" unique_id=1177671617]
+transform = Transform3D(0.14890541, 0, -0.76231223, 0, 0.77671915, 0, 0.76231223, 0, 0.14890541, 1126.131, -6.4238534, 61.94171)
+
+[node name="StaticMeshComponent_08_CollisionShape" parent="Pattern_7_StaticBody/Pattern_7/StaticMeshComponent_08_StaticBody" parent_id_path=PackedInt32Array(718609157) index="1" unique_id=711993663]
+shape = null
+
+[node name="StaticMeshComponent_18_CollisionShape" parent="Pattern_7_StaticBody/Pattern_7/StaticMeshComponent_18_StaticBody" parent_id_path=PackedInt32Array(1992278857) index="1" unique_id=220889438]
+shape = null
+
+[node name="Pattern_8_StaticBody" parent="." index="275" unique_id=1006313436]
+transform = Transform3D(-0.63256544, 0, -0.774507, 0, 1, 0, 0.774507, 0, -0.63256544, 1133.316, -6.4238534, 58.19074)
+
+[node name="Pattern_9_StaticBody" parent="." index="276" unique_id=285508419]
+transform = Transform3D(0.73998964, -0.0012449954, 0.077878095, 0.0011713203, 0.7440762, 0.00076528994, -0.07787926, -0.0006384722, 0.73999035, 1116.9655, -6.4565268, 62.17964)
+
+[node name="Mesh_Cat_Black_White_StaticBody" parent="." index="438" unique_id=1579864789]
+transform = Transform3D(1.9273607, 0, 0.5341171, 0, 2, 0, -0.5341171, 0, 1.9273607, 1186.927, -6.277976, 94.14947)
+
+[node name="Mesh_Cat_Black_White2_StaticBody" parent="." index="439" unique_id=1225841587]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1300.2924, -6.5481224, 86.98296)
+
+[node name="Mesh_Cat_black_StaticBody" parent="." index="440" unique_id=1349623171]
+transform = Transform3D(-0.720765, 0, -1.8656093, 0, 2, 0, 1.8656093, 0, -0.720765, 1299.9224, -6.5481224, 87.13516)
+
+[node name="Mesh_Cat_black" parent="Mesh_Cat_black_StaticBody" index="0" unique_id=1367216309]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.31643677, 0, 0.33935547)
+
+[node name="Mesh_Cat_Abyss_StaticBody" parent="." index="441" unique_id=492918013]
+transform = Transform3D(1.9675254, 0, 0.35894817, 0, 2, 0, -0.35894817, 0, 1.9675254, 1241.0128, -6.513165, 105.738686)

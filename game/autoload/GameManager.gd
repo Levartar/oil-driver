@@ -29,22 +29,10 @@ var quests = {
 		"name": "R-Kiosk",
 		"dialog_id": "RKiosk",
 		"description": "Get your Uhiskaart at the R-Kiosk",
-	},
-	"quest_4": {
-		"id": "quest_4",
-		"name": "Ulikool Tram Stop",
-		"dialog_id": "quest_4",
-		"description": "This is it for this Demo. Thanks for Playing",
-	},
-	"quest_5": {
-		"id": "quest_5",
-		"name": "Linnahall",
-		"dialog_id": "quest_5",
-		"description": "Visit Linnahall and speak with the guide.",
 	}
 }
 
-var quest_sequence = ["tutorial", "Karu17", "Ulikool", "RKiosk", "quest_4", "quest_5"]
+var quest_sequence = ["tutorial", "Karu17", "Ulikool", "RKiosk"]
 var current_quest_index = 0
 
 func _ready():
