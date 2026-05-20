@@ -115,11 +115,6 @@ func _ready() -> void:
 	if marker_scale and marker_scale != Vector2.ZERO:
 		marker.scale = marker_scale
 	
-	if marker_pointer and quest_marker_pointer_image:
-		marker_pointer.texture = quest_marker_pointer_image
-		marker_pointer.scale = pointer_scale
-		marker_pointer.z_index = 3
-	
 	placeholder.hide()
 
 	# Setup Camera3D for top-down orthographic view
@@ -166,7 +161,8 @@ func _process(delta: float) -> void:
 	# Update all quest marker positions
 	_update_quest_markers()
 	
-	_update_player_marker_pointer()
+	if not Engine.is_editor_hint():
+		_update_player_marker_pointer()
 
 
 func add_quest_marker(quest_id: String, world_position: Vector3, marker_color: Color = Color.WHITE) -> void:
@@ -316,9 +312,6 @@ func _clamp_to_minimap_bounds(minimap_pos: Vector2) -> Vector2:
 
 func _update_player_marker_pointer() -> void:
 	"""Update player marker pointer rotation based on camera viewing direction"""
-	if not marker_pointer:
-		return
-
 	var scene_root = get_parent().get_parent().get_parent()
 	if not scene_root:
 		return
