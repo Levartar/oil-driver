@@ -12,14 +12,14 @@ New to Tallinn Dialogue
 }
 
 
-:: Back to game scene {"position":"1900,1225","size":"100,100"}
+:: Back to game scene {"position":"1775,1500","size":"100,100"}
 ''Back to game scene''
 
 There are x of posters in total
-Collect them all!
+Collect them all!!
 
 
-:: Ending Scene {"position":"1900,1100","size":"100,100"}
+:: Ending Scene {"position":"1725,1350","size":"100,100"}
 End of the Demo
 Thank you for playing
 
@@ -49,24 +49,32 @@ Nice job! You’re officially at TLU. ''Pro-tip: Be here every day this week. ''
 
 Perfect! That little green card is your golden ticket to the whole city. Just remember to ''beep it every time you board a bus or tram.''
 
-[[Open World Unlocked->Open World Unlocked]]
+[[Pop up->Free roam]]
 
 
 
-:: Finish quest4 {"position":"1900,925","size":"100,100"}
+:: Finish quest4 {"position":"1875,1175","size":"100,100"}
 ''Finish quest 4''
 
-Player collect quest's pic as a bedge.
+And there you go! Now you’re in the loop. These guys know about every festival, concert, and student night happening in Tallinn. Keep those maps and brochures handy. Your social life in Estonia officially starts now! What’s next on the list?
 
 [[Next->Ending Scene]]
 
 
-:: Finish quest5 {"position":"2025,925","size":"100,100"}
+:: Finish quest5 {"position":"2000,1175","size":"100,100"}
 ''Finish quest 5''
 
-Player collect quest's pic as a bedge.
+Breathtaking, right? The sea breeze is the best cure for study stress. Take as much time as you need to enjoy the view!
 
 [[Next->Ending Scene]]
+
+
+:: Free roam {"position":"1950,675","size":"100,100"}
+And just like that, you're a local! You’ve got the card, you’ve got the map, and now... you’ve got the freedom. Go ahead and wander!
+
+Free Roam Mode Unlocked!
+
+[[What is Free Roam Mode->What is Free Roam Mode]]
 
 
 :: Introduce Mascot {"position":"1000,300","size":"100,100"}
@@ -90,19 +98,6 @@ I’ll guide you through the map and help you tick off every quest. Let’s get 
 [[Next->Tutorial: Walk]]
 
 
-
-
-:: Open World Unlocked {"position":"1950,675","size":"100,100"}
-''Open World Unlocked''
-
-- Player is free to explore the town.
-- Posters are scattered around the town for player to roam and collect them.
-- When the player finish quest 3, both quest 4 and 5 are unlocked simultaneously. These quests will be displayed in the notebook.
-- Player finish one of these quest to end the game (End of demo,Thank you for playing scene)
-- If player finish both quests, special poster will be unlocked.
-
-[[Recieve quest 4->Quest4: Tourist Information Center]]
-[[Recieve quest 5->Quest5: Linnahaul]]
 
 
 :: Quest 1: Finding Karu17 {"position":"1375,425","size":"100,100"}
@@ -138,15 +133,27 @@ We need to find an ''R-Kiosk'' to buy your ''Ühiskaart''. It’s the only way t
 [[Finish quest3->Finish quest3]]
 
 
-:: Quest4: Tourist Information Center {"position":"1900,825","size":"100,100"}
-''Quest 4 Detail''
+:: Quest4 and 5 unlocked {"position":"1950,925","size":"100,100"}
+''Quest4 and 5 unlocked''
 
+I recooment you to start with these two places, ''Tourist Information Center'' and ''Linnahall''. Check your notebook and pick your destination.
+
+[[Recieve quest 4->Quest4: Tourist Information Center]]
+[[Recieve quest 5->Quest5: Linnahaul]]
+
+
+:: Quest4: Tourist Information Center {"position":"1875,1075","size":"100,100"}
+''Quest 4 Detail: In Notebook''
+
+Want to know a secret? Even though it’s for tourists, the Tourist Information Centre in Old Town is a goldmine for students too! They have maps, event calendars, and tips for cool spots you won't find on Google. Head over there and see what’s happening in Tallinn this month!
 
 [[Finish quest4->Finish quest4]]
 
 
-:: Quest5: Linnahaul {"position":"2025,825","size":"100,100"}
-''Quest 5 Detail''
+:: Quest5: Linnahaul {"position":"2000,1075","size":"100,100"}
+''Quest 5 Detail: In Notebook''
+
+If you’re feeling a bit overwhelmed, I know the perfect spot to clear your head. Head over to Linnahall. It’s this massive concrete landmark right by the harbor. Walk up the stairs to the roof. It has the absolute best view of the Baltic Sea. Trust me, you haven't truly seen Tallinn until you’ve seen it from there!
 
 [[Finish quest5->Finish quest5]]
 
@@ -187,3 +194,12 @@ Look around!'' Left-click and drag'' to take in the beautiful campus scenery.
 
 [[Next->Tutorial : Quest box]]
 
+
+
+:: What is Free Roam Mode {"position":"1950,800","size":"100,100"}
+''What is Free Roam Mode''
+
+there are posters scattered all over town! Collecting them is a great way to learn the hidden history. See how many you can find!
+
+[[Poster Hunting->Back to game scene]]
+[[Quests Unlocked->Quest4 and 5 unlocked]]

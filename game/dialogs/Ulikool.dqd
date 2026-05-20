@@ -1,5 +1,8 @@
-say | wolf | Nice job! You’re officially at TLU. 
-say | wolf | ''Pro-tip: Be here every day this week. ''Orientation is the only time everything is explained clearly before the real work begins!
-say | wolf | Since you're here, take some time to wander toward'' Old Town''; it's the heart of Tallinn. 
-say | wolf | Walking is great, but Tallinn has a secret: once you’re registered, public transport is free for residents.
-say | wolf | We need to find an ''R-Kiosk'' to buy your ''Ühiskaart''. It’s the only way to travel like a local. Let’s find the nearest one.
+say | wolf | Nice job! You’re officially at TLU.
+say | wolf | Orientation is the only time everything is explained clearly before the real work begins!
+say | wolf | You will receive crucial information, such as preparing your documents for a TRP/ID card, accommodation registration, applying for health insurance and a family doctor, getting a library card, and creating your university email.
+say | wolf | This might sound overwhelming, but trust me, just keep an eye on the schedule the university provides and you will integrate here smoothly.
+say | wolf | Since you're here, take some time to wander toward "Old Town". It's the heart of Tallinn.
+say | wolf | Walking is great, but Tallinn has a secret: once you’re registered as a resident, public transport is free.
+say | wolf | Let's go to the nearest convenience store, "R-Kiosk," to buy your transportation card. 
+say | wolf | With this card, you can easily use public transport to explore the town, submit legal documents at the police station, or register your accommodation at the International House of Estonia while you wait for your ID!
